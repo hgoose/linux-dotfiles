@@ -1,8 +1,11 @@
 # goosemane linux dotfiles
 
-*kitty terminal* 
-*fish shell using oh my fish (neolambda) 
-*omf install neolambda*
+*kitty terminal*  
+
+*fish shell using oh my fish (neolambda)  
+  
+*omf install neolambda*  
+
 *nvim init for keybinds and such*
 
 
