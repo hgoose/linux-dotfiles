@@ -31,7 +31,7 @@ function fish_prompt
   # Only calculate once, to save a few CPU cycles when displaying the prompt
   if not set -q __fish_prompt_hostname
     # set -g __fish_prompt_hostname (hostname|cut -d . -f 1)
-    set -g __fish_prompt_hostname $orange(hostname|cut -d . -f 1)(set_color normal)
+    set -g __fish_prompt_hostname $orange(echo $hostname|cut -d . -f 1)(set_color normal)
   end
   if not set -q __fish_prompt_char
     if [ (id -u) -eq 0 ]
