@@ -33,6 +33,15 @@ nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
+nmap <C-s> <Plug>MarkdownPreview
+nmap <M-s> <Plug>MarkdownPreviewStop
+nmap <C-p> <Plug>MarkdownPreviewToggle
+
+nmap h <Down>
+nmap t <Up>
+nmap n <Left>
+nmap s <Right>
+
 :set completeopt-=preview " For No Previews
 
 
