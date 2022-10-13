@@ -1,0 +1,15 @@
+alias gitc="git commit -m "fixed""
+alias c="g++ -o out.exe"
+alias run="./out.exe"
+alias uuu="ls -a"
+alias uu="ls"
+alias desk="cd /mnt/c/Users/nate/Onedrive/desktop"
+alias doc="cd /mnt/c/Users/nate/Onedrive/documents"
+alias spy="cd /mnt/c/Users/nate/Onedrive/documents/recent-python/hw; uu"
+alias nfet="neofetch"
+alias dot="cd ~/.config"
+alias gpush="git add .; git commit -m "all"; git push"
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    set -g -x fish_greeting ''
+end
