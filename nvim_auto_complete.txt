@@ -1,0 +1,32 @@
+- Auto Complete For Nvim Steps -
+
+Prereq -
+	npm
+	nvm (to install node) run in bash -> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash  run in bash -> source ~/.nvm/nvm.sh
+	node (nvm install node)
+	python-pip
+	vim plug
+
+Install Coc -
+plug 'https://github.com/neoclide/coc.nvim'
+
+Make sure you set up plugged dir in .config/nvim by adding '~/.config/nvim/plugged' to call plug#begin
+
+Navigate to plugged/coc.nvim
+	Run sudo npm install -g yarn (to make sure yarn is installed)
+	yarn install
+	yarn build
+	
+Go into Nvim
+	:CocInstall coc-python
+
+make sure you have pip installed
+	sudo apt install python3-pip
+
+install jedi
+	pip3 install jedi
+
+set keybind in init.vim at bottom
+	inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+	
+:TerminalSplit fish
