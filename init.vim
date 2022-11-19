@@ -11,7 +11,7 @@ nnoremap J :m .+1<CR>==
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
 
-call plug#begin()
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
@@ -23,8 +23,7 @@ Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+Plug 'https://github.com/neoclide/coc.nvim'
 call plug#end()
 
 nnoremap <C-f> :NERDTreeFocus<CR>
