@@ -41,10 +41,10 @@ cd ~/.config/kitty
 ln -s ./kitty-themes/themes/Floraverse.conf ~/.config/kitty/theme.conf
 
 Favorite Themes:
-PaulMillr
+PaulMillr (using)
+
+- Decent -
 Molokai
-
-
 LiquidCarbonTransparent
 JetBrains_Darcula
 MaterialDark
