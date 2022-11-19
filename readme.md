@@ -41,9 +41,10 @@ cd ~/.config/kitty
 ln -s ./kitty-themes/themes/Floraverse.conf ~/.config/kitty/theme.conf
 
 Favorite Themes:
+JetBrains_Darcula
+MaterialDark
 Alucard
 Floraverse
-Grape
 Argonaut
 Atom
 Brogrammer
