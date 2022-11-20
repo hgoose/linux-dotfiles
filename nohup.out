@@ -5,3 +5,5 @@ Opening in existing browser session.
 [31091:31091:1119/183258.076486:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x8bc00333f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
 Fontconfig error: Cannot load default config file: No such file: (null)
 Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+[31091:31091:1119/190031.381105:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[31091:31091:1119/190031.381907:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
