@@ -25,3 +25,14 @@ Fontconfig error: Cannot load default config file: No such file: (null)
 Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
 Fontconfig error: Cannot load default config file: No such file: (null)
 Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+[33713:33713:1119/203203.222742:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[33713:33713:1119/203203.223072:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+Fontconfig error: Cannot load default config file: No such file: (null)
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+[33658:46583:1119/203638.549460:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for i.im failed:
+----- Certificate i=0 (emailAddress=root@ip-172-31-4-65.eu-west-2.compute.internal,CN=ip-172-31-4-65.eu-west-2.compute.internal,OU=SomeOrganizationalUnit,O=SomeOrganization,L=SomeCity,ST=SomeState,C=--) -----
+ERROR: No matching issuer found
+
+
+[33714:33720:1119/203638.550025:ERROR:ssl_client_socket_impl.cc(982)] handshake failed; returned -1, SSL error code 1, net_error -202
