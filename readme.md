@@ -68,6 +68,5 @@ Distro: Arco Linux L
 - (WM Theme): empty (create dir in /usr/share/themes -> mkdir empty/xfwm4 -> touch themerc)
 
 ## Images:
-![Preview](https://i.imgur.com/wsfyoqD.png)
-
+![Preview](https://i.imgur.com/EUQqZSs.png)
 ![Background](https://i.imgur.com/NUX6Lq9.jpg)
