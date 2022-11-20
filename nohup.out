@@ -36,3 +36,4 @@ ERROR: No matching issuer found
 
 
 [33714:33720:1119/203638.550025:ERROR:ssl_client_socket_impl.cc(982)] handshake failed; returned -1, SSL error code 1, net_error -202
+[33714:33720:1119/203852.126578:ERROR:ssl_client_socket_impl.cc(982)] handshake failed; returned -1, SSL error code 1, net_error -202

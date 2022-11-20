@@ -82,7 +82,7 @@ Distro: Arco Linux L
 ![Preview](https://i.imgur.com/4RANlDH.png)
 
 ### Kitty Terminal Background Image
-![Background](https://i.imgur.com/DNXWVgs.png)
+![Background](https://i.imgur.com/lM2u4yO.png)
 
 ### Wallpaper
 ![Background](https://i.imgur.com/NUX6Lq9.jpg)
