@@ -79,10 +79,10 @@ Distro: Arco Linux L
 ![Preview](https://i.imgur.com/viIt4Sx.png)
 
 ### (Preview) Kitty with background image
-![Preview](https://i.imgur.com/4RANlDH.png)
+![Preview](https://i.imgur.com/lM2u4yO.png)
 
 ### Kitty Terminal Background Image
-![Background](https://i.imgur.com/lM2u4yO.png)
+![Background](https://i.imgur.com/DNXWVgs.png)
 
 ### Wallpaper
 ![Background](https://i.imgur.com/NUX6Lq9.jpg)

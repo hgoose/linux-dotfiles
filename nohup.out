@@ -37,3 +37,10 @@ ERROR: No matching issuer found
 
 [33714:33720:1119/203638.550025:ERROR:ssl_client_socket_impl.cc(982)] handshake failed; returned -1, SSL error code 1, net_error -202
 [33714:33720:1119/203852.126578:ERROR:ssl_client_socket_impl.cc(982)] handshake failed; returned -1, SSL error code 1, net_error -202
+Discord 0.0.21
+Quitting secondary instance.
+Fontconfig error: Cannot load default config file: No such file: (null)
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+[33714:33720:1119/204329.146696:ERROR:ssl_client_socket_impl.cc(982)] handshake failed; returned -1, SSL error code 1, net_error -202
+[33714:33720:1119/204337.929238:ERROR:ssl_client_socket_impl.cc(982)] handshake failed; returned -1, SSL error code 1, net_error -202
+[33714:33720:1119/204338.047832:ERROR:ssl_client_socket_impl.cc(982)] handshake failed; returned -1, SSL error code 1, net_error -202
