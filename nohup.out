@@ -7,3 +7,21 @@ Fontconfig error: Cannot load default config file: No such file: (null)
 Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
 [31091:31091:1119/190031.381105:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
 [31091:31091:1119/190031.381907:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[33713:33713:1119/190336.124330:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x1ba800337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[33713:33713:1119/190336.127758:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x1ba800337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[33713:33713:1119/190336.132298:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x1ba800337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[33713:33713:1119/190336.136618:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x1ba800337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+[33713:33713:1119/195814.819055:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[33713:33713:1119/195814.819433:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[33713:33713:1119/195814.819739:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[33713:33713:1119/195814.819987:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+[libprotobuf ERROR ../../third_party/protobuf/src/google/protobuf/message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+Fontconfig error: Cannot load default config file: No such file: (null)
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Fontconfig error: Cannot load default config file: No such file: (null)
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo

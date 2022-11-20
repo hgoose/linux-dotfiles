@@ -29,7 +29,13 @@ then go into nvim and use PlugInstall
 
 **(Nvim Set up MD Previewer):** https://github.com/instant-markdown/vim-instant-markdown
 
-## Kitty:
+## Kitty (Background Image):
+
+```
+Copy over kitty_with_background.conf to ~/.config/kitty (Rename to kitty.conf)
+```
+
+## Kitty (Theme Pack):
 ```
 Copy over kitty.conf to ~/.config/kitty
 
@@ -67,6 +73,16 @@ Distro: Arco Linux L
 - (DE Theme): Arc-Dark
 - (WM Theme): empty (create dir in /usr/share/themes -> mkdir empty/xfwm4 -> touch themerc)
 
-## Images:
+# Images:
+
+### (Preview) Kitty with theme pack
 ![Preview](https://i.imgur.com/viIt4Sx.png)
+
+### (Preview) Kitty with background image
+![Preview](https://i.imgur.com/SdKTvA5.png)
+
+### Kitty Terminal Background Image
+![Background](https://i.imgur.com/DNXWVgs.png)
+
+### Wallpaper
 ![Background](https://i.imgur.com/NUX6Lq9.jpg)
