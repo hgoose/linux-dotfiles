@@ -6,8 +6,11 @@ alias gpush="git add .; git commit -m "all"; git push"
 alias neo="neofetch"
 alias dis="nohup discord &"
 alias tm="tmux new"
-alias nt="nohup nautilus &"
+alias nt="nohup nautilus . &"
 alias spy="cd ~/recent-python"
+alias file="xdg-open ."
+alias clock="tty-clock -c -C 5"
+alias calc="libreoffice -calc"
 
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish
