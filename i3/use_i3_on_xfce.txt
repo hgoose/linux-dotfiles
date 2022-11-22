@@ -1,0 +1,58 @@
+-- Use I3 on xfce
+
+1: install i3
+	(Depend):
+	libev
+	libxkbcommon-x11
+	pango
+	startup-notification
+	xcb-util-cursor
+	xcb-util-keysyms
+	xcb-util-wm
+	xcb-util-xrm
+	yajl
+	dmenu (optional) - for the default program launcher
+	i3lock (optional) - for the default screen locker
+	i3status (optional) - for the default status bar generator
+	perl (optional) - for i3-save-tree and i3-dmenu-desktop
+	perl-anyevent-i3 (optional) - for i3-save-tree
+	perl-json-xs (optional) - for i3-save-tree
+	rofi (optional) - for a modern dmenu replacement
+	xss-lock (optional) - for the default screen locker
+	meson (make)
+	xmlto (make)
+
+2: head into session and startup
+	
+	(head into current session):
+		xfce (never)
+		xfce desktop (never)
+	
+	(head into application autostart) ->
+		add new -> 
+			name = i3
+			description = i3
+			command = i3
+
+3: logout and log back in
+
+( TRANSPARENCY ) 
+	
+1: Install picom
+
+2: sudo cp /etc/xdg/picom.conf ~/.config/picom (or copy from linux-dotfiles
+
+Lines for TRANSPARENCY: (Not using)
+	inactive-opacity = 0.80;
+	active-opacity = 0.80;
+	frame-opacity = 0.80;
+
+Lines for BLUR: (Not using):
+	blur: {
+  	method = "kawase";
+  	strength = 9;
+  	background = false;
+  	background-frame = false;
+  	background-fixed = false;
+}	
+	

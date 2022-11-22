@@ -1,0 +1,7 @@
+( Setup Wallpaper on I3):
+
+1: Install nitrogen
+2: Run nitrogen
+3: add dir 
+4: select wallpaper
+
