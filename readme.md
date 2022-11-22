@@ -69,14 +69,14 @@ https://github.com/dexpota/kitty-themes
 Distro: Arco Linux L
 
 - (DE): Xfce4
-- (WM): Xfwm4
+- (WM): i3
 - (DE Theme): Arc-Dark
 - (WM Theme): empty (create dir in /usr/share/themes -> mkdir empty/xfwm4 -> touch themerc)
 
 # Images:
 
 ### (Preview) Kitty with theme pack
-![Preview](https://i.imgur.com/viIt4Sx.png)
+![Preview](https://i.imgur.com/stIk1Tn.png)
 
 ### (Preview) Kitty with background image
 ![Preview](https://i.imgur.com/lM2u4yO.png)
