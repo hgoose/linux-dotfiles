@@ -142,8 +142,8 @@ set_from_resource $fg i3wm.color0 #282a2e
 set_from_resource $bg i3wm.color6 #282a2e
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #8B00FF #3c464d #ffffff #7e7e7e   #8B00FF
-client.focused_inactive #8B00FF #5f676a #ffffff #484e50   #5f676a
+client.focused          #8B00FF #3c464d #ffffff #8B00FF   #8B00FF
+client.focused_inactive #8B00FF #5f676a #ffffff #484e50   #8B00FF
 client.unfocused        #8B00FF #222222 #888888 #292d2e   #8B00FF
 client.urgent           #8B00FF #900000 #ffffff #900000   #900000
 client.placeholder      #8B00FF #0c0c0c #ffffff #000000   #0c0c0c
