@@ -9,7 +9,7 @@ alias tm="tmux new"
 alias nt="nohup nautilus . &"
 alias spy="cd ~/recent-python"
 alias file="xdg-open ."
-alias clock="tty-clock -c -C 5"
+alias clock="tty-clock -t -c -C 5"
 alias calc="libreoffice -calc"
 
 # https://fishshell.com/docs/current/index.html
