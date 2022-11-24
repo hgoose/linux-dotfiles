@@ -11,6 +11,8 @@ alias spy="cd ~/recent-python"
 alias file="xdg-open ."
 alias clock="tty-clock -t -c -C 5"
 alias calc="libreoffice -calc"
+alias ::="python3"
+alias n="nvim"
 
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish
