@@ -46,6 +46,8 @@ nmap s <Right>
 
 :set completeopt-=preview " For No Previews
 
+" set latex previewer viewer 
+let g:livepreview_previewer = 'zathura'
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"

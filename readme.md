@@ -38,7 +38,8 @@ Prereq:
 	python
 	python-pip
 	pip install neovim
-	evince
+	evince (Defualt Viewer)
+	zathura (using)
 
 (_start_):
 :LLPStartPreview
@@ -64,8 +65,9 @@ cd ~/.config/kitty
 ln -s ./kitty-themes/themes/Floraverse.conf ~/.config/kitty/theme.conf
 
 Favorite Themes:
+gruvbox_dark (using)
 DotGov
-Borland (using)
+Borland 
 PaulMillr 
 
 - Decent -
