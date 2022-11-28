@@ -47,7 +47,8 @@ cd ~/.config/kitty
 ln -s ./kitty-themes/themes/Floraverse.conf ~/.config/kitty/theme.conf
 
 Favorite Themes:
-PaulMillr (using)
+Borland (using)
+PaulMillr 
 
 - Decent -
 Molokai
