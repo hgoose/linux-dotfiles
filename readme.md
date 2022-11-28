@@ -29,6 +29,23 @@ then go into nvim and use PlugInstall
 
 **(Nvim Set up MD Previewer):** https://github.com/instant-markdown/vim-instant-markdown
 
+**(Nvim Set up Latex Previewer):** https://github.com/xuhdev/vim-latex-live-preview
+
+```
+(fix: https://github.com/xuhdev/vim-latex-live-preview/issues/105):
+
+Prereq:
+	python
+	python-pip
+	pip install neovim
+	evince
+
+(_start_):
+:LLPStartPreview
+
+
+``` 
+
 ## Kitty (Background Image):
 
 ```
