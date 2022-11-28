@@ -14,6 +14,7 @@ alias calc="libreoffice -calc"
 alias ::="python3"
 alias n="nvim"
 alias nrestore="nitrogen --restore"
+alias spush="sudo git add .; sudo git commit -m "commit"; git push"
 
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish
