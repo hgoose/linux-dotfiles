@@ -47,6 +47,7 @@ cd ~/.config/kitty
 ln -s ./kitty-themes/themes/Floraverse.conf ~/.config/kitty/theme.conf
 
 Favorite Themes:
+DotGov
 Borland (using)
 PaulMillr 
 
