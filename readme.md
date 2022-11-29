@@ -31,7 +31,8 @@ then go into nvim and use PlugInstall
 
 **(Nvim Set up Latex Previewer):** https://github.com/xuhdev/vim-latex-live-preview
 
-```
+
+``` 
 (fix: https://github.com/xuhdev/vim-latex-live-preview/issues/105):
 
 Prereq:
@@ -46,6 +47,18 @@ Prereq:
 
 
 ``` 
+
+**(Nvim Latex AutoComplete):**
+
+```
+~ See nvim_auto_complete.txt to ensure coc is set up
+
+install texlab package
+
+inside nvim :CocInstall coc-texlab
+
+```
+
 
 ## Kitty (Background Image):
 
