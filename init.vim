@@ -6,10 +6,14 @@ set shiftwidth=4
 set smarttab
 set softtabstop=4
 set guicursor=
-nnoremap K :m .-2<CR>==
-nnoremap J :m .+1<CR>==
-vnoremap K :m '<-2<CR>gv=gv
-vnoremap J :m '>+1<CR>gv=gv
+
+set termguicolors " True Colors
+set omnifunc=syntaxcomplete#Complete
+
+nnoremap T :m .-2<CR>==
+nnoremap H :m .+1<CR>==
+vnoremap L :m '<-2<CR>gv=gv
+vnoremap S :m '>+1<CR>gv=gv
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -27,7 +31,9 @@ Plug 'https://github.com/neoclide/coc.nvim'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'https://github.com/907th/vim-auto-save' " Vim auto Save
+Plug 'jiangmiao/auto-pairs' " Finish [], ()  and \"\" automatically 
 call plug#end()
+
 
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
