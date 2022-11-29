@@ -111,3 +111,34 @@ WEIGHT /home/catsoup/.config/discord/0.0.21/modules/discord_krisp/VAD_weight.thw
 [Modules] Host is up to date.
 [Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
 [Modules] No module updates available.
+[19826:19826:1128/191932.226115:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x126c00337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[19826:19826:1128/191932.231285:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x126c00337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[19826:19826:1128/191932.246255:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x126c00337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[19826:19826:1128/191932.253844:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x126c00337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+[INFO] Hi there
+[INFO] plugins dir set to:  "/usr/lib/nomacs-plugins"
+[INFO] local client created in:  2 ms
+[INFO] theme loaded from "/usr/share/nomacs/Image Lounge/themes/Dark-Theme.css"
+[INFO] CSS loaded from:  ":/nomacs/stylesheet.css"
+[INFO] Initialization takes:  228 ms
+[INFO] [DkImageLoader] 17 containers created in 0 ms
+[INFO] [DkImageLoader] after sorting:  0 ms
+[INFO] [Basic Loader] "/home/catsoup/Pictures/finaldates.png" loaded in 7 ms
+[INFO] [Basic Loader] "/home/catsoup/Pictures/kitty_with_background.png" loaded in 43 ms
+[WARNING] DkImageStorage::computeIntern was called without a need...
+[INFO] Hi there
+[INFO] plugins dir set to:  "/usr/lib/nomacs-plugins"
+[INFO] local client created in:  6 ms
+[INFO] theme loaded from "/usr/share/nomacs/Image Lounge/themes/Dark-Theme.css"
+[INFO] CSS loaded from:  ":/nomacs/stylesheet.css"
+[INFO] Initialization takes:  238 ms
+[INFO] [DkImageLoader] 17 containers created in 0 ms
+[INFO] [DkImageLoader] after sorting:  0 ms
+[INFO] [Basic Loader] "/home/catsoup/Pictures/finaldates.png" loaded in 8 ms
+[INFO] [Basic Loader] "/home/catsoup/Pictures/kitty_with_background.png" loaded in 52 ms
+[WARNING] DkImageStorage::computeIntern was called without a need...
