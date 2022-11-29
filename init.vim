@@ -26,6 +26,7 @@ Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/neoclide/coc.nvim'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'xuhdev/vim-latex-live-preview'
+Plug 'https://github.com/907th/vim-auto-save' " Vim auto Save
 call plug#end()
 
 nnoremap <C-f> :NERDTreeFocus<CR>
@@ -46,9 +47,12 @@ nmap s <Right>
 
 :set completeopt-=preview " For No Previews
 
+let g:auto_save = 1  " enable AutoSave on Vim startup
+
 " set latex previewer viewer 
 let g:livepreview_previewer = 'zathura'
 
+" NerdTree
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 

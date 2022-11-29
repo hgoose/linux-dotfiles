@@ -31,6 +31,7 @@ then go into nvim and use PlugInstall
 
 **(Nvim Set up Latex Previewer):** https://github.com/xuhdev/vim-latex-live-preview
 
+**(Nvim AutoSave):** https://github.com/907th/vim-auto-save
 
 ``` 
 (fix: https://github.com/xuhdev/vim-latex-live-preview/issues/105):
