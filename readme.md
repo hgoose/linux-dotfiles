@@ -38,7 +38,9 @@ then go into nvim and use PlugInstall
 
 ```
 ~ Create dir ~/.config/nvim/UltiSnips/
-:UltiSnipsEdit
+~ mv tex.snippets to this dir
+
+:UltiSnipsEdit (to edit snips)
 
 ```
 
