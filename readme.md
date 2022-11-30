@@ -1,5 +1,6 @@
 # goosemane linux dotfiles
 
+
 ## Fish:
 ```
 Install fish package
@@ -32,6 +33,17 @@ then go into nvim and use PlugInstall
 **(Nvim Set up Latex Previewer):** https://github.com/xuhdev/vim-latex-live-preview
 
 **(Nvim AutoSave):** https://github.com/907th/vim-auto-save
+
+**(Nvim Snippits):** https://github.com/SirVer/ultisnips
+
+```
+~ Create dir ~/.config/nvim/UltiSnips/
+:UltiSnipsEdit
+
+```
+
+
+**(More on latex previewer):**
 
 ``` 
 (fix: https://github.com/xuhdev/vim-latex-live-preview/issues/105):

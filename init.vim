@@ -27,13 +27,17 @@ Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
-Plug 'https://github.com/neoclide/coc.nvim'
+Plug 'https://github.com/neoclide/coc.nvim' " completion
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
-Plug 'xuhdev/vim-latex-live-preview'
+Plug 'xuhdev/vim-latex-live-preview' " Latex Live Preview
 Plug 'https://github.com/907th/vim-auto-save' " Vim auto Save
 Plug 'jiangmiao/auto-pairs' " Finish [], ()  and \"\" automatically 
+"Plug 'lervag/vimtex' " Vimtex
+Plug 'SirVer/ultisnips'
+
 call plug#end()
 
+nnoremap <C-z> :LLPStartPreview<CR>
 
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
@@ -53,7 +57,20 @@ nmap s <Right>
 
 :set completeopt-=preview " For No Previews
 
+" Snippets
+let g:UltiSnipsExpandTrigger = '<s-tab>'
+let g:UltiSnipsJumpForwardTrigger = '<s-tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-tab>'
+
+" Autosave 
 let g:auto_save = 1  " enable AutoSave on Vim startup
+
+" Latex stuff
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+"set conceallevel=1
+"let g:tex_conceal='abdmg'
 
 " set latex previewer viewer 
 let g:livepreview_previewer = 'zathura'
