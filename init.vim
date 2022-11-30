@@ -58,8 +58,8 @@ nmap s <Right>
 :set completeopt-=preview " For No Previews
 
 " Snippets
-let g:UltiSnipsExpandTrigger = '<s-tab>'
-let g:UltiSnipsJumpForwardTrigger = '<s-tab>'
+let g:UltiSnipsExpandTrigger = '<a-tab>'
+let g:UltiSnipsJumpForwardTrigger = '<a-tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-tab>'
 
 " Autosave 
