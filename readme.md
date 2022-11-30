@@ -132,7 +132,7 @@ Distro: Arco Linux L
 
 # Images:
 
-### (Preview) Kitty with theme pack
+### (Preview) Kitty with theme pack (PaulMillr)
 ![Preview](https://i.imgur.com/stIk1Tn.png)
 
 ### (Preview) Kitty with background image
