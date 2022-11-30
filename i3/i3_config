@@ -132,8 +132,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # previous | for_window [class="^.*"] border pixel 1
 for_window [class="^.*"] border pixel 2
 # previous | gaps inner 4
-gaps inner 13
-gaps outer 13
+gaps inner 10
+gaps outer 10
+
 
 # gapsconfig
 #NON IMPORTANT STUFF
