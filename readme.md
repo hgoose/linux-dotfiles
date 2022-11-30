@@ -74,6 +74,14 @@ inside nvim :CocInstall coc-texlab
 
 ```
 
+### Zarthura  (pdf viewer for latex):
+
+```
+Colors set to dark grey (see zathurarc)
+
+~ Copy over zathurarc to ~/.config/zathura 
+
+```
 
 ## Kitty (Background Image):
 
