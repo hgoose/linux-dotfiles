@@ -1,5 +1,19 @@
 # goosemane linux dotfiles
 
+### I3WM <3
+
+```
+./i3 for details and config 
+
+~ mv config to ~/.config/i3
+
+(Workspace manager):
+https://github.com/infokiller/i3-workspace-groups#installation
+
+	(Setup):
+		
+
+```
 
 ## Fish:
 ```
