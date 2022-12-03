@@ -11,8 +11,9 @@
 https://github.com/infokiller/i3-workspace-groups#installation
 
 	(Setup):
-		
+		python3 -m pip install i3-workspace-groups
 
+		for further information refer to the github page
 ```
 
 ## Fish:

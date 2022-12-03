@@ -166,3 +166,5 @@ WEIGHT /home/catsoup/.config/discord/0.0.21/modules/discord_krisp/VAD_weight.thw
 [Modules] Host is up to date.
 [Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
 [Modules] No module updates available.
+
+(org.gnome.Nautilus:20846): dconf-WARNING **: 21:01:28.836: Unable to open /root/.local/share/flatpak/exports/share/dconf/profile/user: Permission denied
