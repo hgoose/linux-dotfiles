@@ -39,7 +39,6 @@ call plug#end()
 
 nnoremap <C-z> :LLPStartPreview<CR>
 
-nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
