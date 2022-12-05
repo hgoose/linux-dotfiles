@@ -147,8 +147,6 @@ Distro: Arco Linux L
 
 # Images:
 
-### (Preview) Kitty with theme pack (PaulMillr)
-![Preview](https://i.imgur.com/stIk1Tn.png)
 
 ### (Preview) Kitty with theme gruvbox_dark 
 ![Preview](https://i.imgur.com/mTgOgEs.png)
