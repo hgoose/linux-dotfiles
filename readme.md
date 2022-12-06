@@ -116,7 +116,8 @@ cd ~/.config/kitty
 ln -s ./kitty-themes/themes/Floraverse.conf ~/.config/kitty/theme.conf
 
 Favorite Themes:
-gruvbox_dark (using)
+sazzy (using)
+gruvbox_dark 
 DotGov
 Borland 
 PaulMillr 
