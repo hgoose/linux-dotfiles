@@ -116,7 +116,8 @@ cd ~/.config/kitty
 ln -s ./kitty-themes/themes/Floraverse.conf ~/.config/kitty/theme.conf
 
 Favorite Themes:
-sazzy (using)
+Molokai_Soda (using)
+snazzy 
 gruvbox_dark 
 DotGov
 Borland 
