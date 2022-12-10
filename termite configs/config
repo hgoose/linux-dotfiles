@@ -10,7 +10,7 @@
 
 # FONTS #
 #font = Monospace 9
-font = Source Code Pro Bold 14 
+font = White Rabbit Bold 14 
 #font = white-rabbit
 
 #fullscreen = true
@@ -64,7 +64,8 @@ hyperlinks = true
 foreground = #FFFFFF
 #foreground = #00FF22
 #foreground_bold = #ffffff
-background =  #0F00FF
+#
+background = #ED00FF
 
 # 20% background transparency (requires a compositor)
 #background = rgba(63, 63, 63, 0.8)
