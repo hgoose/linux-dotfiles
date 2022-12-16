@@ -1,0 +1,58 @@
+Discord 0.0.21
+Starting app.
+Starting updater.
+[Modules] Modules initializing
+[Modules] Distribution: remote
+[Modules] Host updates: enabled
+[Modules] Module updates: enabled
+[Modules] Module install path: /home/catsoup/.config/discord/0.0.21/modules
+[Modules] Module installed file path: /home/catsoup/.config/discord/0.0.21/modules/installed.json
+[Modules] Module download path: /home/catsoup/.config/discord/0.0.21/modules/pending
+[Modules] No updates to install
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+Optional module ./ElectronTestRpc was not included.
+WEIGHT /home/catsoup/.config/discord/0.0.21/modules/discord_krisp/NC_small_8k.thw
+WEIGHT /home/catsoup/.config/discord/0.0.21/modules/discord_krisp/NC_small_16k.thw
+WEIGHT /home/catsoup/.config/discord/0.0.21/modules/discord_krisp/c6.s.f.27f1a3.thw
+WEIGHT /home/catsoup/.config/discord/0.0.21/modules/discord_krisp/VAD_weight.thw
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+[8534:1125/193942.334461:FATAL:gpu_data_manager_impl_private.cc(415)] GPU process isn't usable. Goodbye.
+--2022-11-25 19:39:42--  https://sentry.io/api/146342/minidump/?sentry_key=384ce4413de74fe0be270abe03b2b35a
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving sentry.io (sentry.io)... 35.188.42.15
+Connecting to sentry.io (sentry.io)|35.188.42.15|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 36 [text/plain]
+Saving to: ‘/dev/fd/4’
+
+     0K                           
+ Failed to get crash dump id. 
+ Report Id:  4f1e2a03-7564-42 
+  --2022-11-25 19:39:42--  https://sentry.io/api/146342/minidump/?sentry_key=384ce4413de74fe0be270abe03b2b35a
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving sentry.io (sentry.io)... 35.188.42.15
+Connecting to sentry.io (sentry.io)|35.188.42.15|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 36 [text/plain]
+Saving to: ‘/dev/fd/4’
+
+     0K                        
+ Failed to get crash dump id. 
+ Report Id:  09ce2352-cf4a-47
+  Opening in existing browser session.
+[106399:106399:0100/000000.055829:ERROR:gl_angle_util_vulkan.cc(189)] Failed to retrieve vkGetInstanceProcAddr
+[106399:106399:0100/000000.055892:ERROR:vulkan_instance.cc(91)] Failed to get vkGetInstanceProcAddr pointer from ANGLE.
