@@ -19,6 +19,12 @@ local astro_plugins = {
     config = function() require "core.plugins" end,
   },
 
+  -- Auta save
+  ['907th/vim-auto-save'] = {},
+
+  -- snippets
+  ['SirVer/ultisnips'] = {},
+
   -- Vim Latex Preview
   ['xuhdev/vim-latex-live-preview'] = {},
 
@@ -130,7 +136,7 @@ local astro_plugins = {
         "TSUpdateSync",
       })
     end,
-    run = function() require("nvim-treesitter.install").update { with_sync = true }() end,
+    run = function() require("nvim-treesitter.install").update { with_sync = true } () end,
     config = function() require "configs.treesitter" end,
   },
 

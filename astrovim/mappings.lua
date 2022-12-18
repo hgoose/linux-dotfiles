@@ -7,7 +7,7 @@ local maps = { i = {}, n = {}, v = {}, t = {}, [""] = {} }
 -- ('mode', 'newkey', 'old key')
 
 local function map(mode, lhs, rhs, opts)
-  local options = { noremap=true, silent=true }
+  local options = { noremap = true, silent = true }
   if opts then
     options = vim.tbl_extend('force', options, opts)
   end
@@ -21,11 +21,21 @@ map('n', 't', '<up>')
 map('n', 'n', '<left>')
 map('n', 's', '<right>')
 
--- MOVE LINES UP/DOWN 
-map("n", "K", ":m .-2<CR>==")
+-- move lines up/down
+map("n", "T", ":m .-2<CR>==")
 map("n", "J", ":m .+1<CR>==")
 ------------------------------------
 
+-- SNIPPETS
+vim.g.UltiSnipsExpandTrigger = '<a-tab>'
+vim.g.UltiSnipsJumpForwardTrigger = '<a-tab>'
+vim.g.UltiSnipsJumpBackwardTrigger = '<c-tab>'
+
+-- Set latex previewer to zathhura
+vim.g.livepreview_previewer = 'zathura'
+
+-- vim auto save
+vim.g.auto_save = 1 -- :AutoSaveToggle
 
 -- KEYMAPS STRAIGHT FROM ASTROVIM
 
@@ -115,7 +125,7 @@ if is_available "neovim-session-manager" then
   maps.n["<leader>Sd"] = { "<cmd>SessionManager! delete_session<cr>", desc = "Delete session" }
   maps.n["<leader>Sf"] = { "<cmd>SessionManager! load_session<cr>", desc = "Search sessions" }
   maps.n["<leader>S."] =
-    { "<cmd>SessionManager! load_current_dir_session<cr>", desc = "Load current directory session" }
+  { "<cmd>SessionManager! load_current_dir_session<cr>", desc = "Load current directory session" }
 end
 
 -- Package Manager
@@ -180,7 +190,7 @@ if is_available "telescope.nvim" then
   maps.n["<leader>fm"] = { function() require("telescope.builtin").marks() end, desc = "Search marks" }
   maps.n["<leader>fo"] = { function() require("telescope.builtin").oldfiles() end, desc = "Search history" }
   maps.n["<leader>fc"] =
-    { function() require("telescope.builtin").grep_string() end, desc = "Search for word under cursor" }
+  { function() require("telescope.builtin").grep_string() end, desc = "Search for word under cursor" }
   maps.n["<leader>sb"] = { function() require("telescope.builtin").git_branches() end, desc = "Git branches" }
   maps.n["<leader>sh"] = { function() require("telescope.builtin").help_tags() end, desc = "Search help" }
   maps.n["<leader>sm"] = { function() require("telescope.builtin").man_pages() end, desc = "Search man" }
@@ -189,7 +199,7 @@ if is_available "telescope.nvim" then
   maps.n["<leader>sc"] = { function() require("telescope.builtin").commands() end, desc = "Search commands" }
   if astronvim.is_available "nvim-notify" then
     maps.n["<leader>sn"] =
-      { function() require("telescope").extensions.notify.notify() end, desc = "Search notifications" }
+    { function() require("telescope").extensions.notify.notify() end, desc = "Search notifications" }
   end
   maps.n["<leader>ls"] = {
     function()
