@@ -16,10 +16,17 @@ end
 
 -- UP DOWN LEFT RIGHT
 
+-- For insert mode
 map('n', 'h', '<down>')
 map('n', 't', '<up>')
 map('n', 'n', '<left>')
 map('n', 's', '<right>')
+
+-- For visual mode
+map('v', 'h', '<down>')
+map('v', 't', '<up>')
+map('v', 'n', '<left>')
+map('v', 's', '<right>')
 
 -- move lines up/down
 map("n", "T", ":m .-2<CR>==")
