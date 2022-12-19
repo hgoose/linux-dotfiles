@@ -19,6 +19,12 @@ local astro_plugins = {
     config = function() require "core.plugins" end,
   },
 
+  -- gruvbox color way
+  ['morhetz/gruvbox'] = {},
+
+  -- catppuccin color way
+  ['catppuccin/nvim'] = {},
+
   -- Auta save
   ['907th/vim-auto-save'] = {},
 
