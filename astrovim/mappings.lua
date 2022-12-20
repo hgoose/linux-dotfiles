@@ -38,6 +38,10 @@ vim.g.UltiSnipsExpandTrigger = '<a-tab>'
 vim.g.UltiSnipsJumpForwardTrigger = '<a-tab>'
 vim.g.UltiSnipsJumpBackwardTrigger = '<c-tab>'
 
+-- vimtex
+vim.g.vimtex_view_method = 'zathura'
+vim.g.tex_fast = "bMpr"
+
 -- Set latex previewer to zathhura
 vim.g.livepreview_previewer = 'zathura'
 
