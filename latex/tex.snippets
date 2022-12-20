@@ -1,13 +1,16 @@
 snippet template
-\documentclass{article}
+\documentclass{report}
 
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{gensymb}
 \usepackage{verbatim}
-\usepackage{algorithm}}
+\usepackage{algorithm}
 \usepackage{algpseudocode}
+
+\input{~/dev/latex/template/preamble.tex}
+\input{~/dev/latex/template/macros.tex}
 
 \title{$1}
 \author{$2}
@@ -20,15 +23,19 @@ snippet template
 \end{document}
 endsnippet
 
+snippet qs
+\qs{}{$1}
+endsnippet
+
+snippet indent
+\hspace{\parindent} $1
+endsnippet
+
 snippet new 
 \begin{$1}
 	$2
 \end{$1}
 
-endsnippet
-
-snippet indent
-\hspace{\parindent} $1
 endsnippet
 
 snippet sect
@@ -70,5 +77,21 @@ snippet alg
 $2
 \end{algorithmic}
 \end{algorithm}
+endsnippet	
+
+snippet while
+\while { $1 }
+$2
+\endwhile
+endsnippet
+
+snippet if
+\if { $1 }
+$2
+\endif
+endsnippet
+
+snippet state
+\state $1
 endsnippet
 
