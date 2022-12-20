@@ -1,14 +1,6 @@
 snippet template
 \documentclass{report}
 
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{mathtools}
-\usepackage{gensymb}
-\usepackage{verbatim}
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-
 \input{~/dev/latex/template/preamble.tex}
 \input{~/dev/latex/template/macros.tex}
 
@@ -71,27 +63,48 @@ $\displaystyle{$1}$
 endsnippet
 
 snippet alg
-\begin{algorithm}
-\caption{$1}
-\begin{algorithmic} [1]
-$2
-\end{algorithmic}
-\end{algorithm}
-endsnippet	
+\begin{algorithm}[H]
+	\caption{$1}
+	\KwIn{$2}
+	\KwOut{$3}
+	\SetAlgoLined
 
-snippet while
-\while { $1 }
-$2
-\endwhile
+	$4
+\end{algorithm}
+endsnippet
+
+snippet comment
+\tcc{$1}
 endsnippet
 
 snippet if
-\if { $1 }
-$2
-\endif
+\uIf{$ $1 $} {
+	$2
+}
 endsnippet
 
-snippet state
-\state $1
+snippet elif
+\ElseIf{$ $1 $}{
+	$2
+}
 endsnippet
+
+snippet else
+\Else{
+	$1
+}
+endsnippet
+
+snippet while
+\While{$ $1 $}{
+	$2
+}
+endsnippet
+
+snippet for
+\For{$ $1 $}{
+	$2
+}
+endsnippet
+
 
