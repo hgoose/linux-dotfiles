@@ -1,11 +1,14 @@
 snippet template
-\documentclass{article}
+\documentclass{report}
 
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{gensymb}
 \usepackage{verbatim}
+
+\input{~/dev/latex/template/preamble.tex}
+\input{~/dev/latex/template/macros.tex}
 
 \title{$1}
 \author{$2}
@@ -16,6 +19,14 @@ snippet template
 	\section{$3}
 
 \end{document}
+endsnippet
+
+snippet qs
+\qs{}{$1}
+endsnippet
+
+snippet indent
+\hspace{\parindent} $1
 endsnippet
 
 snippet new 
