@@ -6,6 +6,8 @@ snippet template
 \usepackage{mathtools}
 \usepackage{gensymb}
 \usepackage{verbatim}
+\usepackage{algorithm}}
+\usepackage{algpseudocode}
 
 \title{$1}
 \author{$2}
@@ -23,6 +25,10 @@ snippet new
 	$2
 \end{$1}
 
+endsnippet
+
+snippet indent
+\hspace{\parindent} $1
 endsnippet
 
 snippet sect
@@ -57,4 +63,12 @@ snippet ds
 $\displaystyle{$1}$
 endsnippet
 
+snippet alg
+\begin{algorithm}
+\caption{$1}
+\begin{algorithmic} [1]
+$2
+\end{algorithmic}
+\end{algorithm}
+endsnippet
 
