@@ -18,6 +18,7 @@ alias spush="sudo git add .; sudo git commit -m "commit"; git push"
 alias lx="cd ~/dev/latex"
 alias lxc="pdflatex -pdf"
 alias killpanel="killall xfce4-panel"
+alias hh="cd ~/.config/nvim/lua/core"
 
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish
