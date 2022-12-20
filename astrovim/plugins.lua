@@ -31,11 +31,11 @@ local astro_plugins = {
   -- snippets
   ['SirVer/ultisnips'] = {},
 
-  -- Vimtex
+  -- -- Vimtex
   ['lervag/vimtex'] = {},
-
-  -- Vim Latex Preview
-  ['xuhdev/vim-latex-live-preview'] = {},
+  --
+  -- -- Vim Latex Preview
+  -- ['xuhdev/vim-latex-live-preview'] = {},
 
   -- Vim instant Markdown
   ["instant-markdown/vim-instant-markdown"] = {},

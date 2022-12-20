@@ -18,6 +18,7 @@ end
 
 -- For insert mode
 map('n', 'h', '<down>')
+
 map('n', 't', '<up>')
 map('n', 'n', '<left>')
 map('n', 's', '<right>')
@@ -32,6 +33,11 @@ map('v', 's', '<right>')
 map("n", "T", ":m .-2<CR>==")
 map("n", "J", ":m .+1<CR>==")
 ------------------------------------
+
+maps.n["<leader>b"] = { "o<Esc>", desc = "newline below and remain in normal mode" }
+maps.n["<leader>m"] = { "O<Esc>", desc = "newline below and remain in normal mode" }
+
+-- Newline in normal mode
 
 -- SNIPPETS
 vim.g.UltiSnipsExpandTrigger = '<a-tab>'
