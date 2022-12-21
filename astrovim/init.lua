@@ -20,5 +20,18 @@ if vim.fn.has "nvim-0.8" ~= 1 or vim.version().prerelease then
   vim.schedule(function() astronvim.notify("Unsupported Neovim Version! Please check the requirements", "error") end)
 end
 
--- vim.cmd("colorscheme catppuccin")
 vim.cmd("colorscheme gruvbox")
+
+-- Available colorschemes
+-- catppuccin
+-- catppuccin-latte
+-- catppuccin-frappe
+-- catppuccin-mocha
+
+-- gruvbox
+-- gruvbox-baby
+
+-- ayu
+
+-- moonfly
+-- vim.cmd("colorscheme catppuccin")

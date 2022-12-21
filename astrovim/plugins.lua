@@ -19,6 +19,18 @@ local astro_plugins = {
     config = function() require "core.plugins" end,
   },
 
+  -- moonfly colors
+  ['bluz71/vim-moonfly-colors'] = {},
+
+  -- ayu theme
+  ['Shatur/neovim-ayu'] = {},
+
+  -- gruvbox baby
+  ['luisiacc/gruvbox-baby'] = {},
+
+  -- nyoom color way
+  ['nyoom-engineering/nyoom.nvim'] = {},
+
   -- gruvbox color way
   ['morhetz/gruvbox'] = {},
 
