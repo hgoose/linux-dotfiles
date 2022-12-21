@@ -1,7 +1,7 @@
 ### User defined aliases
 alias chrome="nohup /usr/bin/google-chrome-stable &"
-alias uu="ls"
-alias uuu="ls -a"
+alias uu="ls -l"
+alias u="ls -a"
 alias gpush="git add .; git commit -m "all"; git push"
 alias neo="neofetch --source ~/.config/neofetch/tux2.txt"
 alias dis="nohup discord &"
@@ -21,6 +21,7 @@ alias killpanel="killall xfce4-panel"
 alias hh="cd ~/.config/nvim/lua/core"
 alias tmp="cd ~/tmp"
 alias dev="cd ~/dev/"
+alias fishconfig="cd ~/.config/fish; n config.fish"
 
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish
