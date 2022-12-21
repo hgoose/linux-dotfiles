@@ -22,6 +22,7 @@ alias hh="cd ~/.config/nvim/lua/core"
 alias tmp="cd ~/tmp"
 alias dev="cd ~/dev/"
 alias fishconfig="cd ~/.config/fish; n config.fish"
+alias pn="cd ~/dev/latex/notes/python/"
 
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish
