@@ -23,6 +23,7 @@ alias tmp="cd ~/tmp"
 alias dev="cd ~/dev/"
 alias fishconfig="cd ~/.config/fish; n config.fish"
 alias pn="cd ~/dev/latex/notes/python/"
+alias rounds="~/backgrounds/1"
 
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish
