@@ -19,6 +19,12 @@ local astro_plugins = {
     config = function() require "core.plugins" end,
   },
 
+  -- Color scheme
+  ['AlessandroYorba/Sierra'] = {},
+
+  -- White color scheme
+  ['habamax/vim-polar'] = {},
+
   -- moonfly colors
   ['bluz71/vim-moonfly-colors'] = {},
 

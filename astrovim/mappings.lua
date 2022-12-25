@@ -34,11 +34,12 @@ map("n", "T", ":m .-2<CR>==")
 map("n", "J", ":m .+1<CR>==")
 ------------------------------------
 
+-- Newline in normal mode
 maps.n["<leader>b"] = { "o<Esc>", desc = "newline below and remain in normal mode" }
 maps.n["<leader>m"] = { "O<Esc>", desc = "newline below and remain in normal mode" }
 
--- Newline in normal mode
-
+-- VimtexCompile
+maps.n["<leader>9"] = { "<cmd>VimtexCompile<cr>", desc = "Commence continuos latex compile (and open viewer)" }
 -- SNIPPETS
 vim.g.UltiSnipsExpandTrigger = '<a-tab>'
 vim.g.UltiSnipsJumpForwardTrigger = '<a-tab>'
@@ -54,6 +55,8 @@ vim.g.livepreview_previewer = 'zathura'
 -- vim auto save
 vim.g.auto_save = 1 -- :AutoSaveToggle
 
+--colorscheme
+vim.g.sierra_Midnight = 1
 -- KEYMAPS STRAIGHT FROM ASTROVIM
 
 maps[""]["<Space>"] = "<Nop>"
