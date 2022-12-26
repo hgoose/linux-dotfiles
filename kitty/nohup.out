@@ -1,0 +1,40 @@
+[15992:15992:1119/171048.343460:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x1b8000337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[15992:15992:1119/171048.347457:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x1b8000337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[15992:15992:1119/171048.351857:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x1b8000337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[15992:15992:1119/171048.356032:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x1b8000337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+[7180:7180:1128/133416.896175:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x35c400337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[7180:7180:1128/133416.906230:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x35c400337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[7180:7180:1128/133416.911868:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x35c400337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[7180:7180:1128/133416.928865:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x35c400337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Fontconfig error: Cannot load default config file: No such file: (null)
+Fontconfig error: Cannot load default config file: No such file: (null)
+[7181:7188:1128/133704.072272:ERROR:ssl_client_socket_impl.cc(982)] handshake failed; returned -1, SSL error code 1, net_error -200
+[8432:8432:1128/133722.395123:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x32c00035bf00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[8432:8432:1128/133722.399720:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x32c00035bf00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[8432:8432:1128/133722.405147:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x32c00035bf00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[8432:8432:1128/133722.410986:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x32c00035bf00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Fontconfig error: Cannot load default config file: No such file: (null)
+Fontconfig error: Cannot load default config file: No such file: (null)
+Fontconfig error: Cannot load default config file: No such file: (null)
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Fontconfig error: Cannot load default config file: No such file: (null)
+Fontconfig error: Cannot load default config file: No such file: (null)
+[8380:8380:1128/135754.480777:ERROR:interface_endpoint_client.cc(690)] Message 0 rejected by interface blink.mojom.WidgetHost
+Fontconfig error: Cannot load default config file: No such file: (null)
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+[8432:8432:1128/160229.584124:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[8432:8432:1128/160229.584331:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Fontconfig error: Cannot load default config file: No such file: (null)
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Fontconfig error: Cannot load default config file: No such file: (null)
+[8432:8432:1128/170942.830906:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[8432:8432:1128/170942.831173:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
