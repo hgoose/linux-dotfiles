@@ -190,27 +190,63 @@ bindsym $mod+r mode "resize"
 
 # Bar appearance
 
+# bar {
+#     font pango:DejaVu Sans, Font Awesome 5 Free Solid 10
+#     status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#     i3bar_command i3bar -t
+#     position bottom 
+#     tray_output primary
+#     mode dock
+#     hidden_state show
+#     verbose yes
+#     colors {
+#         separator #969896
+#         background #1d1f21
+#         statusline #c5c8c6
+#         focused_workspace #81a2be #81a2be #1d1f21
+#         active_workspace #373b41 #373b41 #ffffff
+#         inactive_workspace #282a2e #282a2e #969896
+#         urgent_workspace #cc6666 #cc6666 #ffffff
+#     }
+# }
+#
+# client.focused #9300ff #9300ff #9300ff #9300ff
+# client.focused_inactive #373b41 #373b41 #969896 #282a2e
+# client.unfocused #282a2e #282a2e #969896 #282a2e
+# client.urgent #9300ff #9300ff #9300ff #9300ff
+
 bar {
-    font pango:DejaVu Sans, Font Awesome 5 Free Solid 10
-    status_command i3blocks -c ~/.config/i3/i3blocks.conf
-    i3bar_command i3bar -t
-    position bottom 
-    tray_output primary
-    mode dock
-    hidden_state show
-    verbose yes
+    position top
+    strip_workspace_numbers yes
+    #tray_output none
+    font pango:Economica, FontAwesome 10
+    separator_symbol "⋆"
+
+    status_command i3status --config ~/.config/i3/i3status.conf
+    # use patched i3status
+    #status_command ~/src/i3status/i3status --config ~/.i3/i3status.conf
+    #status_command i3bf
+    #status_command ~/.i3/i3-conky-initscript.sh
+
     colors {
         separator #969896
-        background #1d1f21
-        statusline #c5c8c6
+        background #000000
+        statusline #ffffff
+        #statusline #c5c8c6
         focused_workspace #81a2be #81a2be #1d1f21
         active_workspace #373b41 #373b41 #ffffff
         inactive_workspace #282a2e #282a2e #969896
         urgent_workspace #cc6666 #cc6666 #ffffff
     }
+#   statusbar colors       border      background   text
+    # colors {
+    #     background          $bg
+    #     statusline          $sl
+    #     separator           $tx
+    #     focused_workspace   $ia        $ia        $tx
+    #     active_workspace    $gn        $ac        $tx
+    #     inactive_workspace  $bg        $fg        $ia
+    #     urgent_workspace    $ac        $bg        $ac
+    # }
 }
 
-client.focused #9300ff #9300ff #9300ff #9300ff
-client.focused_inactive #373b41 #373b41 #969896 #282a2e
-client.unfocused #282a2e #282a2e #969896 #282a2e
-client.urgent #9300ff #9300ff #9300ff #9300ff

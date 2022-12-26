@@ -1,0 +1,64 @@
+[3776:3776:1121/192723.763412:ERROR:gl_utils.cc(319)] [.RendererMainThread-0xb5400337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[3776:3776:1121/192723.766972:ERROR:gl_utils.cc(319)] [.RendererMainThread-0xb5400337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[3776:3776:1121/192723.771215:ERROR:gl_utils.cc(319)] [.RendererMainThread-0xb5400337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[3776:3776:1121/192723.776384:ERROR:gl_utils.cc(319)] [.RendererMainThread-0xb5400337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+Opening in existing browser session.
+[8729:8729:1207/124744.886780:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x1e800337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[8729:8729:1207/124744.890408:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x1e800337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[8729:8729:1207/124744.902904:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x1e800337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[8729:8729:1207/124744.907248:ERROR:gl_utils.cc(319)] [.RendererMainThread-0x1e800337f00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+[8677:8677:1207/124745.045015:ERROR:interface_endpoint_client.cc(690)] Message 0 rejected by interface blink.mojom.WidgetHost
+[8677:8677:1207/124755.607267:ERROR:interface_endpoint_client.cc(690)] Message 1 rejected by interface blink.mojom.WidgetHost
+Fontconfig error: Cannot load default config file: No such file: (null)
+Fontconfig error: Cannot load default config file: No such file: (null)
+Fontconfig error: Cannot load default config file: No such file: (null)
+[8729:8729:1207/125546.822912:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[8729:8729:1207/125546.823286:ERROR:shared_image_manager.cc(189)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+Fontconfig error: Cannot load default config file: No such file: (null)
+[8677:8677:1207/135326.417361:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.420688:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.422032:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.428855:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.431312:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.436189:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.438987:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.450880:ERROR:network_service_instance_impl.cc(513)] Network service crashed, restarting service.
+[8677:8677:1207/135326.467536:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.469321:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.470782:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.472308:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.473436:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.476504:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.479239:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.481489:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.483602:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.485056:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.486424:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.487915:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.489303:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.492479:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.499014:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.508989:ERROR:zygote_communication_linux.cc(275)] Failed to send GetTerminationStatus message to zygote
+[8677:8677:1207/135326.551037:ERROR:gpu_process_host.cc(965)] GPU process launch failed: error_code=1002
+[8677:8677:1207/135326.561399:ERROR:gpu_process_host.cc(965)] GPU process launch failed: error_code=1002
+[8677:8677:1207/135326.562802:ERROR:gpu_process_host.cc(965)] GPU process launch failed: error_code=1002
+[8677:8677:1207/135326.563736:ERROR:gpu_process_host.cc(965)] GPU process launch failed: error_code=1002
+[8677:8677:1207/135326.564346:ERROR:gpu_process_host.cc(965)] GPU process launch failed: error_code=1002
+[8677:8677:1207/135326.564860:ERROR:gpu_process_host.cc(965)] GPU process launch failed: error_code=1002
+[8677:8677:1207/135326.565467:ERROR:gpu_process_host.cc(965)] GPU process launch failed: error_code=1002
+[8677:8677:1207/135326.566013:ERROR:gpu_process_host.cc(965)] GPU process launch failed: error_code=1002
+[8677:8677:1207/135326.566607:ERROR:gpu_process_host.cc(965)] GPU process launch failed: error_code=1002
+[8677:8677:1207/135326.567305:ERROR:gpu_process_host.cc(965)] GPU process launch failed: error_code=1002
+[8677:8677:1207/135326.567847:ERROR:gpu_process_host.cc(965)] GPU process launch failed: error_code=1002
+[8677:8677:1207/135326.568389:ERROR:gpu_process_host.cc(965)] GPU process launch failed: error_code=1002
+[8677:8677:1207/135326.568396:FATAL:gpu_data_manager_impl_private.cc(440)] GPU process isn't usable. Goodbye.
+[1207/135326.574600:ERROR:elf_dynamic_array_reader.h(64)] tag not found
+[1207/135326.575077:ERROR:elf_dynamic_array_reader.h(64)] tag not found
+[1207/135326.575443:ERROR:elf_dynamic_array_reader.h(64)] tag not found
+[1207/135326.579881:ERROR:directory_reader_posix.cc(42)] opendir /home/catsoup/.config/google-chrome/Crash Reports/attachments/e19d862b-4af5-4586-8b95-c22db3c6ea6e: No such file or directory (2)
+[1207/135326.580517:WARNING:minidump_to_upload_parameters.cc(32)] duplicate key guid, discarding value 9ec60ae96cd040d696f568bda162e20e
+[14578:14583:1207/135327.865689:ERROR:broker_posix.cc(40)] Recvmsg error: Connection reset by peer (104)
