@@ -19,6 +19,18 @@ local astro_plugins = {
     config = function() require "core.plugins" end,
   },
 
+  -- My themes
+  --  ['https://github.com/hgoose/herobrine'] = {},
+
+  -- Tokyo
+  ['folke/tokyonight.nvim'] = {},
+
+  -- dues
+  ['ajmwagar/vim-deus'] = {},
+
+  -- abstract colorscheme
+  ['jdsimcoe/abstract.vim'] = {},
+
   -- Color scheme
   ['AlessandroYorba/Sierra'] = {},
 
