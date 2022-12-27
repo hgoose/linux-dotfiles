@@ -16,6 +16,8 @@ exec --no-startup-id picom -CGb
 # Start nitrogen (wallpaper)
 exec --no-startup-id nitrogen --restore
 
+exec --no-startup-id killpanel
+
 set $mod Mod4
 
 #---- WORKSPACE MANAGER ----#

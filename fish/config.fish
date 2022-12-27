@@ -24,7 +24,7 @@ alias dev="cd ~/dev/"
 alias fishc="cd ~/.config/fish; n config.fish"
 alias kittyc="cd ~/.config/kitty; n kitty.conf"
 alias pn="cd ~/dev/latex/notes/python/"
-
+alias picom="nohup picom &"
 
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish
