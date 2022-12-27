@@ -16,7 +16,12 @@ exec --no-startup-id picom -CGb
 # Start nitrogen (wallpaper)
 exec --no-startup-id nitrogen --restore
 
-exec --no-startup-id killpanel
+# Kill xfce4-panel on startup
+exec --no-startup-id killall xfce4-panel 
+
+# Launch a terminal session on startup
+exec --no-startup-id kitty 
+
 
 set $mod Mod4
 
