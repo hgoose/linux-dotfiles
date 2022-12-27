@@ -22,6 +22,9 @@ exec --no-startup-id killall xfce4-panel
 # Launch a terminal session on startup
 exec --no-startup-id kitty 
 
+# Launch tint2 at startup
+exec --no-startup-id tint2 
+
 
 set $mod Mod4
 
@@ -155,13 +158,13 @@ set_from_resource $fg i3wm.color0 #282a2e
 set_from_resource $bg i3wm.color6 #282a2e
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #8B00FF #3c464d #ffffff #8B00FF   #8B00FF
-client.focused_inactive #8B00FF #5f676a #ffffff #484e50   #8B00FF
-client.unfocused        #8B00FF #222222 #888888 #292d2e   #8B00FF
-client.urgent           #8B00FF #900000 #ffffff #900000   #900000
-client.placeholder      #8B00FF #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          #00A8E7 #3c464d #ffffff #00A8E7   #00A8E7
+client.focused_inactive #00A8E7 #5f676a #ffffff #484e50   #00A8E7
+client.unfocused        #00A8E7 #222222 #888888 #292d2e   #00A8E7
+client.urgent           #00A8E7 #900000 #ffffff #900000   #900000
+client.placeholder      #00A8E7 #0c0c0c #ffffff #000000   #0c0c0c
 
-client.background       #8B00FF
+client.background       #00A8E7
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
