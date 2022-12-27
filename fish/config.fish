@@ -25,6 +25,7 @@ alias fishc="cd ~/.config/fish; n config.fish"
 alias kittyc="cd ~/.config/kitty; n kitty.conf"
 alias pn="cd ~/dev/latex/notes/python/"
 alias picom="nohup picom &"
+alias c="clear && ~/shell-color-scripts/colorscripts/pacman"
 
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish
@@ -211,7 +212,7 @@ function less
 end
 
 function cd
-    builtin cd $argv; and ls
+    builtin cd $argv; and ls -a
 end
 
 ### ALIASES ###
