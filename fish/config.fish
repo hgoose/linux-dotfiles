@@ -26,6 +26,7 @@ alias kittyc="cd ~/.config/kitty; n kitty.conf"
 alias pn="cd ~/dev/latex/notes/python/"
 alias picom="nohup picom &"
 alias c="clear && ~/shell-color-scripts/colorscripts/pacman"
+alias x="sudo chmod +x"
 
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish
