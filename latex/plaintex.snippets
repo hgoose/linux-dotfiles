@@ -125,7 +125,7 @@ snippet larrow
 $\leftarrow$
 endsnippet
 
-snippet table
+snippet tabletemplate
 
 \begin{tabular}{||c c c c||} 
 	\hline
@@ -141,6 +141,20 @@ snippet table
 	\hline
 	5 & 88 & 788 & 6344 \\\ [1ex] 
 	\hline
+\end{tabular}
+
+endsnippet
+
+snippet table
+\noindent
+\begin{tabular}{||c c ||} 
+    \hline
+    Numeric Types & Example \\\ [0.5ex] 
+    \hline\hline
+    int & 6 \\\ 
+    \hline
+    float & 7.34 \\\
+    \hline\hline
 \end{tabular}
 
 endsnippet
