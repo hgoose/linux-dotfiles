@@ -1,4 +1,5 @@
-### User defined aliases
+# USER DEFINED ALIASES
+
 alias chrome="nohup /usr/bin/google-chrome-stable &"
 alias uu="ls -l"
 alias u="ls -a"
@@ -28,6 +29,11 @@ alias picom="nohup picom &"
 alias c="clear && ~/shell-color-scripts/colorscripts/pacman"
 alias x="sudo chmod +x"
 alias dot="cd ~/.config"
+
+# Function to make directory and cd into it
+function mcd
+  eval {mkdir, cd}\ $argv\; 
+end
 
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish

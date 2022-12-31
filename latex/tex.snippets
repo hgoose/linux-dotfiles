@@ -43,7 +43,7 @@ snippet bold
 endsnippet
 
 snippet italic
-\texit{$1}
+\textit{$1}
 endsnippet
 
 snippet underline
@@ -149,7 +149,7 @@ snippet table
 \noindent
 \begin{tabular}{||c c ||} 
     \hline
-    Numeric Types & Example \\\ [0.5ex] 
+    Numeric Types \vline & Example \\\ [0.5ex] 
     \hline\hline
     int & 6 \\\ 
     \hline
@@ -161,4 +161,34 @@ endsnippet
 
 snippet line
 \line(1,0){470}
+endsnippet
+
+snippet pb
+\pagebreak
+endsnippet
+
+snippet fun
+\SetKwFunction{FMain}{$1}
+\SetKwProg{Fn}{Function}{:}{}
+\Fn{\FMain{$ $2 $}}{
+
+}
+\textbf{End Function}
+endsnippet
+
+snippet funtemplate
+\SetKwFunction{FMain}{NegationDetection}
+\SetKwProg{Fn}{Function}{:}{}
+\Fn{\FMain{$F$}}{
+    $ S^{*}  \longleftarrow F $;    
+
+    \ForEach{$ F \in NPs $}
+    {\eIf{$ f_i = Negated $}
+        {$ N \longleftarrow f_i;$}
+        {$ S \longleftarrow f_i;$}
+
+    }
+    \textbf{return} $ S^{*}; $ 
+}
+\textbf{End Function}snippet funtemplate
 endsnippet

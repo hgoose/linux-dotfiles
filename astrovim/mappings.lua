@@ -40,6 +40,10 @@ maps.n["<leader>m"] = { "O<Esc>", desc = "newline below and remain in normal mod
 
 -- VimtexCompile
 maps.n["<leader>9"] = { "<cmd>VimtexCompile<cr>", desc = "Commence continuos latex compile (and open viewer)" }
+
+-- open snippets file
+maps.n["<leader>8"] = { "<cmd>UltiSnipsEdit<cr>", desc = "Open UltiSnipsEdit file" }
+
 -- SNIPPETS
 vim.g.UltiSnipsExpandTrigger = '<a-tab>'
 vim.g.UltiSnipsJumpForwardTrigger = '<a-tab>'
