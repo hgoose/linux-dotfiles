@@ -7,7 +7,7 @@
 * [Astrovim](https://github.com/hgoose/linux-dotfiles/tree/master/astrovim)
 * [Nvim](https://github.com/hgoose/linux-dotfiles/tree/master/nvim)
 * [Fish](https://github.com/hgoose/linux-dotfiles/tree/master/fish)
-* [i3](https://github.com/hgoose/linux-dotfiles/tree/master/i3)
+* [i3 <3](https://github.com/hgoose/linux-dotfiles/tree/master/i3)
 * [Kitty](https://github.com/hgoose/linux-dotfiles/tree/master/kitty)
 * [Latex (Snippets, Preamble)](https://github.com/hgoose/linux-dotfiles/tree/master/latex)
 * [Neofetch](https://github.com/hgoose/linux-dotfiles/tree/master/neofetch)
