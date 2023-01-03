@@ -38,6 +38,9 @@ map("n", "J", ":m .+1<CR>==")
 maps.n["<leader>b"] = { "o<Esc>", desc = "newline below and remain in normal mode" }
 maps.n["<leader>m"] = { "O<Esc>", desc = "newline below and remain in normal mode" }
 
+-- set colorscheme to mine
+maps.n["<leader>7"] = { "<cmd>colorscheme herobrine<cr>", desc = "Commence continuos latex compile (and open viewer)" }
+
 -- VimtexCompile
 maps.n["<leader>9"] = { "<cmd>VimtexCompile<cr>", desc = "Commence continuos latex compile (and open viewer)" }
 

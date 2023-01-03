@@ -20,7 +20,11 @@ if vim.fn.has "nvim-0.8" ~= 1 or vim.version().prerelease then
   vim.schedule(function() astronvim.notify("Unsupported Neovim Version! Please check the requirements", "error") end)
 end
 
-vim.cmd("colorscheme tokyonight-night")
+vim.cmd("syntax on")
+vim.cmd("syntax enable")
+vim.cmd("colorscheme herobrine")
+
+-- vim.cmd("colorscheme tokyonight-night")
 
 -- Available colorschemes
 -- catppuccin

@@ -16,11 +16,12 @@ local astro_plugins = {
         "PackerLoad",
       })
     end,
+
     config = function() require "core.plugins" end,
   },
 
-  -- My themes
-  --  ['https://github.com/hgoose/herobrine'] = {},
+  -- My colorscheme
+  ['hgoose/Herobrine'] = {},
 
   -- Tokyo
   ['folke/tokyonight.nvim'] = {},
