@@ -29,6 +29,7 @@ alias picom="nohup picom &"
 alias c="clear && ~/shell-color-scripts/colorscripts/pacman"
 alias x="sudo chmod +x"
 alias dot="cd ~/.config"
+alias nviminit="cd ~/.config/nvim && nvim init.lua"
 
 # Function to make directory and cd into it
 function mcd
