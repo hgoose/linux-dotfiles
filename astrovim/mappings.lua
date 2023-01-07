@@ -14,8 +14,6 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-vim.cmd("colorscheme goose")
-
 -- UP DOWN LEFT RIGHT
 
 -- For insert mode
