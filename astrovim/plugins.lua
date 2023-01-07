@@ -18,10 +18,10 @@ local astro_plugins = {
     end,
 
     config = function() require "core.plugins" end,
-  },
 
+  },
   -- My colorscheme
-  ['hgoose/Herobrine'] = {},
+  ['hgoose/goose.vim'] = {},
 
   -- Tokyo
   ['folke/tokyonight.nvim'] = {},
