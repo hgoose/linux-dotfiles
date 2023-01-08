@@ -21,20 +21,3 @@ if vim.fn.has "nvim-0.8" ~= 1 or vim.version().prerelease then
 end
 
 vim.cmd("colorscheme goose_light")
--- vim.cmd("colorscheme goose")
-
--- vim.cmd("colorscheme tokyonight-night")
-
--- Available colorschemes
--- catppuccin
--- catppuccin-latte
--- catppuccin-frappe
--- catppuccin-mocha
-
--- gruvbox
--- gruvbox-baby
-
--- ayu
-
--- moonfly
--- vim.cmd("colorscheme catppuccin")
