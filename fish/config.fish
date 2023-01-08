@@ -1,6 +1,6 @@
 # USER DEFINED ALIASES
 
-alias chrome="nohup /usr/bin/google-chrome-stable &"
+alias chrome="nohup /usr/bin/google-chrome-stable & && pidof chrome | disown"
 alias uu="ls -l"
 alias u="ls -a"
 alias gpush="git add .; git commit -m "all"; git push"
