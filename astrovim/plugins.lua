@@ -20,6 +20,9 @@ local astro_plugins = {
     config = function() require "core.plugins" end,
 
   },
+  -- temple.vim
+  ['hgoose/temple.vim'] = {},
+
   -- My colorscheme
   ['hgoose/goose.vim'] = {},
 
