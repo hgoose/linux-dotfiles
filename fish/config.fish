@@ -30,6 +30,7 @@ alias c="clear && ~/shell-color-scripts/colorscripts/pacman"
 alias x="sudo chmod +x"
 alias dot="cd ~/.config"
 alias nviminit="cd ~/.config/nvim && nvim init.lua"
+alias kazam="nohup kazam & && pidof kazam | kill"
 
 # Function to make directory and cd into it
 function mcd
