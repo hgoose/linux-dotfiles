@@ -1,5 +1,6 @@
 # USER DEFINED ALIASES
 
+alias wifi-connect="nmtui"
 alias upd="sudo pacman -Syyu"
 alias chrome="nohup /usr/bin/google-chrome-stable & && pidof chrome | disown"
 alias uu="ls -l"
@@ -26,12 +27,12 @@ alias dev="cd ~/dev/"
 alias fishc="n ~/.config/fish/config.fish"
 alias kittyc="n ~/.config/kitty/kitty.conf"
 alias pn="cd ~/dev/latex/notes/python/"
-alias picom="nohup picom &"
+alias picom="nohup picom & && pidof picom | disown"
 alias c="clear && ~/shell-color-scripts/colorscripts/pacman"
 alias x="sudo chmod +x"
 alias dot="cd ~/.config"
 alias nviminit="cd ~/.config/nvim && nvim init.lua"
-alias kazam="nohup kazam & && pidof kazam | kill"
+alias kazam="nohup kazam & && pidof kazam | disown"
 
 # Function to make directory and cd into it
 function mcd
