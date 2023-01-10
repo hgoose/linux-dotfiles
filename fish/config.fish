@@ -1,5 +1,6 @@
 # USER DEFINED ALIASES
 
+alias upd="sudo pacman -Syyu"
 alias chrome="nohup /usr/bin/google-chrome-stable & && pidof chrome | disown"
 alias uu="ls -l"
 alias u="ls -a"
