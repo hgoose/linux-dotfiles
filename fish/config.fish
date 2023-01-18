@@ -29,10 +29,12 @@ alias kittyc="n ~/.config/kitty/kitty.conf"
 alias pn="cd ~/dev/latex/notes/python/"
 alias picom="nohup picom & && pidof picom | disown"
 alias c="clear && ~/shell-color-scripts/colorscripts/pacman"
+alias C="clear && ~/shell-color-scripts/colorscripts/pacman"
 alias x="sudo chmod +x"
 alias dot="cd ~/.config"
 alias nviminit="cd ~/.config/nvim && nvim init.lua"
 alias kazam="nohup kazam & && pidof kazam | disown"
+alias ss="cd ~/springsemester/"
 
 # Function to make directory and cd into it
 function mcd
