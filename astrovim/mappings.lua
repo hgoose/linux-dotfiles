@@ -14,6 +14,9 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+-- Better copy
+map('n', ',p', '"0p')
+map('n', ',P', '"0P')
 -- UP DOWN LEFT RIGHT
 
 -- For insert mode
