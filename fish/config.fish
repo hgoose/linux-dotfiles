@@ -6,7 +6,7 @@ alias chrome="nohup /usr/bin/google-chrome-stable & && pidof chrome | disown"
 alias uu="ls -l"
 alias u="ls -a"
 alias gpush="git add .; git commit -m "all"; git push"
-alias neo="neofetch" 
+alias neo="neofetch --source ~/.config/neofetch/logo" 
 alias discord="nohup discord & && pidof Discord | disown "
 alias tm="tmux new"
 alias nt="nohup nautilus . &"
@@ -518,7 +518,7 @@ end
 alias undopush "git push -f origin HEAD^:master"
 
 # reporting tools - install when not installed
-neofetch
+neofetch --source ~/.config/neofetch/logo
 #screenfetch
 #alsi
 #paleofetch
