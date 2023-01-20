@@ -4,15 +4,48 @@ snippet template
 \input{~/dev/latex/template/preamble.tex}
 \input{~/dev/latex/template/macros.tex}
 
-\title{\huge{$1}}
-\author{\huge{$2}}
-\date{\huge{\today}}
+\title{\Huge{$1}}
+\author{\huge{Nathan Warner}}
+\date{\huge{$2}}
 
 \begin{document}
 	\maketitle
 	\section{\Large{$3}}
 
 \end{document}
+endsnippet
+
+snippet title
+\begin{titlepage}
+   \begin{center}
+       \vspace*{1cm}
+
+       \textbf{Thesis Title}
+
+       \vspace{0.5cm}
+        Thesis Subtitle
+            
+       \vspace{1.5cm}
+
+       \textbf{Author Name}
+
+       \vfill
+            
+       A thesis presented for the degree of\\
+       Doctor of Philosophy
+            
+       \vspace{0.8cm}
+     
+       \includegraphics[width=0.4\textwidth]{university}
+            
+       Department Name\\
+       University Name\\
+       Country\\
+       Date
+            
+   \end{center}
+\end{titlepage}
+
 endsnippet
 
 snippet qs
@@ -31,7 +64,7 @@ snippet new
 endsnippet
 
 snippet sect
-\section{\Large{$1}i}
+\section{\Large{$1}}
 endsnippet
 
 snippet subsect
@@ -78,13 +111,13 @@ snippet comment
 endsnippet
 
 snippet if
-\uIf{$ $1 $} {
+\uIf{ $1 } {
 	$2
 }
 endsnippet
 
 snippet elif
-\ElseIf{$ $1 $}{
+\ElseIf{ $1 }{
 	$2
 }
 endsnippet
@@ -96,33 +129,45 @@ snippet else
 endsnippet
 
 snippet while
-\While{$ $1 $}{
+\While{ $1 }{
 	$2
 }
 endsnippet
 
 snippet for
-\For{$ $1 $}{
+\For{ $1 }{
 	$2
 }
 endsnippet
 
 snippet center
-\begin{align*}
+\begin{center}
 	$1
-.\end{align*}
+\end{center}
 endsnippet
 
 snippet break
 \bigbreak \noindent $1
 endsnippet
 
-snippet rarrow
+snippet nra
+\rightarrow
+endsnippet
+
+snippet ra
 $\rightarrow$
 endsnippet
 
-snippet larrow
+snippet la
 $\leftarrow$
+endsnippet
+
+snippet lra
+$\longrightarrow$
+endsnippet
+
+snippet lla
+$\longleftarrow$
 endsnippet
 
 snippet tabletemplate
@@ -191,4 +236,70 @@ snippet funtemplate
     \textbf{return} $ S^{*}; $ 
 }
 \textbf{End Function}snippet funtemplate
+endsnippet
+
+snippet nt
+\nt{$1}
+endsnippet
+
+snippet link
+\href{$1}{$2}
+endsnippet
+
+snippet dfn
+\dfn{$1}{$2}
+endsnippet
+
+snippet ex
+\ex{$1}{$2}
+endsnippet
+
+snippet mm
+\[
+	.
+\]
+endsnippet
+
+snippet ali
+\begin{align*}
+	$1
+.\end{align*}
+endsnippet
+
+snippet frac
+\frac{$1}{$2}
+endsnippet
+
+snippet gp
+\graphicspath{{$1}}
+endsnippet
+
+snippet im
+\includegraphics{$1}
+endsnippet
+
+snippet pf
+\pf{$1}{
+	$2
+}
+endsnippet
+
+snippet lim
+$\lim\limits_{$1 \to $2}{$3}$
+endsnippet
+
+snippet psf
+$y-y_1 = m\left(x-x_1\right)$
+endsnippet
+
+snippet paren
+\left($1\right)
+endsnippet
+
+snippet mslash
+\diagdown
+endsnippet
+
+snippet bar
+\overline{$1}
 endsnippet
