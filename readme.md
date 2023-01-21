@@ -23,7 +23,7 @@
 **move to $HOME/.config/**
 
 ### Preview
-![Preview](https://i.imgur.com/SQqijX4.png)
+![Preview](https://i.imgur.com/vHEbyhp.png)
 
 ### Background 
 ![Preview](https://i.imgur.com/4Tb2dX1.jpg)
