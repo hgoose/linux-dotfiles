@@ -1,5 +1,6 @@
 # USER DEFINED ALIASES
 
+alias sublime="~/sublime_text_3/sublime_text"
 alias wifi-connect="nmtui"
 alias upd="sudo pacman -Syyu"
 alias chrome="nohup /usr/bin/google-chrome-stable & && pidof chrome | disown"
@@ -40,6 +41,23 @@ alias ss="cd ~/springsemester/"
 function mcd
   eval {mkdir, cd}\ $argv\; 
 end
+
+# Function to bring up wifi menu
+function wifi-menu
+  nmcli dev wifi rescan;
+  nmtui
+end
+
+# Function to push dotfiles
+function push-dotfiles
+  sudo git -C ~/linux-dotfiles add .;
+  sudo git -C ~/linux-dotfiles commit -m "changes";
+  git -C ~/linux-dotfiles push
+end
+
+
+
+
 
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish
