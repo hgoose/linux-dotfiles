@@ -41,6 +41,8 @@ alias nviminit="nvim ~/.config/nvim/init.lua"
 alias kazam="nohup kazam & && pidof kazam | disown"
 alias pd="push-dotfiles"
 alias ss="cd ~/springsemester/"
+alias bluetooth="nvim /etc/bluetooth/main.conf"
+
 
 # Function to make directory and cd into it
 function mcd
