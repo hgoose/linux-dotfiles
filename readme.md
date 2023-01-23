@@ -25,6 +25,7 @@
 ### Preview
 ![Preview](https://i.imgur.com/vHEbyhp.png)
 
-### Background 
+### Backgrounds 
 ![Preview](https://i.imgur.com/4Tb2dX1.jpg)
 
+![Preview](https://i.imgur.com/ghDkqvK.jpg)
