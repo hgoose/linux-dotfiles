@@ -150,7 +150,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # previous | for_window [class="^.*"] border pixel 1
 for_window [class="^.*"] border pixel 2
 # previous | gaps inner 4
-gaps inner 15
+gaps inner 17
 gaps outer 0
 
 
