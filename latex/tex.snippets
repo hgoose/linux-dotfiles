@@ -266,6 +266,14 @@ snippet ali
 .\end{align*}
 endsnippet
 
+snippet lali
+\begin{large}
+	\begin{align*}
+		$1
+	.\end{align*}
+\end{large}
+endsnippet
+
 snippet frac
 \frac{$1}{$2}
 endsnippet
@@ -275,17 +283,19 @@ snippet gp
 endsnippet
 
 snippet im
-\includegraphics{$1}
+\includegraphics[scale=$1]{ $2 }
 endsnippet
 
 snippet pf
-\pf{$1}{
-	$2
-}
+\pf{$1}{$2}
 endsnippet
 
 snippet lim
 $\lim\limits_{$1 \to $2}{$3}$
+endsnippet
+
+snippet li
+\lim\limits_{$1 \to $2}{$3}
 endsnippet
 
 snippet psf
@@ -300,6 +310,28 @@ snippet mslash
 \diagdown
 endsnippet
 
-snippet bar
+snippet bar 
 \overline{$1}
+endsnippet
+
+snippet nd
+\noindent
+endsnippet
+
+snippet inf
+$\infty$
+endsnippet
+
+snippet in
+$\infty$
+endsnippet
+
+snippet pw
+   \begin{equation}
+    $1=
+        \begin{cases}
+            $2 & \text{if } $3 \\\
+            $4 & \text{if } $5 
+        \end{cases}
+    \end{equation}
 endsnippet
