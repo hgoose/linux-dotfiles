@@ -10,8 +10,10 @@ snippet template
 
 \begin{document}
 	\maketitle
-	\section{\Large{$3}}
-
+	\begin{Large}
+		\noindent \textbf{$3}
+	\end{Large}
+	$4
 \end{document}
 endsnippet
 
@@ -150,6 +152,10 @@ snippet break
 \bigbreak \noindent $1
 endsnippet
 
+snippet br
+\bigbreak \noindent $1
+endsnippet
+
 snippet nra
 \rightarrow
 endsnippet
@@ -283,7 +289,9 @@ snippet gp
 endsnippet
 
 snippet im
-\includegraphics[scale=$1]{ $2 }
+\begin{center}
+	\includegraphics[scale=$1]{ $2 }
+\end{center}
 endsnippet
 
 snippet pf
@@ -323,7 +331,7 @@ $\infty$
 endsnippet
 
 snippet in
-$\infty$
+\infty
 endsnippet
 
 snippet pw
@@ -334,4 +342,56 @@ snippet pw
             $4 & \text{if } $5 
         \end{cases}
     \end{equation}
+endsnippet
+
+snippet item
+\begin{itemize}
+	$1
+\end{itemize}
+endsnippet
+
+snippet enum
+\begin{enumerate}
+	$1
+\end{enumerate}
+endsnippet
+
+snippet Large
+\begin{Large}
+	$1
+\end{Large}
+endsnippet
+
+snippet large
+\begin{large}
+	$1
+\end{large}
+endsnippet
+
+snippet boldit
+\textbf{\textit{$1}}
+endsnippet
+
+snippet sq
+$\sqrt{$1}$
+endsnippet
+
+snippet msq
+\sqrt{$1}$2
+endsnippet
+
+snippet allreal
+$\mathbb{R}$
+endsnippet
+
+snippet mallreal
+\mathbb{R}
+endsnippet
+
+snippet el
+$\in $1$
+endsnippet
+
+snippet mel
+\in $1
 endsnippet
