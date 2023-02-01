@@ -1,7 +1,7 @@
 # USER DEFINED ALIASES
 
+alias wscan="nmcli dev wifi rescan; nmtui"
 alias sublime="~/sublime_text_3/sublime_text"
-alias wifi-connect="nmtui"
 alias upd="sudo pacman -Syyu"
 alias chrome="nohup /usr/bin/google-chrome-stable & && pidof chrome | disown"
 alias uu="ls -l"
@@ -43,6 +43,10 @@ alias pd="push-dotfiles"
 alias ss="cd ~/springsemester/"
 alias bluetooth="nvim /etc/bluetooth/main.conf"
 
+#function to move from $HOME/Downloads
+function mvdn
+  sudo mv ~/Downloads/$argv $argv
+end
 
 # Function to make directory and cd into it
 function mcd
@@ -51,7 +55,7 @@ end
 
 # Function to bring up wifi menu
 function wifi-menu
-  nmcli dev wifi rescan;
+  nmcli dev wifi rescan
   nmtui
 end
 
