@@ -1,6 +1,6 @@
 ~/.config/zathura/zathurarc
 
 set recolor   
-set recolor-lightcolor \#222222
+set recolor-lightcolor \#25282B
 set recolor-keephue
-set default-bg \#222230
+set default-bg \#25282B

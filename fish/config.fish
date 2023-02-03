@@ -1,6 +1,10 @@
 # USER DEFINED ALIASES
 
-alias wscan="nmcli dev wifi rescan; nmtui"
+alias dnotes="cd ~/springsemester/dmed/notes"
+alias mnotes="cd ~/springsemester/calc/notes/lectures"
+alias dhw="cd ~/springsemester/dmed/hw"
+alias mhw="cd ~/springsemester/calc/hw"
+alias wscan="nmcli dev wifi rescan && nmtui"
 alias sublime="~/sublime_text_3/sublime_text"
 alias upd="sudo pacman -Syyu"
 alias chrome="nohup /usr/bin/google-chrome-stable & && pidof chrome | disown"

@@ -193,7 +193,7 @@ colors:
   # Default colors
   primary:
    background: '#1a1b26'
-   foreground: '#F9F9F9'
+   foreground: '#ff0000'
 
     # Bright and dim foreground colors
     #
@@ -220,9 +220,9 @@ colors:
   #
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  #vi_mode_cursor:
-  #  text: CellBackground
-  #  cursor: CellForeground
+  vi_mode_cursor:
+    # text: CellBackground
+    cursor: '#000000'
 
   # Search colors
   #
@@ -232,9 +232,9 @@ colors:
     # affected cell, or hexadecimal colors like #ff00ff.
     #matches:
     #  foreground: '#000000'
-    #  background: '#ffffff'
+    #  background: '#000000'
     #focused_match:
-    #  foreground: '#ffffff'
+    #  foreground: '#000000'
     #  background: '#000000'
 
     #bar:
