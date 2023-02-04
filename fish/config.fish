@@ -1,5 +1,4 @@
 # USER DEFINED ALIASES
-
 alias dnotes="cd ~/springsemester/dmed/notes"
 alias mnotes="cd ~/springsemester/calc/notes/lectures"
 alias dhw="cd ~/springsemester/dmed/hw"
@@ -12,9 +11,9 @@ alias uu="ls -l"
 alias u="ls -a"
 alias gpush="git add .; git commit -m "all"; git push"
 alias neo="neofetch --source ~/.config/neofetch/logo" 
-alias discord="nohup discord & && pidof Discord | disown "
+# alias discord="nohup discord & && pidof Discord | disown "
 alias tm="tmux new"
-alias nt="nohup nautilus . &"
+alias nt="nohup nautilus . >/dev/null 2>&1 &"
 alias spy="cd ~/dev/Python/hw"
 alias file="xdg-open ."
 alias clock="tty-clock -t -c -C 5"
@@ -57,12 +56,6 @@ function mcd
   eval {mkdir, cd}\ $argv\; 
 end
 
-# Function to bring up wifi menu
-function wifi-menu
-  nmcli dev wifi rescan
-  nmtui
-end
-
 # Function to push dotfiles
 function push-dotfiles
   sudo git -C ~/linux-dotfiles add .;
@@ -70,8 +63,9 @@ function push-dotfiles
   git -C ~/linux-dotfiles push
 end
 
-
-
+function nhup
+  nohup $argv > /dev/null 2>&1&
+end
 
 
 # https://fishshell.com/docs/current/index.html
