@@ -13,7 +13,7 @@ alias gpush="git add .; git commit -m "all"; git push"
 alias neo="neofetch --source ~/.config/neofetch/logo" 
 # alias discord="nohup discord & && pidof Discord | disown "
 alias tm="tmux new"
-alias nt="nohup nautilus . >/dev/null 2>&1 &"
+# alias nt="nohup nautilus >/dev/null 2>&1 &"
 alias spy="cd ~/dev/Python/hw"
 alias file="xdg-open ."
 alias clock="tty-clock -t -c -C 5"
@@ -65,6 +65,10 @@ end
 
 function nhup
   nohup $argv > /dev/null 2>&1&
+end
+
+function nt
+  nohup nautilus . >/dev/null 2>&1 &
 end
 
 
