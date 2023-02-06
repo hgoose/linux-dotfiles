@@ -8,6 +8,27 @@ snippet template
 \author{\huge{Nathan Warner}}
 \date{\huge{$2}}
 
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
 \begin{document}
 	\maketitle
 	\begin{Large}
@@ -156,6 +177,14 @@ snippet br
 \bigbreak \noindent $1
 endsnippet
 
+snippet 2br
+\bigbreak \noindent \bigbreak \noindent $1
+endsnippet
+
+snippet 3br
+\bigbreak \noindent \bigbreak \noindent \bigbreak \noindent $1
+endsnippet
+
 snippet nra
 \rightarrow
 endsnippet
@@ -211,7 +240,7 @@ snippet table
 endsnippet
 
 snippet line
-\line(1,0){470}
+\line(1,0){490}
 endsnippet
 
 snippet pb
@@ -358,13 +387,13 @@ endsnippet
 
 snippet Large
 \begin{Large}
-	$1
+	\textbf{$1}
 \end{Large}
 endsnippet
 
 snippet large
 \begin{large}
-	$1
+	\textbf{$1}
 \end{large}
 endsnippet
 
@@ -394,4 +423,70 @@ endsnippet
 
 snippet mel
 \in $1
+endsnippet
+
+snippet box
+\begin{mdframed}
+	$1
+\end{mdframed}
+endsnippet
+
+snippet ther
+\begin{mdframed}
+	\textbf{\underline{Theorem:} $1}		
+\end{mdframed}
+endsnippet
+
+snippet border
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+endsnippet
+
+snippet mathsection
+\pagebreak \bigbreak \noindent
+\begin{Large}
+    \begin{mdframed}
+        \begin{center}
+            \textbf{$1}
+        \end{center}
+    \end{mdframed}
+\end{Large}
+\begin{Large}
+    \begin{center}
+        \textbf{$2}
+    \end{center}
+\end{Large}
+\line(1,0){490}
+
+\bigbreak \noindent \bigbreak \noindent \bigbreak \noindent 
+$3
+endsnippet
+
+snippet mathsubsect
+\bigbreak \noindent
+\begin{mdframed}
+\begin{large}
+    \begin{center}
+        \textbf{Finding the derivative using the limit definition:}
+    \end{center}
+\end{large}
+\end{mdframed}
 endsnippet

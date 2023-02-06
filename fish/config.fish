@@ -1,4 +1,5 @@
 # USER DEFINED ALIASES
+alias mch2="cd ~/springsemester/calc/notes/lectures/chapter2"
 alias dnotes="cd ~/springsemester/dmed/notes"
 alias mnotes="cd ~/springsemester/calc/notes/lectures"
 alias dhw="cd ~/springsemester/dmed/hw"
