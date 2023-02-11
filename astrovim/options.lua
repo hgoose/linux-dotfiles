@@ -26,7 +26,7 @@ astronvim.vim_opts(astronvim.user_plugin_opts("options", {
     sidescrolloff = 8, -- Number of columns to keep at the sides of the cursor
     signcolumn = "yes", -- Always show the sign column
     smartcase = true, -- Case sensitivie searching
-    splitbelow = true, -- Splitting a new window below the current one
+    splitbelow = true, -- Splitting a new window below the current on
     splitright = true, -- Splitting a new window at the right of the current one
     swapfile = false, -- Disable use of swapfile for the buffer
     tabstop = 4, -- Number of space in a tab
