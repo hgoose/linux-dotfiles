@@ -23,9 +23,14 @@
 **move to $HOME/.config/**
 
 ### Preview
-![Preview](https://i.imgur.com/vHEbyhp.png)
+![Preview](https://i.imgur.com/JckGwZG.png)
+
+### Preview
+![Preview](https://i.imgur.com/AsIqbTw.png)
 
 ### Backgrounds 
+![Preview](https://i.imgur.com/aKBGclS.jpg)
+
 ![Preview](https://i.imgur.com/4Tb2dX1.jpg)
 
 ![Preview](https://i.imgur.com/ghDkqvK.jpg)
