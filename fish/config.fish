@@ -38,7 +38,7 @@ alias pn="cd ~/dev/latex/notes/python/"
 alias picom="nohup picom & && pidof picom | disown"
 alias c="clear && logo" 
 alias C="clear && logo"
-alias cc="clear && logo" 
+alias cc="clear && neofetch --source ~/.config/neofetch/logo" 
 alias CC="clear && logo" 
 alias ccc="clear && ~/shell-color-scripts/colorscripts/pacman" 
 alias CCC="clear && ~/shell-color-scripts/colorscripts/pacman" 
@@ -81,7 +81,10 @@ function nt
   nohup nautilus . >/dev/null 2>&1 &
 end
 
-
+# Bobthefish options
+set -g theme_powerline_fonts yes
+set -g theme_nerd_fonts yes
+set -g theme_color_scheme zenburn
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish
 

@@ -24,3 +24,4 @@ vim.cmd("colorscheme goose_purp")
 -- vim.cmd("colorscheme temple")
 -- vim.cmd("colorscheme goose_light")
 -- vim.cmd("colorscheme goose_dark")
+--

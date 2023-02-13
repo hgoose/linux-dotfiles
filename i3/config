@@ -148,10 +148,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # gapsconfig
 
 # previous | for_window [class="^.*"] border pixel 1
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 # previous | gaps inner 4
-gaps inner 17
-gaps outer 0
+gaps inner 10
+gaps outer 50
 
 
 # gapsconfig
@@ -161,13 +161,13 @@ set_from_resource $fg i3wm.color0 #282a2e
 set_from_resource $bg i3wm.color6 #282a2e
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #ff00ff #3c464d #ffffff #ff00ff   #ff00ff
-client.focused_inactive #ff00ff #5f676a #ffffff #484e50   #ff00ff
-client.unfocused        #ff00ff #222222 #888888 #292d2e   #ff00ff
-client.urgent           #ff00ff #900000 #ffffff #900000   #900000
-client.placeholder      #ff00ff #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          #ff87ff #3c464d #ffffff #ff87ff   #ff87ff
+client.focused_inactive #ff87ff #5f676a #ffffff #484e50   #ff87ff
+client.unfocused        #ff87ff #222222 #888888 #292d2e   #ff87ff
+client.urgent           #ff87ff #900000 #ffffff #900000   #900000
+client.placeholder      #ff87ff #0c0c0c #ffffff #000000   #0c0c0c
 
-client.background       #ff00ff
+client.background       #ff87ff
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -227,7 +227,7 @@ colors {
              separator #cfd8dc
      
              # colors                outline    background   number
-             focused_workspace       #ff00ff  #ff00ff    #ecefff
+             focused_workspace       #ff87ff  #ff87ff    #ecefff
              active_workspace        #37474f  #37474f    #81d4fa
              inactive_workspace      #37474f  #37474f    #81d4fa
              urgent_workspace        #ffc107  #ffc107    #37474f
