@@ -185,7 +185,7 @@ snippet 3br
 \bigbreak \noindent \bigbreak \noindent \bigbreak \noindent $1
 endsnippet
 
-snippet nra
+snippet mra
 \rightarrow
 endsnippet
 
@@ -197,12 +197,24 @@ snippet la
 $\leftarrow$
 endsnippet
 
+snippet mla
+\leftarrow
+endsnippet
+
 snippet lra
 $\longrightarrow$
 endsnippet
 
+snippet mlra
+\longrightarrow
+endsnippet
+
 snippet lla
 $\longleftarrow$
+endsnippet
+
+snippet mlla
+\longleftarrow
 endsnippet
 
 snippet tabletemplate
@@ -328,11 +340,11 @@ snippet pf
 endsnippet
 
 snippet lim
-$\lim\limits_{$1 \to $2}{$3}$
+$\lim_{$1 \to $2}{$3}$
 endsnippet
 
 snippet li
-\lim\limits_{$1 \to $2}{$3}
+\lim_{$1 \to $2}{$3}
 endsnippet
 
 snippet psf
@@ -485,13 +497,66 @@ snippet mathsubsect
 \begin{mdframed}
 \begin{large}
     \begin{center}
-        \textbf{Finding the derivative using the limit definition:}
+        \textbf{$1}
     \end{center}
 \end{large}
 \end{mdframed}
+\bigbreak \noindent \bigbreak
+$2
 endsnippet
 
 snippet h0
-\lim\limits_{h \to 0}{ $1}
+\lim_{h \to 0}{ $1}
 endsnippet
 
+snippet etox
+e^x
+endsnippet
+
+snippet prime
+^{\prime}
+endsnippet
+
+snippet big)
+\bigg($1\bigg)
+endsnippet
+
+snippet big]
+\bigg[$1\bigg]
+endsnippet
+
+snippet cd
+\cdot 
+endsnippet
+
+snippet prule1
+\frac{d}{dx}[f(x) \cdot g(x)] = f(x) \frac{d}{dx}[g(x)] + g(x) \frac{d}{dx}[f(x)]
+endsnippet
+
+snippet prule2
+(f\cdot g)\prime = f \cdot g\prime + g \cdot f\prime
+endsnippet
+
+snippet prule3
+\frac{d}{dx}[f(x) \cdot g(x)] = 
+endsnippet
+
+snippet qrule1
+\frac{d}{dx}\bigg[ \frac{f(x)}{g(x)}\bigg] = \frac{g(x) \frac{d}{dx}[f(x)] - f(x) \frac{d}{dx}[g(x)]}{[g(x)]^2}
+endsnippet
+
+snippet qrule2
+\bigg(\frac{f}{g}\bigg)^{\prime} = \frac{g \cdot f ^{\prime} - f \cdot g ^{\prime}}{g^2}
+endsnippet
+
+snippet qrule3
+\frac{d}{dx} \bigg[\frac{f(x)}{g(x)}\bigg] =
+endsnippet
+
+snippet tofrac
+^{\frac{$1}{$2}}
+endsnippet
+
+snippet -tofrac
+^{-\frac{$1}{$2}}
+endsnippet

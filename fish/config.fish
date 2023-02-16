@@ -1,6 +1,7 @@
 xset r rate 300 50
 
 # USER DEFINED ALIASES
+alias rno="rm -rf nohup.out"
 alias mch2="cd ~/springsemester/calc/notes/lectures/chapter2"
 alias dnotes="cd ~/springsemester/dmed/notes"
 alias mnotes="cd ~/springsemester/calc/notes/lectures"

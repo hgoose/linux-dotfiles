@@ -20,6 +20,9 @@ local astro_plugins = {
     config = function() require "core.plugins" end,
 
   },
+  -- Moonbow
+  ['arturgoms/moonbow.nvim'] = {},
+
   -- temple.vim
   ['hgoose/temple.vim'] = {},
 
