@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-# move kitty config to ~/linux-dotfiles
+# Script to automate copying configs to dotfiles repo
 
 echo "Select Option:
 
