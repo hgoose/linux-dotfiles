@@ -9,6 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+exec --no-startup-id "gnome-settings-daemon"
 
 # Start Picom
 exec --no-startup-id picom -CGb
