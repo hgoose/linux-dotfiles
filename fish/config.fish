@@ -1,6 +1,7 @@
 xset r rate 300 50
 
 # USER DEFINED ALIASES
+alias picomc="nvim ~/.config/picom/picom.conf"
 alias s="sudo pacman -S"
 alias rno="rm -rf nohup.out"
 alias mch2="cd ~/springsemester/calc/notes/lectures/chapter2"
@@ -77,7 +78,7 @@ function push-dotfiles
 end
 
 function nhup
-  nohup $argv > /dev/null 2>&1&
+  nohup $argv >/dev/null 2>&1&
 end
 
 function nt

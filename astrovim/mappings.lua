@@ -14,6 +14,8 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+map('n', ';', 'n')
+
 -- Better copy
 map('n', ',p', '"0p')
 map('n', ',P', '"0P')
