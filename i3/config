@@ -222,7 +222,7 @@ bar {
 		-t iceberg-rainbow 
 		# Available Themes: https://bumblebee-status.readthedocs.io/en/main/themes.html
 colors {
-             background #0B0517
+             background #000000
              # background #0B0517
              statusline #eceff1
              separator #cfd8dc
