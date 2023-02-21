@@ -321,7 +321,7 @@ snippet lali
 \end{large}
 endsnippet
 
-snippet frac
+snippet frac "Fractions" iA
 \frac{$1}{$2}
 endsnippet
 
@@ -335,19 +335,19 @@ snippet im
 \end{center}
 endsnippet
 
-snippet pf
+snippet pf "proof" i
 \pf{$1}{$2}
 endsnippet
 
-snippet lim
+snippet lim "limit" 
 $\lim_{$1 \to $2}{$3}$
 endsnippet
 
-snippet li
+snippet li "limit" 
 \lim_{$1 \to $2}{$3}
 endsnippet
 
-snippet psf
+snippet psf "point slope form" i
 $y-y_1 = m\left(x-x_1\right)$
 endsnippet
 
@@ -355,11 +355,11 @@ snippet paren
 \left($1\right)
 endsnippet
 
-snippet mslash
+snippet mslash "msolash" i
 \diagdown
 endsnippet
 
-snippet bar 
+snippet bar "repeating" i
 \overline{$1}
 endsnippet
 
@@ -367,11 +367,11 @@ snippet nd
 \noindent
 endsnippet
 
-snippet inf
+snippet inf "inf" i
 $\infty$
 endsnippet
 
-snippet in
+snippet in "in" i
 \infty
 endsnippet
 
@@ -409,16 +409,20 @@ snippet large
 \end{large}
 endsnippet
 
-snippet boldit
+snippet boldit "boldit" i
 \textbf{\textit{$1}}
 endsnippet
 
-snippet sq
-$\sqrt{$1}$
+snippet bolditun "boldit" i
+\textbf{\textit{\underline{$1}}}
 endsnippet
 
-snippet msq
+snippet sq "msq" i
 \sqrt{$1}$2
+endsnippet
+
+snippet nr "msq" i
+\sqrt[$1]{$2}$3
 endsnippet
 
 snippet allreal
@@ -505,27 +509,27 @@ snippet mathsubsect
 $2
 endsnippet
 
-snippet h0
+snippet h0 "h0" i
 \lim_{h \to 0}{ $1}
 endsnippet
 
-snippet etox
+snippet etox "etox" i
 e^x
 endsnippet
 
-snippet prime
+snippet prime "prime" i
 ^{\prime}
 endsnippet
 
-snippet big)
+snippet big) "big" i
 \bigg($1\bigg)
 endsnippet
 
-snippet big]
+snippet big] "big" i
 \bigg[$1\bigg]
 endsnippet
 
-snippet cd
+snippet cd "dot" i
 \cdot 
 endsnippet
 
@@ -553,10 +557,79 @@ snippet qrule3
 \frac{d}{dx} \bigg[\frac{f(x)}{g(x)}\bigg] =
 endsnippet
 
-snippet tofrac
+snippet tf "t" i
 ^{\frac{$1}{$2}}
 endsnippet
 
-snippet -tofrac
+snippet -tf "t" i
 ^{-\frac{$1}{$2}}
+endsnippet
+
+snippet theta0 "lim theta to 0" i
+\lim_{\theta \to 0}{$1}
+endsnippet
+
+snippet sine "sin" i
+\sin{$1}
+endsnippet
+
+snippet cos "cos" i
+\cos{$1}
+endsnippet
+
+snippet tan "tan" i
+\tan{$1}
+endsnippet
+
+snippet csc "csc" i
+\csc{$1}
+endsnippet
+
+snippet sec "sec" i
+\sec{$1}
+endsnippet
+
+snippet cot "cot" i
+\cot{$1}
+endsnippet
+
+snippet th "theta" i
+\theta 
+endsnippet
+
+snippet td "exponent" iA
+^{$1}
+endsnippet
+
+snippet mk "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+    snip.rv = ' '
+else:
+    snip.rv = ''
+`$2
+endsnippet
+
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+snippet so--- "so" iA
+\bigbreak \noindent
+\textit{So:}
+\begin{align*}
+  $1
+\end{align*}
+endsnippet
+
+snippet now--- "so" iA
+\bigbreak \noindent
+\textit{Now:}
+\begin{align*}
+  $1
+\end{align*}
 endsnippet

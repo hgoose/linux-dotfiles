@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-# Script to automate copying configs to dotfiles repo
+# move kitty config to ~/linux-dotfiles
 
 echo "Select Option:
 
@@ -23,7 +23,7 @@ read OPTION
 
 if [ "$OPTION" = "1"  ];
 then
-	sudo cp ~/.config/kitty/kitty.conf ~/linux-dotfiles/kitty && echo "Copied Kitty Config to ~/linux-dotfiles/kitty" || echo "failed to move config to linux-dotfiles"
+	sudo cp -R ~/.config/kitty/ ~/linux-dotfiles && echo "Copied Kitty Directory to ~/linux-dotfiles" || echo "failed to move configs to linux-dotfiles"
 
 elif [ "$OPTION" = "2" ];
 then
@@ -72,7 +72,7 @@ then
 elif [ "$OPTION" = "12" ];
 then
 	sudo cp ~/.config/fish/config.fish ~/linux-dotfiles/fish && echo "Copied Fish Config to ~/linux-dotfiles/fish" || echo "failed to move config to linux-dotfiles";
-	sudo cp ~/.config/kitty/kitty.conf ~/linux-dotfiles/kitty && echo "Copied Kitty Config to ~/linux-dotfiles/kitty" || echo "failed to move config to linux-dotfiles";
+	sudo cp -R ~/.config/kitty/ ~/linux-dotfiles && echo "Copied Kitty Directory to ~/linux-dotfiles/kitty" || echo "failed to move Directory to linux-dotfiles";
 	sudo cp ~/.config/termite/config ~/linux-dotfiles/termite\ configs && echo "copied termite config to ~/linux-dotfiles/termite" || echo "failed to move config to linux-dotfiles";
 	sudo cp ~/.config/nvim/init.lua ~/linux-dotfiles/astrovim/ && echo "Copied neovim config (init.lua) to ~/linux-dotfiles/astrovim " || echo "falied to move config (init.lua) to linux-dotfiles";
 	sudo cp ~/.config/nvim/lua/core/mappings.lua ~/linux-dotfiles/astrovim/ && echo "Copied neovim config (mappings.lua) to ~/linux-dotfiles/astrovim " || echo "falied to move config (mappings.lua) to linux-dotfiles";
@@ -85,6 +85,10 @@ then
 	sudo cp ~/.config/picom/picom.conf ~/linux-dotfiles/picom && echo "Copied picom config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
 	sudo cp ~/.config/nvim/UltiSnips/tex.snippets ~/linux-dotfiles/latex && echo "Copied latex config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
 	sudo cp ~/.config/alacritty/alacritty.yml ~/linux-dotfiles/alacritty && echo "Copied alacritty config to ~/linux-dotfiles/alacritty" || echo "failed to move config to linux-dotfiles";
+	sudo cp -R ~/backgrounds/1 ~/linux-dotfiles/Backgrounds && echo "Moved Backgrounds Directory To ~/linux-dotfiles/Backgrounds" || echo "Failed to move Backgrounds Directory To ~/linux-dotfiles/Backgrounds"
+	sudo cp /usr/bin/moveConfigs ~/linux-dotfiles/configMover && echo "Moved config mover to ~/linux-dotfiles/configMover" || echo "failed to move configmove to ~/linux-dotfiles/configMover"
+	sudo cp /usr/bin/pall ~/linux-dotfiles/pall && echo "Moved push-all tool to ~/linux-dotfiles/pall" || echo "Failed to move push-all tool to ~/linux-dotfiles/pall"
+	sudo cp /usr/bin/i3changer ~/linux-dotfiles/i3ConfigChanger && echo "Moved i3 config changer tool to ~/linux-dotfiles/i3ConfigChanger" || echo "Failed to move i3 config changer tool to ~/linux-dotfiles/i3ConfigChanger "
 
 else
 	echo "Invalid Option"

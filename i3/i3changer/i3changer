@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+# I3 Config gap changer
+
+echo "Select Option
+1: Change To Small Gaps
+2: Change to Big Gaps
+"
+read OPTION
+
+if [ $OPTION = "1" ];
+then
+    sudo mv ~/.config/i3/config ~/.config/i3/config.big
+    sudo mv ~/.config/i3/config.small ~/.config/i3/config
+elif [ $OPTION = "2" ];
+then
+    sudo mv ~/.config/i3/config ~/.config/i3/config.small
+    sudo mv ~/.config/i3/config.big ~/.config/i3/config
+else
+    echo " $OPTION Not A Valid Option"
+fi
+
+
