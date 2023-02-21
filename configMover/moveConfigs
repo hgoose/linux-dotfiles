@@ -42,9 +42,7 @@ then
 	
 elif [ "$OPTION" = "5" ];
 then
-	sudo cp ~/.config/i3/config ~/linux-dotfiles/i3 && echo "Copied i3 config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles"
-	sudo cp ~/.config/i3/i3blocks.conf ~/linux-dotfiles/i3 && echo "Copied i3blocks.conf to ~/linux-dotfiles" || echo "failed to move i3blocks.conf to linux-dotfiles"
-	
+	sudo cp -R ~/.config/i3/* ~/linux-dotfiles/i3 && echo "Move i3 configs to ~/linux-dotfiles/i3" || echo "Failed to move i3 configs to ~/linux-dotfiles/i3" 
 elif [ "$OPTION" = "6" ];
 then
 	sudo cp ~/.config/neofetch/config.conf ~/linux-dotfiles/neofetch && echo "Copied neofetch config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles"
