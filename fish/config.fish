@@ -1,6 +1,8 @@
 xset r rate 300 50
 
 # USER DEFINED ALIASES
+alias chap3="open ~/springsemester/calc/notes/lectures/chapter3/main.pdf google-chrome-stable"
+alias openmain="open main.pdf google-chrome-stable"
 alias picomc="nvim ~/.config/picom/picom.conf"
 alias s="sudo pacman -S"
 alias rno="rm -rf nohup.out"
@@ -10,7 +12,7 @@ alias mnotes="cd ~/springsemester/calc/notes/lectures"
 alias c3="cd ~/springsemester/calc/notes/lectures/chapter3 && nvim main.tex"
 alias dhw="cd ~/springsemester/dmed/hw"
 alias mhw="cd ~/springsemester/calc/hw"
-alias wscan="nmcli dev wifi rescan && nmtui"
+alias wscan="nmcli dev wifi rescan" 
 alias sublime="~/sublime_text_3/sublime_text"
 alias upd="sudo pacman -Syyu"
 alias chrome="nohup /usr/bin/google-chrome-stable & && pidof chrome | disown"
