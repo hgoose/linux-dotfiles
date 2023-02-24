@@ -5,13 +5,16 @@
 
 \usepackage[tmargin=2cm,rmargin=1in,lmargin=1in,margin=0.85in,bmargin=2cm,footskip=.2in]{geometry}
 \usepackage{amsmath,amsfonts,amsthm,amssymb,mathtools}
-\usepackage[varbb]{newpxmath}
+% \usepackage[varbb]{newpxmath}
 \usepackage{xfrac}
 \usepackage[makeroom]{cancel}
 \usepackage{mathtools}
 \usepackage{bookmark}
 \usepackage{enumitem}
 \usepackage{hyperref,theoremref}
+\usepackage[]{mdframed}
+\usepackage{pgfpages}
+\usepackage{fancyhdr}
 \hypersetup{
 	pdftitle={Assignment},
 	colorlinks=true, linkcolor=doc!90,
@@ -34,6 +37,7 @@
 \usepackage{pdfpages}
 \usepackage{transparent}
 \usepackage{longtable}
+\usepackage{graphicx}
 % \usepackage{table}
 
 \newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
@@ -681,6 +685,7 @@
 }
 \providecommand*{\pdv}[3][]{\frac{\partial^{#1}#2}{\partial#3^{#1}}}
 %  - others
+\DeclareMathSizes{12}{16}{10}{12}
 \DeclareMathOperator{\Lap}{\mathcal{L}}
 \DeclareMathOperator{\Var}{Var} % varience
 \DeclareMathOperator{\Cov}{Cov} % covarience
