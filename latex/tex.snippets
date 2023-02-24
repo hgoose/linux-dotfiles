@@ -10,6 +10,8 @@ snippet template
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{MATHEMATICS NOTES}
+\lhead{\leftmark}
+\cfoot{\thepage}
 
 \pgfpagesdeclarelayout{boxed}
 {
@@ -97,15 +99,15 @@ snippet subsect
 \subsection{\large{$1}}
 endsnippet
 
-snippet bold
+snippet bold "bold" i
 \textbf{$1}
 endsnippet
 
-snippet italic
+snippet italic "italic" i
 \textit{$1}
 endsnippet
 
-snippet underline
+snippet underline "underline" i
 \underline{$1}
 endsnippet
 
@@ -324,9 +326,9 @@ snippet lali
 \end{large}
 endsnippet
 
-snippet frac "Fractions" iA
-\frac{$1}{$2}
-endsnippet
+# snippet frac "Fractions" iA
+# \frac{$1}{$2}
+# endsnippet
 
 snippet gp
 \graphicspath{{$1}}
@@ -609,22 +611,22 @@ snippet td "exponent" iA
 ^{$1}
 endsnippet
 
-snippet mk "Math" wA
-$${1}$`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
-    snip.rv = ' '
-else:
-    snip.rv = ''
-`$2
-endsnippet
+# snippet mk "Math" wA
+# $${1}$`!p
+# if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+#     snip.rv = ' '
+# else:
+#     snip.rv = ''
+# `$2
+# endsnippet
 
-snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
-\\frac{`!p snip.rv = match.group(1)`}{$1}$0
-endsnippet
+# snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+# \\frac{`!p snip.rv = match.group(1)`}{$1}$0
+# endsnippet
 
-snippet // "Fraction" iA
-\\frac{$1}{$2}$0
-endsnippet
+# snippet // "Fraction" iA
+# \\frac{$1}{$2}$0
+# endsnippet
 
 snippet so--- "so" iA
 \bigbreak \noindent
