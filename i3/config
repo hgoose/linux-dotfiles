@@ -215,7 +215,7 @@ bar {
 	position top
 	tray_output none
 	status_command ~/.config/i3/bumblebee-status/bumblebee-status \
-	        -m hostname kernel network arch-update pacman memory layout disk cmus bluetooth time date pasource battery \
+	        -m hostname kernel arch-update pacman memory layout disk cmus time date pasource battery \
 		-p spacer.text="catsoup" time.format="" date.format="%a, %b, %Y %l:%M:%S %p"\
 		-t iceberg-rainbow 
 		# Available Themes: https://bumblebee-status.readthedocs.io/en/main/themes.html

@@ -6,7 +6,7 @@
 
 sudo git -C ~/linux-dotfiles add . && sudo git -C ~/linux-dotfiles commit -m "commit" && git -C ~/linux-dotfiles push && echo "Successfully pushed changes to directory linux-dotfiles" || echo "Failed to push changes to directory linux-dotfiles or everything is up to date"
 
-sudo git -C ~/Linux\ Resources add . && sudo git -C ~/Linux\ Resources commit -m "commit" && git -C ~/Linux\ Resources && echo "Successfully pushed changes to directory Linux Resources " || echo "Failed to push changes to directory Linux Resources or everything is up to date"
+sudo git -C ~/Linux-Resources add . && sudo git -C ~/Linux-Resources commit -m "commit" && git -C ~/Linux-Resources && echo "Successfully pushed changes to directory Linux Resources " || echo "Failed to push changes to directory Linux Resources or everything is up to date"
 
 sudo git -C ~/springsemester add . && sudo git -C ~/springsemester commit -m "commit" && git -C ~/springsemester push && echo "Successfully pushed changes to directory dev" || echo "Failed to push changes to directory dev or everything is up to date"
 
