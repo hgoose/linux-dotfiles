@@ -39,30 +39,30 @@ then
 	sudo cp ~/.config/nvim/lua/core/mappings.lua ~/linux-dotfiles/astrovim/ && echo "Copied neovim config (mappings.lua) to ~/linux-dotfiles/astrovim " || echo "falied to move config (mappings.lua) to linux-dotfiles"
 	sudo cp ~/.config/nvim/lua/core/plugins.lua ~/linux-dotfiles/astrovim/ && echo "Copied neovim config (plugins.lua) to ~/linux-dotfiles/astrovim " || echo "falied to move config (plugins.lua) to linux-dotfiles"
 	sudo cp ~/.config/nvim/lua/core/options.lua ~/linux-dotfiles/astrovim/ && echo "Copied neovim config (options.lua) to ~/linux-dotfiles/astrovim " || echo "falied to move config (options.lua) to linux-dotfiles"
-	
+
 elif [ "$OPTION" = "5" ];
 then
 	sudo cp -R ~/.config/i3/* ~/linux-dotfiles/i3 && echo "Move i3 configs to ~/linux-dotfiles/i3" || echo "Failed to move i3 configs to ~/linux-dotfiles/i3" 
 elif [ "$OPTION" = "6" ];
 then
 	sudo cp ~/.config/neofetch/config.conf ~/linux-dotfiles/neofetch && echo "Copied neofetch config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles"
-	
+
 elif [ "$OPTION" = "7" ];
 then
 	sudo cp ~/.config/zathura/zathurarc ~/linux-dotfiles/zathura && echo "Copied zathura config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles"
-	
+
 elif [ "$OPTION" = "8" ];
 then
 	sudo cp ~/.config/picom/picom.conf ~/linux-dotfiles/picom && echo "Copied picom config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles"
-	
+
 elif [ "$OPTION" = "9" ];
 then
 	sudo cp ~/.config/nvim/UltiSnips/tex.snippets ~/linux-dotfiles/latex && echo "Copied latex config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles"
-	
+
 elif [ "$OPTION" = "10" ];
 then
 	sudo cp ~/.config/alacritty/alacritty.yml ~/linux-dotfiles/alacritty && echo "Copied alacritty config to ~/linux-dotfiles/alacritty" || echo "failed to move config to linux-dotfiles"
-	
+
 elif [ "$OPTION" = "11" ];
 then
 	sudo git -C ~/linux-dotfiles add . && sudo git -C ~/linux-dotfiles commit -m "changes" && git -C ~/linux-dotfiles push && echo "Pushed changes to github repository Successfully" || echo "Failed to Push changes to github repository"
@@ -81,7 +81,7 @@ then
 	sudo cp ~/.config/neofetch/config.conf ~/linux-dotfiles/neofetch && echo "Copied neofetch config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
 	sudo cp ~/.config/zathura/zathurarc ~/linux-dotfiles/zathura && echo "Copied zathura config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
 	sudo cp ~/.config/picom/picom.conf ~/linux-dotfiles/picom && echo "Copied picom config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
-	sudo cp ~/.config/nvim/UltiSnips/ ~/linux-dotfiles/latex && echo "Copied latex config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
+	sudo cp -R ~/.config/nvim/UltiSnips/ ~/linux-dotfiles/latex && echo "Copied latex config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
 	sudo cp ~/.config/alacritty/alacritty.yml ~/linux-dotfiles/alacritty && echo "Copied alacritty config to ~/linux-dotfiles/alacritty" || echo "failed to move config to linux-dotfiles";
 	sudo cp -R ~/backgrounds/1 ~/linux-dotfiles/Backgrounds && echo "Moved Backgrounds Directory To ~/linux-dotfiles/Backgrounds" || echo "Failed to move Backgrounds Directory To ~/linux-dotfiles/Backgrounds"
 	sudo cp /usr/bin/moveConfigs ~/linux-dotfiles/configMover && echo "Moved config mover to ~/linux-dotfiles/configMover" || echo "failed to move configmove to ~/linux-dotfiles/configMover"
