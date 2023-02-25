@@ -81,12 +81,15 @@ then
 	sudo cp ~/.config/neofetch/config.conf ~/linux-dotfiles/neofetch && echo "Copied neofetch config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
 	sudo cp ~/.config/zathura/zathurarc ~/linux-dotfiles/zathura && echo "Copied zathura config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
 	sudo cp ~/.config/picom/picom.conf ~/linux-dotfiles/picom && echo "Copied picom config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
-	sudo cp ~/.config/nvim/UltiSnips/tex.snippets ~/linux-dotfiles/latex && echo "Copied latex config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
+	sudo cp ~/.config/nvim/UltiSnips/ ~/linux-dotfiles/latex && echo "Copied latex config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
 	sudo cp ~/.config/alacritty/alacritty.yml ~/linux-dotfiles/alacritty && echo "Copied alacritty config to ~/linux-dotfiles/alacritty" || echo "failed to move config to linux-dotfiles";
 	sudo cp -R ~/backgrounds/1 ~/linux-dotfiles/Backgrounds && echo "Moved Backgrounds Directory To ~/linux-dotfiles/Backgrounds" || echo "Failed to move Backgrounds Directory To ~/linux-dotfiles/Backgrounds"
 	sudo cp /usr/bin/moveConfigs ~/linux-dotfiles/configMover && echo "Moved config mover to ~/linux-dotfiles/configMover" || echo "failed to move configmove to ~/linux-dotfiles/configMover"
 	sudo cp /usr/bin/pall ~/linux-dotfiles/pall && echo "Moved push-all tool to ~/linux-dotfiles/pall" || echo "Failed to move push-all tool to ~/linux-dotfiles/pall"
 	sudo cp /usr/bin/i3changer ~/linux-dotfiles/i3ConfigChanger && echo "Moved i3 config changer tool to ~/linux-dotfiles/i3ConfigChanger" || echo "Failed to move i3 config changer tool to ~/linux-dotfiles/i3ConfigChanger "
+	sudo cp -R ~/.config/rofi ~/linux-dotfiles && echo "moved rofi configs to linux-dotfiles" || echo "Failed to move rofi configs to linux dotfiles"
+	
+	
 
 else
 	echo "Invalid Option"
