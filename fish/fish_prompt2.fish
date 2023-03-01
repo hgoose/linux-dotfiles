@@ -12,6 +12,7 @@ function fish_prompt
   set fish_greeting
   set -l cyan (set_color -o cyan)
   set -l red (set_color -o red)
+  set -l yellow (set_color -o yellow)
   set -l blue (set_color -o blue)
   set -l green (set_color -o green)
   set -l purple (set_color -o purple)
@@ -25,7 +26,7 @@ function fish_prompt
     echo -n -s $red (uname -n |cut -d . -f 1) " "
   else
     # display 'user@host:'
-    echo -n -s $green [(whoami)  $purple"@mane] " "in-> "
+    echo -n -s $green [$yellow d$blue a $cyan t $purple u $red r $yellow a $purple @mane] " in-> "
   end
 
   # display the current directory name:
