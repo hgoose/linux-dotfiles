@@ -20,7 +20,10 @@ local astro_plugins = {
     config = function() require "core.plugins" end,
 
   },
-  -- Moonbow
+  -- Palenight (colorscheme)
+  ['drewtempelmeyer/palenight.vim'] = {},
+
+   -- Moonbow
   ['arturgoms/moonbow.nvim'] = {},
 
   -- temple.vim

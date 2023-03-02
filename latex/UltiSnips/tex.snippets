@@ -603,6 +603,30 @@ snippet cot "cot" i
 \cot{$1}
 endsnippet
 
+snippet isine- "sin" i
+\sin^{-1}{$1}
+endsnippet
+
+snippet icos- "cos" i
+\cos^{-1}{$1}
+endsnippet
+
+snippet itan- "tan" i
+\tan^{-1}{$1}
+endsnippet
+
+snippet icsc- "csc" i
+\csc^{-1}{$1}
+endsnippet
+
+snippet isec- "sec" i
+\sec^{-1}{$1}
+endsnippet
+
+snippet icot- "cot" i
+\cot^{-1}{$1}
+endsnippet
+
 snippet th "theta" i
 \theta 
 endsnippet
@@ -611,22 +635,22 @@ snippet td "exponent" iA
 ^{$1}
 endsnippet
 
-# snippet mk "Math" wA
-# $${1}$`!p
-# if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
-#     snip.rv = ' '
-# else:
-#     snip.rv = ''
-# `$2
-# endsnippet
+snippet mk "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+   snip.rv = ' '
+else:
+   snip.rv = ''
+`$2
+endsnippet
 
-# snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
-# \\frac{`!p snip.rv = match.group(1)`}{$1}$0
-# endsnippet
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
 
-# snippet // "Fraction" iA
-# \\frac{$1}{$2}$0
-# endsnippet
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
 
 snippet so--- "so" iA
 \bigbreak \noindent
@@ -650,4 +674,12 @@ endsnippet
 
 snippet -- "--" i
 \texttt{--}
+endsnippet
+
+snippet pi "pi" i
+\pi
+endsnippet
+
+snippet log "log" i
+\log_$1{$2}
 endsnippet
