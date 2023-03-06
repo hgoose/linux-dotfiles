@@ -21,7 +21,8 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id killall xfce4-panel 
 
 # Launch a terminal session on startup
-exec --no-startup-id kitty 
+exec --no-startup-id terminator 
+# exec --no-startup-id kitty 
 
 # Launch tint2 at startup
 # exec --no-startup-id tint2 

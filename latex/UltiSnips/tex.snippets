@@ -631,42 +631,42 @@ snippet th "theta" i
 \theta 
 endsnippet
 
-snippet td "exponent" iA
-^{$1}
-endsnippet
-
-snippet mk "Math" wA
-$${1}$`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
-   snip.rv = ' '
-else:
-   snip.rv = ''
-`$2
-endsnippet
-
-snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
-\\frac{`!p snip.rv = match.group(1)`}{$1}$0
-endsnippet
-
-snippet // "Fraction" iA
-\\frac{$1}{$2}$0
-endsnippet
-
-snippet so--- "so" iA
-\bigbreak \noindent
-\textit{So:}
-\begin{align*}
-  $1
-\end{align*}
-endsnippet
-
-snippet now--- "so" iA
-\bigbreak \noindent
-\textit{Now:}
-\begin{align*}
-  $1
-\end{align*}
-endsnippet
+# snippet td "exponent" iA
+# ^{$1}
+# endsnippet
+#
+# snippet mk "Math" wA
+# $${1}$`!p
+# if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+#    snip.rv = ' '
+# else:
+#    snip.rv = ''
+# `$2
+# endsnippet
+#
+# snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+# \\frac{`!p snip.rv = match.group(1)`}{$1}$0
+# endsnippet
+#
+# snippet // "Fraction" iA
+# \\frac{$1}{$2}$0
+# endsnippet
+#
+# snippet so--- "so" iA
+# \bigbreak \noindent
+# \textit{So:}
+# \begin{align*}
+#   $1
+# \end{align*}
+# endsnippet
+#
+# snippet now--- "so" iA
+# \bigbreak \noindent
+# \textit{Now:}
+# \begin{align*}
+#   $1
+# \end{align*}
+# endsnippet
 
 snippet ln "ln" i
 \ln{$1}
