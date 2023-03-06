@@ -54,10 +54,17 @@ alias pd="push-dotfiles"
 alias ss="cd ~/springsemester/"
 alias bluetooth="nvim /etc/bluetooth/main.conf"
 
+# Remove fish greeting
 set -U fish_greeting
 
+# function to refresh fish shell
 function refresh
 	clear && fish	
+end
+
+# Function to streamline searching packages
+function psearch
+	sudo pacman -Ss $argv
 end
 
 #function to move from $HOME/Downloads
@@ -77,10 +84,12 @@ function push-dotfiles
   git -C ~/linux-dotfiles push
 end
 
+# Function for rerouting nohup output to /dev/null
 function nhup
   nohup $argv >/dev/null 2>&1&
 end
 
+# Function to open nautilus
 function nt
   nohup nautilus . >/dev/null 2>&1 &
 end
