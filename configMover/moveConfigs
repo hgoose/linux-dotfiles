@@ -88,8 +88,7 @@ then
 	sudo cp /usr/bin/pall ~/linux-dotfiles/pall && echo "Moved push-all tool to ~/linux-dotfiles/pall" || echo "Failed to move push-all tool to ~/linux-dotfiles/pall"
 	sudo cp /usr/bin/i3changer ~/linux-dotfiles/i3ConfigChanger && echo "Moved i3 config changer tool to ~/linux-dotfiles/i3ConfigChanger" || echo "Failed to move i3 config changer tool to ~/linux-dotfiles/i3ConfigChanger "
 	sudo cp -R ~/.config/rofi ~/linux-dotfiles && echo "moved rofi configs to linux-dotfiles" || echo "Failed to move rofi configs to linux dotfiles"
-	
-	
+	sudo cp -R ~/.config/qutebrowser ~/linux-dotfiles && echo "moved qutebrowser configs to linux-dotfiles" || echo "failed to move qutebrowser configs to linux-dotfiles"
 
 else
 	echo "Invalid Option"
