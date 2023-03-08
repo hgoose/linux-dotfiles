@@ -9,7 +9,7 @@ snippet template
 \date{\huge{$2}}
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{MATHEMATICS NOTES}
+\rhead{$3}
 \lhead{\leftmark}
 \cfoot{\thepage}
 
@@ -37,9 +37,9 @@ snippet template
 \begin{document}
 	\maketitle
 	\begin{Large}
-		\noindent \textbf{$3}
+		\noindent \textbf{$4}
 	\end{Large}
-	$4
+	$5
 \end{document}
 endsnippet
 
@@ -180,6 +180,10 @@ endsnippet
 
 snippet br
 \bigbreak \noindent $1
+endsnippet
+
+snippet sbr
+\smallbreak \noindent
 endsnippet
 
 snippet 2br
@@ -631,42 +635,42 @@ snippet th "theta" i
 \theta 
 endsnippet
 
-# snippet td "exponent" iA
-# ^{$1}
-# endsnippet
-#
-# snippet mk "Math" wA
-# $${1}$`!p
-# if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
-#    snip.rv = ' '
-# else:
-#    snip.rv = ''
-# `$2
-# endsnippet
-#
-# snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
-# \\frac{`!p snip.rv = match.group(1)`}{$1}$0
-# endsnippet
-#
-# snippet // "Fraction" iA
-# \\frac{$1}{$2}$0
-# endsnippet
-#
-# snippet so--- "so" iA
-# \bigbreak \noindent
-# \textit{So:}
-# \begin{align*}
-#   $1
-# \end{align*}
-# endsnippet
-#
-# snippet now--- "so" iA
-# \bigbreak \noindent
-# \textit{Now:}
-# \begin{align*}
-#   $1
-# \end{align*}
-# endsnippet
+snippet td "exponent" iA
+^{$1}
+endsnippet
+
+snippet mk "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+   snip.rv = ' '
+else:
+   snip.rv = ''
+`$2
+endsnippet
+
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+snippet so--- "so" iA
+\bigbreak \noindent
+\textit{So:}
+\begin{align*}
+  $1
+\end{align*}
+endsnippet
+
+snippet now--- "so" iA
+\bigbreak \noindent
+\textit{Now:}
+\begin{align*}
+  $1
+\end{align*}
+endsnippet
 
 snippet ln "ln" i
 \ln{$1}
@@ -682,4 +686,16 @@ endsnippet
 
 snippet log "log" i
 \log_$1{$2}
+endsnippet
+
+snippet abs "abs" i
+\abs{$1}
+endsnippet
+
+snippet deg "deg" i
+^{\circ}
+endsnippet
+
+snippet bxd
+\boxed{$1}
 endsnippet
