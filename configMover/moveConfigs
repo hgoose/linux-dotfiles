@@ -89,6 +89,8 @@ then
 	sudo cp /usr/bin/i3changer ~/linux-dotfiles/i3ConfigChanger && echo "Moved i3 config changer tool to ~/linux-dotfiles/i3ConfigChanger" || echo "Failed to move i3 config changer tool to ~/linux-dotfiles/i3ConfigChanger "
 	sudo cp -R ~/.config/rofi ~/linux-dotfiles && echo "moved rofi configs to linux-dotfiles" || echo "Failed to move rofi configs to linux dotfiles"
 	sudo cp -R ~/.config/qutebrowser ~/linux-dotfiles && echo "moved qutebrowser configs to linux-dotfiles" || echo "failed to move qutebrowser configs to linux-dotfiles"
+	sudo cp ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pycodestyle.py ~/linux-dotfiles/pycodestyle && echo "moved pycodestyle to linex-dotfiles" || echo "failed to move pycodestyle to linux-dotfiles"
+	sudo cp ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pyflakes/messages.py ~/linux-dotfiles/pyflakes && echo "moved pyflakes messages.py to linux-dotfiles" || echo "failed to move pyflakes messages.py to linux-dotfiles"
 
 else
 	echo "Invalid Option"

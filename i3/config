@@ -32,6 +32,7 @@ exec --no-startup-id nitrogen --restore
 
 set $mod Mod4
 
+
 #---- WORKSPACE MANAGER ----#
 
 set $exec_i3_groups exec --no-startup-id i3-workspace-groups

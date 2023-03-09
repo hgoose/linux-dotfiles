@@ -1,6 +1,9 @@
 xset r rate 300 50
 
 # USER DEFINED ALIASES
+alias pyflakes="nvim ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pyflakes/messages.py"
+alias pycodestyle="nvim ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pycodestyle.py"
+alias flake8="nvim ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pylsp/plugins/flake8_lint.py"
 alias fm="fm6000 -f ~/repos/fetch-master-6000/ascii_arts/catart.txt"
 alias chap3="open ~/springsemester/calc/notes/lectures/chapter3/main.pdf google-chrome-stable"
 alias openmain="open main.pdf google-chrome-stable"
