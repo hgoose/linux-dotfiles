@@ -73,7 +73,7 @@ if (
 __version__ = '2.10.0'
 
 DEFAULT_EXCLUDE = '.svn,CVS,.bzr,.hg,.git,__pycache__,.tox'
-DEFAULT_IGNORE = 'E121,E303,E305,E123,E126,E226,E24,E704,E302,W503,W504,W291,W293,E501'
+DEFAULT_IGNORE = 'E121,E128,E901,E303,E305,E123,E126,E226,E24,E704,E302,W503,W504,W291,W293,E501'
 try:
     if sys.platform == 'win32':
         USER_CONFIG = os.path.expanduser(r'~\.pycodestyle')
