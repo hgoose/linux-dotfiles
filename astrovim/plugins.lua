@@ -20,6 +20,10 @@ local astro_plugins = {
     config = function() require "core.plugins" end,
 
   },
+
+  -- any-jump
+  ['pechorin/any-jump.vim'] = {},
+
   -- Palenight (colorscheme)
   ['drewtempelmeyer/palenight.vim'] = {},
 
