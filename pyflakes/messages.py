@@ -3,6 +3,7 @@ Provide the class Message and its subclasses.
 """
 
 # ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pyflakes/messages.py
+# sudo cp ~/linux-dotfiles/pyflakes/messages.py ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pyflakes/messages.py
 
 
 class Message:

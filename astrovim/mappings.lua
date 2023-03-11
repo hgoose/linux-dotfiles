@@ -16,6 +16,8 @@ end
 
 map('n', ';', 'n')
 
+map('n', 'm', 'q')
+
 -- Better copy
 map('n', ',p', '"0p')
 map('n', ',P', '"0P')

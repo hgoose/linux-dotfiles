@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pycodestyle.py
+# sudo cp ~/linux-dotfiles/pycodestyle/pycodestyle.py ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pycodestyle.py
 
 # pycodestyle.py - Check Python source code formatting, according to
 # PEP 8
