@@ -1,6 +1,7 @@
 xset r rate 300 50
 
 # USER DEFINED ALIASES
+alias keymap="setxkbmap"
 alias pyflakes="nvim ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pyflakes/messages.py"
 alias pycodestyle="nvim ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pycodestyle.py"
 alias flake8="nvim ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pylsp/plugins/flake8_lint.py"
