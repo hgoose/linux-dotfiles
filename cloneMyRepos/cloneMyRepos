@@ -72,6 +72,8 @@ then
     sudo cp -R ~/linux-dotfiles/terminator ~/.config
     sudo cp -R ~/linux-dotfiles/qutebrowser ~/.config
     sudo cp -R ~/linux-dotfiles/tint2 ~/.config
+
+    sudo chown -R $HNAME:$HNAME ~/.config
 elif [ "$OPTION" = "2" ];
 then
     echo ""
