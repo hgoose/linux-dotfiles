@@ -99,7 +99,7 @@ main()
 
         if [ "$OPTION2" = "1" ];
         then 
-                SCRIPTS=("configMover/moveConfigs" "pall/pall" "i3ConfigChanger/i3Changer")
+                SCRIPTS=("configMover/moveConfigs" "pall/pall" "i3ConfigChanger/i3changer")
                 BIN="/usr/bin"
 
                 for i in ${SCRIPTS[@]}; do
