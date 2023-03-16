@@ -1,101 +1,121 @@
 #!/usr/bin/bash
 
-echo "Enter username: " 
+main()
+{
+        echo "Enter username: " 
 
-read HNAME
-sleep 1
+        read HNAME
+        sleep 1
+        
+        echo "Ok, $HNAME, cloning all your repos to your fresh system, standby..."
 
-echo "Ok, $HNAME, cloning all your repos to your fresh system, standby..."
 
-sleep 0.5
+        clonelist=(
+                "git@github.com:hgoose/Linux-Resources.git"
+                "git@github.com:hgoose/latex.git "
+                "git@github.com:hgoose/dev.git"
+                "git@github.com:hgoose/earn.git"
+                "git@github.com:hgoose/goose.vim.git"
+                "git@github.com:hgoose/temple.vim.git"
+                "git@github.com:hgoose/learn.git"
+        )
 
-echo "Cloning Linux-Resources into $HOME/Linux-Resources"
-git clone git@github.com:hgoose/Linux-Resources.git -q ~/Linux-Resources && echo "...Done" || echo "...Failed"
+        pathlist=(
+                "~/Linux-Resources"
+                "~/springsemester"
+                "~/dev"
+                "~/earn"
+                "~/goose.vim"
+                "~/temple.vim"
+                "~/learn"
+        ) 
 
-sleep 0.5
-echo "Cloning springsemester into $HOME/springsemester"
-git clone git@github.com:hgoose/latex.git -q ~/springsemester && echo "...Done" || echo "...Failed"
+        sleep 1
+        for i in "${!clonelist[@]}"; do
+                git clone ${clonelist[$i]} -q ${pathlist[$i]} && echo "${clonelist[$i]}...Done" || echo "${clonelist[$i]}...Failed"
+        done
 
-sleep 0.5
-echo "Cloning dev into $HOME/dev" 
-git clone git@github.com:hgoose/dev.git -q ~/dev && echo "...Done" || echo "...Failed"
+        sleep 0.85
+        echo "...Done"
+        sleep 0.85
 
-sleep 0.5
-echo "Cloning earn into $HOME/earn" 
-git clone git@github.com:hgoose/earn.git -q ~/earn && echo "...Done" || echo "...Failed"
+        echo "Success... Cloned all github repos to $HOME, changing ownership to all repos now..."
 
-sleep 0.5
-echo "Cloning goose.vim into $HOME/goose.vim" 
-git clone git@github.com:hgoose/goose.vim.git -q ~/goose.vim && echo "...Done" || echo "...Failed"
+        sleep 1
+        for i in "${pathlist[@]}"; do
+            sudo chown $HNAME:$HNAME $i
+        done
+        sudo chown $HNAME:$HNAME ~/linux-dotfiles
 
-sleep 0.5
-echo "Cloning temple.vim into $HOME/temple.vim" 
-git clone git@github.com:hgoose/temple.vim.git -q ~/temple.vim && echo "...Done" || echo "...Failed"
+        sleep 0.75
+        echo "...Done"
 
-sleep 0.5
-echo "Cloning learn into $HOME/learn"
-git clone git@github.com:hgoose/learn.git -q ~/learn && echo "...Done" || echo "...Failed"
-
-sleep 1.25
-echo "Success... Cloned all github repos to $HOME, changing ownership to all repos now..."
-
-sleep 1
-sudo chown $HNAME:$HNAME ~/linux-dotfiles
-sudo chown $HNAME:$HNAME ~/Linux-Resources
-sudo chown $HNAME:$HNAME ~/springsemester
-sudo chown $HNAME:$HNAME ~/dev
-sudo chown $HNAME:$HNAME ~/earn
-sudo chown $HNAME:$HNAME ~/goose.vim
-sudo chown $HNAME:$HNAME ~/temple.vim
-sudo chown $HNAME:$HNAME ~/learn
-
-sleep 0.85
-echo "...Done"
-sleep 0.85
-
-echo "Would you like to copy directorys from linux-dotfiles to $HOME/.config?
+        echo "Would you like to copy directorys from linux-dotfiles to $HOME/.config?
 1: Yes
 2: No
-"
-read OPTION
+        "
+        read OPTION
 
-if [ "$OPTION" = "1" ];
-then
-    sudo cp -R ~/linux-dotfiles/fish ~/.config
-    sudo cp -R ~/linux-dotfiles/kitty ~/.config
-    sudo cp -R ~/linux-dotfiles/rofi ~/.config
-    sudo cp -R ~/linux-dotfiles/tmux ~/.config
-    sudo cp -R ~/linux-dotfiles/i3 ~/.config
-    sudo cp -R ~/linux-dotfiles/zathura ~/.config
-    sudo cp -R ~/linux-dotfiles/neofetch ~/.config
-    sudo cp -R ~/linux-dotfiles/alacritty ~/.config
-    sudo cp -R ~/linux-dotfiles/terminator ~/.config
-    sudo cp -R ~/linux-dotfiles/qutebrowser ~/.config
-    sudo cp -R ~/linux-dotfiles/tint2 ~/.config
+        if [ "$OPTION" = "1" ];
+        then
+                DOTFILES_PATH="~/linux-dotfiles"
 
-    sudo chown -R $HNAME:$HNAME ~/.config
-elif [ "$OPTION" = "2" ];
-then
-    echo ""
-else 
-    echo "Invalid Option"
-fi
+                CONFIGLIST=(
+                        "fish"
+                        "kitty"
+                        "rofi"
+                        "tmux"
+                        "i3"
+                        "zathura"
+                        "neofetch"
+                        "alacritty"
+                        "terminator"
+                        "qutebrowser"
+                        "tint2"
+                )
 
-echo "Would you like to move your scripts to /usr/bin?
+                for i in "${CONFIGLIST[@]}"; do
+                        sudo cp -R $DOTFILES_PATH/$i $HOME/.config && echo "$i...Done" || echo "$i...Failed"
+                done
+
+                sleep 1
+                echo "Success... Moved all config directorys to $HOME/.config"
+
+        elif [ "$OPTION" = "2"];
+        then
+                echo ""
+        else
+                sleep 0.5
+                echo "Invalid Option"
+
+        fi
+
+        sleep 0.75
+        echo "Would you like to move your scripts to /usr/bin?
 1: Yes
 2: No
-"
+        "
+        read OPTION2
 
-read OPTION2
-if [ "$OPTION2" = "1" ];
-then 
-    sudo cp ~/linux-dotfiles/configMover/moveConfigs /usr/bin
-    sudo cp ~/linux-dotfiles/pall/pall /usr/bin
-    sudo cp ~/linux-dotfiles/i3ConfigChanger/i3changer /usr/bin
+        if [ "$OPTION2" = "1" ];
+        then 
+                SCRIPTS=("configMover/moveConfigs" "pall/pall" "i3ConfigChanger/i3Changer")
+                BIN="/usr/bin"
 
-elif [ "$OPTION2" = "2" ];
-then
-    echo ""
-else
-    echo "Invalid Option"
-fi
+                for i in ${SCRIPTS[@]}; do
+                        sudo cp $DOTFILES_PATH/$i $BIN && echo "$i...Done" || echo "$i...Failed"
+                done
+                sleep 0.75
+                echo "Success... Moved scripts to $BIN"
+
+        elif [ "$OPTION2" = "2" ];
+        then
+            echo ""
+        else
+            echo "Invalid Option"
+        fi
+
+
+}
+main
+
