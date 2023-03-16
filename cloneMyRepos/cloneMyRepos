@@ -21,13 +21,13 @@ main()
         )
 
         pathlist=(
-                "~/Linux-Resources"
-                "~/springsemester"
-                "~/dev"
-                "~/earn"
-                "~/goose.vim"
-                "~/temple.vim"
-                "~/learn"
+                "$HOME/Linux-Resources"
+                "$HOME/springsemester"
+                "$HOME/dev"
+                "$HOME/earn"
+                "$HOME/goose.vim"
+                "$HOME/temple.vim"
+                "$HOME/learn"
         ) 
 
         sleep 1
@@ -45,7 +45,7 @@ main()
         for i in "${pathlist[@]}"; do
             sudo chown $HNAME:$HNAME $i
         done
-        sudo chown $HNAME:$HNAME ~/linux-dotfiles
+        sudo chown $HNAME:$HNAME $HOME/linux-dotfiles
 
         sleep 0.75
         echo "...Done"
@@ -57,8 +57,8 @@ main()
         read OPTION
 
         if [ "$OPTION" = "1" ];
+                DOTFILES_PATH="$HOME/linux-dotfiles"
         then
-                DOTFILES_PATH="~/linux-dotfiles"
 
                 CONFIGLIST=(
                         "fish"
