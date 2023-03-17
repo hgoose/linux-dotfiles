@@ -1,6 +1,7 @@
 xset r rate 300 50
 
 # USER DEFINED ALIASES
+alias dphin="dolphin ."
 alias keymap="setxkbmap"
 alias pyflakes="nvim ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pyflakes/messages.py"
 alias pycodestyle="nvim ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pycodestyle.py"

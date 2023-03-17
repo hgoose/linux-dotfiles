@@ -46,7 +46,7 @@ W warnings
 400 imports
 500 line length
 600 deprecation
-700 statements
+700 statements 
 900 syntax error
 """
 import bisect
@@ -1041,70 +1041,70 @@ def whitespace_around_named_parameter_equals(logical_line, tokens):
         prev_end = end
 
 
-@register_check
-def whitespace_before_comment(logical_line, tokens):
-    """Separate inline comments by at least two spaces.
+# @register_check
+# def whitespace_before_comment(logical_line, tokens):
+#     """Separate inline comments by at least two spaces.
+#
+#     An inline comment is a comment on the same line as a statement.
+#     Inline comments should be separated by at least two spaces from the
+#     statement. They should start with a # and a single space.
+#
+#     Each line of a block comment starts with a # and one or multiple
+#     spaces as there can be indented text inside the comment.
+#
+#     Okay: x = x + 1  # Increment x
+#     Okay: x = x + 1    # Increment x
+#     Okay: # Block comments:
+#     Okay: #  - Block comment list
+#     Okay: # \xa0- Block comment list
+#     E261: x = x + 1 # Increment x
+#     E262: x = x + 1  #Increment x
+#     E262: x = x + 1  #  Increment x
+#     E262: x = x + 1  # \xa0Increment x
+#     E265: #Block comment
+#     E266: ### Block comment
+#     """
+#     prev_end = (0, 0)
+#     for token_type, text, start, end, line in tokens:
+#         if token_type == tokenize.COMMENT:
+#             inline_comment = line[:start[1]].strip()
+#             if inline_comment:
+#                 if prev_end[0] == start[0] and start[1] < prev_end[1] + 2:
+#                     yield (prev_end,
+#                            "E261 at least two spaces before inline comment")
+#             symbol, sp, comment = text.partition(' ')
+#             bad_prefix = symbol not in '#:' and (symbol.lstrip('#')[:1] or '#')
+#             if inline_comment:
+#                 if bad_prefix or comment[:1] in WHITESPACE:
+#                     yield start, "E262 inline comment should start with '# '"
+#             elif bad_prefix and (bad_prefix != '!' or start[0] > 1):
+#                 if bad_prefix != '#':
+#                     yield start, "E265 block comment should start with '# '"
+#                 elif comment:
+#                     yield start, "E266 too many leading '#' for block comment"
+#         elif token_type != tokenize.NL:
+#             prev_end = end
 
-    An inline comment is a comment on the same line as a statement.
-    Inline comments should be separated by at least two spaces from the
-    statement. They should start with a # and a single space.
 
-    Each line of a block comment starts with a # and one or multiple
-    spaces as there can be indented text inside the comment.
-
-    Okay: x = x + 1  # Increment x
-    Okay: x = x + 1    # Increment x
-    Okay: # Block comments:
-    Okay: #  - Block comment list
-    Okay: # \xa0- Block comment list
-    E261: x = x + 1 # Increment x
-    E262: x = x + 1  #Increment x
-    E262: x = x + 1  #  Increment x
-    E262: x = x + 1  # \xa0Increment x
-    E265: #Block comment
-    E266: ### Block comment
-    """
-    prev_end = (0, 0)
-    for token_type, text, start, end, line in tokens:
-        if token_type == tokenize.COMMENT:
-            inline_comment = line[:start[1]].strip()
-            if inline_comment:
-                if prev_end[0] == start[0] and start[1] < prev_end[1] + 2:
-                    yield (prev_end,
-                           "E261 at least two spaces before inline comment")
-            symbol, sp, comment = text.partition(' ')
-            bad_prefix = symbol not in '#:' and (symbol.lstrip('#')[:1] or '#')
-            if inline_comment:
-                if bad_prefix or comment[:1] in WHITESPACE:
-                    yield start, "E262 inline comment should start with '# '"
-            elif bad_prefix and (bad_prefix != '!' or start[0] > 1):
-                if bad_prefix != '#':
-                    yield start, "E265 block comment should start with '# '"
-                elif comment:
-                    yield start, "E266 too many leading '#' for block comment"
-        elif token_type != tokenize.NL:
-            prev_end = end
-
-
-@register_check
-def imports_on_separate_lines(logical_line):
-    r"""Place imports on separate lines.
-
-    Okay: import os\nimport sys
-    E401: import sys, os
-
-    Okay: from subprocess import Popen, PIPE
-    Okay: from myclas import MyClass
-    Okay: from foo.bar.yourclass import YourClass
-    Okay: import myclass
-    Okay: import foo.bar.yourclass
-    """
-    line = logical_line
-    if line.startswith('import '):
-        found = line.find(',')
-        if -1 < found and ';' not in line[:found]:
-            yield found, "E401 multiple imports on one line"
-
+# @register_check
+# def imports_on_separate_lines(logical_line):
+#     r"""Place imports on separate lines.
+#
+#     Okay: import os\nimport sys
+#     E401: import sys, os
+#
+#     Okay: from subprocess import Popen, PIPE
+#     Okay: from myclas import MyClass
+#     Okay: from foo.bar.yourclass import YourClass
+#     Okay: import myclass
+#     Okay: import foo.bar.yourclass
+#     """
+#     line = logical_line
+#     if line.startswith('import '):
+#         found = line.find(',')
+#         if -1 < found and ';' not in line[:found]:
+#             yield found, "E401 multiple imports on one line"
+#
 
 @register_check
 def module_imports_on_top_of_file(
@@ -1165,110 +1165,110 @@ def module_imports_on_top_of_file(
         checker_state['seen_non_imports'] = True
 
 
-@register_check
-def compound_statements(logical_line):
-    r"""Compound statements (on the same line) are generally
-    discouraged.
+# @register_check
+# def compound_statements(logical_line):
+#     r"""Compound statements (on the same line) are generally
+#     discouraged.
+#
+#     While sometimes it's okay to put an if/for/while with a small body
+#     on the same line, never do this for multi-clause statements.
+#     Also avoid folding such long lines!
+#
+#     Always use a def statement instead of an assignment statement that
+#     binds a lambda expression directly to a name.
+#
+#     Okay: if foo == 'blah':\n    do_blah_thing()
+#     Okay: do_one()
+#     Okay: do_two()
+#     Okay: do_three()
+#
+#     E701: if foo == 'blah': do_blah_thing()
+#     E701: for x in lst: total += x
+#     E701: while t < 10: t = delay()
+#     E701: if foo == 'blah': do_blah_thing()
+#     E701: else: do_non_blah_thing()
+#     E701: try: something()
+#     E701: finally: cleanup()
+#     E701: if foo == 'blah': one(); two(); three()
+#     E702: do_one(); do_two(); do_three()
+#     E703: do_four();  # useless semicolon
+#     E704: def f(x): return 2*x
+#     E731: f = lambda x: 2*x
+#     """
+#     line = logical_line
+#     last_char = len(line) - 1
+#     found = line.find(':')
+#     prev_found = 0
+#     counts = {char: 0 for char in '{}[]()'}
+#     while -1 < found < last_char:
+#         update_counts(line[prev_found:found], counts)
+#         if ((counts['{'] <= counts['}'] and   # {'a': 1} (dict)
+#              counts['['] <= counts[']'] and   # [1:2] (slice)
+#              counts['('] <= counts[')']) and  # (annotation)
+#             not (sys.version_info >= (3, 8) and
+#                  line[found + 1] == '=')):  # assignment expression
+#             lambda_kw = LAMBDA_REGEX.search(line, 0, found)
+#             if lambda_kw:
+#                 before = line[:lambda_kw.start()].rstrip()
+#                 if before[-1:] == '=' and before[:-1].strip().isidentifier():
+#                     yield 0, ("E731 do not assign a lambda expression, use a "
+#                               "def")
+#                 break
+#             if STARTSWITH_DEF_REGEX.match(line):
+#                 yield 0, "E704 multiple statements on one line (def)"
+#             elif STARTSWITH_INDENT_STATEMENT_REGEX.match(line):
+#                 yield found, "E701 multiple statements on one line (colon)"
+#         prev_found = found
+#         found = line.find(':', found + 1)
+#     found = line.find(';')
+#     while -1 < found:
+#         if found < last_char:
+#             yield found, "E702 multiple statements on one line (semicolon)"
+#         else:
+#             yield found, "E703 statement ends with a semicolon"
+#         found = line.find(';', found + 1)
+#
 
-    While sometimes it's okay to put an if/for/while with a small body
-    on the same line, never do this for multi-clause statements.
-    Also avoid folding such long lines!
-
-    Always use a def statement instead of an assignment statement that
-    binds a lambda expression directly to a name.
-
-    Okay: if foo == 'blah':\n    do_blah_thing()
-    Okay: do_one()
-    Okay: do_two()
-    Okay: do_three()
-
-    E701: if foo == 'blah': do_blah_thing()
-    E701: for x in lst: total += x
-    E701: while t < 10: t = delay()
-    E701: if foo == 'blah': do_blah_thing()
-    E701: else: do_non_blah_thing()
-    E701: try: something()
-    E701: finally: cleanup()
-    E701: if foo == 'blah': one(); two(); three()
-    E702: do_one(); do_two(); do_three()
-    E703: do_four();  # useless semicolon
-    E704: def f(x): return 2*x
-    E731: f = lambda x: 2*x
-    """
-    line = logical_line
-    last_char = len(line) - 1
-    found = line.find(':')
-    prev_found = 0
-    counts = {char: 0 for char in '{}[]()'}
-    while -1 < found < last_char:
-        update_counts(line[prev_found:found], counts)
-        if ((counts['{'] <= counts['}'] and   # {'a': 1} (dict)
-             counts['['] <= counts[']'] and   # [1:2] (slice)
-             counts['('] <= counts[')']) and  # (annotation)
-            not (sys.version_info >= (3, 8) and
-                 line[found + 1] == '=')):  # assignment expression
-            lambda_kw = LAMBDA_REGEX.search(line, 0, found)
-            if lambda_kw:
-                before = line[:lambda_kw.start()].rstrip()
-                if before[-1:] == '=' and before[:-1].strip().isidentifier():
-                    yield 0, ("E731 do not assign a lambda expression, use a "
-                              "def")
-                break
-            if STARTSWITH_DEF_REGEX.match(line):
-                yield 0, "E704 multiple statements on one line (def)"
-            elif STARTSWITH_INDENT_STATEMENT_REGEX.match(line):
-                yield found, "E701 multiple statements on one line (colon)"
-        prev_found = found
-        found = line.find(':', found + 1)
-    found = line.find(';')
-    while -1 < found:
-        if found < last_char:
-            yield found, "E702 multiple statements on one line (semicolon)"
-        else:
-            yield found, "E703 statement ends with a semicolon"
-        found = line.find(';', found + 1)
-
-
-@register_check
-def explicit_line_join(logical_line, tokens):
-    r"""Avoid explicit line join between brackets.
-
-    The preferred way of wrapping long lines is by using Python's
-    implied line continuation inside parentheses, brackets and braces.
-    Long lines can be broken over multiple lines by wrapping expressions
-    in parentheses.  These should be used in preference to using a
-    backslash for line continuation.
-
-    E502: aaa = [123, \\n       123]
-    E502: aaa = ("bbb " \\n       "ccc")
-
-    Okay: aaa = [123,\n       123]
-    Okay: aaa = ("bbb "\n       "ccc")
-    Okay: aaa = "bbb " \\n    "ccc"
-    Okay: aaa = 123  # \\
-    """
-    prev_start = prev_end = parens = 0
-    comment = False
-    backslash = None
-    for token_type, text, start, end, line in tokens:
-        if token_type == tokenize.COMMENT:
-            comment = True
-        if start[0] != prev_start and parens and backslash and not comment:
-            yield backslash, "E502 the backslash is redundant between brackets"
-        if end[0] != prev_end:
-            if line.rstrip('\r\n').endswith('\\'):
-                backslash = (end[0], len(line.splitlines()[-1]) - 1)
-            else:
-                backslash = None
-            prev_start = prev_end = end[0]
-        else:
-            prev_start = start[0]
-        if token_type == tokenize.OP:
-            if text in '([{':
-                parens += 1
-            elif text in ')]}':
-                parens -= 1
-
+# @register_check
+# def explicit_line_join(logical_line, tokens):
+#     r"""Avoid explicit line join between brackets.
+#
+#     The preferred way of wrapping long lines is by using Python's
+#     implied line continuation inside parentheses, brackets and braces.
+#     Long lines can be broken over multiple lines by wrapping expressions
+#     in parentheses.  These should be used in preference to using a
+#     backslash for line continuation.
+#
+#     E502: aaa = [123, \\n       123]
+#     E502: aaa = ("bbb " \\n       "ccc")
+#
+#     Okay: aaa = [123,\n       123]
+#     Okay: aaa = ("bbb "\n       "ccc")
+#     Okay: aaa = "bbb " \\n    "ccc"
+#     Okay: aaa = 123  # \\
+#     """
+#     prev_start = prev_end = parens = 0
+#     comment = False
+#     backslash = None
+#     for token_type, text, start, end, line in tokens:
+#         if token_type == tokenize.COMMENT:
+#             comment = True
+#         if start[0] != prev_start and parens and backslash and not comment:
+#             yield backslash, "E502 the backslash is redundant between brackets"
+#         if end[0] != prev_end:
+#             if line.rstrip('\r\n').endswith('\\'):
+#                 backslash = (end[0], len(line.splitlines()[-1]) - 1)
+#             else:
+#                 backslash = None
+#             prev_start = prev_end = end[0]
+#         else:
+#             prev_start = start[0]
+#         if token_type == tokenize.OP:
+#             if text in '([{':
+#                 parens += 1
+#             elif text in ')]}':
+#                 parens -= 1
+#
 
 # The % character is strictly speaking a binary operator, but the
 # common usage seems to be to put it next to the format parameters,
@@ -1476,105 +1476,105 @@ def bare_except(logical_line, noqa):
         yield match.start(), "E722 do not use bare 'except'"
 
 
-@register_check
-def ambiguous_identifier(logical_line, tokens):
-    r"""Never use the characters 'l', 'O', or 'I' as variable names.
-
-    In some fonts, these characters are indistinguishable from the
-    numerals one and zero. When tempted to use 'l', use 'L' instead.
-
-    Okay: L = 0
-    Okay: o = 123
-    Okay: i = 42
-    E741: l = 0
-    E741: O = 123
-    E741: I = 42
-
-    Variables can be bound in several other contexts, including class
-    and function definitions, lambda functions, 'global' and 'nonlocal'
-    statements, exception handlers, and 'with' and 'for' statements.
-    In addition, we have a special handling for function parameters.
-
-    Okay: except AttributeError as o:
-    Okay: with lock as L:
-    Okay: foo(l=12)
-    Okay: foo(l=I)
-    Okay: for a in foo(l=12):
-    Okay: lambda arg: arg * l
-    Okay: lambda a=l[I:5]: None
-    Okay: lambda x=a.I: None
-    Okay: if l >= 12:
-    E741: except AttributeError as O:
-    E741: with lock as l:
-    E741: global I
-    E741: nonlocal l
-    E741: def foo(l):
-    E741: def foo(l=12):
-    E741: l = foo(l=12)
-    E741: for l in range(10):
-    E741: [l for l in lines if l]
-    E741: lambda l: None
-    E741: lambda a=x[1:5], l: None
-    E741: lambda **l:
-    E741: def f(**l):
-    E742: class I(object):
-    E743: def l(x):
-    """
-    func_depth = None  # set to brace depth if 'def' or 'lambda' is found
-    seen_colon = False  # set to true if we're done with function parameters
-    brace_depth = 0
-    idents_to_avoid = ('l', 'O', 'I')
-    prev_type, prev_text, prev_start, prev_end, __ = tokens[0]
-    for index in range(1, len(tokens)):
-        token_type, text, start, end, line = tokens[index]
-        ident = pos = None
-        # find function definitions
-        if prev_text in {'def', 'lambda'}:
-            func_depth = brace_depth
-            seen_colon = False
-        elif (
-                func_depth is not None and
-                text == ':' and
-                brace_depth == func_depth
-        ):
-            seen_colon = True
-        # update parameter parentheses level
-        if text in '([{':
-            brace_depth += 1
-        elif text in ')]}':
-            brace_depth -= 1
-        # identifiers on the lhs of an assignment operator
-        if text == ':=' or (text == '=' and brace_depth == 0):
-            if prev_text in idents_to_avoid:
-                ident = prev_text
-                pos = prev_start
-        # identifiers bound to values with 'as', 'for',
-        # 'global', or 'nonlocal'
-        if prev_text in ('as', 'for', 'global', 'nonlocal'):
-            if text in idents_to_avoid:
-                ident = text
-                pos = start
-        # function / lambda parameter definitions
-        if (
-                func_depth is not None and
-                not seen_colon and
-                index < len(tokens) - 1 and tokens[index + 1][1] in ':,=)' and
-                prev_text in {'lambda', ',', '*', '**', '('} and
-                text in idents_to_avoid
-        ):
-            ident = text
-            pos = start
-        if prev_text == 'class':
-            if text in idents_to_avoid:
-                yield start, "E742 ambiguous class definition '%s'" % text
-        if prev_text == 'def':
-            if text in idents_to_avoid:
-                yield start, "E743 ambiguous function definition '%s'" % text
-        if ident:
-            yield pos, "E741 ambiguous variable name '%s'" % ident
-        prev_text = text
-        prev_start = start
-
+# @register_check
+# def ambiguous_identifier(logical_line, tokens):
+#     r"""Never use the characters 'l', 'O', or 'I' as variable names.
+#
+#     In some fonts, these characters are indistinguishable from the
+#     numerals one and zero. When tempted to use 'l', use 'L' instead.
+#
+#     Okay: L = 0
+#     Okay: o = 123
+#     Okay: i = 42
+#     E741: l = 0
+#     E741: O = 123
+#     E741: I = 42
+#
+#     Variables can be bound in several other contexts, including class
+#     and function definitions, lambda functions, 'global' and 'nonlocal'
+#     statements, exception handlers, and 'with' and 'for' statements.
+#     In addition, we have a special handling for function parameters.
+#
+#     Okay: except AttributeError as o:
+#     Okay: with lock as L:
+#     Okay: foo(l=12)
+#     Okay: foo(l=I)
+#     Okay: for a in foo(l=12):
+#     Okay: lambda arg: arg * l
+#     Okay: lambda a=l[I:5]: None
+#     Okay: lambda x=a.I: None
+#     Okay: if l >= 12:
+#     E741: except AttributeError as O:
+#     E741: with lock as l:
+#     E741: global I
+#     E741: nonlocal l
+#     E741: def foo(l):
+#     E741: def foo(l=12):
+#     E741: l = foo(l=12)
+#     E741: for l in range(10):
+#     E741: [l for l in lines if l]
+#     E741: lambda l: None
+#     E741: lambda a=x[1:5], l: None
+#     E741: lambda **l:
+#     E741: def f(**l):
+#     E742: class I(object):
+#     E743: def l(x):
+#     """
+#     func_depth = None  # set to brace depth if 'def' or 'lambda' is found
+#     seen_colon = False  # set to true if we're done with function parameters
+#     brace_depth = 0
+#     idents_to_avoid = ('l', 'O', 'I')
+#     prev_type, prev_text, prev_start, prev_end, __ = tokens[0]
+#     for index in range(1, len(tokens)):
+#         token_type, text, start, end, line = tokens[index]
+#         ident = pos = None
+#         # find function definitions
+#         if prev_text in {'def', 'lambda'}:
+#             func_depth = brace_depth
+#             seen_colon = False
+#         elif (
+#                 func_depth is not None and
+#                 text == ':' and
+#                 brace_depth == func_depth
+#         ):
+#             seen_colon = True
+#         # update parameter parentheses level
+#         if text in '([{':
+#             brace_depth += 1
+#         elif text in ')]}':
+#             brace_depth -= 1
+#         # identifiers on the lhs of an assignment operator
+#         if text == ':=' or (text == '=' and brace_depth == 0):
+#             if prev_text in idents_to_avoid:
+#                 ident = prev_text
+#                 pos = prev_start
+#         # identifiers bound to values with 'as', 'for',
+#         # 'global', or 'nonlocal'
+#         if prev_text in ('as', 'for', 'global', 'nonlocal'):
+#             if text in idents_to_avoid:
+#                 ident = text
+#                 pos = start
+#         # function / lambda parameter definitions
+#         if (
+#                 func_depth is not None and
+#                 not seen_colon and
+#                 index < len(tokens) - 1 and tokens[index + 1][1] in ':,=)' and
+#                 prev_text in {'lambda', ',', '*', '**', '('} and
+#                 text in idents_to_avoid
+#         ):
+#             ident = text
+#             pos = start
+#         if prev_text == 'class':
+#             if text in idents_to_avoid:
+#                 yield start, "E742 ambiguous class definition '%s'" % text
+#         if prev_text == 'def':
+#             if text in idents_to_avoid:
+#                 yield start, "E743 ambiguous function definition '%s'" % text
+#         if ident:
+#             yield pos, "E741 ambiguous variable name '%s'" % ident
+#         prev_text = text
+#         prev_start = start
+#
 
 @register_check
 def python_3000_invalid_escape_sequence(logical_line, tokens, noqa):
@@ -1707,57 +1707,57 @@ def python_3000_async_await_keywords(logical_line, tokens):
 
 
 ########################################################################
-@register_check
-def maximum_doc_length(logical_line, max_doc_length, noqa, tokens):
-    r"""Limit all doc lines to a maximum of 72 characters.
-
-    For flowing long blocks of text (docstrings or comments), limiting
-    the length to 72 characters is recommended.
-
-    Reports warning W505
-    """
-    if max_doc_length is None or noqa:
-        return
-
-    prev_token = None
-    skip_lines = set()
-    # Skip lines that
-    for token_type, text, start, end, line in tokens:
-        if token_type not in SKIP_COMMENTS.union([tokenize.STRING]):
-            skip_lines.add(line)
-
-    for token_type, text, start, end, line in tokens:
-        # Skip lines that aren't pure strings
-        if token_type == tokenize.STRING and skip_lines:
-            continue
-        if token_type in (tokenize.STRING, tokenize.COMMENT):
-            # Only check comment-only lines
-            if prev_token is None or prev_token in SKIP_TOKENS:
-                lines = line.splitlines()
-                for line_num, physical_line in enumerate(lines):
-                    if start[0] + line_num == 1 and line.startswith('#!'):
-                        return
-                    length = len(physical_line)
-                    chunks = physical_line.split()
-                    if token_type == tokenize.COMMENT:
-                        if (len(chunks) == 2 and
-                                length - len(chunks[-1]) < MAX_DOC_LENGTH):
-                            continue
-                    if len(chunks) == 1 and line_num + 1 < len(lines):
-                        if (len(chunks) == 1 and
-                                length - len(chunks[-1]) < MAX_DOC_LENGTH):
-                            continue
-                    if length > max_doc_length:
-                        doc_error = (start[0] + line_num, max_doc_length)
-                        yield (doc_error, "W505 doc line too long "
-                                          "(%d > %d characters)"
-                               % (length, max_doc_length))
-        prev_token = token_type
-
-
-########################################################################
-# Helper functions
-########################################################################
+# @register_check
+# def maximum_doc_length(logical_line, max_doc_length, noqa, tokens):
+#     r"""Limit all doc lines to a maximum of 72 characters.
+#
+#     For flowing long blocks of text (docstrings or comments), limiting
+#     the length to 72 characters is recommended.
+#
+#     Reports warning W505
+#     """
+#     if max_doc_length is None or noqa:
+#         return
+#
+#     prev_token = None
+#     skip_lines = set()
+#     # Skip lines that
+#     for token_type, text, start, end, line in tokens:
+#         if token_type not in SKIP_COMMENTS.union([tokenize.STRING]):
+#             skip_lines.add(line)
+#
+#     for token_type, text, start, end, line in tokens:
+#         # Skip lines that aren't pure strings
+#         if token_type == tokenize.STRING and skip_lines:
+#             continue
+#         if token_type in (tokenize.STRING, tokenize.COMMENT):
+#             # Only check comment-only lines
+#             if prev_token is None or prev_token in SKIP_TOKENS:
+#                 lines = line.splitlines()
+#                 for line_num, physical_line in enumerate(lines):
+#                     if start[0] + line_num == 1 and line.startswith('#!'):
+#                         return
+#                     length = len(physical_line)
+#                     chunks = physical_line.split()
+#                     if token_type == tokenize.COMMENT:
+#                         if (len(chunks) == 2 and
+#                                 length - len(chunks[-1]) < MAX_DOC_LENGTH):
+#                             continue
+#                     if len(chunks) == 1 and line_num + 1 < len(lines):
+#                         if (len(chunks) == 1 and
+#                                 length - len(chunks[-1]) < MAX_DOC_LENGTH):
+#                             continue
+#                     if length > max_doc_length:
+#                         doc_error = (start[0] + line_num, max_doc_length)
+#                         yield (doc_error, "W505 doc line too long "
+#                                           "(%d > %d characters)"
+#                                % (length, max_doc_length))
+#         prev_token = token_type
+#
+#
+# ########################################################################
+# # Helper functions
+# ########################################################################
 
 
 def readlines(filename):
@@ -1901,585 +1901,585 @@ def _is_eol_token(token):
 ########################################################################
 
 
-class Checker:
-    """Load a Python source file, tokenize it, check coding style."""
+# class Checker:
+#     """Load a Python source file, tokenize it, check coding style."""
+#
+#     def __init__(self, filename=None, lines=None,
+#                  options=None, report=None, **kwargs):
+#         if options is None:
+#             options = StyleGuide(kwargs).options
+#         else:
+#             assert not kwargs
+#         self._io_error = None
+#         self._physical_checks = options.physical_checks
+#         self._logical_checks = options.logical_checks
+#         self._ast_checks = options.ast_checks
+#         self.max_line_length = options.max_line_length
+#         self.max_doc_length = options.max_doc_length
+#         self.indent_size = options.indent_size
+#         self.multiline = False  # in a multiline string?
+#         self.hang_closing = options.hang_closing
+#         self.indent_size = options.indent_size
+#         self.verbose = options.verbose
+#         self.filename = filename
+#         # Dictionary where a checker can store its custom state.
+#         self._checker_states = {}
+#         if filename is None:
+#             self.filename = 'stdin'
+#             self.lines = lines or []
+#         elif filename == '-':
+#             self.filename = 'stdin'
+#             self.lines = stdin_get_value().splitlines(True)
+#         elif lines is None:
+#             try:
+#                 self.lines = readlines(filename)
+#             except OSError:
+#                 (exc_type, exc) = sys.exc_info()[:2]
+#                 self._io_error = f'{exc_type.__name__}: {exc}'
+#                 self.lines = []
+#         else:
+#             self.lines = lines
+#         if self.lines:
+#             ord0 = ord(self.lines[0][0])
+#             if ord0 in (0xef, 0xfeff):  # Strip the UTF-8 BOM
+#                 if ord0 == 0xfeff:
+#                     self.lines[0] = self.lines[0][1:]
+#                 elif self.lines[0][:3] == '\xef\xbb\xbf':
+#                     self.lines[0] = self.lines[0][3:]
+#         self.report = report or options.report
+#         self.report_error = self.report.error
+#         self.noqa = False
+#
+#     def report_invalid_syntax(self):
+#         """Check if the syntax is valid."""
+#         (exc_type, exc) = sys.exc_info()[:2]
+#         if len(exc.args) > 1:
+#             offset = exc.args[1]
+#             if len(offset) > 2:
+#                 offset = offset[1:3]
+#         else:
+#             offset = (1, 0)
+#         self.report_error(offset[0], offset[1] or 0,
+#                           f'E901 {exc_type.__name__}: {exc.args[0]}',
+#                           self.report_invalid_syntax)
+#
+#     def readline(self):
+#         """Get the next line from the input buffer."""
+#         if self.line_number >= self.total_lines:
+#             return ''
+#         line = self.lines[self.line_number]
+#         self.line_number += 1
+#         if self.indent_char is None and line[:1] in WHITESPACE:
+#             self.indent_char = line[0]
+#         return line
+#
+#     def run_check(self, check, argument_names):
+#         """Run a check plugin."""
+#         arguments = []
+#         for name in argument_names:
+#             arguments.append(getattr(self, name))
+#         return check(*arguments)
+#
+#     def init_checker_state(self, name, argument_names):
+#         """Prepare custom state for the specific checker plugin."""
+#         if 'checker_state' in argument_names:
+#             self.checker_state = self._checker_states.setdefault(name, {})
+#
+#     def check_physical(self, line):
+#         """Run all physical checks on a raw input line."""
+#         self.physical_line = line
+#         for name, check, argument_names in self._physical_checks:
+#             self.init_checker_state(name, argument_names)
+#             result = self.run_check(check, argument_names)
+#             if result is not None:
+#                 (offset, text) = result
+#                 self.report_error(self.line_number, offset, text, check)
+#                 if text[:4] == 'E101':
+#                     self.indent_char = line[0]
+#
+#     def build_tokens_line(self):
+#         """Build a logical line from tokens."""
+#         logical = []
+#         comments = []
+#         length = 0
+#         prev_row = prev_col = mapping = None
+#         for token_type, text, start, end, line in self.tokens:
+#             if token_type in SKIP_TOKENS:
+#                 continue
+#             if not mapping:
+#                 mapping = [(0, start)]
+#             if token_type == tokenize.COMMENT:
+#                 comments.append(text)
+#                 continue
+#             if token_type == tokenize.STRING:
+#                 text = mute_string(text)
+#             if prev_row:
+#                 (start_row, start_col) = start
+#                 if prev_row != start_row:    # different row
+#                     prev_text = self.lines[prev_row - 1][prev_col - 1]
+#                     if prev_text == ',' or (prev_text not in '{[(' and
+#                                             text not in '}])'):
+#                         text = ' ' + text
+#                 elif prev_col != start_col:  # different column
+#                     text = line[prev_col:start_col] + text
+#             logical.append(text)
+#             length += len(text)
+#             mapping.append((length, end))
+#             (prev_row, prev_col) = end
+#         self.logical_line = ''.join(logical)
+#         self.noqa = comments and noqa(''.join(comments))
+#         return mapping
+#
+#     def check_logical(self):
+#         """Build a line from tokens and run all logical checks on it."""
+#         self.report.increment_logical_line()
+#         mapping = self.build_tokens_line()
+#         if not mapping:
+#             return
+#
+#         mapping_offsets = [offset for offset, _ in mapping]
+#         (start_row, start_col) = mapping[0][1]
+#         start_line = self.lines[start_row - 1]
+#         self.indent_level = expand_indent(start_line[:start_col])
+#         if self.blank_before < self.blank_lines:
+#             self.blank_before = self.blank_lines
+#         if self.verbose >= 2:
+#             print(self.logical_line[:80].rstrip())
+#         for name, check, argument_names in self._logical_checks:
+#             if self.verbose >= 4:
+#                 print('   ' + name)
+#             self.init_checker_state(name, argument_names)
+#             for offset, text in self.run_check(check, argument_names) or ():
+#                 if not isinstance(offset, tuple):
+#                     # As mappings are ordered, bisecting is a fast way
+#                     # to find a given offset in them.
+#                     token_offset, pos = mapping[bisect.bisect_left(
+#                         mapping_offsets, offset)]
+#                     offset = (pos[0], pos[1] + offset - token_offset)
+#                 self.report_error(offset[0], offset[1], text, check)
+#         if self.logical_line:
+#             self.previous_indent_level = self.indent_level
+#             self.previous_logical = self.logical_line
+#             if not self.indent_level:
+#                 self.previous_unindented_logical_line = self.logical_line
+#         self.blank_lines = 0
+#         self.tokens = []
+#
+#     def check_ast(self):
+#         """Build the file's AST and run all AST checks."""
+#         try:
+#             tree = compile(''.join(self.lines), '', 'exec', PyCF_ONLY_AST)
+#         except (ValueError, SyntaxError, TypeError):
+#             return self.report_invalid_syntax()
+#         for name, cls, __ in self._ast_checks:
+#             checker = cls(tree, self.filename)
+#             for lineno, offset, text, check in checker.run():
+#                 if not self.lines or not noqa(self.lines[lineno - 1]):
+#                     self.report_error(lineno, offset, text, check)
+#
+#     def generate_tokens(self):
+#         """Tokenize file, run physical line checks and yield tokens."""
+#         if self._io_error:
+#             self.report_error(1, 0, 'E902 %s' % self._io_error, readlines)
+#         tokengen = tokenize.generate_tokens(self.readline)
+#         try:
+#             prev_physical = ''
+#             for token in tokengen:
+#                 if token[2][0] > self.total_lines:
+#                     return
+#                 self.noqa = token[4] and noqa(token[4])
+#                 self.maybe_check_physical(token, prev_physical)
+#                 yield token
+#                 prev_physical = token[4]
+#         except (SyntaxError, tokenize.TokenError):
+#             self.report_invalid_syntax()
+#
+#     def maybe_check_physical(self, token, prev_physical):
+#         """If appropriate for token, check current physical line(s)."""
+#         # Called after every token, but act only on end of line.
+#
+#         # a newline token ends a single physical line.
+#         if _is_eol_token(token):
+#             # if the file does not end with a newline, the NEWLINE
+#             # token is inserted by the parser, but it does not contain
+#             # the previous physical line in `token[4]`
+#             if token[4] == '':
+#                 self.check_physical(prev_physical)
+#             else:
+#                 self.check_physical(token[4])
+#         elif token[0] == tokenize.STRING and '\n' in token[1]:
+#             # Less obviously, a string that contains newlines is a
+#             # multiline string, either triple-quoted or with internal
+#             # newlines backslash-escaped. Check every physical line in
+#             # the string *except* for the last one: its newline is
+#             # outside of the multiline string, so we consider it a
+#             # regular physical line, and will check it like any other
+#             # physical line.
+#             #
+#             # Subtleties:
+#             # - we don't *completely* ignore the last line; if it
+#             #   contains the magical "# noqa" comment, we disable all
+#             #   physical checks for the entire multiline string
+#             # - have to wind self.line_number back because initially it
+#             #   points to the last line of the string, and we want
+#             #   check_physical() to give accurate feedback
+#             if noqa(token[4]):
+#                 return
+#             self.multiline = True
+#             self.line_number = token[2][0]
+#             _, src, (_, offset), _, _ = token
+#             src = self.lines[self.line_number - 1][:offset] + src
+#             for line in src.split('\n')[:-1]:
+#                 self.check_physical(line + '\n')
+#                 self.line_number += 1
+#             self.multiline = False
+#
+#     def check_all(self, expected=None, line_offset=0):
+#         """Run all checks on the input file."""
+#         self.report.init_file(self.filename, self.lines, expected, line_offset)
+#         self.total_lines = len(self.lines)
+#         if self._ast_checks:
+#             self.check_ast()
+#         self.line_number = 0
+#         self.indent_char = None
+#         self.indent_level = self.previous_indent_level = 0
+#         self.previous_logical = ''
+#         self.previous_unindented_logical_line = ''
+#         self.tokens = []
+#         self.blank_lines = self.blank_before = 0
+#         parens = 0
+#         for token in self.generate_tokens():
+#             self.tokens.append(token)
+#             token_type, text = token[0:2]
+#             if self.verbose >= 3:
+#                 if token[2][0] == token[3][0]:
+#                     pos = '[{}:{}]'.format(token[2][1] or '', token[3][1])
+#                 else:
+#                     pos = 'l.%s' % token[3][0]
+#                 print('l.%s\t%s\t%s\t%r' %
+#                       (token[2][0], pos, tokenize.tok_name[token[0]], text))
+#             if token_type == tokenize.OP:
+#                 if text in '([{':
+#                     parens += 1
+#                 elif text in '}])':
+#                     parens -= 1
+#             elif not parens:
+#                 if token_type in NEWLINE:
+#                     if token_type == tokenize.NEWLINE:
+#                         self.check_logical()
+#                         self.blank_before = 0
+#                     elif len(self.tokens) == 1:
+#                         # The physical line contains only this token.
+#                         self.blank_lines += 1
+#                         del self.tokens[0]
+#                     else:
+#                         self.check_logical()
+#         if self.tokens:
+#             self.check_physical(self.lines[-1])
+#             self.check_logical()
+#         return self.report.get_file_results()
+#
+#
+# class BaseReport:
+#     """Collect the results of the checks."""
+#
+#     print_filename = False
+#
+#     def __init__(self, options):
+#         self._benchmark_keys = options.benchmark_keys
+#         self._ignore_code = options.ignore_code
+#         # Results
+#         self.elapsed = 0
+#         self.total_errors = 0
+#         self.counters = dict.fromkeys(self._benchmark_keys, 0)
+#         self.messages = {}
+#
+#     def start(self):
+#         """Start the timer."""
+#         self._start_time = time.time()
+#
+#     def stop(self):
+#         """Stop the timer."""
+#         self.elapsed = time.time() - self._start_time
+#
+#     def init_file(self, filename, lines, expected, line_offset):
+#         """Signal a new file."""
+#         self.filename = filename
+#         self.lines = lines
+#         self.expected = expected or ()
+#         self.line_offset = line_offset
+#         self.file_errors = 0
+#         self.counters['files'] += 1
+#         self.counters['physical lines'] += len(lines)
+#
+#     def increment_logical_line(self):
+#         """Signal a new logical line."""
+#         self.counters['logical lines'] += 1
+#
+#     def error(self, line_number, offset, text, check):
+#         """Report an error, according to options."""
+#         code = text[:4]
+#         if self._ignore_code(code):
+#             return
+#         if code in self.counters:
+#             self.counters[code] += 1
+#         else:
+#             self.counters[code] = 1
+#             self.messages[code] = text[5:]
+#         # Don't care about expected errors or warnings
+#         if code in self.expected:
+#             return
+#         if self.print_filename and not self.file_errors:
+#             print(self.filename)
+#         self.file_errors += 1
+#         self.total_errors += 1
+#         return code
+#
+#     def get_file_results(self):
+#         """Return the count of errors and warnings for this file."""
+#         return self.file_errors
+#
+#     def get_count(self, prefix=''):
+#         """Return the total count of errors and warnings."""
+#         return sum(self.counters[key]
+#                    for key in self.messages if key.startswith(prefix))
+#
+#     def get_statistics(self, prefix=''):
+#         """Get statistics for message codes that start with the prefix.
+#
+#         prefix='' matches all errors and warnings
+#         prefix='E' matches all errors
+#         prefix='W' matches all warnings
+#         prefix='E4' matches all errors that have to do with imports
+#         """
+#         return ['%-7s %s %s' % (self.counters[key], key, self.messages[key])
+#                 for key in sorted(self.messages) if key.startswith(prefix)]
+#
+#     def print_statistics(self, prefix=''):
+#         """Print overall statistics (number of errors and warnings)."""
+#         for line in self.get_statistics(prefix):
+#             print(line)
+#
+#     def print_benchmark(self):
+#         """Print benchmark numbers."""
+#         print('{:<7.2f} {}'.format(self.elapsed, 'seconds elapsed'))
+#         if self.elapsed:
+#             for key in self._benchmark_keys:
+#                 print('%-7d %s per second (%d total)' %
+#                       (self.counters[key] / self.elapsed, key,
+#                        self.counters[key]))
+#
 
-    def __init__(self, filename=None, lines=None,
-                 options=None, report=None, **kwargs):
-        if options is None:
-            options = StyleGuide(kwargs).options
-        else:
-            assert not kwargs
-        self._io_error = None
-        self._physical_checks = options.physical_checks
-        self._logical_checks = options.logical_checks
-        self._ast_checks = options.ast_checks
-        self.max_line_length = options.max_line_length
-        self.max_doc_length = options.max_doc_length
-        self.indent_size = options.indent_size
-        self.multiline = False  # in a multiline string?
-        self.hang_closing = options.hang_closing
-        self.indent_size = options.indent_size
-        self.verbose = options.verbose
-        self.filename = filename
-        # Dictionary where a checker can store its custom state.
-        self._checker_states = {}
-        if filename is None:
-            self.filename = 'stdin'
-            self.lines = lines or []
-        elif filename == '-':
-            self.filename = 'stdin'
-            self.lines = stdin_get_value().splitlines(True)
-        elif lines is None:
-            try:
-                self.lines = readlines(filename)
-            except OSError:
-                (exc_type, exc) = sys.exc_info()[:2]
-                self._io_error = f'{exc_type.__name__}: {exc}'
-                self.lines = []
-        else:
-            self.lines = lines
-        if self.lines:
-            ord0 = ord(self.lines[0][0])
-            if ord0 in (0xef, 0xfeff):  # Strip the UTF-8 BOM
-                if ord0 == 0xfeff:
-                    self.lines[0] = self.lines[0][1:]
-                elif self.lines[0][:3] == '\xef\xbb\xbf':
-                    self.lines[0] = self.lines[0][3:]
-        self.report = report or options.report
-        self.report_error = self.report.error
-        self.noqa = False
-
-    def report_invalid_syntax(self):
-        """Check if the syntax is valid."""
-        (exc_type, exc) = sys.exc_info()[:2]
-        if len(exc.args) > 1:
-            offset = exc.args[1]
-            if len(offset) > 2:
-                offset = offset[1:3]
-        else:
-            offset = (1, 0)
-        self.report_error(offset[0], offset[1] or 0,
-                          f'E901 {exc_type.__name__}: {exc.args[0]}',
-                          self.report_invalid_syntax)
-
-    def readline(self):
-        """Get the next line from the input buffer."""
-        if self.line_number >= self.total_lines:
-            return ''
-        line = self.lines[self.line_number]
-        self.line_number += 1
-        if self.indent_char is None and line[:1] in WHITESPACE:
-            self.indent_char = line[0]
-        return line
-
-    def run_check(self, check, argument_names):
-        """Run a check plugin."""
-        arguments = []
-        for name in argument_names:
-            arguments.append(getattr(self, name))
-        return check(*arguments)
-
-    def init_checker_state(self, name, argument_names):
-        """Prepare custom state for the specific checker plugin."""
-        if 'checker_state' in argument_names:
-            self.checker_state = self._checker_states.setdefault(name, {})
-
-    def check_physical(self, line):
-        """Run all physical checks on a raw input line."""
-        self.physical_line = line
-        for name, check, argument_names in self._physical_checks:
-            self.init_checker_state(name, argument_names)
-            result = self.run_check(check, argument_names)
-            if result is not None:
-                (offset, text) = result
-                self.report_error(self.line_number, offset, text, check)
-                if text[:4] == 'E101':
-                    self.indent_char = line[0]
-
-    def build_tokens_line(self):
-        """Build a logical line from tokens."""
-        logical = []
-        comments = []
-        length = 0
-        prev_row = prev_col = mapping = None
-        for token_type, text, start, end, line in self.tokens:
-            if token_type in SKIP_TOKENS:
-                continue
-            if not mapping:
-                mapping = [(0, start)]
-            if token_type == tokenize.COMMENT:
-                comments.append(text)
-                continue
-            if token_type == tokenize.STRING:
-                text = mute_string(text)
-            if prev_row:
-                (start_row, start_col) = start
-                if prev_row != start_row:    # different row
-                    prev_text = self.lines[prev_row - 1][prev_col - 1]
-                    if prev_text == ',' or (prev_text not in '{[(' and
-                                            text not in '}])'):
-                        text = ' ' + text
-                elif prev_col != start_col:  # different column
-                    text = line[prev_col:start_col] + text
-            logical.append(text)
-            length += len(text)
-            mapping.append((length, end))
-            (prev_row, prev_col) = end
-        self.logical_line = ''.join(logical)
-        self.noqa = comments and noqa(''.join(comments))
-        return mapping
-
-    def check_logical(self):
-        """Build a line from tokens and run all logical checks on it."""
-        self.report.increment_logical_line()
-        mapping = self.build_tokens_line()
-        if not mapping:
-            return
-
-        mapping_offsets = [offset for offset, _ in mapping]
-        (start_row, start_col) = mapping[0][1]
-        start_line = self.lines[start_row - 1]
-        self.indent_level = expand_indent(start_line[:start_col])
-        if self.blank_before < self.blank_lines:
-            self.blank_before = self.blank_lines
-        if self.verbose >= 2:
-            print(self.logical_line[:80].rstrip())
-        for name, check, argument_names in self._logical_checks:
-            if self.verbose >= 4:
-                print('   ' + name)
-            self.init_checker_state(name, argument_names)
-            for offset, text in self.run_check(check, argument_names) or ():
-                if not isinstance(offset, tuple):
-                    # As mappings are ordered, bisecting is a fast way
-                    # to find a given offset in them.
-                    token_offset, pos = mapping[bisect.bisect_left(
-                        mapping_offsets, offset)]
-                    offset = (pos[0], pos[1] + offset - token_offset)
-                self.report_error(offset[0], offset[1], text, check)
-        if self.logical_line:
-            self.previous_indent_level = self.indent_level
-            self.previous_logical = self.logical_line
-            if not self.indent_level:
-                self.previous_unindented_logical_line = self.logical_line
-        self.blank_lines = 0
-        self.tokens = []
-
-    def check_ast(self):
-        """Build the file's AST and run all AST checks."""
-        try:
-            tree = compile(''.join(self.lines), '', 'exec', PyCF_ONLY_AST)
-        except (ValueError, SyntaxError, TypeError):
-            return self.report_invalid_syntax()
-        for name, cls, __ in self._ast_checks:
-            checker = cls(tree, self.filename)
-            for lineno, offset, text, check in checker.run():
-                if not self.lines or not noqa(self.lines[lineno - 1]):
-                    self.report_error(lineno, offset, text, check)
-
-    def generate_tokens(self):
-        """Tokenize file, run physical line checks and yield tokens."""
-        if self._io_error:
-            self.report_error(1, 0, 'E902 %s' % self._io_error, readlines)
-        tokengen = tokenize.generate_tokens(self.readline)
-        try:
-            prev_physical = ''
-            for token in tokengen:
-                if token[2][0] > self.total_lines:
-                    return
-                self.noqa = token[4] and noqa(token[4])
-                self.maybe_check_physical(token, prev_physical)
-                yield token
-                prev_physical = token[4]
-        except (SyntaxError, tokenize.TokenError):
-            self.report_invalid_syntax()
-
-    def maybe_check_physical(self, token, prev_physical):
-        """If appropriate for token, check current physical line(s)."""
-        # Called after every token, but act only on end of line.
-
-        # a newline token ends a single physical line.
-        if _is_eol_token(token):
-            # if the file does not end with a newline, the NEWLINE
-            # token is inserted by the parser, but it does not contain
-            # the previous physical line in `token[4]`
-            if token[4] == '':
-                self.check_physical(prev_physical)
-            else:
-                self.check_physical(token[4])
-        elif token[0] == tokenize.STRING and '\n' in token[1]:
-            # Less obviously, a string that contains newlines is a
-            # multiline string, either triple-quoted or with internal
-            # newlines backslash-escaped. Check every physical line in
-            # the string *except* for the last one: its newline is
-            # outside of the multiline string, so we consider it a
-            # regular physical line, and will check it like any other
-            # physical line.
-            #
-            # Subtleties:
-            # - we don't *completely* ignore the last line; if it
-            #   contains the magical "# noqa" comment, we disable all
-            #   physical checks for the entire multiline string
-            # - have to wind self.line_number back because initially it
-            #   points to the last line of the string, and we want
-            #   check_physical() to give accurate feedback
-            if noqa(token[4]):
-                return
-            self.multiline = True
-            self.line_number = token[2][0]
-            _, src, (_, offset), _, _ = token
-            src = self.lines[self.line_number - 1][:offset] + src
-            for line in src.split('\n')[:-1]:
-                self.check_physical(line + '\n')
-                self.line_number += 1
-            self.multiline = False
-
-    def check_all(self, expected=None, line_offset=0):
-        """Run all checks on the input file."""
-        self.report.init_file(self.filename, self.lines, expected, line_offset)
-        self.total_lines = len(self.lines)
-        if self._ast_checks:
-            self.check_ast()
-        self.line_number = 0
-        self.indent_char = None
-        self.indent_level = self.previous_indent_level = 0
-        self.previous_logical = ''
-        self.previous_unindented_logical_line = ''
-        self.tokens = []
-        self.blank_lines = self.blank_before = 0
-        parens = 0
-        for token in self.generate_tokens():
-            self.tokens.append(token)
-            token_type, text = token[0:2]
-            if self.verbose >= 3:
-                if token[2][0] == token[3][0]:
-                    pos = '[{}:{}]'.format(token[2][1] or '', token[3][1])
-                else:
-                    pos = 'l.%s' % token[3][0]
-                print('l.%s\t%s\t%s\t%r' %
-                      (token[2][0], pos, tokenize.tok_name[token[0]], text))
-            if token_type == tokenize.OP:
-                if text in '([{':
-                    parens += 1
-                elif text in '}])':
-                    parens -= 1
-            elif not parens:
-                if token_type in NEWLINE:
-                    if token_type == tokenize.NEWLINE:
-                        self.check_logical()
-                        self.blank_before = 0
-                    elif len(self.tokens) == 1:
-                        # The physical line contains only this token.
-                        self.blank_lines += 1
-                        del self.tokens[0]
-                    else:
-                        self.check_logical()
-        if self.tokens:
-            self.check_physical(self.lines[-1])
-            self.check_logical()
-        return self.report.get_file_results()
-
-
-class BaseReport:
-    """Collect the results of the checks."""
-
-    print_filename = False
-
-    def __init__(self, options):
-        self._benchmark_keys = options.benchmark_keys
-        self._ignore_code = options.ignore_code
-        # Results
-        self.elapsed = 0
-        self.total_errors = 0
-        self.counters = dict.fromkeys(self._benchmark_keys, 0)
-        self.messages = {}
-
-    def start(self):
-        """Start the timer."""
-        self._start_time = time.time()
-
-    def stop(self):
-        """Stop the timer."""
-        self.elapsed = time.time() - self._start_time
-
-    def init_file(self, filename, lines, expected, line_offset):
-        """Signal a new file."""
-        self.filename = filename
-        self.lines = lines
-        self.expected = expected or ()
-        self.line_offset = line_offset
-        self.file_errors = 0
-        self.counters['files'] += 1
-        self.counters['physical lines'] += len(lines)
-
-    def increment_logical_line(self):
-        """Signal a new logical line."""
-        self.counters['logical lines'] += 1
-
-    def error(self, line_number, offset, text, check):
-        """Report an error, according to options."""
-        code = text[:4]
-        if self._ignore_code(code):
-            return
-        if code in self.counters:
-            self.counters[code] += 1
-        else:
-            self.counters[code] = 1
-            self.messages[code] = text[5:]
-        # Don't care about expected errors or warnings
-        if code in self.expected:
-            return
-        if self.print_filename and not self.file_errors:
-            print(self.filename)
-        self.file_errors += 1
-        self.total_errors += 1
-        return code
-
-    def get_file_results(self):
-        """Return the count of errors and warnings for this file."""
-        return self.file_errors
-
-    def get_count(self, prefix=''):
-        """Return the total count of errors and warnings."""
-        return sum(self.counters[key]
-                   for key in self.messages if key.startswith(prefix))
-
-    def get_statistics(self, prefix=''):
-        """Get statistics for message codes that start with the prefix.
-
-        prefix='' matches all errors and warnings
-        prefix='E' matches all errors
-        prefix='W' matches all warnings
-        prefix='E4' matches all errors that have to do with imports
-        """
-        return ['%-7s %s %s' % (self.counters[key], key, self.messages[key])
-                for key in sorted(self.messages) if key.startswith(prefix)]
-
-    def print_statistics(self, prefix=''):
-        """Print overall statistics (number of errors and warnings)."""
-        for line in self.get_statistics(prefix):
-            print(line)
-
-    def print_benchmark(self):
-        """Print benchmark numbers."""
-        print('{:<7.2f} {}'.format(self.elapsed, 'seconds elapsed'))
-        if self.elapsed:
-            for key in self._benchmark_keys:
-                print('%-7d %s per second (%d total)' %
-                      (self.counters[key] / self.elapsed, key,
-                       self.counters[key]))
-
-
-class FileReport(BaseReport):
-    """Collect the results of the checks and print the filenames."""
-
-    print_filename = True
-
-
-class StandardReport(BaseReport):
-    """Collect and print the results of the checks."""
-
-    def __init__(self, options):
-        super().__init__(options)
-        self._fmt = REPORT_FORMAT.get(options.format.lower(),
-                                      options.format)
-        self._repeat = options.repeat
-        self._show_source = options.show_source
-        self._show_pep8 = options.show_pep8
-
-    def init_file(self, filename, lines, expected, line_offset):
-        """Signal a new file."""
-        self._deferred_print = []
-        return super().init_file(
-            filename, lines, expected, line_offset)
-
-    def error(self, line_number, offset, text, check):
-        """Report an error, according to options."""
-        code = super().error(line_number, offset, text, check)
-        if code and (self.counters[code] == 1 or self._repeat):
-            self._deferred_print.append(
-                (line_number, offset, code, text[5:], check.__doc__))
-        return code
-
-    def get_file_results(self):
-        """Print results and return the overall count for this file."""
-        self._deferred_print.sort()
-        for line_number, offset, code, text, doc in self._deferred_print:
-            print(self._fmt % {
-                'path': self.filename,
-                'row': self.line_offset + line_number, 'col': offset + 1,
-                'code': code, 'text': text,
-            })
-            if self._show_source:
-                if line_number > len(self.lines):
-                    line = ''
-                else:
-                    line = self.lines[line_number - 1]
-                print(line.rstrip())
-                print(re.sub(r'\S', ' ', line[:offset]) + '^')
-            if self._show_pep8 and doc:
-                print('    ' + doc.strip())
-
-            # stdout is block buffered when not stdout.isatty().
-            # line can be broken where buffer boundary since other
-            # processes write to same file.
-            # flush() after print() to avoid buffer boundary.
-            # Typical buffer size is 8192. line written safely when
-            # len(line) < 8192.
-            sys.stdout.flush()
-        return self.file_errors
+# class FileReport(BaseReport):
+#     """Collect the results of the checks and print the filenames."""
+#
+#     print_filename = True
 
 
-class DiffReport(StandardReport):
-    """Collect and print the results for the changed lines only."""
+# class StandardReport(BaseReport):
+#     """Collect and print the results of the checks."""
+#
+#     def __init__(self, options):
+#         super().__init__(options)
+#         self._fmt = REPORT_FORMAT.get(options.format.lower(),
+#                                       options.format)
+#         self._repeat = options.repeat
+#         self._show_source = options.show_source
+#         self._show_pep8 = options.show_pep8
+#
+#     def init_file(self, filename, lines, expected, line_offset):
+#         """Signal a new file."""
+#         self._deferred_print = []
+#         return super().init_file(
+#             filename, lines, expected, line_offset)
+#
+#     def error(self, line_number, offset, text, check):
+#         """Report an error, according to options."""
+#         code = super().error(line_number, offset, text, check)
+#         if code and (self.counters[code] == 1 or self._repeat):
+#             self._deferred_print.append(
+#                 (line_number, offset, code, text[5:], check.__doc__))
+#         return code
+#
+#     def get_file_results(self):
+#         """Print results and return the overall count for this file."""
+#         self._deferred_print.sort()
+#         for line_number, offset, code, text, doc in self._deferred_print:
+#             print(self._fmt % {
+#                 'path': self.filename,
+#                 'row': self.line_offset + line_number, 'col': offset + 1,
+#                 'code': code, 'text': text,
+#             })
+#             if self._show_source:
+#                 if line_number > len(self.lines):
+#                     line = ''
+#                 else:
+#                     line = self.lines[line_number - 1]
+#                 print(line.rstrip())
+#                 print(re.sub(r'\S', ' ', line[:offset]) + '^')
+#             if self._show_pep8 and doc:
+#                 print('    ' + doc.strip())
+#
+#             # stdout is block buffered when not stdout.isatty().
+#             # line can be broken where buffer boundary since other
+#             # processes write to same file.
+#             # flush() after print() to avoid buffer boundary.
+#             # Typical buffer size is 8192. line written safely when
+#             # len(line) < 8192.
+#             sys.stdout.flush()
+#         return self.file_errors
+#
 
-    def __init__(self, options):
-        super().__init__(options)
-        self._selected = options.selected_lines
+# class DiffReport(StandardReport):
+#     """Collect and print the results for the changed lines only."""
+#
+#     def __init__(self, options):
+#         super().__init__(options)
+#         self._selected = options.selected_lines
+#
+#     def error(self, line_number, offset, text, check):
+#         if line_number not in self._selected[self.filename]:
+#             return
+#         return super().error(line_number, offset, text, check)
+#
 
-    def error(self, line_number, offset, text, check):
-        if line_number not in self._selected[self.filename]:
-            return
-        return super().error(line_number, offset, text, check)
-
-
-class StyleGuide:
-    """Initialize a PEP-8 instance with few options."""
-
-    def __init__(self, *args, **kwargs):
-        # build options from the command line
-        self.checker_class = kwargs.pop('checker_class', Checker)
-        parse_argv = kwargs.pop('parse_argv', False)
-        config_file = kwargs.pop('config_file', False)
-        parser = kwargs.pop('parser', None)
-        # build options from dict
-        options_dict = dict(*args, **kwargs)
-        arglist = None if parse_argv else options_dict.get('paths', None)
-        verbose = options_dict.get('verbose', None)
-        options, self.paths = process_options(
-            arglist, parse_argv, config_file, parser, verbose)
-        if options_dict:
-            options.__dict__.update(options_dict)
-            if 'paths' in options_dict:
-                self.paths = options_dict['paths']
-
-        self.runner = self.input_file
-        self.options = options
-
-        if not options.reporter:
-            options.reporter = BaseReport if options.quiet else StandardReport
-
-        options.select = tuple(options.select or ())
-        if not (options.select or options.ignore or
-                options.testsuite or options.doctest) and DEFAULT_IGNORE:
-            # The default choice: ignore controversial checks
-            options.ignore = tuple(DEFAULT_IGNORE.split(','))
-        else:
-            # Ignore all checks which are not explicitly selected
-            options.ignore = ('',) if options.select else tuple(options.ignore)
-        options.benchmark_keys = BENCHMARK_KEYS[:]
-        options.ignore_code = self.ignore_code
-        options.physical_checks = self.get_checks('physical_line')
-        options.logical_checks = self.get_checks('logical_line')
-        options.ast_checks = self.get_checks('tree')
-        self.init_report()
-
-    def init_report(self, reporter=None):
-        """Initialize the report instance."""
-        self.options.report = (reporter or self.options.reporter)(self.options)
-        return self.options.report
-
-    def check_files(self, paths=None):
-        """Run all checks on the paths."""
-        if paths is None:
-            paths = self.paths
-        report = self.options.report
-        runner = self.runner
-        report.start()
-        try:
-            for path in paths:
-                if os.path.isdir(path):
-                    self.input_dir(path)
-                elif not self.excluded(path):
-                    runner(path)
-        except KeyboardInterrupt:
-            print('... stopped')
-        report.stop()
-        return report
-
-    def input_file(self, filename, lines=None, expected=None, line_offset=0):
-        """Run all checks on a Python source file."""
-        if self.options.verbose:
-            print('checking %s' % filename)
-        fchecker = self.checker_class(
-            filename, lines=lines, options=self.options)
-        return fchecker.check_all(expected=expected, line_offset=line_offset)
-
-    def input_dir(self, dirname):
-        """Check all files in this directory and all subdirectories."""
-        dirname = dirname.rstrip('/')
-        if self.excluded(dirname):
-            return 0
-        counters = self.options.report.counters
-        verbose = self.options.verbose
-        filepatterns = self.options.filename
-        runner = self.runner
-        for root, dirs, files in os.walk(dirname):
-            if verbose:
-                print('directory ' + root)
-            counters['directories'] += 1
-            for subdir in sorted(dirs):
-                if self.excluded(subdir, root):
-                    dirs.remove(subdir)
-            for filename in sorted(files):
-                # contain a pattern that matches?
-                if (
-                    filename_match(filename, filepatterns) and
-                    not self.excluded(filename, root)
-                ):
-                    runner(os.path.join(root, filename))
-
-    def excluded(self, filename, parent=None):
-        """Check if the file should be excluded.
-
-        Check if 'options.exclude' contains a pattern matching filename.
-        """
-        if not self.options.exclude:
-            return False
-        basename = os.path.basename(filename)
-        if filename_match(basename, self.options.exclude):
-            return True
-        if parent:
-            filename = os.path.join(parent, filename)
-        filename = os.path.abspath(filename)
-        return filename_match(filename, self.options.exclude)
-
-    def ignore_code(self, code):
-        """Check if the error code should be ignored.
-
-        If 'options.select' contains a prefix of the error code,
-        return False.  Else, if 'options.ignore' contains a prefix of
-        the error code, return True.
-        """
-        if len(code) < 4 and any(s.startswith(code)
-                                 for s in self.options.select):
-            return False
-        return (code.startswith(self.options.ignore) and
-                not code.startswith(self.options.select))
-
-    def get_checks(self, argument_name):
-        """Get all the checks for this category.
-
-        Find all globally visible functions where the first argument
-        name starts with argument_name and which contain selected tests.
-        """
-        checks = []
-        for check, attrs in _checks[argument_name].items():
-            (codes, args) = attrs
-            if any(not (code and self.ignore_code(code)) for code in codes):
-                checks.append((check.__name__, check, args))
-        return sorted(checks)
-
+# class StyleGuide:
+#     """Initialize a PEP-8 instance with few options."""
+#
+#     def __init__(self, *args, **kwargs):
+#         # build options from the command line
+#         self.checker_class = kwargs.pop('checker_class', Checker)
+#         parse_argv = kwargs.pop('parse_argv', False)
+#         config_file = kwargs.pop('config_file', False)
+#         parser = kwargs.pop('parser', None)
+#         # build options from dict
+#         options_dict = dict(*args, **kwargs)
+#         arglist = None if parse_argv else options_dict.get('paths', None)
+#         verbose = options_dict.get('verbose', None)
+#         options, self.paths = process_options(
+#             arglist, parse_argv, config_file, parser, verbose)
+#         if options_dict:
+#             options.__dict__.update(options_dict)
+#             if 'paths' in options_dict:
+#                 self.paths = options_dict['paths']
+#
+#         self.runner = self.input_file
+#         self.options = options
+#
+#         if not options.reporter:
+#             options.reporter = BaseReport if options.quiet else StandardReport
+#
+#         options.select = tuple(options.select or ())
+#         if not (options.select or options.ignore or
+#                 options.testsuite or options.doctest) and DEFAULT_IGNORE:
+#             # The default choice: ignore controversial checks
+#             options.ignore = tuple(DEFAULT_IGNORE.split(','))
+#         else:
+#             # Ignore all checks which are not explicitly selected
+#             options.ignore = ('',) if options.select else tuple(options.ignore)
+#         options.benchmark_keys = BENCHMARK_KEYS[:]
+#         options.ignore_code = self.ignore_code
+#         options.physical_checks = self.get_checks('physical_line')
+#         options.logical_checks = self.get_checks('logical_line')
+#         options.ast_checks = self.get_checks('tree')
+#         self.init_report()
+#
+#     def init_report(self, reporter=None):
+#         """Initialize the report instance."""
+#         self.options.report = (reporter or self.options.reporter)(self.options)
+#         return self.options.report
+#
+#     def check_files(self, paths=None):
+#         """Run all checks on the paths."""
+#         if paths is None:
+#             paths = self.paths
+#         report = self.options.report
+#         runner = self.runner
+#         report.start()
+#         try:
+#             for path in paths:
+#                 if os.path.isdir(path):
+#                     self.input_dir(path)
+#                 elif not self.excluded(path):
+#                     runner(path)
+#         except KeyboardInterrupt:
+#             print('... stopped')
+#         report.stop()
+#         return report
+#
+#     def input_file(self, filename, lines=None, expected=None, line_offset=0):
+#         """Run all checks on a Python source file."""
+#         if self.options.verbose:
+#             print('checking %s' % filename)
+#         fchecker = self.checker_class(
+#             filename, lines=lines, options=self.options)
+#         return fchecker.check_all(expected=expected, line_offset=line_offset)
+#
+#     def input_dir(self, dirname):
+#         """Check all files in this directory and all subdirectories."""
+#         dirname = dirname.rstrip('/')
+#         if self.excluded(dirname):
+#             return 0
+#         counters = self.options.report.counters
+#         verbose = self.options.verbose
+#         filepatterns = self.options.filename
+#         runner = self.runner
+#         for root, dirs, files in os.walk(dirname):
+#             if verbose:
+#                 print('directory ' + root)
+#             counters['directories'] += 1
+#             for subdir in sorted(dirs):
+#                 if self.excluded(subdir, root):
+#                     dirs.remove(subdir)
+#             for filename in sorted(files):
+#                 # contain a pattern that matches?
+#                 if (
+#                     filename_match(filename, filepatterns) and
+#                     not self.excluded(filename, root)
+#                 ):
+#                     runner(os.path.join(root, filename))
+#
+#     def excluded(self, filename, parent=None):
+#         """Check if the file should be excluded.
+#
+#         Check if 'options.exclude' contains a pattern matching filename.
+#         """
+#         if not self.options.exclude:
+#             return False
+#         basename = os.path.basename(filename)
+#         if filename_match(basename, self.options.exclude):
+#             return True
+#         if parent:
+#             filename = os.path.join(parent, filename)
+#         filename = os.path.abspath(filename)
+#         return filename_match(filename, self.options.exclude)
+#
+#     def ignore_code(self, code):
+#         """Check if the error code should be ignored.
+#
+#         If 'options.select' contains a prefix of the error code,
+#         return False.  Else, if 'options.ignore' contains a prefix of
+#         the error code, return True.
+#         """
+#         if len(code) < 4 and any(s.startswith(code)
+#                                  for s in self.options.select):
+#             return False
+#         return (code.startswith(self.options.ignore) and
+#                 not code.startswith(self.options.select))
+#
+#     def get_checks(self, argument_name):
+#         """Get all the checks for this category.
+#
+#         Find all globally visible functions where the first argument
+#         name starts with argument_name and which contain selected tests.
+#         """
+#         checks = []
+#         for check, attrs in _checks[argument_name].items():
+#             (codes, args) = attrs
+#             if any(not (code and self.ignore_code(code)) for code in codes):
+#                 checks.append((check.__name__, check, args))
+#         return sorted(checks)
+#
 
 def get_parser(prog='pycodestyle', version=__version__):
     """Create the parser for the program."""
