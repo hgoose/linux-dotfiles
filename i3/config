@@ -22,6 +22,9 @@ exec --no-startup-id killall xfce4-panel
 
 # Launch a terminal session on startup
 exec --no-startup-id kitty 
+
+# Launch a chrome session on startup
+exec --no-startup-id google-chrome-stable 
 # exec --no-startup-id terminator 
 
 # Launch tint2 at startup
