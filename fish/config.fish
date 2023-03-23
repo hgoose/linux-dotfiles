@@ -1,6 +1,8 @@
 xset r rate 300 50
 
 # USER DEFINED ALIASES
+alias kp="kill polybar"
+alias polybar="~/.config/polybar/launch.sh"
 alias testp="cd ~/springsemester/calc/testPrep"
 alias dphin="dolphin ."
 alias keymap="setxkbmap"
@@ -60,6 +62,10 @@ alias kazam="nohup kazam & && pidof kazam | disown"
 alias pd="push-dotfiles"
 alias ss="cd ~/springsemester/"
 alias bluetooth="nvim /etc/bluetooth/main.conf"
+
+function pbar
+	sudo cp -R ~/repos/polybar1/polybar-$argv ~/.config/polybar && ~/.config/polybar/launch.sh
+end
 
 # Remove fish greeting
 set -U fish_greeting
