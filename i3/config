@@ -35,7 +35,7 @@ exec --no-startup-id kitty
 # exec --no-startup-id terminator 
 
 # Launch tint2 at startup
-# exec --no-startup-id tint2 
+exec --no-startup-id tint2 
 
 # Start nitrogen (wallpaper)
 exec --no-startup-id nitrogen --restore
