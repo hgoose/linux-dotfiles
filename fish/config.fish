@@ -1,6 +1,7 @@
 xset r rate 300 50
 
 # USER DEFINED ALIASES
+alias go="nohup google-chrome-stable >/dev/null 2>&1 &"
 alias kp="kill polybar"
 alias polybar="~/.config/polybar/launch.sh"
 alias testp="cd ~/springsemester/calc/testPrep"

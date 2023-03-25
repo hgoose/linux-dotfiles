@@ -9,7 +9,8 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec --no-startup-id "gnome-settings-daemon"
+# Gnome Settigs Daemon
+# exec --no-startup-id "gnome-settings-daemon"
 
 # Start Picom
 exec --no-startup-id picom -CGb
@@ -20,11 +21,17 @@ exec --no-startup-id nitrogen --restore
 # Kill xfce4-panel on startup
 exec --no-startup-id killall xfce4-panel 
 
+# Kill i3bar
+exec --no-startup-id killall i3bar
+
+# Lauch polybar
+exec --no-startup-id polybar ~/.config/polybar/launch.sh
+
 # Launch a terminal session on startup
 exec --no-startup-id kitty 
 
 # Launch a chrome session on startup
-exec --no-startup-id google-chrome-stable 
+# exec --no-startup-id google-chrome-stable 
 # exec --no-startup-id terminator 
 
 # Launch tint2 at startup
