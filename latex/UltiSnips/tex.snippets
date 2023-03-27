@@ -644,7 +644,7 @@ endsnippet
 snippet mk "Math" wA
 $${1}$`!p
 if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
-   snip.rv = ' '
+   snip.rv = ''
 else:
    snip.rv = ''
 `$2
@@ -708,4 +708,45 @@ endsnippet
 
 snippet tri "triangle" i
 \triangle
+endsnippet
+
+snippet contents
+\begin{center}
+    \begin{Huge}
+        \textbf{Chapter $1}
+    \end{Huge}
+\end{center}
+\line(1,0){490}
+\bigbreak \noindent \bigbreak \noindent  
+\begin{Huge}
+    \noindent \textbf{Contents}
+\end{Huge}
+\bigbreak \noindent 
+\begin{Large}
+		\bigbreak \noindent
+    \textbf{$2}
+    \bigbreak \noindent \bigbreak \noindent 
+    \textbf{$3}
+    \bigbreak \noindent \bigbreak \noindent 
+    \textbf{$4}
+    \bigbreak \noindent \bigbreak \noindent 
+    \textbf{$5}
+    \bigbreak \noindent \bigbreak \noindent 
+    \textbf{$6}
+    \bigbreak \noindent \bigbreak \noindent 
+    \textbf{$7}
+    \bigbreak \noindent \bigbreak \noindent 
+    \textbf{$8}
+    \bigbreak \noindent \bigbreak \noindent 
+    \textbf{$9}
+    \bigbreak \noindent \bigbreak \noindent 
+    \textbf{$10}
+    \bigbreak \noindent \bigbreak \noindent 
+    \textbf{$11}
+    \bigbreak \noindent \bigbreak \noindent 
+    \textbf{$12}
+    \bigbreak \noindent \bigbreak \noindent 
+    \textbf{$13}
+\end{Large}
+\pagebreak \bigbreak \noindent
 endsnippet

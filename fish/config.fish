@@ -2,7 +2,8 @@ xset r rate 300 50
 
 # USER DEFINED ALIASES
 alias go="nohup google-chrome-stable >/dev/null 2>&1 &"
-alias kp="kill polybar"
+alias kp="kill picom"
+alias p="picom"
 alias polybar="~/.config/polybar/launch.sh"
 alias testp="cd ~/springsemester/calc/testPrep"
 alias dphin="dolphin ."
@@ -31,6 +32,7 @@ alias u="ls -a"
 alias gpush="git add .; git commit -m "all"; git push"
 alias neo="clear; neofetch"
 # alias discord="nohup discord & && pidof Discord | disown "
+alias discord="nohup discord >/dev/null 2>&1 && pidof Discord | disown"
 alias tm="tmux new"
 # alias nt="nohup nautilus >/dev/null 2>&1 &"
 alias spy="cd ~/dev/Python/hw"

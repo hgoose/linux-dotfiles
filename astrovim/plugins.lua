@@ -20,6 +20,12 @@ local astro_plugins = {
     config = function() require "core.plugins" end,
 
   },
+  
+  -- leap.nvim
+  ['ggandor/leap.nvim'] = {},
+
+  --repeat.nvim
+  ['tpope/vim-repeat'] = {},
 
   -- any-jump
   ['pechorin/any-jump.vim'] = {},
