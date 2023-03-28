@@ -242,29 +242,29 @@ bindsym $mod+r mode "resize"
 #     #status_command ~/.i3/i3-conky-initscript.sh
 # }
 
-# NEW BAR (BUMBLEBEE)
-# bar {
-# 	font pango:Inconsolata 8
-# 	position top
-# 	tray_output none
-# 	status_command ~/.config/i3/bumblebee-status/bumblebee-status \
-# 	        -m hostname kernel arch-update pacman memory layout disk cmus time date pasource battery \
-# 		-p spacer.text="catsoup" time.format="" date.format="%a, %b, %Y %l:%M:%S %p"\
-# 		-t iceberg-rainbow 
-# 		# Available Themes: https://bumblebee-status.readthedocs.io/en/main/themes.html
-# colors {
-#              background #000000
-#              # background #0B0517
-#              statusline #eceff1
-#              separator #cfd8dc
-#      
-#              # colors                outline    background   number
-#              focused_workspace       #00D1FF  #00D1FF    #ecefff
-#              active_workspace        #37474f  #37474f    #81d4fa
-#              inactive_workspace      #37474f  #37474f    #81d4fa
-#              urgent_workspace        #ffc107  #ffc107    #37474f
-# }
-# }
+ # NEW BAR (BUMBLEBEE)
+bar {
+	font pango:Inconsolata 8
+	position top
+	tray_output none
+	status_command ~/.config/i3/bumblebee-status/bumblebee-status \
+	        -m hostname kernel arch-update pacman memory layout disk cmus time date pasource battery \
+		-p spacer.text="catsoup" time.format="" date.format="%a, %b, %Y %l:%M:%S %p"\
+		-t iceberg-rainbow 
+		# Available Themes: https://bumblebee-status.readthedocs.io/en/main/themes.html
+colors {
+             background #000000
+             # background #0B0517
+             statusline #eceff1
+             separator #cfd8dc
+     
+             # colors                outline    background   number
+             focused_workspace       #00D1FF  #00D1FF    #ecefff
+             active_workspace        #37474f  #37474f    #81d4fa
+             inactive_workspace      #37474f  #37474f    #81d4fa
+             urgent_workspace        #ffc107  #ffc107    #37474f
+}
+}
 
 
 

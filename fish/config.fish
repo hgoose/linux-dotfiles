@@ -1,6 +1,8 @@
 xset r rate 300 50
+set BIN "/usr/bin"
 
 # USER DEFINED ALIASES
+alias pycon="nvim ~/learn/Python/concepts"
 alias go="nohup google-chrome-stable >/dev/null 2>&1 &"
 alias kp="kill picom"
 alias p="picom"
@@ -32,7 +34,7 @@ alias u="ls -a"
 alias gpush="git add .; git commit -m "all"; git push"
 alias neo="clear; neofetch"
 # alias discord="nohup discord & && pidof Discord | disown "
-alias discord="nohup discord >/dev/null 2>&1 && pidof Discord | disown"
+alias discord="nohup discord >/dev/null 2>&1 & && pidof Discord | disown"
 alias tm="tmux new"
 # alias nt="nohup nautilus >/dev/null 2>&1 &"
 alias spy="cd ~/dev/Python/hw"
