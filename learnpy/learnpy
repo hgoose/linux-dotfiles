@@ -1,0 +1,46 @@
+#!/usr/bin/bash
+
+main(){
+    echo "Where are you going?: 
+    1: EDIT -> learned.tex
+    2: EDIT -> concepts
+    3: EDIT -> pythonNotesTEX
+    4: EDIT -> pythonNotes2TEX
+    5: ENTER -> dev/latex/notes/python
+    6: ENTER -> tmp/python
+    7: ENTER -> dev/Python/notes
+    "
+    read USERIN
+
+    _OPTION=(
+          "1"
+          "2"
+          "3"
+          "4"
+          "5"
+          "6"
+          "7"
+        )
+
+    _PATH=(
+        "nvim $HOME/dev/latex/notes/python/learnedTEX/learned.tex"
+        "nvim $HOME/learn/Python/concepts"
+        "nvim $HOME/dev/latex/notes/python/pythonNotesTEX/pythonNotes.tex"
+        "nvim $HOME/dev/latex/notes/python/pythonNotes2TEX/main.tex"
+        "cd $HOME/dev/latex/notes/python"
+        "cd $HOME/tmp/python"
+        "builtin cd $HOME/dev/Python/notes"
+        )
+
+    for i in "${!_OPTION[@]}"; do
+        if [ "$((i+1))" = "$USERIN" ];
+        then
+            # echo $_PATH[2]
+            ${_PATH[$i]}
+        fi
+    done
+}
+main
+    
+
+    
