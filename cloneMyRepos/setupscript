@@ -91,6 +91,20 @@ main()
                 sudo chown -R $USER:$USER $HOME/.config
                 echo "Success... Moved all config directorys to $HOME/.config"
 
+                sleep 0.75
+                echo "...Setting up nvim"
+                MASONLIST=(
+                        "bash-language-server"
+                        "lua-language-server"
+                        "pyright"
+                        "python-lsp-server"
+                        "texlab"
+                )
+                nvim --headless '+PackerSync' & && echo "PackerSync...Done" || echo "PackerSync...Failed"
+                for i in "${MASONLIST[@]}"; do
+                        nvim --headless -c 'MasonInstall $i' & && echo "$i...Installed" || echo "$i...Failed"
+                done
+
         elif [ "$OPTION" = "2"];
         then
                 echo ""
@@ -180,23 +194,29 @@ main()
         chsh -s /usr/bin/fish && echo "...Done" || echo "...Failed"
         sleep 0.5
 
-        sleep 0.75
-        echo "Do you have mason language servers installed for Python? (y,n): "
-        read OPTIONMASON
-        sleep 0.5
+        # sleep 0.75
+        # echo "Do you have mason language servers installed for Python? (y,n): "
+        # read OPTIONMASON
+        # sleep 0.5
 
-        for i in "${yesarray[@]}"; do
-                if [ $i == $OPTIONMASON ]; then
-                        echo "Setting up pycodestyle.py and messages.py..."
-                        sudo cp ~/linux-dotfiles/pycodestyle/pycodestyle.py ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pycodestyle.py && echo "...Done" || echo "...Failed"
-                        sudo cp ~/linux-dotfiles/pyflakes/messages.py ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pyflakes/messages.py && echo "...Done" || echo "...Failed"
-                        sleep 0.5
-                        echo "...Done"
-                fi
-        done
+        # for i in "${yesarray[@]}"; do
+                # if [ $i == $OPTIONMASON ]; then
+        echo "Setting up pycodestyle.py and messages.py..."
+        sudo cp ~/linux-dotfiles/pycodestyle/pycodestyle.py ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pycodestyle.py && echo "...Done" || echo "...Failed"
+        sudo cp ~/linux-dotfiles/pyflakes/messages.py ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pyflakes/messages.py && echo "...Done" || echo "...Failed"
+        sleep 0.5
+        echo "...Done"
+                # fi
+        # done
+
+        sleep 0.5
+        echo "Setting up login screen..."
+        sudo cp -R ~/linux-dotfiles/sddm/sddm-sugar-candy /usr/share/sddm/themes
+        sudo cp ~/linux-dotfiles/sddm/default.conf /usr/lib/sddm/sddm.conf.d
 
         sleep 1.5
-        echo "...All Done"
+        echo "...All Done, system is now set up"
+
 
 }
 main
