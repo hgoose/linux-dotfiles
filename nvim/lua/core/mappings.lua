@@ -186,7 +186,7 @@ if is_available "mason-lspconfig.nvim" then maps.n["<leader>li"] = { "<cmd>LspIn
 if is_available "smart-splits.nvim" then
   -- Better window navigation
   maps.n["<C-h>"] = { function() require("smart-splits").move_cursor_left() end, desc = "Move to left split" }
-  maps.n["<c-u>"] = { function() require("smart-splits").move_cursor_down() end, desc = "Move to below split" }
+  maps.n["<c-b>"] = { function() require("smart-splits").move_cursor_down() end, desc = "Move to below split" }
   maps.n["<C-k>"] = { function() require("smart-splits").move_cursor_up() end, desc = "Move to above split" }
   maps.n["<C-l>"] = { function() require("smart-splits").move_cursor_right() end, desc = "Move to right split" }
 
@@ -323,7 +323,7 @@ maps.v[">"] = { ">gv", desc = "indent line" }
 -- Improved Terminal Navigation
 maps.t["<C-h>"] = { "<c-\\><c-n><c-w>h", desc = "Terminal left window navigation" }
 maps.t["<C-j>"] = { "<c-\\><c-n><c-w>j", desc = "Terminal down window navigation" }
-maps.t["<C-u>"] = { "<c-\\><c-n><c-w>k", desc = "Terminal up window navigation" }
+maps.t["<C-b>"] = { "<c-\\><c-n><c-w>k", desc = "Terminal up window navigation" }
 maps.t["<C-l>"] = { "<c-\\><c-n><c-w>l", desc = "Terminal right window navigation" }
 
 -- Custom menu for modification of the user experience
