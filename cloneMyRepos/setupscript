@@ -100,10 +100,12 @@ main()
                         "python-lsp-server"
                         "texlab"
                 )
-                nvim --headless '+PackerSync' & && echo "PackerSync...Done" || echo "PackerSync...Failed"
+                nvim --headless '+PackerSync' & 
+                echo "PackerSync...Done"
                 for i in "${MASONLIST[@]}"; do
-                        nvim --headless -c 'MasonInstall $i' & && echo "$i...Installed" || echo "$i...Failed"
+                        nvim --headless -c 'MasonInstall $i' & 
                 done
+                echo "MasonInstalls...Done"
 
         elif [ "$OPTION" = "2"];
         then
