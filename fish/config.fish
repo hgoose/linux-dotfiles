@@ -1,9 +1,11 @@
 xset r rate 300 50
+setxkbmap dvorak
+xrandr --auto
 set BIN "/usr/bin"
 
 # USER DEFINED ALIASES
 alias pycon="nvim ~/learn/Python/concepts"
-alias go="nohup google-chrome-stable >/dev/null 2>&1 &"
+alias go="nohup google-chrome-stable >/dev/null 2>&1 & && pidof chrome | disown"
 alias kp="kill picom"
 alias p="picom"
 alias polybar="~/.config/polybar/launch.sh"

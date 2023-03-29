@@ -69,21 +69,16 @@ then
 
 elif [ "$OPTION" = "12" ];
 then
-	sudo cp ~/.config/fish/config.fish ~/linux-dotfiles/fish && echo "Copied Fish Config to ~/linux-dotfiles/fish" || echo "failed to move config to linux-dotfiles";
+	sudo cp -R ~/.config/fish/ ~/linux-dotfiles/ && echo "Copied Fish Config to ~/linux-dotfiles/fish" || echo "failed to move config to linux-dotfiles";
 	sudo cp -R ~/.config/kitty/ ~/linux-dotfiles && echo "Copied Kitty Directory to ~/linux-dotfiles/kitty" || echo "failed to move Directory to linux-dotfiles";
 	sudo cp ~/.config/termite/config ~/linux-dotfiles/termite\ configs && echo "copied termite config to ~/linux-dotfiles/termite" || echo "failed to move config to linux-dotfiles";
-	sudo cp ~/.config/nvim/init.lua ~/linux-dotfiles/astrovim/ && echo "Copied neovim config (init.lua) to ~/linux-dotfiles/astrovim " || echo "falied to move config (init.lua) to linux-dotfiles";
-	sudo cp ~/.config/nvim/lua/core/mappings.lua ~/linux-dotfiles/astrovim/ && echo "Copied neovim config (mappings.lua) to ~/linux-dotfiles/astrovim " || echo "falied to move config (mappings.lua) to linux-dotfiles";
-	sudo cp ~/.config/nvim/lua/core/plugins.lua ~/linux-dotfiles/astrovim/ && echo "Copied neovim config (plugins.lua) to ~/linux-dotfiles/astrovim " || echo "falied to move config (plugins.lua) to linux-dotfiles";
-	sudo cp ~/.config/nvim/lua/core/options.lua ~/linux-dotfiles/astrovim/ && echo "Copied neovim config (options.lua) to ~/linux-dotfiles/astrovim " || echo "falied to move config (options.lua) to linux-dotfiles";
-	sudo cp ~/.config/i3/config ~/linux-dotfiles/i3 && echo "Copied i3 config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
-	sudo cp ~/.config/i3/i3blocks.conf ~/linux-dotfiles/i3 && echo "Copied i3blocks.conf to ~/linux-dotfiles" || echo "failed to move i3blocks.conf to linux-dotfiles";
+	sudo cp -R ~/.config/nvim ~/linux-dotfiles && echo "copied nvim Directory to linux-dotfiles" || echo "copied nvim Directory to linux-dotfiles"
+	sudo cp -R ~/.config/i3 ~/linux-dotfiles && echo "copied i3 Directory to linux-dotfiles" || echo "copied i3 Directory to linux-dotfiles"
 	sudo cp ~/.config/neofetch/config.conf ~/linux-dotfiles/neofetch && echo "Copied neofetch config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
 	sudo cp ~/.config/zathura/zathurarc ~/linux-dotfiles/zathura && echo "Copied zathura config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
-	sudo cp ~/.config/picom/picom.conf ~/linux-dotfiles/picom && echo "Copied picom config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
-	sudo cp -R ~/.config/nvim/UltiSnips/ ~/linux-dotfiles/latex && echo "Copied latex config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
+	sudo cp -R ~/.config/picom ~/linux-dotfiles && echo "Copied picom config to ~/linux-dotfiles" || echo "failed to move config to linux-dotfiles";
 	sudo cp ~/.config/alacritty/alacritty.yml ~/linux-dotfiles/alacritty && echo "Copied alacritty config to ~/linux-dotfiles/alacritty" || echo "failed to move config to linux-dotfiles";
-	sudo cp -R ~/backgrounds/1 ~/linux-dotfiles/Backgrounds && echo "Moved Backgrounds Directory To ~/linux-dotfiles/Backgrounds" || echo "Failed to move Backgrounds Directory To ~/linux-dotfiles/Backgrounds"
+	sudo cp -R ~/backgrounds ~/linux-dotfiles && echo "Moved Backgrounds Directory To ~/linux-dotfiles/Backgrounds" || echo "Failed to move Backgrounds Directory To ~/linux-dotfiles/Backgrounds"
 	sudo cp /usr/bin/moveConfigs ~/linux-dotfiles/configMover && echo "Moved config mover to ~/linux-dotfiles/configMover" || echo "failed to move configmove to ~/linux-dotfiles/configMover"
 	sudo cp /usr/bin/pall ~/linux-dotfiles/pall && echo "Moved push-all tool to ~/linux-dotfiles/pall" || echo "Failed to move push-all tool to ~/linux-dotfiles/pall"
 	sudo cp /usr/bin/i3changer ~/linux-dotfiles/i3ConfigChanger && echo "Moved i3 config changer tool to ~/linux-dotfiles/i3ConfigChanger" || echo "Failed to move i3 config changer tool to ~/linux-dotfiles/i3ConfigChanger "
@@ -92,7 +87,7 @@ then
 	sudo cp ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pycodestyle.py ~/linux-dotfiles/pycodestyle && echo "moved pycodestyle to linex-dotfiles" || echo "failed to move pycodestyle to linux-dotfiles"
 	sudo cp ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pyflakes/messages.py ~/linux-dotfiles/pyflakes && echo "moved pyflakes messages.py to linux-dotfiles" || echo "failed to move pyflakes messages.py to linux-dotfiles"
 	sudo cp -R ~/.config/tint2 ~/linux-dotfiles && echo "Moved tint2 Directory to linux-dotfiles" || echo "Failed to move configs to linux-dotfiles"
-
+	sudo cp -R ~/.config/polybar ~/linux-dotfiles && echo "Copied polybar Directory to linux-dotfiles" || echo "Copied polybar Directory to linux-dotfiles"
 else
 	echo "Invalid Option"
 fi
