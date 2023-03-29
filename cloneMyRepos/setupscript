@@ -91,21 +91,21 @@ main()
                 sudo chown -R $USER:$USER $HOME/.config
                 echo "Success... Moved all config directorys to $HOME/.config"
 
-                sleep 0.75
-                echo "...Setting up nvim"
-                MASONLIST=(
-                        "bash-language-server"
-                        "lua-language-server"
-                        "pyright"
-                        "python-lsp-server"
-                        "texlab"
-                )
-                nvim --headless '+PackerSync' & 
-                echo "PackerSync...Done"
-                for i in "${MASONLIST[@]}"; do
-                        nvim --headless -c 'MasonInstall $i' & 
-                done
-                echo "MasonInstalls...Done"
+                # sleep 0.75
+                # echo "...Setting up nvim"
+                # MASONLIST=(
+                #         "bash-language-server"
+                #         "lua-language-server"
+                #         "pyright"
+                #         "python-lsp-server"
+                #         "texlab"
+                # )
+                # nvim --headless '+PackerSync' & 
+                # echo "PackerSync...Done"
+                # for i in "${MASONLIST[@]}"; do
+                #         nvim --headless -c 'MasonInstall $i' & 
+                # done
+                # echo "MasonInstalls...Done"
 
         elif [ "$OPTION" = "2"];
         then
@@ -147,7 +147,7 @@ main()
         sleep 1
         echo "...Installing yay"
         sudo pacman -S --noconfirm --needed --quiet base-devel git
-        git clone https://aur.archlinux.org/yay-git.git /opt/yay-git
+        sudo git clone https://aur.archlinux.org/yay-git.git /opt/yay-git
         sudo chown -R $USER:$USER /opt/yay-git
         cd /opt/yay-git && makepkg -si && cd 
         yay -Syu
@@ -195,6 +195,14 @@ main()
         echo "Changing default shell to fish"
         chsh -s /usr/bin/fish && echo "...Done" || echo "...Failed"
         sleep 0.5
+
+        sleep 0.5
+        echo "Setting up bashclone omf theme"
+        sudo cp -R ~/linux-dotfiles/fish/bashclone /usr/share/omf/themes && echo "Moving..Done" || echo "Moving...Failed"
+        omf theme bashclone && echo "Setting...Done" || echo "Setting...Failed"
+        sleep 0.5
+
+        
 
         # sleep 0.75
         # echo "Do you have mason language servers installed for Python? (y,n): "
