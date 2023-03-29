@@ -214,7 +214,11 @@ main()
         sudo cp -R ~/linux-dotfiles/sddm/sddm-sugar-candy /usr/share/sddm/themes
         sudo cp ~/linux-dotfiles/sddm/default.conf /usr/lib/sddm/sddm.conf.d
 
-        sleep 1.5
+        sleep 0.5
+        echo "Fixing Bluetooth"
+        sudo cp ~/linux-dotfiles/bluetooth/main.conf /etc/bluetooth && echo "...Done" || echo "...Failed"
+
+        sleep 1.25
         echo "...All Done, system is now set up"
 
 
