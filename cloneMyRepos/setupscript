@@ -1,0 +1,179 @@
+#!/usr/bin/bash
+
+main()
+{
+        echo "Ok, $USER, cloning all your repos to your fresh system, standby..."
+        sudo chown $USER:$USER $HOME/linux-dotfiles
+
+
+
+        clonelist=(
+                "git@github.com:hgoose/Linux-Resources.git"
+                "git@github.com:hgoose/latex.git "
+                "git@github.com:hgoose/dev.git"
+                "git@github.com:hgoose/earn.git"
+                "git@github.com:hgoose/goose.vim.git"
+                "git@github.com:hgoose/temple.vim.git"
+                "git@github.com:hgoose/learn.git"
+        )
+
+        pathlist=(
+                "$HOME/Linux-Resources"
+                "$HOME/springsemester"
+                "$HOME/dev"
+                "$HOME/earn"
+                "$HOME/goose.vim"
+                "$HOME/temple.vim"
+                "$HOME/learn"
+        ) 
+
+        sleep 1
+        for i in "${!clonelist[@]}"; do
+                git clone ${clonelist[$i]} -q ${pathlist[$i]} && echo "${clonelist[$i]}...Done" || echo "${clonelist[$i]}...Failed"
+        done
+
+        sleep 0.85
+        echo "...Done"
+        sleep 0.85
+
+        echo "Success... Cloned all github repos to $HOME, changing ownership to all repos now..."
+
+        sleep 1
+        for i in "${pathlist[@]}"; do
+            sudo chown $USER:$USER $i
+        done
+
+        sleep 0.75
+        echo "...Done"
+
+        echo "Would you like to copy directorys from linux-dotfiles to $HOME/.config?
+1: Yes
+2: No
+        "
+        read OPTION
+
+        if [ "$OPTION" = "1" ];
+                DOTFILES_PATH="$HOME/linux-dotfiles"
+        then
+
+                CONFIGLIST=(
+                        "fish"
+                        "kitty"
+                        "rofi"
+                        "tmux"
+                        "i3"
+                        "zathura"
+                        "neofetch"
+                        "alacritty"
+                        "terminator"
+                        "qutebrowser"
+                        "tint2"
+                        "polybar"
+                        "nvim"
+                        "picom"
+                )
+
+                for i in "${CONFIGLIST[@]}"; do
+                        sudo cp -R $DOTFILES_PATH/$i $HOME/.config && echo "$i...Done" || echo "$i...Failed"
+                done
+
+                sleep 1
+                sudo chown -R $USER:$USER $HOME/.config
+                echo "Success... Moved all config directorys to $HOME/.config"
+
+        elif [ "$OPTION" = "2"];
+        then
+                echo ""
+        else
+                sleep 0.5
+                echo "Invalid Option"
+
+        fi
+
+        sleep 0.75
+        echo "Would you like to move your scripts to /usr/bin?
+1: Yes
+2: No
+        "
+        read OPTION2
+
+        if [ "$OPTION2" = "1" ];
+        then 
+                mkdir -p $HOME/tmp/sh
+                sudo chown -R $USER:$USER $HOME/tmp
+                SCRIPTS=("configMover/moveConfigs" "pall/pall" "i3ConfigChanger/i3changer")
+                BIN="/usr/bin"
+
+                for i in ${SCRIPTS[@]}; do
+                        sudo cp $DOTFILES_PATH/$i $BIN && echo "$i...Done" || echo "$i...Failed"
+                        sudo cp $DOTFILES_PATH/$i $HOME/tmp/sh && echo "$i...Done" || echo "$i...Failed"
+                done
+                sleep 0.75
+                echo "Success... Moved scripts to $BIN and $HOME/tmp/sh"
+
+        elif [ "$OPTION2" = "2" ];
+        then
+            echo ""
+        else
+            echo "Invalid Option"
+        fi
+
+        sleep 1
+        echo "...Installing yay"
+        sudo pacman -S --noconfirm --needed --quiet base-devel git
+        git clone https://aur.archlinux.org/yay-git.git /opt/yay-git
+        sudo chown -R $USER:$USER /opt/yay-git
+        cd /opt/yay-git && makepkg -si && cd 
+        yay -Syu
+
+        sleep 0.5
+        echo "...Done"
+        sleep 0.5
+
+        echo "Would you like to install packages from a package list? (y/n): "
+        read OPTIONPKG
+
+        yesarray=("y" "Y")
+
+        for i in "${yesarray[@]}"; do
+                if [ $i == $OPTIONPKG ];
+                then
+                        sleep 0.4
+                        echo "Provide a package list (ex. $HOME/Linux-Resources/arch/packages/packages): "
+                        read PKGPATH
+
+                        for i in $(cat $PKGPATH); do
+                                sudo pacman -Sy --noconfirm --quiet $i
+                        done
+                        echo "Installed all packages from $PKGPATH"
+                fi
+        done
+
+        sleep 0.5
+        echo "Fixing locate command"
+        sudo updatedb && echo "...Done" || echo "...Failed"
+        sleep 0.5
+
+
+        sleep 0.75
+        echo "pip installing pynvim"
+        pip install --quiet pynvim && echo "...Done" || echo "...Failed"
+        sleep 0.5
+
+        echo "Installing oh-my-fish"
+        sleep 0.5
+        curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish && echo "...Done" || echo "...Failed"
+        sleep 0.5
+
+        sleep 0.5
+        echo "Changing default shell to fish"
+        chsh -s /usr/bin/fish && echo "...Done" || echo "...Failed"
+        sleep 0.5
+
+
+
+
+
+}
+main
+
