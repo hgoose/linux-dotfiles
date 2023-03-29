@@ -1,6 +1,6 @@
 local is_available = astronvim.is_available
 
-local maps = { i = {}, n = {}, v = {}, t = {}, [""] = {} }
+local maps = { i = {}, n = {}, v = {}, t = {},[""] = {} }
 
 ------------------------------------
 -- USER DEfINED EASY KEYMAPPING
@@ -15,7 +15,10 @@ local function map(mode, lhs, rhs, opts)
 end
 
 
+-- toggleterm
+-- map('n', '<c-t>', '<C-K>')
 
+-- search next on find
 map('n', ';', 'n')
 
 map('n', 'q', 'q')
@@ -48,8 +51,10 @@ maps.n["<leader>b"] = { "o<Esc>", desc = "newline below and remain in normal mod
 maps.n["<leader>m"] = { "O<Esc>", desc = "newline below and remain in normal mode" }
 
 -- set colorscheme to mine
-maps.n["<leader>7"] = { "<cmd>e ~/dev/latex/template/preamble.tex<cr>",
-  desc = "Commence continuos latex compile (and open viewer)" }
+maps.n["<leader>7"] = {
+  "<cmd>e ~/dev/latex/template/preamble.tex<cr>",
+  desc = "Commence continuos latex compile (and open viewer)"
+}
 
 -- VimtexCompile
 maps.n["<leader>9"] = { "<cmd>VimtexCompile<cr>", desc = "Commence continuos latex compile (and open viewer)" }
@@ -181,7 +186,7 @@ if is_available "mason-lspconfig.nvim" then maps.n["<leader>li"] = { "<cmd>LspIn
 if is_available "smart-splits.nvim" then
   -- Better window navigation
   maps.n["<C-h>"] = { function() require("smart-splits").move_cursor_left() end, desc = "Move to left split" }
-  maps.n["<C-j>"] = { function() require("smart-splits").move_cursor_down() end, desc = "Move to below split" }
+  maps.n["<c-u>"] = { function() require("smart-splits").move_cursor_down() end, desc = "Move to below split" }
   maps.n["<C-k>"] = { function() require("smart-splits").move_cursor_up() end, desc = "Move to above split" }
   maps.n["<C-l>"] = { function() require("smart-splits").move_cursor_right() end, desc = "Move to right split" }
 
@@ -287,7 +292,7 @@ if is_available "nvim-dap" then
   -- modified function keys found with `showkey -a` in the terminal to get key code
   -- run `nvim -V3log +quit` and search through the "Terminal info" in the `log` file for the correct keyname
   maps.n["<F5>"] = { function() require("dap").continue() end, desc = "Debugger: Start" }
-  maps.n["<F17>"] = { function() require("dap").terminate() end, desc = "Debugger: Stop" } -- Shift+F5
+  maps.n["<F17>"] = { function() require("dap").terminate() end, desc = "Debugger: Stop" }        -- Shift+F5
   maps.n["<F29>"] = { function() require("dap").restart_frame() end, desc = "Debugger: Restart" } -- Control+F5
   maps.n["<F6>"] = { function() require("dap").pause() end, desc = "Debugger: Pause" }
   maps.n["<F9>"] = { function() require("dap").toggle_breakpoint() end, desc = "Debugger: Toggle Breakpoint" }
@@ -318,7 +323,7 @@ maps.v[">"] = { ">gv", desc = "indent line" }
 -- Improved Terminal Navigation
 maps.t["<C-h>"] = { "<c-\\><c-n><c-w>h", desc = "Terminal left window navigation" }
 maps.t["<C-j>"] = { "<c-\\><c-n><c-w>j", desc = "Terminal down window navigation" }
-maps.t["<C-k>"] = { "<c-\\><c-n><c-w>k", desc = "Terminal up window navigation" }
+maps.t["<C-u>"] = { "<c-\\><c-n><c-w>k", desc = "Terminal up window navigation" }
 maps.t["<C-l>"] = { "<c-\\><c-n><c-w>l", desc = "Terminal right window navigation" }
 
 -- Custom menu for modification of the user experience
