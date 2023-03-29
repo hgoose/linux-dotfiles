@@ -46,6 +46,12 @@ main()
         sleep 0.75
         echo "...Done"
 
+        sleep 0.5
+        echo "Moving backgrounds directory to $HOME"
+        sudo cp -R $HOME/linux-dotfiles/Backgrounds $HOME && echo "...Done" || echo "...Failed"
+        sleep 0.5
+
+
         echo "Would you like to copy directorys from linux-dotfiles to $HOME/.config?
 1: Yes
 2: No
