@@ -99,9 +99,8 @@ main()
                         "python-lsp-server"
                         "texlab"
                 )
-                sudo cp -R $HOME/linux-dotfiles/defaultastro $HOME/.config/nvim
+                sudo cp -R $HOME/linux-dotfiles/defaultastro $HOME/.config/nvim && nvim
                 sudo pacman -S --noconfirm --quiet npm
-                nvim --headless '+PackerSync' &
                 echo "PackerSync...Done"
                 sleep 2
                 for i in "${MASONLIST[@]}"; do
@@ -110,7 +109,7 @@ main()
                 echo "MasonInstalls...Done"
                 sudo cp $HOME/linux-dotfiles/nvim/lua/core/mappings.lua $HOME/linux-dotfiles/nvim/lua/core/plugins.lua $HOME/linux-dotfiles/nvim/lua/core/options.lua $HOME/.config/nvim/lua/core
                 sleep 0.5
-                nvim --headless "+PackerSync" > /dev/null 2>&1 &
+                nvim --headless '+PackerSync' &
                 sudo cp $HOME/linux-dotfiles/nvim/init.lua $HOME/.config/nvim
 
         elif [ "$OPTION" = "2"];
@@ -194,7 +193,7 @@ main()
 
         echo "Installing oh-my-fish"
         sleep 0.5
-        curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install && echo "...Done" || echo "...Failed"
+        curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish && echo "...Done" || echo "...Failed"
         sleep 0.5
 
         sleep 0.5
