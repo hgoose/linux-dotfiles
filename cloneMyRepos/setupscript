@@ -194,7 +194,7 @@ main()
 
         echo "Installing oh-my-fish"
         sleep 0.5
-        curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish && echo "...Done" || echo "...Failed"
+        curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install && echo "...Done" || echo "...Failed"
         sleep 0.5
 
         sleep 0.5
@@ -204,8 +204,7 @@ main()
 
         sleep 0.5
         echo "Setting up bashclone omf theme"
-        sudo cp -R ~/linux-dotfiles/fish/bashclone /usr/share/omf/themes && echo "Moving..Done" || echo "Moving...Failed"
-        omf theme bashclone && echo "Setting...Done" || echo "Setting...Failed"
+        sudo cp -R $HOME/linux-dotfiles/fish/bashclone $HOME/.local/share/omf/themes && echo "Moving..Done" || echo "Moving...Failed"
         sleep 0.5
 
         
@@ -235,6 +234,8 @@ main()
         sudo cp ~/linux-dotfiles/bluetooth/main.conf /etc/bluetooth && echo "...Done" || echo "...Failed"
 
         sleep 1.25
+        fish
+        omf theme bashclone && echo "Setting...Done" || echo "Setting...Failed"
         echo "...All Done, system is now set up"
 
 
