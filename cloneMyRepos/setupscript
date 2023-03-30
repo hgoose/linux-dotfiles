@@ -101,7 +101,7 @@ main()
                 )
                 sudo cp -R $HOME/linux-dotfiles/defaultastro $HOME/.config/nvim
                 sudo pacman -S --noconfirm --quiet npm
-                nvim --headless "+PackerSync" > /dev/null 2>&1 &
+                nvim --headless '+PackerSync' &
                 echo "PackerSync...Done"
                 sleep 2
                 for i in "${MASONLIST[@]}"; do
