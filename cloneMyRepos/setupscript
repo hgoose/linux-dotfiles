@@ -75,7 +75,6 @@ main()
                         "qutebrowser"
                         "tint2"
                         "polybar"
-                        "nvim"
                         "picom"
                 )
 
@@ -91,21 +90,28 @@ main()
                 sudo chown -R $USER:$USER $HOME/.config
                 echo "Success... Moved all config directorys to $HOME/.config"
 
-                # sleep 0.75
-                # echo "...Setting up nvim"
-                # MASONLIST=(
-                #         "bash-language-server"
-                #         "lua-language-server"
-                #         "pyright"
-                #         "python-lsp-server"
-                #         "texlab"
-                # )
-                # nvim --headless '+PackerSync' & 
-                # echo "PackerSync...Done"
-                # for i in "${MASONLIST[@]}"; do
-                #         nvim --headless -c 'MasonInstall $i' & 
-                # done
-                # echo "MasonInstalls...Done"
+                sleep 0.75
+                echo "...Setting up nvim"
+                MASONLIST=(
+                        "bash-language-server"
+                        "lua-language-server"
+                        "pyright"
+                        "python-lsp-server"
+                        "texlab"
+                )
+                sudo cp -R $HOME/linux-dotfiles/defaultastro $HOME/.config/nvim
+                sudo pacman -S --noconfirm --quiet npm
+                nvim --headless "+PackerSync" > /dev/null 2>&1 &
+                echo "PackerSync...Done"
+                sleep 2
+                for i in "${MASONLIST[@]}"; do
+                        nvim --headless -c "MasonInstall $i" > /dev/null 2>&1 & 
+                done
+                echo "MasonInstalls...Done"
+                sudo cp $HOME/linux-dotfiles/nvim/lua/core/mappings.lua $HOME/linux-dotfiles/nvim/lua/core/plugins.lua $HOME/linux-dotfiles/nvim/lua/core/options.lua $HOME/.config/nvim/lua/core
+                sleep 0.5
+                nvim --headless "+PackerSync" > /dev/null 2>&1 &
+                sudo cp $HOME/linux-dotfiles/nvim/init.lua $HOME/.config/nvim
 
         elif [ "$OPTION" = "2"];
         then
