@@ -1,9 +1,26 @@
-xset r rate 300 50
+xset r rate 300 50 
 xset s off 
 xset -dpms
-setxkbmap dvorak
 xrandr --auto
 set BIN "/usr/bin"
+set TERM xterm-256color
+set EDITOR nvim
+
+function endbar
+	if pgrep bar > /dev/null
+		kill i3bar > /dev/null
+	end
+end
+endbar
+
+function setlang
+ 	set mylang (setxkbmap -query | grep layout | awk '{ print $2 }')
+	if [ $mylang != 'dvorak' ]
+		setxkbmap dvorak
+	end
+end
+setlang
+
 # polybar
 
 # USER DEFINED ALIASES
