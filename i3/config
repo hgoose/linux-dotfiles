@@ -37,7 +37,7 @@ exec --no-startup-id kitty
 # exec --no-startup-id terminator 
 
 # Launch tint2 at startup
-exec --no-startup-id tint2 
+# exec --no-startup-id tint2 
 
 # Start nitrogen (wallpaper)
 exec --no-startup-id nitrogen --restore
@@ -163,9 +163,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # gapsconfig
 
-for_window [class="^.*"] border pixel 3
-gaps inner 7
-gaps outer 7
+for_window [class="^.*"] border pixel 2
+gaps inner 6
+gaps outer 6
 
 
 # gapsconfig
@@ -174,23 +174,32 @@ gaps outer 7
 set_from_resource $fg i3wm.color0 #282a2e
 set_from_resource $bg i3wm.color6 #282a2e
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #ffffff #3c464d #ffffff #ffffff   #ffffff
-client.focused_inactive #ffffff #5f676a #ffffff #484e50   #ffffff
-client.unfocused        #ffffff #222222 #888888 #292d2e   #ffffff
-client.urgent           #ffffff #900000 #ffffff #900000   #900000
-client.placeholder      #ffffff #0c0c0c #ffffff #000000   #0c0c0c
-
-client.background       #00D1FF
-
-# # class                 border  backgr. text    indicator child_border
-# client.focused          #00D1FF #3c464d #ffffff #00D1FF   #00D1FF
-# client.focused_inactive #00D1FF #5f676a #ffffff #484e50   #00D1FF
-# client.unfocused        #00D1FF #222222 #888888 #292d2e   #00D1FF
-# client.urgent           #00D1FF #900000 #ffffff #900000   #900000
-# client.placeholder      #00D1FF #0c0c0c #ffffff #000000   #0c0c0c
+# #class
+# client.focused          #000000 #3c464d #000000 #000000   #000000
+# client.focused_inactive #000000 #5f676a #000000 #484e50   #000000
+# client.unfocused        #000000 #222222 #888888 #292d2e   #000000
+# client.urgent           #000000 #900000 #000000 #900000   #900000
+# client.placeholder      #000000 #0c0c0c #000000 #000000   #0c0c0c
 #
 # client.background       #00D1FF
+
+# # class                 border  backgr. text    indicator child_border
+# client.focused          #ffffff #3c464d #ffffff #ffffff   #ffffff
+# client.focused_inactive #ffffff #5f676a #ffffff #484e50   #ffffff
+# client.unfocused        #ffffff #222222 #888888 #292d2e   #ffffff
+# client.urgent           #ffffff #900000 #ffffff #900000   #900000
+# client.placeholder      #ffffff #0c0c0c #ffffff #000000   #0c0c0c
+#
+# client.background       #00D1FF
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #00D1FF #3c464d #ffffff #00D1FF   #00D1FF
+client.focused_inactive #00D1FF #5f676a #ffffff #484e50   #00D1FF
+client.unfocused        #00D1FF #222222 #888888 #292d2e   #00D1FF
+client.urgent           #00D1FF #900000 #ffffff #900000   #900000
+client.placeholder      #00D1FF #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #00D1FF
 #
 # # class                 border  backgr. text    indicator child_border
 # client.focused          #ff87ff #3c464d #ffffff #ff87ff   #ff87ff

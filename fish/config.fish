@@ -1,7 +1,10 @@
 xset r rate 300 50
+xset s off 
+xset -dpms
 setxkbmap dvorak
 xrandr --auto
 set BIN "/usr/bin"
+# polybar
 
 # USER DEFINED ALIASES
 alias pycon="nvim ~/learn/Python/concepts"
