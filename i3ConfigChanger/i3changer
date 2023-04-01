@@ -5,17 +5,64 @@
 echo "Select Option
 1: Change To Small Gaps
 2: Change to Big Gaps
+3: Change to No Gaps
 "
 read OPTION
 
 if [ $OPTION = "1" ];
 then
-    sudo mv ~/.config/i3/config ~/.config/i3/config.big
-    sudo mv ~/.config/i3/config.small ~/.config/i3/config
+    echo "What config is active now?:
+    1: No Gaps
+    2: Big Gaps
+    "
+    read OPTION2
+
+    if [ $OPTION2 = "1" ];
+    then
+        sudo mv $HOME/.config/i3/config $HOME/.config/i3/config.no
+        sudo mv $HOME/.config/i3/config.small $HOME/.config/i3/config
+
+    elif [ $OPTION2 = "2" ];
+    then
+        sudo mv $HOME/.config/i3/config $HOME/.config/i3/config.big
+        sudo mv $HOME/.config/i3/config.small $HOME/.config/i3/config
+    fi
 elif [ $OPTION = "2" ];
 then
-    sudo mv ~/.config/i3/config ~/.config/i3/config.small
-    sudo mv ~/.config/i3/config.big ~/.config/i3/config
+    echo "What config is active now?:
+    1: No Gaps
+    2: Small Gaps
+    "
+    read OPTION2
+
+    if [ $OPTION2 = "1" ];
+    then
+        sudo mv $HOME/.config/i3/config $HOME/.config/i3/config.no
+        sudo mv $HOME/.config/i3/config.big $HOME/.config/i3/config
+
+    elif [ $OPTION2 = "2" ];
+    then
+        sudo mv $HOME/.config/i3/config $HOME/.config/i3/config.small
+        sudo mv $HOME/.config/i3/config.big $HOME/.config/i3/config
+    fi
+elif [ $OPTION = "3" ];
+then 
+    echo "What config is active now?:
+    1: Small Gaps
+    2: Big Gaps
+    "
+    read OPTION2
+
+    if [ $OPTION2 = "1" ];
+    then
+        sudo mv $HOME/.config/i3/config $HOME/.config/i3/config.small
+        sudo mv $HOME/.config/i3/config.no $HOME/.config/i3/config
+
+    elif [ $OPTION2 = "2" ];
+    then
+        sudo mv $HOME/.config/i3/config $HOME/.config/i3/config.big
+        sudo mv $HOME/.config/i3/config.no $HOME/.config/i3/config
+    fi
 else
     echo " $OPTION Not A Valid Option"
 fi
