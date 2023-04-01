@@ -21,9 +21,31 @@ function setlang
 end
 setlang
 
+# function :x
+#   set count 0
+#   while [ $count -lt 100 ]
+#     for i in (seq 1 10)
+#       echo -n "you're not in vim bozo "
+#       set count (math $count + 1)
+#       if [ $count -ge 100 ]
+#         break
+#       end
+#       sleep 0.1
+#     end
+#     echo
+#     sleep 0.5
+#   end
+# end
+#
 # polybar
 
 # USER DEFINED ALIASES
+alias :x="echo 'You're not in vim bozo"
+alias :x!="echo 'You're not in vim bozo"
+alias :w="echo 'You're not in vim bozo"
+alias :wq="echo 'You're not in vim bozo"
+alias :q="echo 'You're not in vim bozo"
+alias :q!="echo 'You're not in vim bozo"
 alias pycon="nvim ~/learn/Python/concepts"
 alias go="nohup google-chrome-stable >/dev/null 2>&1 & && pidof chrome | disown"
 alias kp="kill picom"
@@ -78,9 +100,10 @@ alias kittyc="n ~/.config/kitty/kitty.conf"
 alias termc="nvim ~/.config/terminator/config"
 alias i3c="nvim ~/.config/i3/config"
 alias pn="cd ~/dev/latex/notes/python/"
-alias picom="nohup picom >/dev/null 2>&1 &"
+alias picom="picom >/dev/null &"
 # alias c="clear; fm6000 -f ~/repos/fetch-master-6000/ascii_arts/catart.txt"
-alias c="clear; fm6000 -f ~/repos/fetch-master-6000/ascii_arts/astronaut.txt"
+# alias c="clear; fm6000 -f ~/repos/fetch-master-6000/ascii_arts/astronaut.txt"
+alias c="clear; figlet DATURA | pv -qL 1000 | lolcat"
 alias cls="clear; neofetch"
 alias x="sudo chmod +x"
 alias dot="cd ~/.config"
