@@ -84,7 +84,7 @@ main()
 
                 sleep 0.5
                 echo "...Setting up .bashrc"
-                sudo cp $HOME/linux-dotfiles/bash/bashrc $HOME && echo "...Done" || echo "...Failed"
+                sudo cp $HOME/linux-dotfiles/bash/bashrc $HOME/.bashrc && echo "...Done" || echo "...Failed"
 
                 sleep 1
                 sudo chown -R $USER:$USER $HOME/.config
