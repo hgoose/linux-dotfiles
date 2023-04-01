@@ -5,6 +5,7 @@ xrandr --auto
 set BIN "/usr/bin"
 set TERM xterm-256color
 set EDITOR nvim
+# kill "tmux: server"
 
 function endbar
 	if pgrep bar > /dev/null
@@ -20,6 +21,24 @@ function setlang
 	end
 end
 setlang
+
+function dualmonitor
+	xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --left-of HDMI-1-0
+end
+
+function mirrordisplay
+	xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0
+end
+
+
+# function mux
+# 	if pgrep tmux > /dev/null 
+# 		true
+# 	else
+# 		exec tmux new -s datura
+# 	end
+# end
+# mux
 
 # function :x
 #   set count 0
@@ -40,7 +59,7 @@ setlang
 # polybar
 
 # USER DEFINED ALIASES
-alias :x="echo 'You're not in vim bozo"
+alias :x="echo 'You're not in vim bozo | lolcat"
 alias :x!="echo 'You're not in vim bozo"
 alias :w="echo 'You're not in vim bozo"
 alias :wq="echo 'You're not in vim bozo"
@@ -103,7 +122,7 @@ alias pn="cd ~/dev/latex/notes/python/"
 alias picom="picom >/dev/null &"
 # alias c="clear; fm6000 -f ~/repos/fetch-master-6000/ascii_arts/catart.txt"
 # alias c="clear; fm6000 -f ~/repos/fetch-master-6000/ascii_arts/astronaut.txt"
-alias c="clear; figlet DATURA | pv -qL 1000 | lolcat"
+alias c="clear; figlet DATURA | lolcat"
 alias cls="clear; neofetch"
 alias x="sudo chmod +x"
 alias dot="cd ~/.config"
