@@ -1,7 +1,7 @@
 xset r rate 300 50 
-xset s off 
-xset -dpms
-xrandr --auto
+# xset s off 
+# xset -dpms
+# xrandr --auto
 set BIN "/usr/bin"
 set TERM xterm-256color
 set EDITOR nvim

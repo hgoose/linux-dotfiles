@@ -20,6 +20,20 @@ local astro_plugins = {
     config = function() require "core.plugins" end,
 
   },
+  ['james1236/backseat.nvim']                     = {
+    config = function()
+      require("backseat").setup({
+        openai_api_key = 'sk - eT4UTngd2h6wCToxSRHdT3BlbkFJAXPozFduGKK7oOBibrAm',
+        openai_model_id = 'gpt-3.5-turbo', --gpt-4
+        -- split_threshold = 100,
+        -- additional_instruction = "Respond snarkily", -- (GPT-3 will probably deny this request, but GPT-4 complies)
+        -- highlight = {
+        --     icon = '', -- ''
+        --     group = 'Comment',
+        -- }
+      })
+    end
+  },
   ['dag/vim-fish']                                = {},
   --collection of colorschemes
   ['rafi/awesome-vim-colorschemes']               = {},
