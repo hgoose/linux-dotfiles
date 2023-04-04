@@ -27,8 +27,11 @@ function dualmonitor
 end
 
 function mirrordisplay
-	xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0
+    if [ $( xrandr --listactivemonitors | grep Monitors | awk '{print $2}') = '1' ]
+        xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0
+    end
 end
+mirrordisplay
 
 
 # function mux
