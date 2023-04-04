@@ -1,65 +1,5 @@
-xset r rate 300 50 
-# xset s off 
-# xset -dpms
-# xrandr --auto
-set BIN "/usr/bin"
-set TERM xterm-256color
-set EDITOR nvim
-# kill "tmux: server"
-
-function endbar
-	if pgrep bar > /dev/null
-		kill i3bar > /dev/null
-	end
-end
-endbar
-
-function setlang
- 	set mylang (setxkbmap -query | grep layout | awk '{ print $2 }')
-	if [ $mylang != 'dvorak' ]
-		setxkbmap dvorak
-	end
-end
-setlang
-
-function dualmonitor
-	xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --left-of HDMI-1-0
-end
-
-function mirrordisplay
-    if [ $( xrandr --listactivemonitors | grep Monitors | awk '{print $2}') = '1' ]
-        xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0
-    end
-end
-mirrordisplay
-
-
-# function mux
-# 	if pgrep tmux > /dev/null 
-# 		true
-# 	else
-# 		exec tmux new -s datura
-# 	end
-# end
-# mux
-
-# function :x
-#   set count 0
-#   while [ $count -lt 100 ]
-#     for i in (seq 1 10)
-#       echo -n "you're not in vim bozo "
-#       set count (math $count + 1)
-#       if [ $count -ge 100 ]
-#         break
-#       end
-#       sleep 0.1
-#     end
-#     echo
-#     sleep 0.5
-#   end
-# end
-#
-# polybar
+# Remove fish greeting
+set -U fish_greeting
 
 # USER DEFINED ALIASES
 alias :x="echo 'You're not in vim bozo | lolcat"
@@ -135,12 +75,116 @@ alias pd="push-dotfiles"
 alias ss="cd ~/springsemester/"
 alias bluetooth="nvim /etc/bluetooth/main.conf"
 
+# Set Term
+function setterm
+	if [ $(echo $TERM) != 'xterm-256color' ]
+		set TERM xterm-256color
+	end
+end
+setterm
+
+# Set Editor
+function seteditor
+	if [ $(echo $EDITOR) != 'nvim' ]
+		set EDITOR nvim 
+	end
+end
+seteditor
+
+# Set BIN
+function setbin
+	if [ $(echo $BIN) != '/usr/bin' ]
+		set BIN /usr/bin
+	end
+end
+setbin
+
+# Disable dpms
+function dpmsoff
+	if [ $(xset q | grep -e "DPMS" | grep -v "Power" | awk '{print $3}') = 'enabled' ]
+		xset -dpms
+	end
+end
+dpmsoff
+
+# set rate 300 50
+function setrate
+	if [ $(xset q | grep -e "repeat delay" | awk '{print $4 $7}') != '30050' ]
+		xset r rate 300 50
+	end
+end
+setrate
+
+# Disable Screensaver
+function ssoff
+	if [ $(xset q | grep timeout | awk '{print $2}') != '0' ]
+		xset s off
+	end
+end
+ssoff
+
+# Kill i3bar if running
+function endbar
+	if pgrep bar > /dev/null
+		kill i3bar > /dev/null
+	end
+end
+endbar
+
+# Set lang dvorak
+function setlang
+ 	set mylang (setxkbmap -query | grep layout | awk '{ print $2 }')
+	if [ $mylang != 'dvorak' ]
+		setxkbmap dvorak
+	end
+end
+setlang
+
+# Set Extend Monitors
+function dualmonitor
+	xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --left-of HDMI-1-0
+end
+
+# Set Mirror Displays
+function mirrordisplay
+    if [ $( xrandr --listactivemonitors | grep Monitors | awk '{print $2}') = '1' ]
+        xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0
+    end
+end
+
+
+# function mux
+# 	if pgrep tmux > /dev/null 
+# 		true
+# 	else
+# 		exec tmux new -s datura
+# 	end
+# end
+# mux
+
+# function :x
+#   set count 0
+#   while [ $count -lt 100 ]
+#     for i in (seq 1 10)
+#       echo -n "you're not in vim bozo "
+#       set count (math $count + 1)
+#       if [ $count -ge 100 ]
+#         break
+#       end
+#       sleep 0.1
+#     end
+#     echo
+#     sleep 0.5
+#   end
+# end
+#
+# polybar
+
+
+# Redundant
 function pbar
 	sudo cp -R ~/repos/polybar1/polybar-$argv ~/.config/polybar && ~/.config/polybar/launch.sh
 end
-
-# Remove fish greeting
-set -U fish_greeting
 
 # function to refresh fish shell
 function refresh
