@@ -180,6 +180,19 @@ main()
                 fi
         done
 
+        sleep 1
+        echo "Adding Windows Boot Manager to Grub"
+        sleep 0.5
+        echo "Fixing /etc/default/grub..."
+        sudo cp $HOME/linux-dotfiles/grubdefault/grub /etc/default/grub && echo "...Done" || echo "...Failed"
+        sleep 0.5
+        echo "Running os-prober..."
+        sudo os-prober && echo "...Done" || echo "...Failed"
+        sleep 0.5
+        echo "Runnig grub-mkconfig"
+        sudo grub-mkconfig -o /boot/grub/grub.cfg && echo "...Done" || echo "...Failed"
+        
+
         sleep 0.5
         echo "Fixing locate command"
         sudo updatedb && echo "...Done" || echo "...Failed"
