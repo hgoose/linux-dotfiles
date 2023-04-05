@@ -162,6 +162,18 @@ function mirrordisplay
 end
 mirrordisplay
 
+# Make and activate python virtualenv
+function mkvenv
+	virtualenv $argv
+	source ./$argv/bin/activate.fish
+end
+
+# Remove and deactivate python virtualenv
+function rmvenv
+	rm -rf $argv
+	deactivate
+end
+
 
 # function mux
 # 	if pgrep tmux > /dev/null 

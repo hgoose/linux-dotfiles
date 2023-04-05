@@ -34,6 +34,9 @@ local astro_plugins = {
       })
     end
   },
+  -- harpoon
+  ['ThePrimeagen/harpoon']                        = {},
+  -- Highlighting for fish files
   ['dag/vim-fish']                                = {},
   --collection of colorschemes
   ['rafi/awesome-vim-colorschemes']               = {},
