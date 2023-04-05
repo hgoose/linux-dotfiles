@@ -4,3 +4,4 @@ SETUVAR __fish_initialized:3400
 SETUVAR fish_greeting:\x1d
 SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/home/datura/\x2elocal/bin
