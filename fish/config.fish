@@ -110,7 +110,7 @@ setbin
 
 # Disable dpms
 function dpmsoff
-	if [ $(xset q | grep -e "DPMS" | grep -v "Power" | awk '{print $3}') = 'enabled' ]
+	if [ $(xset q | grep -e "DPMS" | grep -v "Power" | awk '{print $3}') = 'Enabled' ]
 		xset -dpms
 	end
 end
