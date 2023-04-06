@@ -29,11 +29,11 @@ main()
 
         sleep 1
         for i in "${!clonelist[@]}"; do
-                git clone ${clonelist[$i]} -q ${pathlist[$i]} && echo "${clonelist[$i]}...Done" || echo "${clonelist[$i]}...Failed"
+                git clone ${clonelist[$i]} -q ${pathlist[$i]} && echo "${clonelist[$i]}...Finished" || echo "${clonelist[$i]}...Failed"
         done
 
         sleep 0.85
-        echo "...Done"
+        echo "...Finished"
         sleep 0.85
 
         echo "Success... Cloned all github repos to $HOME, changing ownership to all repos now..."
@@ -44,11 +44,11 @@ main()
         done
 
         sleep 0.75
-        echo "...Done"
+        echo "...Finished"
 
         sleep 0.5
         echo "Moving backgrounds directory to $HOME"
-        sudo cp -R $HOME/linux-dotfiles/Backgrounds $HOME && echo "...Done" || echo "...Failed"
+        sudo cp -R $HOME/linux-dotfiles/Backgrounds $HOME && echo "...Finished" || echo "...Failed"
         sleep 0.5
 
 
@@ -79,12 +79,12 @@ main()
                 )
 
                 for i in "${CONFIGLIST[@]}"; do
-                        sudo cp -R $DOTFILES_PATH/$i $HOME/.config && echo "$i...Done" || echo "$i...Failed"
+                        sudo cp -R $DOTFILES_PATH/$i $HOME/.config && echo "$i...Finished" || echo "$i...Failed"
                 done
 
                 sleep 0.5
                 echo "...Setting up .bashrc"
-                sudo cp $HOME/linux-dotfiles/bash/bashrc $HOME/.bashrc && echo "...Done" || echo "...Failed"
+                sudo cp $HOME/linux-dotfiles/bash/bashrc $HOME/.bashrc && echo "...Finished" || echo "...Failed"
 
                 sleep 1
                 sudo chown -R $USER:$USER $HOME/.config
@@ -101,12 +101,12 @@ main()
                 )
                 sudo cp -R $HOME/linux-dotfiles/defaultastro $HOME/.config/nvim && nvim
                 sudo pacman -S --noconfirm --quiet npm
-                echo "PackerSync...Done"
+                echo "PackerSync...Finished"
                 sleep 2
                 for i in "${MASONLIST[@]}"; do
                         nvim --headless -c "MasonInstall $i" > /dev/null 2>&1 & 
                 done
-                echo "MasonInstalls...Done"
+                echo "MasonInstalls...Finished"
                 sudo cp $HOME/linux-dotfiles/nvim/lua/core/mappings.lua $HOME/linux-dotfiles/nvim/lua/core/plugins.lua $HOME/linux-dotfiles/nvim/lua/core/options.lua $HOME/.config/nvim/lua/core
                 sleep 0.5
                 nvim --headless '+PackerSync' &
@@ -136,8 +136,8 @@ main()
                 BIN="/usr/bin"
 
                 for i in ${SCRIPTS[@]}; do
-                        sudo cp $DOTFILES_PATH/$i $BIN && echo "$i...Done" || echo "$i...Failed"
-                        sudo cp $DOTFILES_PATH/$i $HOME/tmp/sh && echo "$i...Done" || echo "$i...Failed"
+                        sudo cp $DOTFILES_PATH/$i $BIN && echo "$i...Finished" || echo "$i...Failed"
+                        sudo cp $DOTFILES_PATH/$i $HOME/tmp/sh && echo "$i...Finished" || echo "$i...Failed"
                 done
                 sleep 0.75
                 echo "Success... Moved scripts to $BIN and $HOME/tmp/sh"
@@ -158,7 +158,7 @@ main()
         yay -Syu
 
         sleep 0.5
-        echo "...Done"
+        echo "...Finished"
         sleep 0.5
 
         echo "Would you like to install packages from a package list? (y/n): "
@@ -181,42 +181,51 @@ main()
         done
 
         sleep 1
+        echo "Enabling IWD..."
+        sudo systemctl enable iwd && echo "...Finished" || echo "...Failed"
+        sleep 0.5
+        sudo systemctl start iwd && echo "...Finished" || echo "...Failed"
+        sleep 0.5
+        echo "...Finished"
+        
+
+        sleep 1
         echo "Adding Windows Boot Manager to Grub"
         sleep 0.5
         echo "Fixing /etc/default/grub..."
-        sudo cp $HOME/linux-dotfiles/grubdefault/grub /etc/default/grub && echo "...Done" || echo "...Failed"
+        sudo cp $HOME/linux-dotfiles/grubdefault/grub /etc/default/grub && echo "...Finished" || echo "...Failed"
         sleep 0.5
         echo "Running os-prober..."
-        sudo os-prober && echo "...Done" || echo "...Failed"
+        sudo os-prober && echo "...Finished" || echo "...Failed"
         sleep 0.5
         echo "Runnig grub-mkconfig"
-        sudo grub-mkconfig -o /boot/grub/grub.cfg && echo "...Done" || echo "...Failed"
+        sudo grub-mkconfig -o /boot/grub/grub.cfg && echo "...Finished" || echo "...Failed"
         
 
         sleep 0.5
         echo "Fixing locate command"
-        sudo updatedb && echo "...Done" || echo "...Failed"
+        sudo updatedb && echo "...Finished" || echo "...Failed"
         sleep 0.5
 
 
         sleep 0.75
         echo "pip installing pynvim"
-        pip install --quiet pynvim && echo "...Done" || echo "...Failed"
+        pip install --quiet pynvim && echo "...Finished" || echo "...Failed"
         sleep 0.5
 
         echo "Installing oh-my-fish"
         sleep 0.5
-        curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish && echo "...Done" || echo "...Failed"
+        curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish && echo "...Finished" || echo "...Failed"
         sleep 0.5
 
         sleep 0.5
         echo "Changing default shell to fish"
-        chsh -s /usr/bin/fish && echo "...Done" || echo "...Failed"
+        chsh -s /usr/bin/fish && echo "...Finished" || echo "...Failed"
         sleep 0.5
 
         sleep 0.5
         echo "Setting up bashclone omf theme"
-        sudo cp -R $HOME/linux-dotfiles/fish/bashclone $HOME/.local/share/omf/themes && echo "Moving..Done" || echo "Moving...Failed"
+        sudo cp -R $HOME/linux-dotfiles/fish/bashclone $HOME/.local/share/omf/themes && echo "Movin...Finished" || echo "Moving...Failed"
         sleep 0.5
 
         
@@ -229,10 +238,10 @@ main()
         # for i in "${yesarray[@]}"; do
                 # if [ $i == $OPTIONMASON ]; then
         echo "Setting up pycodestyle.py and messages.py..."
-        sudo cp ~/linux-dotfiles/pycodestyle/pycodestyle.py ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pycodestyle.py && echo "...Done" || echo "...Failed"
-        sudo cp ~/linux-dotfiles/pyflakes/messages.py ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pyflakes/messages.py && echo "...Done" || echo "...Failed"
+        sudo cp ~/linux-dotfiles/pycodestyle/pycodestyle.py ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pycodestyle.py && echo "...Finished" || echo "...Failed"
+        sudo cp ~/linux-dotfiles/pyflakes/messages.py ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pyflakes/messages.py && echo "...Finished" || echo "...Failed"
         sleep 0.5
-        echo "...Done"
+        echo "...Finished"
                 # fi
         # done
 
@@ -243,12 +252,12 @@ main()
 
         sleep 0.5
         echo "Fixing Bluetooth"
-        sudo cp ~/linux-dotfiles/bluetooth/main.conf /etc/bluetooth && echo "...Done" || echo "...Failed"
+        sudo cp ~/linux-dotfiles/bluetooth/main.conf /etc/bluetooth && echo "...Finished" || echo "...Failed"
 
         sleep 1.25
         fish
-        omf theme bashclone && echo "Setting...Done" || echo "Setting...Failed"
-        echo "...All Done, system is now set up"
+        omf theme bashclone && echo "Setting...Finished" || echo "Setting...Failed"
+        echo "...A...Finished, system is now set up"
 
 
 }
