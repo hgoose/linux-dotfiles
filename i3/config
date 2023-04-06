@@ -35,7 +35,7 @@ assign [class="Kitty"] 2
 exec --no-startup-id kitty 
 
 # Launch a chrome session on startup
-assign [class="google-chrome-stable"] 1
+assign [class="chrome"] 1
 exec --no-startup-id google-chrome-stable 
 # exec --no-startup-id terminator 
 
