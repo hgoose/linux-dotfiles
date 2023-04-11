@@ -192,8 +192,8 @@ main()
         sleep 1
         echo "Adding Windows Boot Manager to Grub"
         sleep 0.5
-        echo "Fixing /etc/default/grub..."
-        sudo cp $HOME/linux-dotfiles/grubdefault/grub /etc/default/grub && echo "...Finished" || echo "...Failed"
+        # echo "Fixing /etc/default/grub..."
+        # sudo cp $HOME/linux-dotfiles/grubdefault/grub /etc/default/grub && echo "...Finished" || echo "...Failed"
         sleep 0.5
         echo "Running os-prober..."
         sudo os-prober && echo "...Finished" || echo "...Failed"
