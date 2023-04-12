@@ -141,13 +141,20 @@ end
 endbar
 
 # Set lang dvorak
-function setlang
+function dvorak
  	set mylang (setxkbmap -query | grep layout | awk '{ print $2 }')
 	if [ $mylang != 'dvorak' ]
 		setxkbmap dvorak
 	end
 end
-setlang
+dvorak
+
+function qwerty
+ 	set mylang (setxkbmap -query | grep layout | awk '{ print $2 }')
+	if [ $mylang != 'us' ]
+		setxkbmap us
+	end
+end
 
 # Set Extend Monitors
 function dualmonitor
@@ -160,7 +167,6 @@ function mirrordisplay
         xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0
     end
 end
-mirrordisplay
 
 # Make and activate python virtualenv
 function mkvenv
