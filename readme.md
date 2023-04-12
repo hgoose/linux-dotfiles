@@ -23,6 +23,9 @@
 **move to $HOME/.config/**
 
 ### Preview
+![Preview](https://i.imgur.com/j9WbOyw.png)
+
+### Preview
 ![Preview](https://i.imgur.com/JckGwZG.png)
 
 ### Preview
