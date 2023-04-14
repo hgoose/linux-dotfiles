@@ -12,6 +12,10 @@
 # Gnome Settigs Daemon
 # exec --no-startup-id "gnome-settings-daemon"
 
+# Connect Display
+exec --no-startup-id xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0
+
+
 # Start Picom
 exec --no-startup-id picom -CGb
 
@@ -30,8 +34,8 @@ exec --no-startup-id killall xfce4-panel
 exec --no-startup-id polybar ~/.config/polybar/launch.sh
 
 # Launch a terminal session on startup
-assign [class="kitty"] 2
-assign [class="Kitty"] 2
+# assign [class="kitty"] 2
+# assign [class="Kitty"] 2
 exec --no-startup-id kitty 
 
 # Launch a chrome session on startup
