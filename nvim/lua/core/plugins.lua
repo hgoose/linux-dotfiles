@@ -34,6 +34,10 @@ local astro_plugins = {
       })
     end
   },
+  --[regex]
+  ['markonm/traces.vim']                          = {},
+  -- Livedown
+  ['shime/vim-livedown']                          = {},
   -- harpoon
   ['ThePrimeagen/harpoon']                        = {},
   -- Highlighting for fish files

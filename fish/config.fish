@@ -2,6 +2,7 @@
 set -U fish_greeting
 
 # USER DEFINED ALIASES
+alias ff="fish"
 alias :x="echo 'You're not in vim bozo | lolcat"
 alias :x!="echo 'You're not in vim bozo"
 alias :w="echo 'You're not in vim bozo"
@@ -76,6 +77,18 @@ alias ss="cd ~/springsemester/"
 alias bluetooth="nvim /etc/bluetooth/main.conf"
 
 
+
+# Overload touch to also make file executable
+# function touch 
+# 	command touch $argv
+# 	sudo chmod +x $argv
+# end
+
+# Overload touch to also make file executable and also open the file in nvim
+function touchn 
+	command touch $argv && sudo chmod +x $argv && nvim $argv
+end
+
 # show directory listing on directory change
 function __ls_after_cd__on_variable_pwd --on-variable PWD
 	set -q LS_AFTER_CD || set -xg LS_AFTER_CD true
@@ -140,7 +153,7 @@ function endbar
 end
 endbar
 
-# Set lang dvorak
+# Set lang vorak
 function dvorak
  	set mylang (setxkbmap -query | grep layout | awk '{ print $2 }')
 	if [ $mylang != 'dvorak' ]
