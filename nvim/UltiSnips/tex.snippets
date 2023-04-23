@@ -9,8 +9,9 @@ snippet template
 \date{\huge{$2}}
 \pagestyle{fancy}
 \fancyhf{}
+\lhead{Warner \thepage}
 \rhead{$3}
-\lhead{\leftmark}
+# \lhead{\leftmark}
 \cfoot{\thepage}
 % \usepackage[default]{sourcecodepro}
 % \usepackage[T1]{fontenc}
@@ -471,11 +472,11 @@ snippet pf "proof" i
 endsnippet
 
 snippet lim "limit" 
-$\lim_{$1 \to $2}{$3}$
+$\lim\limits_{$1 \to $2}{$3}$
 endsnippet
 
 snippet li "limit" 
-\lim_{$1 \to $2}{$3}
+\lim\limits_{$1 \to $2}{$3}
 endsnippet
 
 snippet psf "point slope form" i
@@ -900,6 +901,25 @@ _{$1}
 endsnippet
 
 snippet sum "sigma notation" i
-\summation{$1}{$2} $3=$4
+\summation{$1}{$2}\ \ $3=$4
 endsnippet
 
+snippet del "delta" i
+\Delta
+endsnippet
+
+snippet le "leq" 
+\leq
+endsnippet
+
+snippet ge "leq" 
+\geq
+endsnippet
+
+snippet int "integral" i
+\int_{$1}^{$2}
+endsnippet
+
+snippet intab "integral" i
+\int_{a}^{b}
+endsnippet

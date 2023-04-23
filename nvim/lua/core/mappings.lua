@@ -15,6 +15,22 @@ local function map(mode, lhs, rhs, opts)
 end
 
 
+-- vim.api.nvim_set_keymap('n', '<C-f>',
+--   '<Esc>:silent exec "!inkscape-figures create \\""..vim.fn.getline(".")..\\"" \\""..vim.b.vimtex.root.."/figures/\\""..<CR><CR>:w<CR>',
+--   { noremap = true })
+--
+-- vim.api.nvim_set_keymap('n', '<C-f>',
+--   '<Esc>:silent vim.loop.spawn("inkscape-figures", { args = {"edit", vim.b.vimtex.root.."/figures/"}, stdio = {"ignore", 1, 2}, detached = true })<CR><CR>:redraw!<CR>',
+--   { noremap = true })
+
+
+vim.cmd [[
+inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
+nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
+]]
+
+
+
 -- toggleterm
 -- map('n', '<c-t>', '<C-K>')
 

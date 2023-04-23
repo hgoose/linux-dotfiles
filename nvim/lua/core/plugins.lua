@@ -34,6 +34,8 @@ local astro_plugins = {
       })
     end
   },
+  -- [hgoose/gruvbox]
+  ['hgoose/gruv.nvim']                            = {},
   --[regex]
   ['markonm/traces.vim']                          = {},
   -- Livedown
@@ -80,8 +82,10 @@ local astro_plugins = {
   ['luisiacc/gruvbox-baby']                       = {},
   -- nyoom color way
   ['nyoom-engineering/nyoom.nvim']                = {},
+  -- -- gruvbox color way
+  -- ['morhetz/gruvbox']                             = {},
   -- gruvbox color way
-  ['morhetz/gruvbox']                             = {},
+  ['ellisonleao/gruvbox.nvim']                    = {},
   -- catppuccin color way
   ['catppuccin/nvim']                             = {},
   -- Auta save

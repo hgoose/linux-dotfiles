@@ -2,6 +2,7 @@
 set -U fish_greeting
 
 # USER DEFINED ALIASES
+alias pre="cd ~/springsemester/calc/notes/prereq"
 alias ff="fish"
 alias :x="echo 'You're not in vim bozo | lolcat"
 alias :x!="echo 'You're not in vim bozo"
