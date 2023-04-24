@@ -2,6 +2,8 @@
 set -U fish_greeting
 
 # USER DEFINED ALIASES
+alias lists="nvim ~/learn/lists.txt"
+alias ism="python3 ~/inkscape-shortcut-manager/main.py"
 alias pre="cd ~/springsemester/calc/notes/prereq"
 alias ff="fish"
 alias :x="echo 'You're not in vim bozo | lolcat"
