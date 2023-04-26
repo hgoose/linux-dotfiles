@@ -12,6 +12,9 @@
 # Gnome Settigs Daemon
 # exec --no-startup-id "gnome-settings-daemon"
 
+assign [class="Inkscape"] 5
+
+
 # Connect Display
 exec --no-startup-id xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0
 
