@@ -3,6 +3,7 @@ set -U fish_greeting
 
 # USER DEFINED ALIASES
 alias lists="nvim ~/learn/lists.txt"
+alias ifw="inkscape-figures watch"
 alias ism="python3 ~/inkscape-shortcut-manager/main.py"
 alias pre="cd ~/springsemester/calc/notes/prereq"
 alias ff="fish"

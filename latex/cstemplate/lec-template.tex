@@ -1,0 +1,159 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+
+\DeclareMathOperator*{\E}{\mathbb{E}}
+\let\Pr\relax
+\DeclareMathOperator*{\Pr}{\mathbb{P}}
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\inprod}[1]{\left\langle #1 \right\rangle}
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CS 224: Advanced Algorithms } \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{Scribe: #4}{Lecture #1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+% 1-inch margins, from fullpage.sty by H.Partl, Version 2, Dec. 15, 1988.
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+
+\begin{document}
+
+\lecture{NUMBER --- DATE, 2013}{Fall 2013}{Prof.\ Jelani Nelson}{YOUR NAME}
+
+\section{Overview}
+
+In the last lecture we \ldots.
+
+In this lecture we \ldots.
+
+\section{Math things}
+Here is an equation:
+\begin{equation*}
+a^2 + b^2 = c^2 ,
+\end{equation*}
+or
+$$
+a^2 + b^2 = c^2 .
+$$
+
+Here's the same equation but that can be referenced:
+\begin{equation}
+a^2 + b^2 + c^2 \label{eqn:pythagoras}
+\end{equation}
+Equation~\ref{eqn:pythagoras} has been known for a long time. Sometimes you might want to align equations:
+\begin{align*}
+(x+y)^2 - (x-y)^2 &= (x^2 + 2xy + y^2) - (x^2 - 2xy - y^2) \\
+{}&= 4xy
+\end{align*}
+or align them with numbers to be referenced:
+\begin{align}
+(x+y)^2 - (x-y)^2 &= (x^2 + 2xy + y^2) - (x^2 - 2xy - y^2) \label{eqn:1}\\
+{}&= 4xy \label{eqn:2}
+\end{align}
+or where only some of them can be easily referenced:
+\begin{align}
+\nonumber (x+y)^2 - (x-y)^2 &= (x^2 + 2xy + y^2) - (x^2 - 2xy - y^2) \\
+{}&= 4xy \label{eqn:3}
+\end{align}
+
+Here are some other math goodies: $\binom{n}{k}$, $\frac{n}{k}$, $x\gg y$, $x\ll y$, $x\lesssim y$, $x\gtrsim y$, $\inprod{x,y}$, $x\in\R^n$, $x\in S$, $S\ni x$, $x\notin S$, $x\neq y$, $x\oplus y$, $x\pm y$, $\sqrt{x}$, $x\equiv y$, $S\cap T$, $\S\cup T$, $S\subset T$, $S\subseteq T$, $S\supset T$, $\gamma$,  $\Gamma$, $\R$, $\mathbb{F}$
+$$\sum_{i=1}^n i,\ \sum_{\substack{i=1\\i\ odd}}^n i, \prod_{i=1}^n i$$
+
+\section{Main Section}
+
+We begin by describing the problem \ldots.
+Make sure to use sections and subsections.
+
+\subsection{Blah blah blah}
+Here is a subsection.
+
+\subsubsection{Blah blah blah}
+Here is a subsubsection. You can use these as well.
+
+\subsection{Using Boldface}
+Make sure to use \textbf{lots} of {\bf boldface}.
+
+\paragraph{Question:}
+How would you use boldface?
+
+\paragraph{Example:}
+This is an example showing how to use boldface to 
+help organize your lectures.
+
+
+\paragraph{Some Formatting.}
+Here is some formatting that you can use in your notes:
+\begin{itemize}
+\item {\em Item One} -- This is the first item.
+\item {\em Item Two} -- This is the second item.
+\item \dots and here are other items.
+\end{itemize}
+
+If you need to number things, you can use this style:
+\begin{enumerate}
+\item {\em Item One} -- Again, this is the first item.
+\item {\em Item Two} -- Again, this is the second item.
+\item \dots and here are other items.
+\end{enumerate}
+
+\paragraph{Bibliography.}
+Please give real bibliographical citations for the papers that we
+mention in class. See below for how to include a bibliography section.
+If you use BibTeX, integrate the .bbl file into your .tex
+source. You should reference papers like this: ``The tug of war sketch
+originates in a paper by Alon, Matias and Szegedy \cite{AlonMS99}.''
+In general, the name of the authors should appear in text at most once 
+(for the first citation); further citations look like: ``Our proof follows 
+that of \cite{AlonMS99}''.
+
+Take a look at previous lectures (TeX files are available) to see the
+details. A excellent source for bibliographical citations is
+DBLP. Just Google DBLP and an author's name.
+
+
+\bibliographystyle{alpha}
+
+\begin{thebibliography}{42}
+
+\bibitem{AlonMS99}
+Noga~Alon, Yossi~Matias, Mario~Szegedy.
+\newblock The Space Complexity of Approximating the Frequency Moments.
+\newblock {\em J. Comput. Syst. Sci.}, 58(1):137--147, 1999.
+
+\end{thebibliography}
+
+\end{document}

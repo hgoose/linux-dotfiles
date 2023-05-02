@@ -1,0 +1,74 @@
+\documentclass{report}
+
+\input{~/dev/latex/template/preamble.tex}
+\input{~/dev/latex/template/macros.tex}
+
+\title{\Huge{Course: Lecture Notes}}
+\author{\huge{Nathan Warner}}
+\date{\huge{}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Warner \thepage}
+\rhead{LECTURE NOTES}
+% \lhead{\leftmark}
+\cfoot{\thepage}
+% \usepackage[default]{sourcecodepro}
+% \usepackage[T1]{fontenc}
+
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CS 224: Advanced Algorithms } \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{Scribe: #4}{Lecture #1}}
+
+\pgfpagesuselayout{boxed}
+
+\begin{document}
+    \maketitle
+    \lecture{NUMBER --- DATE, 2013}{Fall 2023}{Prof.\ }{YOUR NAME}
+
+    \bigbreak \noindent \bigbreak \noindent
+    \begin{mdframed}
+        \textbf{Main Function: -> This will serve as the entry point into our program}
+            \begin{verbatim}
+        def main():
+            if stuff:
+                do stuff:
+            return 0
+    \end{verbatim}
+    \end{mdframed}
+
+    
+
+    
+\end{document}

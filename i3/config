@@ -13,6 +13,8 @@
 # exec --no-startup-id "gnome-settings-daemon"
 
 assign [class="Inkscape"] 5
+# for_window [class="Inkscape" instance="inkscape"] floating enable, geometry 1920x1080
+
 
 
 # Connect Display
