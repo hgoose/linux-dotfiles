@@ -39,6 +39,7 @@ assign [class="Inkscape"] 5
 set $mod Mod4
 
 #--- Chrome Shortcuts ---
+bindsym $mod+shift+h exec --no-startup-id google-chrome-stable file:///home/datura/springsemester/calc/notes/
 bindsym $mod+shift+t exec --no-startup-id google-chrome-stable file:///home/datura/dev
 
 #---- WORKSPACE MANAGER ----#
