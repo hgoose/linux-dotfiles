@@ -2,6 +2,8 @@
 set -U fish_greeting
 
 # USER DEFINED ALIASES
+alias leet="cd ~/dev/Python/leetcode"
+alias wgetu="wget --user-agent=Yandex"
 alias lists="nvim ~/learn/lists.txt"
 alias ifw="inkscape-figures watch"
 alias ism="python3 ~/inkscape-shortcut-manager/main.py"

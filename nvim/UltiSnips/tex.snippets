@@ -13,29 +13,9 @@ snippet template
 \rhead{$3}
 % \lhead{\leftmark}
 \cfoot{\thepage}
+\setborder
 % \usepackage[default]{sourcecodepro}
 % \usepackage[T1]{fontenc}
-
-\pgfpagesdeclarelayout{boxed}
-{
-  \edef\pgfpageoptionborder{0pt}
-}
-{
-  \pgfpagesphysicalpageoptions
-  {%
-    logical pages=1,%
-  }
-  \pgfpageslogicalpageoptions{1}
-  {
-    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
-    border shrink=\pgfpageoptionborder,%
-    resized width=.95\pgfphysicalwidth,%
-    resized height=.95\pgfphysicalheight,%
-    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
-  }%
-}
-
-\pgfpagesuselayout{boxed}
 
 \begin{document}
 	\maketitle
