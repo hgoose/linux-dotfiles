@@ -90,6 +90,8 @@ then
 	sudo cp -R ~/.config/polybar ~/linux-dotfiles && echo "Copied polybar Directory to linux-dotfiles" || echo "Copied polybar Directory to linux-dotfiles"
 	sudo cp -R ~/.config/inkscape-figures ~/linux-dotfiles
 	sudo cp -R ~/Pictures/Grids ~/linux-dotfiles
+	sudo cp -R ~/dev/latex/template/preamble.tex ~/linux-dotfiles/latex
+	sudo cp -R ~/dev/latex/template/macros.tex ~/linux-dotfiles/latex
 else
 	echo "Invalid Option"
 fi
