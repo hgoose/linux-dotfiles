@@ -10,7 +10,7 @@
 \usepackage{mathtools}
 \usepackage{bookmark}
 \usepackage{enumitem}
-\usepackage{hyperref,theoremref}
+% \usepackage{hyperref,theoremref}
 \usepackage[]{mdframed}
 \usepackage{pgfpages}
 \usepackage{fancyhdr}
@@ -19,7 +19,7 @@
 \newcommand{\summation}[2]{\sum\limits^{#1}_{#2}}
 \hypersetup{
 	pdftitle={Assignment},
-	colorlinks=true, linkcolor=doc!90,
+	% colorlinks=true, linkcolor=doc!90,
 	bookmarksnumbered=true,
 	bookmarksopen=true
 }
@@ -768,7 +768,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \usepackage{tikz}
-% \definecolor{doc}{RGB}{0,60,110}
 % \usepackage{titletoc}
 % \contentsmargin{0cm}
 % \titlecontents{chapter}[3.7pc]
@@ -810,6 +809,7 @@
 % \makeatother
 %
 % -- PROPER TABLE OF CONTENTS --
+\definecolor{doc}{RGB}{0,60,110}
 \renewcommand{\cfttoctitlefont}{\hfill\large\bfseries}
 \renewcommand{\cftaftertoctitle}{\hfill}
 \renewcommand{\cftsecfont}{\normalsize\bfseries}
@@ -821,7 +821,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
 % -- Border --
-\renewcommand{\setborder}{
+\newcommand{\setborder}{
 \pgfpagesdeclarelayout{boxed}
 {
   \edef\pgfpageoptionborder{0pt}
