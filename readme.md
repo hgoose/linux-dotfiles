@@ -14,9 +14,9 @@
 * [Picom](https://github.com/hgoose/linux-dotfiles/tree/master/picom)
 * [Rofi (Drun)](https://github.com/hgoose/linux-dotfiles/tree/master/rofi)
 * [Termite](https://github.com/hgoose/linux-dotfiles/tree/master/termite%20configs)
+* [Zathura (pdf viewer)](https://github.com/hgoose/linux-dotfiles/tree/master/zathura)
 * [Tmux](https://github.com/hgoose/linux-dotfiles/tree/master/tmux)
 * [Xfce4](https://github.com/hgoose/linux-dotfiles/tree/master/xfce4)
-* [Zathura (pdf viewer)](https://github.com/hgoose/linux-dotfiles/tree/master/zathura)
 * [Backgrounds](https://github.com/hgoose/linux-dotfiles/tree/master/shell-color-scripts)
 * [Shell Color Scripts (click to view setup)](https://gitlab.com/dwt1/shell-color-scripts)
 
