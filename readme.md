@@ -26,10 +26,10 @@
 ![Preview](https://i.imgur.com/j9WbOyw.png)
 
 ### Preview
-![Preview](https://i.imgur.com/JckGwZG.png)
+![Preview](https://i.imgur.com/Bn9F4t4.png)
 
 ### Preview
-![Preview](https://i.imgur.com/AsIqbTw.png)
+![Preview](https://i.imgur.com/1TewMoj.png)
 
 ### Backgrounds 
 ![Preview](https://i.imgur.com/aKBGclS.jpg)
