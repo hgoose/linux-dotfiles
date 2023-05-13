@@ -193,13 +193,21 @@ set_from_resource $bg i3wm.color6 #282a2e
 # client.urgent           #00D1FF #900000 #ffffff #900000   #900000
 # client.placeholder      #00D1FF #0c0c0c #ffffff #000000   #0c0c0c
 
-client.background       #0AD900
+client.background       #9B00FF
 # class                 border  backgr. text    indicator child_border
-client.focused          #0AD900 #3c464d #ffffff #0AD900   #0AD900
-client.focused_inactive #0AD900 #5f676a #ffffff #484e50   #0AD900
-client.unfocused        #0AD900 #222222 #888888 #292d2e   #0AD900
-client.urgent           #0AD900 #900000 #ffffff #900000   #900000
-client.placeholder      #0AD900 #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          #9B00FF #3c464d #ffffff #9B00FF   #9B00FF
+client.focused_inactive #9B00FF #5f676a #ffffff #484e50   #9B00FF
+client.unfocused        #9B00FF #222222 #888888 #292d2e   #9B00FF
+client.urgent           #9B00FF #900000 #ffffff #900000   #900000
+client.placeholder      #9B00FF #0c0c0c #ffffff #000000   #0c0c0c
+
+# client.background       #0AD900
+# # class                 border  backgr. text    indicator child_border
+# client.focused          #0AD900 #3c464d #ffffff #0AD900   #0AD900
+# client.focused_inactive #0AD900 #5f676a #ffffff #484e50   #0AD900
+# client.unfocused        #0AD900 #222222 #888888 #292d2e   #0AD900
+# client.urgent           #0AD900 #900000 #ffffff #900000   #900000
+# client.placeholder      #0AD900 #0c0c0c #ffffff #000000   #0c0c0c
 
 
 #
