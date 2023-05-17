@@ -779,7 +779,7 @@ snippet pi "pi" iA
 endsnippet
 
 snippet log "log" i
-\log_$1{$2}
+\log_{$1}{$2}
 endsnippet
 
 snippet abs "abs" i
@@ -935,4 +935,21 @@ endsnippet
 
 snippet ss
 \subsection{$1}
+endsnippet
+
+snippet sdiv
+    \begin{align*}
+      \begin{array}{rrrrr}
+      \multicolumn{1}{r|}{$1} & {$2} & $3 & $4 & $5 \\\\ \cline{2-5}
+       & & $6 & $7 & $8 \\\\ \cline{2-5}
+       & $9 & $10 & $11 & $12 
+      \end{array}
+    .\end{align*}
+endsnippet
+
+snippet def
+\thmcon{\textbf{\textit{\underline{Definition:}}}
+\bigbreak \noindent
+$1
+}
 endsnippet
