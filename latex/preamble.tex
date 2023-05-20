@@ -18,6 +18,8 @@
 \usepackage{tocloft}
 \usepackage{multirow}
 \usepackage{dcolumn}
+\usepackage{tikz}
+% \usepackage{pgfplots}
 \newcolumntype{2}{D{.}{}{2.0}}
 \newcommand{\summation}[2]{\sum\limits^{#1}_{#2}}
 \hypersetup{
@@ -79,6 +81,10 @@
   \end{Large}
   \line(1,0){490}
 }
+
+% Custom Theorem Box
+\newtcbtheorem[number within=section]{theo}{Theorem.}%
+{colback=white!5,colframe=black!35!black,fonttitle=\bfseries}{th}
 
 %\usepackage{import}
 %\usepackage{xifthen}
