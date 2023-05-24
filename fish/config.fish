@@ -4,6 +4,8 @@ neofetch
 set -U fish_greeting
 
 # USER DEFINED ALIASES
+alias inter="cd ~/dev/roadmap/python/intermediate"
+alias interm="nvim ~/dev/roadmap/python/intermediate/main.tex"
 alias leet="cd ~/dev/Python/leetcode"
 alias wgetu="wget --user-agent=Yandex"
 alias lists="nvim ~/learn/lists.txt"
@@ -90,11 +92,11 @@ function fish_user_key_bindings
     bind \cl 'clear;neofetch; commandline -f repaint'
 end
 
-# Overload clear to also run neofetch
-function clear
-    command clear
-    neofetch
-end
+# # Overload clear to also run neofetch
+# function clear
+#     command clear
+#     neofetch
+# end
 
 
 # Overload touch to also make file executable
