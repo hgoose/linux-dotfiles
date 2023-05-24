@@ -74,7 +74,8 @@ alias pn="cd ~/dev/latex/notes/python/"
 alias picom="picom >/dev/null &"
 # alias c="clear; fm6000 -f ~/repos/fetch-master-6000/ascii_arts/catart.txt"
 # alias c="clear; fm6000 -f ~/repos/fetch-master-6000/ascii_arts/astronaut.txt"
-alias c="clear; figlet DATURA | lolcat"
+# alias c="clear; figlet DATURA | lolcat"
+alias c="clear;neofetch"
 alias cls="clear; neofetch"
 alias x="sudo chmod +x"
 alias dot="cd ~/.config"
@@ -84,10 +85,17 @@ alias pd="push-dotfiles"
 alias ss="cd ~/springsemester/"
 alias bluetooth="nvim /etc/bluetooth/main.conf"
 
-
+# Rebind clear to also run neofetch
 function fish_user_key_bindings
     bind \cl 'clear;neofetch; commandline -f repaint'
 end
+
+# Overload clear to also run neofetch
+function clear
+    command clear
+    neofetch
+end
+
 
 # Overload touch to also make file executable
 # function touch 
