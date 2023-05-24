@@ -34,6 +34,8 @@ local astro_plugins = {
       })
     end
   },
+  -- Dracula
+  ['Mofiqul/dracula.nvim']                        = {}, 
   -- [hgoose/gruvbox]
   ['hgoose/gruv.nvim']                            = {},
   --[regex]
