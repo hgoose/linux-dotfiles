@@ -1,4 +1,5 @@
 # tmux
+neofetch
 # Remove fish greeting
 set -U fish_greeting
 
@@ -84,6 +85,9 @@ alias ss="cd ~/springsemester/"
 alias bluetooth="nvim /etc/bluetooth/main.conf"
 
 
+function fish_user_key_bindings
+    bind \cl 'clear;neofetch; commandline -f repaint'
+end
 
 # Overload touch to also make file executable
 # function touch 
