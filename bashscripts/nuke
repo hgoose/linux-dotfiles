@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+main()
+{
+    read -p "Which Dir: " DIRECTORY
+
+    MKDIR=$DIRECTORY/nuked
+    if [ ! -d $MKDIR ]; then
+        sudo mkdir $MKDIR
+        # sudo mv $DIRECTORY/*.* $MKDIR
+    else
+        COUNT="1"
+        while [ -d "$MKDIR$COUNT" ]; do
+            ((COUNT++))
+        done
+        sudo mkdir $MKDIR$COUNT
+    fi
+}
+main
