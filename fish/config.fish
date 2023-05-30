@@ -87,6 +87,10 @@ alias pd="push-dotfiles"
 alias ss="cd ~/springsemester/"
 alias bluetooth="nvim /etc/bluetooth/main.conf"
 
+function mk
+    touch $argv;sudo chmod +x $argv;nvim $argv
+end
+
 # Rebind clear to also run neofetch
 function fish_user_key_bindings
     bind \cl 'clear;neofetch; commandline -f repaint'

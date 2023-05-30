@@ -29,6 +29,64 @@ snippet template
 \end{document}
 endsnippet
 
+snippet ttemplate
+\documentclass{report}
+
+\input{~/dev/latex/template/preamble.tex}
+\input{~/dev/latex/template/macros.tex}
+
+\title{\Huge{}}
+\author{\huge{Nathan Warner}}
+\date{\huge{}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Warner \thepage}
+\rhead{}
+% \lhead{\leftmark}
+\cfoot{\thepage}
+\setborder
+% \usepackage[default]{sourcecodepro}
+% \usepackage[T1]{fontenc}
+
+\begin{document}
+	% \maketitle
+	    \begin{titlepage}
+       \begin{center}
+           \vspace*{1cm}
+    
+           \textbf{$1}
+    
+           \vspace{0.5cm}
+            $2
+                
+           \vspace{1.5cm}
+    
+           \textbf{Nathan Warner}
+    
+           \vfill
+                
+                
+           \vspace{0.8cm}
+         
+           \includegraphics[width=0.4\textwidth]{$3}
+                
+           Computer Science \\\
+           Northern Illinois University\\\
+           United States\\\
+           $4
+                
+       \end{center}
+    \end{titlepage}
+	\tableofcontents
+	\pagebreak \bigbreak \noindent
+	\begin{Large}
+
+		\noindent \textbf{$4}
+	\end{Large}
+	$5
+\end{document}
+endsnippet
+
 snippet essay
 \documentclass[12pt]{article}
 
@@ -122,36 +180,33 @@ snippet esindent
 endsnippet
 
 snippet title
-\begin{titlepage}
-   \begin{center}
-       \vspace*{1cm}
-
-       \textbf{Thesis Title}
-
-       \vspace{0.5cm}
-        Thesis Subtitle
-            
-       \vspace{1.5cm}
-
-       \textbf{Author Name}
-
-       \vfill
-            
-       A thesis presented for the degree of\\
-       Doctor of Philosophy
-            
-       \vspace{0.8cm}
-     
-       \includegraphics[width=0.4\textwidth]{university}
-            
-       Department Name\\
-       University Name\\
-       Country\\
-       Date
-            
-   \end{center}
-\end{titlepage}
-
+    \begin{titlepage}
+       \begin{center}
+           \vspace*{1cm}
+    
+           \textbf{$1}
+    
+           \vspace{0.5cm}
+            $2
+                
+           \vspace{1.5cm}
+    
+           \textbf{Nathan Warner}
+    
+           \vfill
+                
+                
+           \vspace{0.8cm}
+         
+           \includegraphics[width=0.4\textwidth]{$3}
+                
+           $4 \\
+           Northern Illinois University\\
+           United States\\
+           $5
+                
+       \end{center}
+    \end{titlepage}
 endsnippet
 
 snippet qs
@@ -170,7 +225,7 @@ snippet new
 endsnippet
 
 snippet sect
-\section{\Large{$1}}
+\section{$1}
 endsnippet
 
 snippet subsect
@@ -306,40 +361,6 @@ endsnippet
 
 snippet mlla
 \longleftarrow
-endsnippet
-
-snippet tabletemplate
-
-\begin{tabular}{||c c c c||} 
-	\hline
-	Col1 & Col2 & Col2 & Col3 \\\ [0.5ex] 
-	\hline\hline
-	1 & 6 & 87837 & 787 \\\ 
-	\hline
-	2 & 7 & 78 & 5415 \\\
-	\hline
-	3 & 545 & 778 & 7507 \\\
-	\hline
-	4 & 545 & 18744 & 7560 \\\
-	\hline
-	5 & 88 & 788 & 6344 \\\ [1ex] 
-	\hline
-\end{tabular}
-
-endsnippet
-
-snippet table
-\noindent
-\begin{tabular}{||c c ||} 
-    \hline
-    Numeric Types \vline & Example \\\ [0.5ex] 
-    \hline\hline
-    int & 6 \\\ 
-    \hline
-    float & 7.34 \\\
-    \hline\hline
-\end{tabular}
-
 endsnippet
 
 snippet line
@@ -927,9 +948,9 @@ f(x)
 endsnippet
 
 snippet code
-\begin{verbatim}
+\begin{minted}{$1}
 $1
-\end{verbatim}
+\end{minted}
 endsnippet
 
 snippet iff
@@ -957,3 +978,36 @@ $1
 }
 endsnippet
 
+snippet table
+\begin{center}
+	\begin{tabular}{|l|c|}
+	\hline
+    	$1 \\\
+    	\hline
+     	 $2 & $3  \\\
+    	\hline
+	\end{tabular}
+\end{center}
+endsnippet
+
+snippet addition
+\[
+\begin{array}{@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}}
+  	  	  	  	  \\
+        + \ \ & \\
+\cline{2-10}
+        = \ \ &  
+\end{array}
+\]
+endsnippet
+
+snippet preface
+\addcontentsline{toc}{section}{Preface}
+\pagebreak \bigbreak \noindent
+
+\bigbreak \noindent 
+\begin{Large}
+    \textbf{Preface}
+\end{Large}
+
+endsnippet

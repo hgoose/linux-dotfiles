@@ -96,6 +96,7 @@ local astro_plugins = {
   ['SirVer/ultisnips']                            = {},
   -- -- Vimtex
   ['lervag/vimtex']                               = {},
+
   --
   -- -- Vim Latex Preview
   -- ['xuhdev/vim-latex-live-preview'] = {},

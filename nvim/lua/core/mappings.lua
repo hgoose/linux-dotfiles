@@ -87,6 +87,20 @@ vim.g.UltiSnipsJumpBackwardTrigger = '<c-tab>'
 vim.g.vimtex_view_method = 'zathura'
 vim.g.tex_fast = "bMpr"
 vim.g.vimtex_quickfix_mode = 0
+vim.cmd[[
+let g:vimtex_compiler_latexrun_engines = {'_': 'lualatex'}
+let g:vimtex_compiler_latexmk_engines = {'_': '-lualatex'}
+let g:vimtex_compiler_latexmk = {
+            \ 'options' : [
+                \   '-shell-escape',
+                \   '-verbose',
+                \   '-file-line-error',
+                \   '-synctex=1',
+                \   '-interaction=nonstopmode',
+                \ ],
+                \}
+let g:vimtex_syntax_packages = {'minted': {'load': 2}}
+]]
 -- vim.cmd("set conceallevel=1")
 -- vim.g.tex_conceal = 'abdmg'
 
