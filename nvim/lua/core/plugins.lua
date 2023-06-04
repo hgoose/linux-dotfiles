@@ -34,6 +34,8 @@ local astro_plugins = {
       })
     end
   },
+  -- Synthwave Port
+  ['artanikin/vim-synthwave84']                   = {},
   -- Dracula
   ['Mofiqul/dracula.nvim']                        = {}, 
   -- [hgoose/gruvbox]
