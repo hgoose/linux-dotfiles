@@ -77,10 +77,10 @@ bindsym $mod+d exec ~/.config/rofi/scripts/launcher_t3
 
 # change focus
 #HTNS
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym Mod1+n focus left
+bindsym Mod1+h focus down
+bindsym Mod1+t focus up
+bindsym Mod1+s focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
