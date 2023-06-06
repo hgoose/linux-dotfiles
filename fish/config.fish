@@ -21,7 +21,7 @@ alias :q="echo 'You're not in vim bozo"
 alias :q!="echo 'You're not in vim bozo"
 alias pycon="nvim ~/learn/Python/concepts"
 alias go="nohup google-chrome-stable >/dev/null 2>&1 & && pidof chrome | disown"
-alias kp="kill picom"
+# alias kp="kill picom"
 alias p="picom"
 alias polybar="~/.config/polybar/launch.sh"
 alias testp="cd ~/springsemester/calc/testPrep"
@@ -87,6 +87,11 @@ alias pd="push-dotfiles"
 alias ss="cd ~/springsemester/"
 alias bluetooth="nvim /etc/bluetooth/main.conf"
 
+
+# # Kill picom
+# function kp
+#     kill picom
+# end
 function mk
     touch $argv;sudo chmod +x $argv;nvim $argv
 end
