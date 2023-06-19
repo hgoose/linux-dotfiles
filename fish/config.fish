@@ -8,6 +8,7 @@ xrandr --addmode HDMI-1-0 1440x1080_100.00
 xrandr --addmode eDP-1 1440x1080_100.00
 
 # USER DEFINED ALIASES
+alias dunder="cd ~/dev/roadmap/python/dunder"
 alias inter="cd ~/dev/roadmap/python/intermediate"
 alias interm="nvim ~/dev/roadmap/python/intermediate/main.tex"
 alias leet="cd ~/dev/Python/leetcode"
@@ -191,7 +192,7 @@ endbar
 function dvorak
  	set mylang (setxkbmap -query | grep layout | awk '{ print $2 }')
 	if [ $mylang != 'dvorak' ]
-		setxkbmap dvorak
+		setxkbmap -layout us -variant dvorak
 	end
 end
 dvorak

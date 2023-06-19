@@ -34,6 +34,8 @@ local astro_plugins = {
       })
     end
   },
+  -- vscode theme
+  ['https://github.com/Mofiqul/vscode.nvim.git']  = {},
   -- Synthwave Port
   ['artanikin/vim-synthwave84']                   = {},
   -- Dracula
