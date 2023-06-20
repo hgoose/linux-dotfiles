@@ -3,9 +3,9 @@ neofetch
 # Remove fish greeting
 set -U fish_greeting
 
-xrandr --newmode "1440x1080_100.00"  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync
-xrandr --addmode HDMI-1-0 1440x1080_100.00
-xrandr --addmode eDP-1 1440x1080_100.00
+# xrandr --newmode "1440x1080_100.00"  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync
+# xrandr --addmode HDMI-1-0 1440x1080_100.00
+# xrandr --addmode eDP-1 1440x1080_100.00
 
 # USER DEFINED ALIASES
 alias dunder="cd ~/dev/roadmap/python/dunder"
