@@ -1,0 +1,61 @@
+#!/bin/bash
+#sddmtest
+#version 1.0
+#Mark Hart
+
+clear
+
+loc=/home
+thme=test
+
+if [ "$2" == '' ]; then
+  echo "Usage: sddmtest THEME_DIR THEME_NAME"
+  echo "Use:   sddmtest default C64 (to test C64 in /usr/share/sddm/themes/)"
+  echo "Use:   sddmtest . C64 (to test C64 in current dir)"
+  echo "Use:   sddmtest /where/theme/is/located/ C64 (to test C64)"
+  exit
+fi
+
+
+if [ "$1" == 'default' ] || [ "$1" == '.' ]; then
+
+   if [ "$1" == 'default' ]; then
+
+     loc=/usr/share/sddm/themes/
+
+     if [ -d "$loc$2" ]; then
+        sddm-greeter --test-mode --theme $loc$2
+        exit
+     else
+        echo "ERROR: can't find theme $loc$2"
+        exit
+     fi
+
+   fi
+
+
+   if [ "$1" == '.' ]; then
+
+     loc=$(pwd)"/"
+
+     if [ -d "$loc" ]; then
+        sddm-greeter --test-mode --theme "$loc"
+        exit
+     else
+        echo "ERROR: can't find theme $loc"
+        exit
+     fi
+   fi
+
+else
+
+  loc=$1
+
+fi
+
+
+if [ -d "$loc" ]; then
+  sddm-greeter --test-mode --theme $loc $2
+else
+  echo "ERROR: can't find theme $loc$2"
+fi
