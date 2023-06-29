@@ -8,6 +8,7 @@ set -U fish_greeting
 # xrandr --addmode eDP-1 1440x1080_100.00
 
 # USER DEFINED ALIASES
+alias cdc="cd;c"
 alias dunder="cd ~/dev/roadmap/python/dunder"
 alias inter="cd ~/dev/roadmap/python/intermediate"
 alias interm="nvim ~/dev/roadmap/python/intermediate/main.tex"
