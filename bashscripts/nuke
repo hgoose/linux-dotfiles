@@ -6,13 +6,14 @@ main()
     MKDIR=$DIRECTORY/nuked
     if [ ! -d $MKDIR ]; then
         sudo mkdir $MKDIR
-        # sudo mv $DIRECTORY/*.* $MKDIR
+        sudo mv $DIRECTORY/*.* $MKDIR
     else
         COUNT="1"
         while [ -d "$MKDIR$COUNT" ]; do
             ((COUNT++))
         done
         sudo mkdir $MKDIR$COUNT
+        sudo mv $DIRECTORY/*.* $MKDIR$COUNT
     fi
 }
 main
