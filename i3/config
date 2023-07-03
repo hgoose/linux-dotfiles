@@ -25,7 +25,7 @@ exec --no-startup-id kitty
 
 # Launch a chrome session on startup and bind it to workspace 1
 assign [class="chrome"] 1
-exec --no-startup-id google-chrome-stable 
+exec --no-startup-id brave
 
 # Inkscape
 assign [class="Inkscape"] 5

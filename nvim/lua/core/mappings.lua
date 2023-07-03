@@ -30,6 +30,7 @@ nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/
 ]]
 
 
+maps.n["<leader>-"] = {"<cmd>!bash opb<cr>", desc="open pdf file in brave browser"}
 
 -- toggleterm
 -- map('n', '<c-t>', '<C-K>')
