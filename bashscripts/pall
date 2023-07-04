@@ -8,9 +8,7 @@ main(){
     DIRS=("linux-dotfiles" "Linux-Resources" "dev" "earn" "learn" "niu")
 
     for i in "${DIRS[@]}"; do
-        sudo git -C $HOME/$i add .
-        sudo git -C $HOME/$i commit -m "Commit"
-        git -C $HOME/$i push && echo "Successfully pushed changes to dirctory $i" || echo "Failed to push changes to directory $i or everything is up to date"
+        sudo git -C $HOME/$i add . && sudo git -C $HOME/$i commit -m "Commit" && git -C $HOME/$i push && echo "Successfully pushed changes to directory $i" || echo "Failed to push changes to directory $i or everything is up to date"
     done
 }
 main
