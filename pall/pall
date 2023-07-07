@@ -5,7 +5,7 @@
 # Linux-dotfiles, Linux Resources, programming resources, dev
 #
 main(){
-    DIRS=("linux-dotfiles" "Linux-Resources" "dev" "earn" "learn" "niu")
+    DIRS=("linux-dotfiles" "Linux-Resources" "dev" "earn" "learn" "niu" "springsemester" "Pictures")
 
     for i in "${DIRS[@]}"; do
         sudo git -C $HOME/$i add . && sudo git -C $HOME/$i commit -m "Commit" && git -C $HOME/$i push && echo "Successfully pushed changes to directory $i" || echo "Failed to push changes to directory $i or everything is up to date"
