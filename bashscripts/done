@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 main(){
-    ARR=('kitty' 'zathura')
-    for i in "${ARR[@]}"; do
-        pkill -e $i
-    done
     kitty -- pall
+    ARR=('zathura' 'kitty')
+    for i in "${ARR[@]}"; do
+        killall $i
+    done
 
 }
 main
