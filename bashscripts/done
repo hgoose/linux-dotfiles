@@ -5,6 +5,7 @@ main(){
     for i in "${ARR[@]}"; do
         killall $i
     done
+    poweroff
 
 }
 main
