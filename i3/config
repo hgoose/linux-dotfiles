@@ -39,8 +39,8 @@ assign [class="Inkscape"] 5
 set $mod Mod4
 
 #--- Chrome Shortcuts ---
-bindsym $mod+shift+h exec --no-startup-id google-chrome-stable file:///home/datura/niu
-bindsym $mod+shift+t exec --no-startup-id google-chrome-stable file:///home/datura/dev
+bindsym $mod+shift+h exec --no-startup-id brave file:///home/datura/niu
+bindsym $mod+shift+t exec --no-startup-id brave file:///home/datura/dev
 
 #---- WORKSPACE MANAGER ----#
 set $exec_i3_groups exec --no-startup-id i3-workspace-groups
@@ -264,12 +264,12 @@ bindsym $mod+r mode "resize"
  # NEW BAR (BUMBLEBEE)
 bar {
 	font pango:Inconsolata 8
-	position top
+	position bottom
 	tray_output none
 	status_command ~/.config/i3/bumblebee-status/bumblebee-status \
-	        -m hostname kernel arch-update pacman memory layout disk cmus time date pasource battery \
+	        -m  layout disk cmus time date pasource battery \
 		-p spacer.text="catsoup" time.format="" date.format="%a, %b, %Y %l:%M:%S %p"\
-		-t iceberg-rainbow 
+		-t moonlight-powerline
 		# Available Themes: https://bumblebee-status.readthedocs.io/en/main/themes.html
 colors {
              background #000000

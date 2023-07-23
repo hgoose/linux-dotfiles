@@ -228,6 +228,12 @@ snippet sect
 \section{$1}
 endsnippet
 
+snippet unsect
+\phantomsection
+\addcontentsline{toc}{section}{$1}
+\section*{$1}
+endsnippet
+
 snippet subsect
 \subsection{\large{$1}}
 endsnippet
@@ -368,7 +374,7 @@ snippet line
 endsnippet
 
 snippet pb
-\pagebreak \bigbreak \noindent
+\pagebreak 
 endsnippet
 
 snippet fun
@@ -972,6 +978,13 @@ snippet ss
 \subsection{$1}
 endsnippet
 
+snippet unss
+\phantomsection
+\addcontentsline{toc}{subsection}{$1}
+\subsection*{$1}
+endsnippet
+
+
 snippet sdiv
     \begin{align*}
       \begin{array}{rrrrr}
@@ -1053,6 +1066,10 @@ snippet yhat "yhat" i
 \hat{y}
 endsnippet
 
+snippet phat "phat" i
+\hat{p}
+endsnippet
+
 snippet d3
 \begin{large}
   \textbf{$1}
@@ -1060,3 +1077,9 @@ snippet d3
 \addcontentsline{toc}{subsubsection}{$2}
 endsnippet
 
+snippet formulas
+\textbf{Formulas:}
+\begin{itemize}
+$1
+\end{itemize}
+endsnippet

@@ -1,5 +1,5 @@
-# tmux
 neofetch
+set -x PATH $HOME/.cargo/bin $PATH
 # Remove fish greeting
 set -U fish_greeting
 
@@ -45,6 +45,7 @@ alias rno="rm -rf nohup.out"
 alias mch2="cd ~/springsemester/calc/notes/lectures/chapter2"
 alias dnotes="cd ~/springsemester/dmed/notes"
 alias mnotes="cd ~/springsemester/calc/notes/lectures"
+alias goodjob="nohup ~/good_job/good_job >/dev/null 2>&1 &" 
 alias c3="cd ~/springsemester/calc/notes/lectures/chapter3 && nvim main.tex"
 alias dhw="cd ~/springsemester/dmed/hw"
 alias mhw="cd ~/springsemester/calc/hw"
@@ -182,12 +183,12 @@ end
 ssoff
 
 # Kill i3bar if running
-function endbar
-	if pgrep bar > /dev/null
-		kill i3bar > /dev/null
-	end
-end
-endbar
+# function endbar
+# 	if pgrep bar > /dev/null
+# 		kill i3bar > /dev/null
+# 	end
+# end
+# endbar
 
 # Set lang vorak
 function dvorak

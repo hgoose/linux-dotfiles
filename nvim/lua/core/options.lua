@@ -1,6 +1,9 @@
 vim.opt.shortmess:append { s = true, I = true } -- disable startup message
 vim.cmd[[
-set spell spelllang=en_us
+  augroup FileTypeSettings
+    autocmd!
+    autocmd FileType tex,txt setlocal spell spelllang=en_us
+  augroup END
 ]]
 astronvim.vim_opts(astronvim.user_plugin_opts("options", {
   opt = {
