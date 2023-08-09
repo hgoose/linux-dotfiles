@@ -902,8 +902,16 @@ snippet nm
 Newton's Method
 endsnippet
 
-snippet sub "subscript" iA
+snippet sub "subscript" i
 _{$1}
+endsnippet
+
+snippet subb "suubset" i
+\subseteq
+endsnippet
+
+snippet prop "proper suubset" i
+\subset
 endsnippet
 
 snippet sum "sigma notation" i
@@ -996,10 +1004,9 @@ snippet sdiv
 endsnippet
 
 snippet def
-\thmcon{\textbf{\textit{\underline{Definition:}}}
-\bigbreak \noindent
-$1
-}
+\begin{mdframed}
+    \textbf{Definition}
+\end{mdframed}
 endsnippet
 
 snippet table
@@ -1109,5 +1116,9 @@ $1
 
 \end{itemize}
 \pagebreak \bigbreak \noindent 
+endsnippet
+
+snippet chi "chi-square" i
+\chi^{2}
 endsnippet
 
