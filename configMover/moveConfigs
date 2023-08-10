@@ -93,6 +93,10 @@ then
 	sudo cp -R ~/dev/latex/template/preamble.tex ~/linux-dotfiles/latex
 	sudo cp -R ~/dev/latex/template/macros.tex ~/linux-dotfiles/latex
 	sudo cp ~/.tmux.conf ~/linux-dotfiles/tmux
+	sudo cp -R ~/.config/hypr ~/linux-dotfiles
+	sudo cp -R ~/.config/HyprV ~/linux-dotfiles
+	sudo cp -R ~/.config/waybar ~/linux-dotfiles
+
 else
 	echo "Invalid Option"
 fi
