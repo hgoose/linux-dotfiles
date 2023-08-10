@@ -1,4 +1,6 @@
 neofetch
+# swww init
+# wlr-randr --output HDMI-A-1 --mode 1920x1080@119.878998
 set -x PATH $HOME/.cargo/bin $PATH
 # Remove fish greeting
 set -U fish_greeting
@@ -191,13 +193,13 @@ ssoff
 # endbar
 
 # Set lang vorak
-function dvorak
- 	set mylang (setxkbmap -query | grep layout | awk '{ print $2 }')
-	if [ $mylang != 'dvorak' ]
-		setxkbmap -layout us -variant dvorak
-	end
-end
-dvorak
+# function dvorak
+#  	set mylang (setxkbmap -query | grep layout | awk '{ print $2 }')
+# 	if [ $mylang != 'dvorak' ]
+# 		setxkbmap -layout us -variant dvorak
+# 	end
+# end
+# dvorak
 
 function qwerty
  	set mylang (setxkbmap -query | grep layout | awk '{ print $2 }')
@@ -214,7 +216,7 @@ end
 # Set Mirror Displays
 function mirrordisplay
     if [ $( xrandr --listactivemonitors | grep Monitors | awk '{print $2}') = '1' ]
-        xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0
+        xrandr --output HDMI-A-1 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0
     end
 end
 

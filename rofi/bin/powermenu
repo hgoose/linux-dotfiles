@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+rofi_command="rofi -markup -markup-rows -matching fuzzy -theme $HOME/.config/rofi/config/powermenu.rasi"
+
+uptime=$(uptime -p | sed -e 's/up //g')
+
+shutdown=""
+reboot=""
+lock=""
+suspend=""
+logout=""
+hibernate=""
+
+# Variable passed to rofi
+options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+
+chosen="$(echo -e "$options" | $rofi_command -p "Online For:  ${uptime}" -dmenu -selected-row 0)"
+case $chosen in
+    $shutdown)
+        sh $HOME/.config/rofi/bin/powermenu-options 1
+		;;		
+    $reboot)
+        sh $HOME/.config/rofi/bin/powermenu-options 2
+        ;;
+    $lock)
+        sh $HOME/.config/rofi/bin/powermenu-options 3
+        ;;
+    $suspend)
+        sh $HOME/.config/rofi/bin/powermenu-options 4
+        ;;
+    $logout)
+        sh $HOME/.config/rofi/bin/powermenu-options 5	
+        ;;
+esac
+
