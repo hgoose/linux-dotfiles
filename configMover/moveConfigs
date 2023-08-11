@@ -96,6 +96,9 @@ then
 	sudo cp -R ~/.config/hypr ~/linux-dotfiles
 	sudo cp -R ~/.config/HyprV ~/linux-dotfiles
 	sudo cp -R ~/.config/waybar ~/linux-dotfiles
+	sudo cp -R ~/.config/cava ~/linux-dotfiles
+	sudo cp -R ~/.config/wofi ~/linux-dotfiles
+	sudo cp -R ~/.config/eww ~/linux-dotfiles
 
 else
 	echo "Invalid Option"

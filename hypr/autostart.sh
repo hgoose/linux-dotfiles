@@ -20,6 +20,7 @@ $scripts/launch_waybar &
 # wallpaper
 #$scripts/wall $HOME/Pictures/NewWallpapers/r32.png &
 swww init
+swww img home/datura/Backgrounds/1/cute-devil-girl-tuvte9u70chm12cl.jpg
 #hyprctl hyprpaper unload all
 
 # effects
