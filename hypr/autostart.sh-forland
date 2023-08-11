@@ -14,18 +14,13 @@ dunst &
 brightnessctl set 24000
 
 # waybar
-# $scripts/launch_waybar &
+$scripts/launch_waybar &
 #$scripts/tools/dynamic &
 
 # wallpaper
-nitrogen --restore
-
-# Compositor
-picom
-
 #$scripts/wall $HOME/Pictures/NewWallpapers/r32.png &
-# swww init
-# swww img home/datura/Backgrounds/1/cute-devil-girl-tuvte9u70chm12cl.jpg
+swww init
+swww img home/datura/Backgrounds/1/cute-devil-girl-tuvte9u70chm12cl.jpg
 #hyprctl hyprpaper unload all
 
 # effects
@@ -34,11 +29,11 @@ $scripts/rgb &
 # other
 /usr/lib64/polkit-kde-authentication-agent-1 &
 /usr/lib64/polkit-kde-authentication-agent-1 &
-# dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
 
 # brightnessctl set 15%
 
-# dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 rfkill unblock all
 
