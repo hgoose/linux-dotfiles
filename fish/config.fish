@@ -219,6 +219,7 @@ function mirrordisplay
         xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0
     end
 end
+mirrordisplay
 
 # Make and activate python virtualenv
 function mkvenv

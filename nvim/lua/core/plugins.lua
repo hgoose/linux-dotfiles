@@ -34,6 +34,7 @@ local astro_plugins = {
       })
     end
   },
+  ['karb94/neoscroll.nvim']                       = {},
   -- vscode theme
   ['https://github.com/Mofiqul/vscode.nvim.git']  = {},
   -- Synthwave Port
