@@ -337,37 +337,29 @@ snippet 3br
 \bigbreak \noindent \bigbreak \noindent \bigbreak \noindent $1
 endsnippet
 
-snippet mra
+snippet ra "right arrow" i
 \rightarrow
 endsnippet
 
-snippet ra
-$\rightarrow$
-endsnippet
-
-snippet la
-$\leftarrow$
-endsnippet
-
-snippet mla
+snippet la "left arrow" i
 \leftarrow
 endsnippet
 
-snippet lra
-$\longrightarrow$
-endsnippet
-
-snippet mlra
-\longrightarrow
-endsnippet
-
-snippet lla
-$\longleftarrow$
-endsnippet
-
-snippet mlla
-\longleftarrow
-endsnippet
+# snippet lra
+# $\longrightarrow$
+# endsnippet
+#
+# snippet mlra
+# \longrightarrow
+# endsnippet
+#
+# snippet lla
+# $\longleftarrow$
+# endsnippet
+#
+# snippet mlla
+# \longleftarrow
+# endsnippet
 
 snippet line
 \line(1,0){490}
@@ -1005,7 +997,8 @@ endsnippet
 
 snippet def
 \begin{mdframed}
-    \textbf{Definition}
+    \textbf{Definition:}
+    $1
 \end{mdframed}
 endsnippet
 
@@ -1122,3 +1115,14 @@ snippet chi "chi-square" i
 \chi^{2}
 endsnippet
 
+snippet eq "equivalant"
+\equiv
+endsnippet
+
+snippet minipage
+\begin{minipage}{0.47\textwidth}
+$1
+\caption{$2}
+\label{fig:$3}
+\end{minipage}
+endsnippet
