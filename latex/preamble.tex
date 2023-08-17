@@ -57,6 +57,17 @@
 \usepackage{graphicx}
 % \usepackage{table}
 
+% NAND and NOR define
+\makeatletter
+\DeclareRobustCommand{\nand}{\mathbin{\mathpalette\n@and@or\land}}
+\DeclareRobustCommand{\nor}{\mathbin{\mathpalette\n@and@or\lor}}
+
+\newcommand{\n@and@or}[2]{%
+  \vphantom{#2}%
+  \ooalign{$\m@th#1#2$\cr\hidewidth$\m@th#1\sim$\hidewidth\cr}%
+}
+\makeatother
+
 % Start sections at 1
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
@@ -663,6 +674,22 @@
 \newenvironment{myproof}[1][\proofname]{%
 	\proof[\bfseries #1: ]%
 }{\endproof}
+
+\newcommand{\ep}{
+    \hspace{4in}
+    \begin{tikzpicture}
+      \draw (-0.2,0.45) -- (-0.2,0.2); % Draw left eye
+      \draw (0.2,0.45) -- (0.2,0.2);   % Draw right eye
+      \draw (-0.277, -0.4) .. controls (-0.2, -0.1) and (0.2, -0.1) .. (0.277, -0.4); % Draw frown
+    \end{tikzpicture}
+    % Other
+ % \begin{tikzpicture}
+%   \draw (-0.2,0.4) -- (-0.2,0.2); % Draw left eye
+%   \draw (0.2,0.4) -- (0.2,0.2);   % Draw right eye
+%   \draw (-0.4, -0.3) .. controls (-0.2, -0.1) and (0.2, -0.1) .. (0.4, -0.3); % Draw frown
+% \end{tikzpicture}
+
+}
 
 \newcommand{\mclm}[2]{\begin{myclaim}[#1]#2\end{myclaim}}
 \newenvironment{myclaim}[1][\claimname]{\proof[\bfseries #1: ]}{}
