@@ -1,5 +1,5 @@
-colors.scheme=rainbow
-visualizer.spectrum.color.scheme=rainbow
+colors.scheme=nord
+visualizer.spectrum.color.scheme=nord
 visualizer.spectrum.bar.width=1
 
 visualizer.spectrum.top.margin=0.30
