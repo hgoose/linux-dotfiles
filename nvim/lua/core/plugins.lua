@@ -34,6 +34,10 @@ local astro_plugins = {
       })
     end
   },
+  --Quickscope
+  ['unblevable/quick-scope'] = {},
+  -- Nord
+  ['nordtheme/vim'] = {},
   ['karb94/neoscroll.nvim']                       = {},
   -- vscode theme
   ['https://github.com/Mofiqul/vscode.nvim.git']  = {},

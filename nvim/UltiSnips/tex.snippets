@@ -997,11 +997,11 @@ snippet sdiv
     .\end{align*}
 endsnippet
 
-snippet def
-\begin{mdframed}
-    \textbf{Definition:}
-    $1
-\end{mdframed}
+snippet def "definition"
+\smallbreak \noindent
+\begin{definition}
+\textbf{$1} $2
+\end{definition}
 endsnippet
 
 snippet table
@@ -1128,3 +1128,12 @@ $1
 \label{fig:$3}
 \end{minipage}
 endsnippet
+
+snippet mbb "mathbb" iA
+\mathbb{$1}
+endsnippet
+
+snippet mcc "mathcc" iA
+\mathcc{$1}
+endsnippet
+

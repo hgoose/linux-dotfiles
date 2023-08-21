@@ -15,6 +15,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 
+
 -- vim.api.nvim_set_keymap('n', '<C-f>',
 --   '<Esc>:silent exec "!inkscape-figures create \\""..vim.fn.getline(".")..\\"" \\""..vim.b.vimtex.root.."/figures/\\""..<CR><CR>:w<CR>',
 --   { noremap = true })
