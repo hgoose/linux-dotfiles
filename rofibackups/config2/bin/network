@@ -1,0 +1,38 @@
+#!/bin/sh
+
+rofi_command="rofi -markup -markup-rows -theme $HOME/.config/rofi/config/network.rasi -steal-focus "
+rofi_password_command="rofi -dmenu -markup -markup-rows -theme $HOME/.config/rofi/config/network-password.rasi -steal-focus "
+
+options=$(nmcli device wifi list  | tail +2 | sed 's/Infra.*//' -E | rev | sed 's/:.*//' -E | rev | cut -c 5-)
+echo -e "$options" 
+
+
+chosen=$(echo -e "$options\n<span font='Font Awesome 6 Pro' font_weight='bold' size='medium'> </span>Bluetooth"| $rofi_command -p 'Networks' -dmenu -selected-row 0) 
+
+if [[ $chosen == "" ]]; then
+	exit 1
+fi
+
+active=$(nmcli -f GENERAL.STATE connection show $chosen)
+
+chosen=$(echo $chosen | sed 's/:.*//')
+
+echo "chosen is "$chosen
+echo "rofi retv is "$ROFI_RETV
+
+if [[ $chosen == "<span font='Font Awesome 6 Pro' font_weight='bold' size='medium'> </span>Bluetooth" ]]; then
+	kitty bluetuith
+	exit 0
+else
+	if [[ $active != "" ]]; then
+		nmcli connection down $chosen 
+	else
+		nmcli connection up "${chosen}"
+		if [[ $? != 0 ]]; then
+			password=$($rofi_password_command)
+			nmcli device wifi connect "${chosen}" password "${password}" 
+		fi
+	fi
+fi
+
+#nmcli connection 
