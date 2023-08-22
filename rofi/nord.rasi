@@ -9,7 +9,7 @@ configuration {
 }
 
 * {
-	background-color:            #2e3440;
+	background-color:            #282828;
 	text-color:                  #eceff4;
 	selbg:                       #66cccc;
 	actbg:                       #4c566a;
@@ -36,14 +36,14 @@ configuration {
 	separator-style:             "none";
 	hide-scrollbar:              "true";
 	margin:                      0;
-	padding:                     10;
+	padding:                     5;
 }
 
 window {
-	location:	 west;
-	anchor:		 west;
-	height:		 100%;
-	width:		 30%;
+	location:	 center;
+	anchor:		 center;
+	height:		 50%;
+	width:		 50%;
 	orientation: horizontal;
 	children:	 [mainbox];
 }
