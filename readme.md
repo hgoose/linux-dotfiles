@@ -24,8 +24,9 @@
 
 ### Preview
 ![Preview](https://i.imgur.com/ntmTpgj.png)
-![Preview](https://i.imgur.com/PMAExsA.png)
-![Preview](https://i.imgur.com/j9WbOyw.png)
+![Preview](https://i.imgur.com/ypEPc9H.png)
+<!-- ![Preview](https://i.imgur.com/PMAExsA.png) -->
+<!-- ![Preview](https://i.imgur.com/j9WbOyw.png) -->
 <!-- ### Preview -->
 <!-- ![Preview](https://i.imgur.com/eisKkWc.png) -->
 <!---->
@@ -33,12 +34,14 @@
 <!-- ![Preview](https://i.imgur.com/1TewMoj.png) -->
 
 ### Backgrounds 
-![Preview](https://i.imgur.com/ugJuXa0.jpg)
+![Preview](https://wallpapercave.com/dwp1x/wp11058350.png)
+<!-- ![Preview](https://i.imgur.com/ugJuXa0.jpg) -->
 
-![Preview](https://i.imgur.com/swWtVZv.jpg)
-
-![Preview](https://i.imgur.com/aKBGclS.jpg)
-
-![Preview](https://i.imgur.com/4Tb2dX1.jpg)
-
-![Preview](https://i.imgur.com/ghDkqvK.jpg)
+<!---->
+<!-- ![Preview](https://i.imgur.com/swWtVZv.jpg) -->
+<!---->
+<!-- ![Preview](https://i.imgur.com/aKBGclS.jpg) -->
+<!---->
+<!-- ![Preview](https://i.imgur.com/4Tb2dX1.jpg) -->
+<!---->
+<!-- ![Preview](https://i.imgur.com/ghDkqvK.jpg) -->
