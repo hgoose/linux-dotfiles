@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Define your directories
+declare -a dirs=(
+    "$HOME/niu"
+    "$HOME/niu/math/discrete/notes"
+    "$HOME/niu/allmath"
+    "$HOME/tmp"
+    "$HOME/dev"
+# ... add more paths as needed
+)
+
+# Use Rofi to get a directory selection
+chosen_dir=$(printf '%s\n' "${dirs[@]}" | rofi -dmenu -theme /home/datura/.config/rofi/launchers/type-4/style-3.rasi -p "Where are you going?")
+
+# Check if chosen directory is not empty and exists
+if [ -n "$chosen_dir" ] && [ -d "$chosen_dir" ]; then
+    echo "$chosen_dir"
+else
+    echo ""
+fi
+

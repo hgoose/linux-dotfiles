@@ -44,7 +44,7 @@ snippet ttemplate
 \rhead{}
 % \lhead{\leftmark}
 \cfoot{\thepage}
-\setborder
+%\setborder
 % \usepackage[default]{sourcecodepro}
 % \usepackage[T1]{fontenc}
 
@@ -966,6 +966,13 @@ $1
 \end{minted}
 endsnippet
 
+snippet cpp "cpp" i
+\begin{minted}{cpp}
+$1
+\end{minted}
+endsnippet
+
+
 snippet bash
 \begin{minted}{bash}
 $1
@@ -1139,4 +1146,10 @@ endsnippet
 
 snippet bar "bar" i
 \bar{$1}
+endsnippet
+
+snippet scalebox "scalebox" i
+\scalebox{$1}{
+$2
+}
 endsnippet
