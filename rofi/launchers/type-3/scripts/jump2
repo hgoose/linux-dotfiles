@@ -4,7 +4,13 @@
 declare -a dirs=(
     "$HOME/niu"
     "$HOME/niu/math/discrete/notes"
-    "$HOME/niu/allmath"
+    "$HOME/niu/math/calc/calc2/lecturenotes"
+    "$HOME/niu/math/calc/calc2/psets"
+    "$HOME/niu/math/discrete/notes"
+    "$HOME/niu/math/allmath1"
+    "$HOME/niu/math/allmath2"
+    "$HOME/niu/cs/cs240/notes/lectures/full"
+    "$HOME/niu/cs/cs240/psets/"
     "$HOME/tmp"
     "$HOME/dev"
 # ... add more paths as needed
