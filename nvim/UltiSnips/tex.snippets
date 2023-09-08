@@ -1134,10 +1134,10 @@ snippet eq "equivalant"
 endsnippet
 
 snippet minipage
-\begin{minipage}{0.47\textwidth}
+\begin{minipage}[t]{0.47\textwidth}
 $1
-\caption{$2}
-\label{fig:$3}
+%\caption{$2}
+%\label{fig:$3}
 \end{minipage}
 endsnippet
 
@@ -1157,4 +1157,18 @@ snippet scalebox "scalebox" i
 \scalebox{$1}{
 $2
 }
+endsnippet
+
+snippet :: "std::" i
+std::
+endsnippet
+
+snippet ftc "fundamental theorem of calculus part 2" i
+\bigg]^{$1}_{$2}
+endsnippet
+
+snippet mx
+\begin{bmatrix}
+	$1
+\end{bmatrix}
 endsnippet

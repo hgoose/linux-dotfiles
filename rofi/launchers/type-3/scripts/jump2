@@ -13,6 +13,8 @@ declare -a dirs=(
     "$HOME/niu/cs/cs240/psets/"
     "$HOME/tmp"
     "$HOME/dev"
+    "$HOME/niu/cs/cs240/notes/lectures/full" 
+    "$HOME/niu/cs/cs240/notes/booknotes/notes"
 # ... add more paths as needed
 )
 

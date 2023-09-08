@@ -64,8 +64,8 @@
 \DeclareRobustCommand{\nor}{\mathbin{\mathpalette\n@and@or\lor}}
 
 \newcommand{\n@and@or}[2]{%
-  \vphantom{#2}%
-  \ooalign{$\m@th#1#2$\cr\hidewidth$\m@th#1\sim$\hidewidth\cr}%
+  	\vphantom{#2}%
+  	\ooalign{$\m@th#1#2$\cr\hidewidth$\m@th#1\sim$\hidewidth\cr}%
 }
 \makeatother
 
@@ -88,20 +88,20 @@
 \newcommand*\Heq{\ensuremath{\overset{\kern2pt H}{=}}}
 
 \renewcommand{\mathsection}[2]{
-  \pagebreak \bigbreak \noindent
-  \begin{Large}
-      \begin{mdframed}
-          \begin{center}
-              \textbf{#1}
-          \end{center}
-      \end{mdframed}
-  \end{Large}
-  \begin{Large}
-      \begin{center}
-          \textbf{#2}
-      \end{center}
-  \end{Large}
-  \line(1,0){490}
+  	\pagebreak \bigbreak \noindent
+  	\begin{Large}
+      	\begin{mdframed}
+          	\begin{center}
+              	\textbf{#1}
+          	\end{center}
+      	\end{mdframed}
+  	\end{Large}
+  	\begin{Large}
+      	\begin{center}
+          	\textbf{#2}
+      	\end{center}
+  	\end{Large}
+  	\line(1,0){490}
 }
 
 % Custom Theorem Box
@@ -509,18 +509,18 @@
 	title={#2},
 	boxed title size=title,
 	boxed title style={%
-			sharp corners,
-			rounded corners=northwest,
-			colback=tcbcolframe,
-			boxrule=0pt,
-		},
+		sharp corners,
+		rounded corners=northwest,
+		colback=tcbcolframe,
+		boxrule=0pt,
+	},
 	underlay boxed title={%
-			\path[fill=tcbcolframe] (title.south west)--(title.south east)
-			to[out=0, in=180] ([xshift=5mm]title.east)--
-			(title.center-|frame.east)
-			[rounded corners=\kvtcb@arc] |-
-			(frame.north) -| cycle;
-		},
+		\path[fill=tcbcolframe] (title.south west)--(title.south east)
+		to[out=0, in=180] ([xshift=5mm]title.east)--
+		(title.center-|frame.east)
+		[rounded corners=\kvtcb@arc] |-
+		(frame.north) -| cycle;
+	},
 	#1
 }{def}
 \makeatother
@@ -538,18 +538,18 @@
 	title=Solution,
 	boxed title size=title,
 	boxed title style={%
-			sharp corners,
-			rounded corners=northwest,
-			colback=tcbcolframe,
-			boxrule=0pt,
-		},
+		sharp corners,
+		rounded corners=northwest,
+		colback=tcbcolframe,
+		boxrule=0pt,
+	},
 	underlay boxed title={%
-			\path[fill=tcbcolframe] (title.south west)--(title.south east)
-			to[out=0, in=180] ([xshift=5mm]title.east)--
-			(title.center-|frame.east)
-			[rounded corners=\kvtcb@arc] |-
-			(frame.north) -| cycle;
-		},
+		\path[fill=tcbcolframe] (title.south west)--(title.south east)
+		to[out=0, in=180] ([xshift=5mm]title.east)--
+		(title.center-|frame.east)
+		[rounded corners=\kvtcb@arc] |-
+		(frame.north) -| cycle;
+	},
 }
 \makeatother
 
@@ -567,18 +567,18 @@
 	title={#2},
 	boxed title size=title,
 	boxed title style={%
-			sharp corners,
-			rounded corners=northwest,
-			colback=tcbcolframe,
-			boxrule=0pt,
-		},
+		sharp corners,
+		rounded corners=northwest,
+		colback=tcbcolframe,
+		boxrule=0pt,
+	},
 	underlay boxed title={%
-			\path[fill=tcbcolframe] (title.south west)--(title.south east)
-			to[out=0, in=180] ([xshift=5mm]title.east)--
-			(title.center-|frame.east)
-			[rounded corners=\kvtcb@arc] |-
-			(frame.north) -| cycle;
-		},
+		\path[fill=tcbcolframe] (title.south west)--(title.south east)
+		to[out=0, in=180] ([xshift=5mm]title.east)--
+		(title.center-|frame.east)
+		[rounded corners=\kvtcb@arc] |-
+		(frame.north) -| cycle;
+	},
 	#1
 }{def}
 \makeatother
@@ -594,12 +594,12 @@
 	colbacktitle=myr,
 	attach boxed title to top left={},
 	boxed title style={
-			enhanced,
-			skin=enhancedfirst jigsaw,
-			arc=3pt,
-			bottom=0pt,
-			interior style={fill=myr}
-		},
+		enhanced,
+		skin=enhancedfirst jigsaw,
+		arc=3pt,
+		bottom=0pt,
+		interior style={fill=myr}
+	},
 	#1
 }{def}
 
@@ -625,52 +625,52 @@
 	attach boxed title to top left={xshift=1cm,yshift=-\tcboxedtitleheight/2,yshifttext=-\tcboxedtitleheight/2},
 	minipage boxed title=1.5cm,
 	boxed title style={%
-			colback=white,
-			size=fbox,
-			boxrule=1pt,
-			boxsep=2pt,
-			underlay={%
-					\coordinate (dotA) at ($(interior.west) + (-0.5pt,0)$);
-					\coordinate (dotB) at ($(interior.east) + (0.5pt,0)$);
-					\begin{scope}
-						\clip (interior.north west) rectangle ([xshift=3ex]interior.east);
-						\filldraw [white, blur shadow={shadow opacity=60, shadow yshift=-.75ex}, rounded corners=2pt] (interior.north west) rectangle (interior.south east);
-					\end{scope}
-					\begin{scope}[gray!80!black]
-						\fill (dotA) circle (2pt);
-						\fill (dotB) circle (2pt);
-					\end{scope}
-				},
+		colback=white,
+		size=fbox,
+		boxrule=1pt,
+		boxsep=2pt,
+		underlay={%
+			\coordinate (dotA) at ($(interior.west) + (-0.5pt,0)$);
+			\coordinate (dotB) at ($(interior.east) + (0.5pt,0)$);
+			\begin{scope}
+				\clip (interior.north west) rectangle ([xshift=3ex]interior.east);
+				\filldraw [white, blur shadow={shadow opacity=60, shadow yshift=-.75ex}, rounded corners=2pt] (interior.north west) rectangle (interior.south east);
+			\end{scope}
+			\begin{scope}[gray!80!black]
+				\fill (dotA) circle (2pt);
+				\fill (dotB) circle (2pt);
+			\end{scope}
 		},
+	},
 	#1,
 }
 \usepackage{mdframed}
 \mdfsetup{skipabove=1em,skipbelow=0em}
 \theoremstyle{definition}
-\newmdtheoremenv[nobreak=true]{definitie}{Definitie}
-\newmdtheoremenv[nobreak=true]{eigenschap}{Eigenschap}
-\newmdtheoremenv[nobreak=true]{gevolg}{Gevolg}
+% \newmdtheoremenv[nobreak=true]{definition}{Definition}
+% \newmdtheoremenv[nobreak=true]{property}{Property}
+\newmdtheoremenv[nobreak=true]{consequence}{Consequence}
 \newmdtheoremenv[nobreak=true]{lemma}{Lemma}
-\newmdtheoremenv[nobreak=true]{propositie}{Propositie}
-\newmdtheoremenv[nobreak=true]{stelling}{Stelling}
-\newmdtheoremenv[nobreak=true]{wet}{Wet}
-\newmdtheoremenv[nobreak=true]{postulaat}{Postulaat}
-\newmdtheoremenv{conclusie}{Conclusie}
-\newmdtheoremenv{toemaatje}{Toemaatje}
-\newmdtheoremenv{vermoeden}{Vermoeden}
-\newtheorem*{herhaling}{Herhaling}
-\newtheorem*{intermezzo}{Intermezzo}
-\newtheorem*{notatie}{Notatie}
-\newtheorem*{observatie}{Observatie}
-\newtheorem*{oef}{Oefening}
-\newtheorem*{opmerking}{Opmerking}
-\newtheorem*{praktisch}{Praktisch}
-\newtheorem*{probleem}{Probleem}
-\newtheorem*{terminologie}{Terminologie}
-\newtheorem*{toepassing}{Toepassing}
-\newtheorem*{uovt}{UOVT}
-\newtheorem*{vb}{Voorbeeld}
-\newtheorem*{vraag}{Vraag}
+\newmdtheoremenv[nobreak=true]{proposition}{Proposition}
+% \newmdtheoremenv[nobreak=true]{theorem}{Theorem}
+\newmdtheoremenv[nobreak=true]{law}{Law}
+\newmdtheoremenv[nobreak=true]{postulate}{Postulate}
+\newmdtheoremenv{conclusion}{Conclusion}
+\newmdtheoremenv{extra}{Extra}
+\newmdtheoremenv{conjecture}{Conjecture}
+\newtheorem*{repetition}{Repetition}
+\newtheorem*{interlude}{Interlude}
+% \newtheorem*{notation}{Notation}
+\newtheorem*{observation}{Observation}
+% \newtheorem*{exercise}{Exercise}
+% \newtheorem*{remark}{Remark}
+\newtheorem*{practical}{Practical}
+% \newtheorem*{problem}{Problem}
+\newtheorem*{terminology}{Terminology}
+\newtheorem*{application}{Application}
+\newmdtheoremenv[nobreak=true]{examp}{Example}
+\newtheorem*{uovt}{UOVT} % This is an acronym, so it's kept as is.
+% \newtheorem*{question}{Question}
 
 \newmdtheoremenv[nobreak=true]{definition}{Definition}
 \newtheorem*{eg}{Example}
@@ -684,8 +684,8 @@
 \newtheorem*{property}{Property}
 \newtheorem*{intuition}{Intuition}
 % \newmdtheoremenv[nobreak=true]{prop}{Proposition}
-% \newmdtheoremenv[nobreak=true]{theorem}{Theorem}
-% \newmdtheoremenv[nobreak=true]{corollary}{Corollary}
+\newmdtheoremenv[nobreak=true]{thrm}{Theorem}
+\newmdtheoremenv[nobreak=true]{corr}{Corollary}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -708,7 +708,7 @@
 \newcommand{\nt}[1]{\begin{note}#1\end{note}}
 
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-		\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
 \newcommand\getcurrentref[1]{%
 	\ifnumequal{\value{#1}}{0}
 	{??}
@@ -722,16 +722,16 @@
 \newcommand{\ep}{
     \hspace{4in}
     \begin{tikzpicture}
-      \draw (-0.2,0.45) -- (-0.2,0.2); % Draw left eye
-      \draw (0.2,0.45) -- (0.2,0.2);   % Draw right eye
-      \draw (-0.277, -0.4) .. controls (-0.2, -0.1) and (0.2, -0.1) .. (0.277, -0.4); % Draw frown
+      	\draw (-0.2,0.45) -- (-0.2,0.2); % Draw left eye
+      	\draw (0.2,0.45) -- (0.2,0.2);   % Draw right eye
+      	\draw (-0.277, -0.4) .. controls (-0.2, -0.1) and (0.2, -0.1) .. (0.277, -0.4); % Draw frown
     \end{tikzpicture}
     % Other
- % \begin{tikzpicture}
-%   \draw (-0.2,0.4) -- (-0.2,0.2); % Draw left eye
-%   \draw (0.2,0.4) -- (0.2,0.2);   % Draw right eye
-%   \draw (-0.4, -0.3) .. controls (-0.2, -0.1) and (0.2, -0.1) .. (0.4, -0.3); % Draw frown
-% \end{tikzpicture}
+ 	% \begin{tikzpicture}
+	%   \draw (-0.2,0.4) -- (-0.2,0.2); % Draw left eye
+	%   \draw (0.2,0.4) -- (0.2,0.2);   % Draw right eye
+	%   \draw (-0.4, -0.3) .. controls (-0.2, -0.1) and (0.2, -0.1) .. (0.4, -0.3); % Draw frown
+	% \end{tikzpicture}
 
 }
 
