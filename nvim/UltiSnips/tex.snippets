@@ -408,8 +408,11 @@ snippet dfn
 endsnippet
 
 snippet ex
-\ex{$1}{$2}
-endsnippet
+\smallbreak \noindent
+\begin{eg}
+	$1
+\end{eg}
+endsnippet 
 
 snippet mm
 \[
@@ -1134,8 +1137,8 @@ snippet eq "equivalant"
 endsnippet
 
 snippet minipage
-\begin{minipage}[t]{0.47\textwidth}
-$1
+\begin{minipage}[$1]{0.47\textwidth}
+$2
 %\caption{$2}
 %\label{fig:$3}
 \end{minipage}
