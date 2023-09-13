@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Read the web addresses from the text file into an array
+#mapfile -t options < ./addrlist
+options=("file:///home/datura/niu"
+  "file:///home/datura/niu/math/allmath1/main.pdf"
+  "file:///home/datura/niu/math/allmath2/main.pdf"
+  "file:///home/datura/niu/math/calc/calc2/lecturenotes/"
+  "file:///home/datura/niu/cs/cs240/notes/booknotes"
+  "file:///home/datura/dev/roadmap/python/intermediate/main.pdf"
+  "file:///home/datura/dev/roadmap/python/dunder/definitions/main.pdf"
+  )
+
+# Use Rofi to display the options and store the selected one
+choice=$(printf '%s\n' "${options[@]}" | rofi -dmenu -i -theme /home/datura/.config/rofi/launchers/type-3/style-3.rasi -p "Select Web Address")
+
+# Open the selected web address in Google Chrome
+if [ -n "$choice" ]; then
+  google-chrome-stable "$choice"
+fi

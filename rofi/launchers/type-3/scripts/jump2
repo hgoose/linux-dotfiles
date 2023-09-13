@@ -19,7 +19,7 @@ declare -a dirs=(
 )
 
 # Use Rofi to get a directory selection
-chosen_dir=$(printf '%s\n' "${dirs[@]}" | rofi -dmenu -theme /home/datura/.config/rofi/launchers/type-4/style-3.rasi -p "Where are you going?")
+chosen_dir=$(printf '%s\n' "${dirs[@]}" | rofi -dmenu -theme /home/datura/.config/rofi/launchers/type-3/style-3.rasi -p "Where are you going?")
 
 # Check if chosen directory is not empty and exists
 if [ -n "$chosen_dir" ] && [ -d "$chosen_dir" ]; then

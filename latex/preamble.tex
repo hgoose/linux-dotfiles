@@ -644,6 +644,197 @@
 	},
 	#1,
 }
+
+% %================================
+% % Theorem BOX
+% %================================
+\newtcolorbox[auto counter]{thrm}[1][\empty]{%
+	enhanced jigsaw,
+	colback=white!20!white,%
+	colframe=blue!80!blue,
+	boxrule=1.25pt,
+	title=\textbf{Theorem \thetcbcounter\ifx#1\empty\else: #1\fi},
+	halign title=flush center,
+	coltitle=black,
+	breakable,
+	drop shadow=black!50!white,
+	attach boxed title to top left={xshift=1cm,yshift=-\tcboxedtitleheight/2,yshifttext=-\tcboxedtitleheight/2},
+	% Uncomment to statically determine length of title box, otherwise keep it dynamic
+	% minipage boxed title=3cm,
+	boxed title style={%
+		colback=white,
+		size=fbox,
+		boxrule=1pt,
+		boxsep=2pt,
+		underlay={%
+			\coordinate (dotA) at ($(interior.west) + (-0.5pt,0)$);
+			\coordinate (dotB) at ($(interior.east) + (0.5pt,0)$);
+			\begin{scope}
+				\clip (interior.north west) rectangle ([xshift=3ex]interior.east);
+				\filldraw [white, blur shadow={shadow opacity=60, shadow yshift=-.75ex}, rounded corners=2pt] (interior.north west) rectangle (interior.south east);
+			\end{scope}
+			\begin{scope}[gray!80!black]
+				\fill (dotA) circle (2pt);
+				\fill (dotB) circle (2pt);
+			\end{scope}
+		},
+	},
+}
+%
+% % \usepackage{etoolbox}
+% % \preto{\section}{\setcounter{tcbcounter}{0}}
+% \usetikzlibrary{arrows,calc,shadows.blur}
+% \tcbuselibrary{skins}
+% \newtcolorbox[auto counter]{thrm}[1][]{%
+% 	enhanced jigsaw,
+% 	colback=white!20!white,%
+% 	colframe=blue!80!blue,
+% 	boxrule=1.25pt,
+% 	title=\textbf{Theorem \thetcbcounter:},
+% 	halign title=flush center,
+% 	coltitle=black,
+% 	breakable,
+% 	drop shadow=black!50!white,
+% 	attach boxed title to top left={xshift=1cm,yshift=-\tcboxedtitleheight/2,yshifttext=-\tcboxedtitleheight/2},
+% 	minipage boxed title=2.5cm,
+% 	boxed title style={%
+% 		colback=white,
+% 		size=fbox,
+% 		boxrule=1pt,
+% 		boxsep=2pt,
+% 		underlay={%
+% 			\coordinate (dotA) at ($(interior.west) + (-0.5pt,0)$);
+% 			\coordinate (dotB) at ($(interior.east) + (0.5pt,0)$);
+% 			\begin{scope}
+% 				\clip (interior.north west) rectangle ([xshift=3ex]interior.east);
+% 				\filldraw [white, blur shadow={shadow opacity=60, shadow yshift=-.75ex}, rounded corners=2pt] (interior.north west) rectangle (interior.south east);
+% 			\end{scope}
+% 			\begin{scope}[gray!80!black]
+% 				\fill (dotA) circle (2pt);
+% 				\fill (dotB) circle (2pt);
+% 			\end{scope}
+% 		},
+% 	},
+% 	#1,
+% }
+%
+%================================
+% Definition BOX
+%================================
+
+% \usepackage{etoolbox}
+% \preto{\section}{\setcounter{tcbcounter}{0}}
+\usetikzlibrary{arrows,calc,shadows.blur}
+\tcbuselibrary{skins}
+\newtcolorbox[auto counter]{definition}[1][]{%
+	enhanced jigsaw,
+	colback=white!20!white,%
+	colframe=green!80!green,
+	boxrule=1.25pt,
+	title=\textbf{Definition \thetcbcounter:},
+	halign title=flush center,
+	coltitle=black,
+	breakable,
+	drop shadow=black!50!white,
+	attach boxed title to top left={xshift=1cm,yshift=-\tcboxedtitleheight/2,yshifttext=-\tcboxedtitleheight/2},
+	minipage boxed title=2.5cm,
+	boxed title style={%
+		colback=white,
+		size=fbox,
+		boxrule=1pt,
+		boxsep=2pt,
+		underlay={%
+			\coordinate (dotA) at ($(interior.west) + (-0.5pt,0)$);
+			\coordinate (dotB) at ($(interior.east) + (0.5pt,0)$);
+			\begin{scope}
+				\clip (interior.north west) rectangle ([xshift=3ex]interior.east);
+				\filldraw [white, blur shadow={shadow opacity=60, shadow yshift=-.75ex}, rounded corners=2pt] (interior.north west) rectangle (interior.south east);
+			\end{scope}
+			\begin{scope}[gray!80!black]
+				\fill (dotA) circle (2pt);
+				\fill (dotB) circle (2pt);
+			\end{scope}
+		},
+	},
+	#1,
+}
+
+%================================
+% Example BOX
+%================================
+
+\newtcolorbox[auto counter]{eg}[1][\empty]{%
+	enhanced jigsaw,
+	colback=white!20!white,%
+	colframe=red!80!red,
+	boxrule=1.25pt,
+	title=\textbf{Example \thetcbcounter\ifx#1\empty\else: #1\fi},
+	halign title=flush center,
+	coltitle=black,
+	breakable,
+	drop shadow=black!50!white,
+	attach boxed title to top left={xshift=1cm,yshift=-\tcboxedtitleheight/2,yshifttext=-\tcboxedtitleheight/2},
+	% Uncomment to statically determine length of title box, otherwise keep it dynamic
+	% minipage boxed title=3cm,
+	boxed title style={%
+		colback=white,
+		size=fbox,
+		boxrule=1pt,
+		boxsep=2pt,
+		underlay={%
+			\coordinate (dotA) at ($(interior.west) + (-0.5pt,0)$);
+			\coordinate (dotB) at ($(interior.east) + (0.5pt,0)$);
+			\begin{scope}
+				\clip (interior.north west) rectangle ([xshift=3ex]interior.east);
+				\filldraw [white, blur shadow={shadow opacity=60, shadow yshift=-.75ex}, rounded corners=2pt] (interior.north west) rectangle (interior.south east);
+			\end{scope}
+			\begin{scope}[gray!80!black]
+				\fill (dotA) circle (2pt);
+				\fill (dotB) circle (2pt);
+			\end{scope}
+		},
+	},
+}
+%
+% % \usepackage{etoolbox}
+% % \preto{\section}{\setcounter{tcbcounter}{0}}
+% \usetikzlibrary{arrows,calc,shadows.blur}
+% \tcbuselibrary{skins}
+% \newtcolorbox[auto counter]{eg}[1][]{%
+% 	enhanced jigsaw,
+% 	colback=white!20!white,%
+% 	colframe=red!80!red,
+% 	boxrule=1.25pt,
+% 	title=\textbf{Example \thetcbcounter:},
+% 	halign title=flush center,
+% 	coltitle=black,
+% 	breakable,
+% 	drop shadow=black!50!white,
+% 	attach boxed title to top left={xshift=1cm,yshift=-\tcboxedtitleheight/2,yshifttext=-\tcboxedtitleheight/2},
+% 	minipage boxed title=2.5cm,
+% 	boxed title style={%
+% 		colback=white,
+% 		size=fbox,
+% 		boxrule=1pt,
+% 		boxsep=2pt,
+% 		underlay={%
+% 			\coordinate (dotA) at ($(interior.west) + (-0.5pt,0)$);
+% 			\coordinate (dotB) at ($(interior.east) + (0.5pt,0)$);
+% 			\begin{scope}
+% 				\clip (interior.north west) rectangle ([xshift=3ex]interior.east);
+% 				\filldraw [white, blur shadow={shadow opacity=60, shadow yshift=-.75ex}, rounded corners=2pt] (interior.north west) rectangle (interior.south east);
+% 			\end{scope}
+% 			\begin{scope}[gray!80!black]
+% 				\fill (dotA) circle (2pt);
+% 				\fill (dotB) circle (2pt);
+% 			\end{scope}
+% 		},
+% 	},
+% 	#1,
+% }
+%
+%
+%
 \usepackage{mdframed}
 \mdfsetup{skipabove=1em,skipbelow=0em}
 \theoremstyle{definition}
@@ -680,14 +871,25 @@
 \newtheorem*{property}{Property}
 \newtheorem*{intuition}{Intuition}
 % \newmdtheoremenv[nobreak=true]{prop}{Proposition}
-\newmdtheoremenv[nobreak=true,linecolor=green]{definition}{Definition}
-\newmdtheoremenv[nobreak=true,linecolor=red]{eg}{Example}
-\newmdtheoremenv[nobreak=true,linecolor=blue]{thrm}{Theorem}
-\newmdtheoremenv[nobreak=true]{proposition}{Proposition}
+% \newmdtheoremenv[nobreak=true,linecolor=green]{definition}{Definition}
+% \newmdtheoremenv[nobreak=true,linecolor=red]{eg}{Example}
+% \newmdtheoremenv[nobreak=true,linecolor=blue]{thrm}{Theorem}
 \newmdtheoremenv[nobreak=true]{lemma}{Lemma}
+\newmdtheoremenv[nobreak=true]{proposition}{Proposition}
 \newmdtheoremenv[nobreak=true]{corr}{Corollary}
 
+% Define a new counter for the concept environment
+\newcounter{conceptcounter}
 
+% Define the concept environment
+\newenvironment{concept}
+{%
+  \stepcounter{conceptcounter}% Increment the counter
+  \noindent\textbf{Concept \theconceptcounter:} % Format the label
+}
+{%
+  \par% End the paragraph
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SELF MADE COMMANDS
@@ -999,4 +1201,22 @@
               (0cm,-1.25cm) node[fill=white] {$(0,-1)$}
               (0cm,1.25cm)  node[fill=white] {$(0,1)$};
     \end{tikzpicture}
+}
+
+\definecolor{PaleVioletRed3}{RGB}{219,112,147}
+\newlength{\seplinewidth}
+\newlength{\seplinesep}
+\setlength{\seplinewidth}{1mm}
+\setlength{\seplinesep}{2mm}
+\colorlet{sepline}{PaleVioletRed3}
+\newcommand*{\sepline}{%
+  \par
+  \vspace{\dimexpr\seplinesep+.5\parskip}%
+  \cleaders\vbox{%
+    \begingroup % because of color
+      \color{sepline}%
+      \hrule width\linewidth height\seplinewidth
+    \endgroup
+  }\vskip\seplinewidth
+  \vspace{\dimexpr\seplinesep-.5\parskip}%
 }
