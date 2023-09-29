@@ -1,12 +1,17 @@
 snippet template "Html template"
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
     <title>Page Name</title>
+    <link rel="stylsheet" href="styles.css">
 </head>
 
-<body></body>
+<body>
+    $1
+
+</body>
 
 </html>
 endsnippet
@@ -21,7 +26,7 @@ snippet background
   </style>
 endsnippet
 
-snippet tag "tag" iA
+snippet .tg "tag" iA
 <$1>
     $2
 </$1>
@@ -44,4 +49,24 @@ snippet br
 <br></br>
 $1
 endsnippet
+
+snippet html
+<html lang="en">
+    $1
+</html>
+endsnippet
+
+snippet div "div tag" i
+<div $1>
+    $2
+</div>
+endsnippet
+
+snippet .p "ptags" iA
+<p $1>
+    $2
+</p>
+endsnippet
+
+
 

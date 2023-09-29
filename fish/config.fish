@@ -57,6 +57,9 @@ alias pd="push-dotfiles"
 alias ss="cd ~/springsemester/"
 alias bluetooth="nvim /etc/bluetooth/main.conf"
 
+function stat
+    ./$argv && echo "status $status" 
+end
 
 function gccc
     gcc $argv -std=c++14 -lstdc++
