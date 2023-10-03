@@ -454,6 +454,12 @@ $2
 }
 endsnippet
 
+snippet ans "answer" i
+\pf{Answer}{
+$2
+}
+endsnippet
+
 snippet lim "limit" 
 $\lim\limits_{$1 \to $2}{$3}$
 endsnippet
@@ -662,11 +668,11 @@ snippet dp "prime" i
 endsnippet
 
 snippet big) "big" i
-\bigg($1\bigg)
+\left($1\right)
 endsnippet
 
 snippet big] "big" i
-\bigg[$1\bigg]
+\left[$1\right]
 endsnippet
 
 snippet cd "dot" i
@@ -1180,11 +1186,25 @@ std::
 endsnippet
 
 snippet ftc "fundamental theorem of calculus part 2" i
-\bigg]^{$1}_{$2}
+\bigg|^{$1}_{$2}
 endsnippet
 
 snippet mx
 \begin{bmatrix}
 	$1
 \end{bmatrix}
+endsnippet
+
+snippet pascaltriangle
+    \begin{center}
+    \begin{tabular}{>{$n=}l<{$\hspace{12pt}}*{13}{c}}
+        0 &&&&&&&1&&&&&&\\
+        1 &&&&&&1&&1&&&&&\\
+        2 &&&&&1&&2&&1&&&&\\
+        3 &&&&1&&3&&3&&1&&&\\
+        4 &&&1&&4&&6&&4&&1&&\\
+        5 &&1&&5&&10&&10&&5&&1&\\
+        6 &1&&6&&15&&20&&15&&6&&1
+    \end{tabular}
+    \end{center}
 endsnippet
