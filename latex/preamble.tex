@@ -7,6 +7,7 @@
 \usepackage{amsmath,amsfonts,amsthm,amssymb,mathtools}
 % \usepackage[varbb]{newpxmath}
 \usepackage{xfrac}
+\usepackage{changepage}
 \usepackage{geometry}
 \usepackage[makeroom]{cancel}
 \usepackage{mathtools}
@@ -1222,4 +1223,14 @@
     \endgroup
   }\vskip\seplinewidth
   \vspace{\dimexpr\seplinesep-.5\parskip}%
+}
+
+% Purple mdframed box -- use: {mdframed}[style=purplebox]
+\mdfdefinestyle{purplebox}{
+  linewidth=2pt,       % thickness of the border
+  linecolor=PaleVioletRed3,    % color of the border
+  backgroundcolor=white, % background color of the box
+  roundcorner=5pt,     % if you want rounded corners
+  innertopmargin=\baselineskip, % space added at the top of the box
+  skipabove=\baselineskip  % space added above the box
 }
