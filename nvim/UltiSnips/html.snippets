@@ -16,56 +16,68 @@ snippet template "Html template"
 </html>
 endsnippet
 
-snippet background
-<style>
-    body {
-      background-image: url("$1");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  </style>
-endsnippet
-
 snippet .tg "tag" iA
 <$1>
     $2
 </$1>
 endsnippet
 
-snippet redirect 
-<a href="$1" >$2</a>
+snippet .br "line break" iA
+<br />
+    $1
 endsnippet
 
-snippet color
-<style>
-    /* CSS code to change heading color */
-    h1 {
-      color: white;
-    }
-</style>
+snippet .line "horizontal line" iA
+<hr />
+    $1
 endsnippet
 
-snippet br
-<br></br>
-$1
-endsnippet
-
-snippet html
+snippet .html "html tag" iA
 <html lang="en">
     $1
 </html>
 endsnippet
 
-snippet div "div tag" i
+snippet .head "head tag" iA
+<head $1>
+    $2
+</head>
+endsnippet
+
+snippet .body "body tag" iA
+<body $1> 
+    $2
+</body>
+endsnippet
+
+snippet .div "div tag" iA
 <div $1>
     $2
 </div>
+endsnippet
+
+snippet .span "span tag" iA
+<span $1> $2 </span>
 endsnippet
 
 snippet .p "ptags" iA
 <p $1>
     $2
 </p>
+endsnippet
+
+snippet .h "h tag" iA
+<h$1>
+    $2
+</h$1>
+endsnippet
+
+snippet .meta "meta tag" iA
+<meta $1>
+endsnippet
+
+snippet .title "title" iA
+<title> $1 </title>
 endsnippet
 
 
