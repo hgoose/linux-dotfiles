@@ -1,4 +1,5 @@
 local astro_plugins = {
+
   -- Plugin manager
   ["wbthomason/packer.nvim"]                      = {
     setup = function()
@@ -34,6 +35,8 @@ local astro_plugins = {
       })
     end
   },
+  --fk
+  ['hgoose/nvim-hybrid-fk'] = {},
   --Quickscope
   ['unblevable/quick-scope'] = {},
   -- Nord
