@@ -68,7 +68,7 @@ snippet ttemplate
                 
            \vspace{0.8cm}
          
-           \includegraphics[width=0.4\textwidth]{$3}
+           \includegraphics[width=0.4\textwidth]{~/niu/seal.png}
                 
            Computer Science \\\
            Northern Illinois University\\\
@@ -460,13 +460,10 @@ $2
 }
 endsnippet
 
-snippet lim "limit" 
-$\lim\limits_{$1 \to $2}{$3}$
-endsnippet
-
-snippet li "limit" 
+snippet lim "limit" i
 \lim\limits_{$1 \to $2}{$3}
 endsnippet
+
 
 snippet psf "point slope form" i
 $y-y_1 = m\left(x-x_1\right)$
@@ -970,45 +967,43 @@ f(x)
 endsnippet
 
 snippet python
-\sepline
+\line(1,0){490}
 \begin{minted}[linenos]{python}
 $1
 \end{minted}
-\sepline
+\line(1,0){490}
 endsnippet
 
 
 snippet cpp "cpp" i
-\sepline
+\line(1,0){490}
 \begin{minted}[linenos]{cpp}
 $1
 \end{minted}
-\sepline
+\line(1,0){490}
 endsnippet
 
 snippet html "html" i
-\sepline
+\line(1,0){490}
 \begin{minted}[linenos]{html}
 $1
 \end{minted}
-\sepline
+\line(1,0){490}
 endsnippet
 
 snippet css "css" i
-\sepline
+\line(1,0){490}
 \begin{minted}[linenos]{css}
 $1
 \end{minted}
-\sepline
+\line(1,0){490}
 endsnippet
 
 snippet bash "bash" i
-\begin{mdframed}[style=purplebox]
 \begin{minted}{bash}
 $1
 \end{minted}
 \bigbreak \noindent
-\end{mdframed}
 endsnippet
 
 snippet iff
