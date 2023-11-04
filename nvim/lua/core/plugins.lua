@@ -1,4 +1,4 @@
-local astro_plugins = {
+lhttps://github.com/sainnhe/edge.gitocal astro_plugins = {
 
   -- Plugin manager
   ["wbthomason/packer.nvim"]                      = {
@@ -35,6 +35,9 @@ local astro_plugins = {
       })
     end
   },
+
+  --Edge 
+  ['https://github.com/sainnhe/edge.git'] = {},
   --fk
   ['hgoose/nvim-hybrid-fk'] = {},
   --Quickscope
