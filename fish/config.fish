@@ -1,4 +1,4 @@
-neofetch
+# neofetch
 # swww init
 # wlr-randr --output HDMI-A-1 --mode 1920x1080@119.878998
 set -x PATH $HOME/.cargo/bin $PATH
@@ -47,7 +47,7 @@ alias dev="cd ~/dev/"
 alias fishc="n ~/.config/fish/config.fish"
 alias kittyc="n ~/.config/kitty/kitty.conf"
 alias i3c="nvim ~/.config/i3/config"
-alias c="clear;neofetch"
+alias c="clear"
 alias cls="clear; neofetch"
 alias x="sudo chmod +x"
 alias dot="cd ~/.config"
@@ -70,9 +70,9 @@ function mk
 end
 
 # Rebind clear to also run neofetch
-function fish_user_key_bindings
-    bind \cl 'clear;neofetch; commandline -f repaint'
-end
+# function fish_user_key_bindings
+#     bind \cl 'clear;neofetch; commandline -f repaint'
+# end
 
 # # Overload clear to also run neofetch
 # function clear
