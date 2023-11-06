@@ -24,6 +24,7 @@
 
 ### Preview
 ![Preview](https://i.imgur.com/ntmTpgj.png)
+![Preview](https://i.imgur.com/t68nmvj.png)
 ![Preview](https://i.imgur.com/ypEPc9H.png)
 ![Preview](https://i.imgur.com/uqwJHNZ.png)
 <!-- ![Preview](https://i.imgur.com/PMAExsA.png) -->
