@@ -2,6 +2,14 @@ snippet template
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
+#include <string>
+
+#define a_sizeof(x) sizeof(x) / sizeof(x[0])
+#define show(a) cout << a << endl
+
+#define sizeT size_t
+#define S string
+#define I int
 
 using std::cout;
 using std::cin;
@@ -72,6 +80,10 @@ snippet tmp
 
 #define sizeofarr(x) sizeof(x) / sizeof(x[0])
 #define show(a) cout << a << endl
+
+#define sizeT size_t
+#define S& string&
+#define I& int&
 
 using std::cout;
 using std::cin;
