@@ -4,17 +4,23 @@ snippet template
 #include <cstdlib>
 #include <string>
 
+#ifndef a_sizeof
 #define a_sizeof(x) sizeof(x) / sizeof(x[0])
-#define show(a) cout << a << endl
+#endif
 
-#define sizeT size_t
-#define S string
-#define I int
+#ifndef show
+#define show(a) cout << a << endl
+#endif
+
+#ifndef NOPOS
+#define NOPOS -1
+#endif
 
 using std::cout;
 using std::cin;
 using std::cerr;
 using std::endl;
+using std::string;
 
 int main(int argc, const char *argv[]) {
     $1
@@ -37,11 +43,21 @@ Purpose: $3
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
+#include <string>
+
+#ifndef SHOW
+#define show(a) cout << a << endl
+#endif
+
+#ifndef NOPOS
+#define NOPOS -1
+#endif
 
 using std::cout;
 using std::cin;
 using std::cerr;
 using std::endl;
+using std::string;
 
 int main(int argc, const char *argv[]) {
 

@@ -4,94 +4,127 @@ snippet template "Html template"
 
 <head>
     <meta charset="utf-8">
-    <title>Page Name</title>
-    <link rel="stylsheet" href="styles.css">
+    <title>$1</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    $1
+    $2
 
 </body>
 
 </html>
 endsnippet
 
-snippet .tg "tag" iA
+snippet .tg "tag" i
 <$1>
     $2
 </$1>
 endsnippet
 
-snippet .br "line break" iA
+snippet .br "line break" i
 <br />
     $1
 endsnippet
 
-snippet .bar "horizontal line" iA
+snippet .line "horizontal line" i
 <hr />
     $1
 endsnippet
 
-snippet .html "html tag" iA
+snippet .html "html tag" i
 <html lang="en">
     $1
 </html>
 endsnippet
 
-snippet .head "head tag" iA
+snippet .head "head tag" i
 <head $1>
     $2
 </head>
 endsnippet
 
-snippet .body "body tag" iA
+snippet .body "body tag" i
 <body $1> 
     $2
 </body>
 endsnippet
 
-snippet .div "div tag" iA
+snippet .div "div tag" i
 <div $1>
     $2
 </div>
 endsnippet
 
-snippet .span "span tag" iA
+snippet .span "span tag" i
 <span $1> $2 </span>
 endsnippet
 
-snippet .p "ptags" iA
-<p $1>
-    $2
-</p>
+snippet .p "ptags" i
+<p> $1 </p>
 endsnippet
 
-snippet .h "h tag" iA
-<h$1>
-    $2
-</h$1>
+snippet .h "h tag" i
+<h$1> $2 </h$1>
 endsnippet
 
-snippet .meta "meta tag" iA
+snippet .meta "meta tag" i
 <meta $1>
 endsnippet
 
-snippet .title "title" iA
+snippet .title "title" i
 <title> $1 </title>
 endsnippet
 
 
-snippet .ul "unordered list" iA
+snippet .ul "unordered list" i
 <ul>
     $1
 </ul>
 endsnippet
 
-snippet .li "list item" iA
+snippet .li "list item" i
 <li> $1 </li>
 endsnippet
 
 snippet .im
-<img src="$1" alt="$2">$3</img> iA
+<img src="$1" alt="$2">$3</img> i
 endsnippet
 
+snippet .a "link tag" i
+<a href="$1" target="_blank"> $2 </a>
+endsnippet
+
+snippet .img "image tag" i
+<img src="$1" alt="$2"> $3 </img>
+endsnippet
+
+snippet .form
+<form>
+    $1
+</form>
+endsnippet
+
+snippet .inp
+<input type="$1"> $2 </input>
+endsnippet
+
+snippet .label
+<label for="$1"> $2 </label>
+endsnippet
+
+snippet .button
+<button> $1 </button>
+endsnippet
+
+snippet .sect
+<section class="$1"> 
+    $2
+</section
+endsnippet
+
+snippet .nav
+<nav class="$1">
+    $2
+</nav>
+endsnippet

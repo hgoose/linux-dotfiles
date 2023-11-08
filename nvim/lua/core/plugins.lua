@@ -1,4 +1,4 @@
-lhttps://github.com/sainnhe/edge.gitocal astro_plugins = {
+astro_plugins = {
 
   -- Plugin manager
   ["wbthomason/packer.nvim"]                      = {
