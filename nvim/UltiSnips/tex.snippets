@@ -817,9 +817,6 @@ snippet log "log" i
 \log_{$1}{$2}
 endsnippet
 
-snippet abs "abs" i
-\abs{$1}
-endsnippet
 
 snippet deg "deg" i
 ^{\circ}
@@ -976,11 +973,9 @@ endsnippet
 
 
 snippet cpp "cpp" i
-\line(1,0){490}
-\begin{minted}[linenos]{cpp}
+\begin{cppcode}
 $1
-\end{minted}
-\line(1,0){490}
+\end{cppcode}
 endsnippet
 
 snippet html "html" i
@@ -1211,4 +1206,14 @@ snippet bs
 #!/usr/bin/bash
 endsnippet
 
+snippet vc "vec" i
+\vec{$1}
+endsnippet
 
+snippet vect "vector" i
+\begin{bmatrix} $1 \\\ $2 \end{bmatrix}
+endsnippet
+
+snippet abs "absolute value" i
+\bigg\lvert $1 \bigg\rvert
+endsnippet

@@ -4,8 +4,12 @@ snippet template "Html template"
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$1</title>
     <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta http-equiv="refresh" content="1">
 </head>
 
 <body>
@@ -88,7 +92,7 @@ snippet .li "list item" i
 endsnippet
 
 snippet .im
-<img src="$1" alt="$2">$3</img> i
+<img src="$1" alt="$2">$3</img> 
 endsnippet
 
 snippet .a "link tag" i
@@ -120,11 +124,15 @@ endsnippet
 snippet .sect
 <section class="$1"> 
     $2
-</section
+</section>
 endsnippet
 
 snippet .nav
 <nav class="$1">
     $2
 </nav>
+endsnippet
+
+snippet .class "class" i
+class="$1"
 endsnippet
