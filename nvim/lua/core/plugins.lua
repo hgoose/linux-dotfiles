@@ -35,7 +35,8 @@ astro_plugins = {
       })
     end
   },
-
+  -- Edge-fk-black
+  ['hgoose/edge-fk-black'] = {},
   --Edge 
   ['https://github.com/sainnhe/edge.git'] = {},
   --fk

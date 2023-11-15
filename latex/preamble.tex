@@ -6,6 +6,9 @@
 \usepackage[tmargin=2cm,rmargin=1in,lmargin=1in,margin=0.85in,bmargin=2cm,footskip=.2in]{geometry}
 \usepackage{amsmath,amsfonts,amsthm,amssymb,mathtools}
 % \usepackage[varbb]{newpxmath}
+\usepackage{lipsum} % for generating dummy text
+% \usepackage{fontawesome} % for icons
+\usepackage{fontawesome5} % for icons
 \usepackage{xfrac}
 \usepackage{changepage}
 \usepackage{geometry}
@@ -1210,6 +1213,7 @@
 \definecolor{PaleVioletRed3}{RGB}{153,51,255} % Purple 
 \definecolor{c_grey}{RGB}{247,247,247} % Grey 
 \definecolor{c_grey2}{RGB}{213,213,213} % Grey 
+\definecolor{c_note}{HTML}{000000} % Gold color for the note icon
 \newlength{\seplinewidth}
 \newlength{\seplinesep}
 \setlength{\seplinewidth}{1mm}
@@ -1243,19 +1247,40 @@
 }
 
 \newtcolorbox{notebox}{
-  breakable, % to allow page breaks
-  colback=c_grey, % background color of the box
-  colframe=c_grey, % frame color
-  boxrule=0pt, % frame thickness (set to 0pt to remove the frame)
-  leftrule=5pt, % thickness of the left rule
-  colframe=c_grey2, % color of the frame and left rule
-  arc=0pt, % remove rounding of the corners
-  left=6pt, % inner left margin
-  right=6pt, % inner right margin
-  top=6pt, % inner top margin
-  bottom=6pt % inner bottom margin
+  breakable,
+  colback=c_grey,
+  colframe=c_grey,
+  boxrule=0pt,
+  leftrule=5pt,
+  colframe=c_grey2,
+  arc=0pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt,
+  title=\faTired\ Note:, % Note title with icon
+  coltitle=c_note, % Color of the title
+  fonttitle=\bfseries, % Bold title font
+  enhanced, % Enhanced mode for more features
+  % overlay={%
+  %   \node[anchor=north west, text=c_note] at (frame.north west) {\faTired}; % Note icon
+  % }
 }
 
+% \newtcolorbox{notebox}{
+%   breakable, % to allow page breaks
+%   colback=c_grey, % background color of the box
+%   colframe=c_grey, % frame color
+%   boxrule=0pt, % frame thickness (set to 0pt to remove the frame)
+%   leftrule=5pt, % thickness of the left rule
+%   colframe=c_grey2, % color of the frame and left rule
+%   arc=0pt, % remove rounding of the corners
+%   left=6pt, % inner left margin
+%   right=6pt, % inner right margin
+%   top=6pt, % inner top margin
+%   bottom=6pt % inner bottom margin
+% }
+%
 % Purple mdframed box -- use: {mdframed}[style=purplebox]
 \mdfdefinestyle{purplebox}{
   linewidth=2pt,       % thickness of the border
