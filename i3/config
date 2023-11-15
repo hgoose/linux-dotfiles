@@ -11,7 +11,7 @@ exec --no-startup-id xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 
 exec --no-startup-id dunst
 
 # # Start Picom
-# exec --no-startup-id picom -CGb
+exec --no-startup-id picom -CGb
 
 # Start nitrogen (wallpaper)
 exec --no-startup-id nitrogen --restore
@@ -211,12 +211,12 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 for_window [class="^.*"] border pixel 3
 
 # gapsconfig
-gaps inner 10
-# gaps outer 50
-gaps top   40
-gaps bottom 40
-gaps left 90
-gaps right 90
+gaps inner 40
+gaps outer 10
+# gaps top   40
+# gaps bottom 40
+# gaps left 90
+# gaps right 90
 # smart_gaps on
 
 # Old gaps
