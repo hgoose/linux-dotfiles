@@ -3,18 +3,16 @@ snippet template
 #include <iomanip>
 #include <cstdlib>
 #include <string>
+#include <cstdint>
+#include <unistd.h>
+#include <typeinfo>
+#include <cctype>
+#include <algorithm>
 
-#ifndef a_sizeof
 #define a_sizeof(x) sizeof(x) / sizeof(x[0])
-#endif
-
-#ifndef show
 #define show(a) cout << a << endl
-#endif
-
-#ifndef NOPOS
+#define show_ar(a) for (int i=0; i<a_sizeof(a); ++i) cout << a[i] << endl
 #define NOPOS -1
-#endif
 
 using std::cout;
 using std::cin;
@@ -22,8 +20,10 @@ using std::cerr;
 using std::endl;
 using std::string;
 
-int main(int argc, const char *argv[]) {
-    $1
+int main(int argc, const char* argv[]) {
+
+	$1
+    
     return EXIT_SUCCESS;
 }
 endsnippet
@@ -152,3 +152,9 @@ Returns: $5
 Notes: $6
 ***************************************************************/
 endsnippet
+
+snippet seed
+unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+endsnippet
+
+
