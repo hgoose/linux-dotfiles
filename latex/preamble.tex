@@ -9,6 +9,7 @@
 \usepackage{lipsum} % for generating dummy text
 % \usepackage{fontawesome} % for icons
 \usepackage{fontawesome5} % for icons
+\usepackage{titlesec}
 \usepackage{xfrac}
 \usepackage{changepage}
 \usepackage{geometry}
@@ -27,8 +28,7 @@
 \usepackage{pifont}
 \usepackage{tocloft}
 \setcounter{tocdepth}{3}
-\renewcommand{\cftsubsubsecnumwidth}{1.5em}
-\renewcommand{\cftsubsubsecaftersnum}{.}
+\setcounter{secnumdepth}{3}
 \usepackage{multirow}
 \usepackage{dcolumn}
 \usepackage{tikz}
@@ -896,6 +896,22 @@
   \par% End the paragraph
 }
 
+% Define a new counter for the concept environment
+\newcounter{theoremcounter}
+
+% Initialize the counter to start at 1
+\setcounter{theoremcounter}{0}
+
+% % Define the thrmm environment
+% \newenvironment{thrmm}[1] % #1 is the argument
+% {%
+%   \refstepcounter{theoremcounter}% Increment the counter and allow referencing
+%   \noindent\textbf{Theorem \thetheoremcounter\ (#1):} % Format the label with the argument
+%   % \itshape % Theorem text in italics, for example
+% }
+% {%
+%   \par% End the paragraph
+% }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SELF MADE COMMANDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -909,7 +925,7 @@
 \newcommand{\wc}[2]{\begin{wconc}{#1}{}\setlength{\parindent}{1cm}#2\end{wconc}}
 \newcommand{\thmcon}[1]{\begin{Theoremcon}{#1}\end{Theoremcon}}
 \newcommand{\ex}[2]{\begin{Example}{#1}{}#2\end{Example}}
-\newcommand{\dfn}[2]{\begin{Definition}[colbacktitle=red!75!black]{#1}{}#2\end{Definition}}
+% \newcommand{\dfn}[2]{\begin{Definition}[colbacktitle=red!75!black]{#1}{}#2\end{Definition}}
 \newcommand{\dfnc}[2]{\begin{definition}[colbacktitle=red!75!black]{#1}{}#2\end{definition}}
 \newcommand{\qs}[2]{\begin{question}{#1}{}#2\end{question}}
 \newcommand{\pf}[2]{\begin{myproof}[#1]#2\end{myproof}}
@@ -1108,15 +1124,35 @@
 %
 % -- PROPER TABLE OF CONTENTS --
 \definecolor{doc}{RGB}{0,60,110}
+
+
+% Leader
+\renewcommand{\cftsecleader}{\hfill} % No dots for sections
+% \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% Font styles
 \renewcommand{\cfttoctitlefont}{\hfill\large\bfseries}
 \renewcommand{\cftaftertoctitle}{\hfill}
-\renewcommand{\cftsecfont}{\normalsize\bfseries}
-\renewcommand{\cftsubsecfont}{\normalsize}%\itshape} -> italic subsections
-\renewcommand{\cftsubsubsecfont}{\normalsize}
-\setlength{\cftbeforesecskip}{0.5em}
-\setlength{\cftbeforesubsecskip}{0.2em}
-\setlength{\cftbeforesubsubsecskip}{0.1em}
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecfont}{\large\bfseries}
+\renewcommand{\cftsubsecfont}{\normalsize}%\itshape} 
+\renewcommand{\cftsubsubsecfont}{\small}%\itshape}
+
+% Lengths (Spacing length)
+\setlength{\cftbeforesecskip}{2em}
+\setlength{\cftbeforesubsecskip}{.8em}
+\setlength{\cftbeforesubsubsecskip}{.8em}
+
+
+% Widths (Spacing width)
+\setlength{\cftsecnumwidth}{1.5em}       % Increase for sections
+\setlength{\cftsubsecnumwidth}{2em}  % Increase for subsections
+\setlength{\cftsubsubsecnumwidth}{2.6em} % Increase for subsubsections
+
+% Indents
+\setlength{\cftsecindent}{0em}
+\setlength{\cftsubsecindent}{1.6em}
+\setlength{\cftsubsubsecindent}{3.7em}
+
 
 % -- Border --
 \newcommand{\setborder}{
@@ -1210,15 +1246,12 @@
 
 % \definecolor{PaleVioletRed3}{RGB}{219,112,147} % PaleVioletRed
 % \definecolor{PaleVioletRed3}{RGB}{255,102,255} % Pink
-\definecolor{PaleVioletRed3}{RGB}{153,51,255} % Purple 
-\definecolor{c_grey}{RGB}{247,247,247} % Grey 
-\definecolor{c_grey2}{RGB}{213,213,213} % Grey 
-\definecolor{c_note}{HTML}{000000} % Gold color for the note icon
+
 \newlength{\seplinewidth}
 \newlength{\seplinesep}
 \setlength{\seplinewidth}{1mm}
 \setlength{\seplinesep}{2mm}
-\colorlet{sepline}{PaleVioletRed3}
+% \colorlet{sepline}{PaleVioletRed3}
 \newcommand*{\sepline}{%
   \par
   \vspace{\dimexpr\seplinesep+.5\parskip}%
@@ -1231,8 +1264,23 @@
   \vspace{\dimexpr\seplinesep-.5\parskip}%
 }
 
-\tcbuselibrary{minted, skins}
+% Define some colors
+\definecolor{PaleVioletRed3}{RGB}{153,51,255} % Purple 
+\definecolor{c_grey}{RGB}{247,247,247} % Grey 
+\definecolor{c_grey2}{RGB}{213,213,213} % Grey 
+\definecolor{c_note}{HTML}{000000} % Gold color for the note icon
+\definecolor{theoremlightblue}{HTML}{F2F6FB}
+\definecolor{theoremdarkblue}{HTML}{086FBD}
+\definecolor{definitionlightgreen}{HTML}{F2F9F5}
+\definecolor{definitiondarkgreen}{HTML}{129F57}
+\definecolor{examplelightred}{HTML}{FFF5F6}
+\definecolor{exampledarkred}{HTML}{FF3769}
 
+% Global minted options
+\setminted[]{breaklines, breakanywhere, autogobble, linenos=true, xleftmargin=20pt, mathescape}
+
+% Begin minted code boxes
+\tcbuselibrary{minted, skins}
 \newtcblisting{cppcode}{
   arc=10pt,
   outer arc=10pt,
@@ -1285,7 +1333,22 @@
   % other settings...
 }
 
+\newtcblisting{bashcode}{
+  arc=10pt,
+  outer arc=10pt,
+  listing only,
+  minted style=colorful,
+  minted language=bash,
+  minted options={linenos=true, breaklines=true},
+  colback=c_grey,
+  colframe=c_grey2,
+  listing engine=minted,
+  % other settings...
+}
 
+% End minted code boxes
+
+% Color boxes
 \newtcolorbox{notebox}{
   breakable,
   colback=c_grey,
@@ -1306,6 +1369,71 @@
   %   \node[anchor=north west, text=c_note] at (frame.north west) {\faTired}; % Note icon
   % }
 }
+\makeatother
+\usepackage{thmtools}
+\theoremstyle{definition}
+\tcbuselibrary{theorems}
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{definitiondarkgreen!70!black}, bodyfont=\normalfont,
+    mdframed={
+            linewidth=2pt,
+            rightline=false, topline=false, bottomline=false,
+            linecolor=definitiondarkgreen, backgroundcolor=definitionlightgreen,
+            nobreak=false
+        }
+]{thmgreenbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{theoremdarkblue!70!black}, bodyfont=\normalfont,
+    mdframed={
+            linewidth=2pt,
+            rightline=false, topline=false, bottomline=false,
+            linecolor=theoremdarkblue, backgroundcolor=theoremlightblue,
+            nobreak=false
+        }
+]{thmbluebox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{exampledarkred!70!black}, bodyfont=\normalfont,
+    mdframed={
+            linewidth=2pt,
+            rightline=false, topline=false, bottomline=false,
+            linecolor=exampledarkred, backgroundcolor=examplelightred,
+            nobreak=false
+        }
+]{thmredbox}
+
+\declaretheorem[style=thmgreenbox, name=Definition, numberwithin=section]{dfn}
+\declaretheorem[style=thmbluebox, name=Theorem, numberwithin=section]{thrmm}
+\declaretheorem[style=thmredbox, name=Example, numberwithin=section]{exm}
+
+% Gray word box
+\newtcbox{\emp}{nobeforeafter, colframe=gray, colback=lightgray, boxrule=0.5pt, arc=4pt, boxsep=0pt, left=2pt, right=2pt, top=2pt, bottom=2pt, tcbox raise base}
+
+
+% \newtcbtheorem[number within=section]{thrmm}{Theorem}{
+%   breakable,
+%   colback=theoremlightgreen,
+%   colframe=theoremlightgreen,
+%   boxrule=0pt,
+%   leftrule=3pt,
+%   colframe=theoremdarkgreen,
+%   arc=0pt,
+%   left=6pt,
+%   detach title,
+% before upper = \tcbtitle\par\smallskip,
+%   right=6pt,
+%   top=0pt,
+%   bottom=6pt,
+%   % title=\faTired\ Note:, % Note title with icon
+%   coltitle=0, % Color of the title
+%   fonttitle=\bfseries, % Bold title font
+%   enhanced, % Enhanced mode for more features
+%   % overlay={%
+%   %   \node[anchor=north west, text=c_note] at (frame.north west) {\faTired}; % Note icon
+%   % }
+% }{th}
+
 
 % \newtcolorbox{notebox}{
 %   breakable, % to allow page breaks
@@ -1348,8 +1476,51 @@
 %   % skipabove=\baselineskip  % space added above the box
 % }
 
-\setminted[]{breaklines, breakanywhere, autogobble, linenos=true, xleftmargin=20pt}
 % \surroundwithmdframed{minted}
 
 % \newcommand{\fa}{\ \forall\ }
+
+% Some auxiliary defines 
 \newcommand{\te}[1][]{\ \exists#1\ }
+
+% Increases size of sections
+\titleformat{\section}
+  {\huge\bfseries} % Change \Huge to desired size
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\large\bfseries} % Change \Huge to desired size
+  {\thesubsection}{1em}{}
+
+% Phantom sections
+\newcommand{\unsect}[1]{
+    \refstepcounter{section} % Increment section counter
+    \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1} % Add to TOC with number
+    \markboth{}{} % Remove header left
+     \thispagestyle{empty} % Remove header right
+   \markboth{\MakeUppercase{#1}}{}%
+    \section*{#1} % Create unnumbered section
+}
+
+\newcommand{\beginch}[2] {
+	\markboth{}{}
+	 \vspace*{1.5in} % Add vertical space to push content down
+	 \thispagestyle{empty}
+     {\huge\bfseries Chapter #1} % Large, bold text
+    \vspace*{.25in}
+    \unsect{#2} % Call unsect command
+    \bigbreak \noindent 
+    \vspace*{.1in}
+}
+% Redefine \sectionmark
+\renewcommand{\sectionmark}[1]{%
+  \markboth{#1}{}%
+}
+% Page geometry
+\geometry{
+  left=1.5in,
+  right=1.5in,
+  top=1in,
+  bottom=1in
+}
+

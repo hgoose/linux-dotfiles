@@ -174,7 +174,7 @@ end
 
 # Set Extend Monitors
 function dualmonitor
-	xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --left-of HDMI-1-0
+	xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --right-of HDMI-1-0
 end
 
 # Set Mirror Displays

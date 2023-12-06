@@ -38,12 +38,18 @@ snippet ttemplate
 \title{\Huge{}}
 \author{\huge{Nathan Warner}}
 \date{\huge{}}
-\pagestyle{fancy}
 \fancyhf{}
-\lhead{Warner \thepage}
 \rhead{}
-% \lhead{\leftmark}
+\fancyhead[R]{\itshape Warner} % Left header: Section name
+\fancyhead[L]{\itshape\leftmark}  % Right header: Page number
 \cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt} % Optional: Removes the header line
+%\pagestyle{fancy}
+%\fancyhf{}
+%\lhead{Warner \thepage}
+%\rhead{}
+% \lhead{\leftmark}
+%\cfoot{\thepage}
 %\setborder
 % \usepackage[default]{sourcecodepro}
 % \usepackage[T1]{fontenc}
@@ -225,7 +231,7 @@ snippet new
 endsnippet
 
 snippet sect
-\section{\LARGE $1}
+\section{$1}
 endsnippet
 
 snippet unsect
@@ -630,9 +636,9 @@ endsnippet
 # $3
 # endsnippet
 
-snippet mathsection
-\mathsection{$1}{$2}
-endsnippet
+# snippet mathsection
+# \mathsection{$1}{$2}
+# endsnippet
 
 snippet mathsubsect
 \bigbreak \noindent
@@ -912,7 +918,7 @@ snippet prop "proper suubset" i
 endsnippet
 
 snippet sum "sigma notation" i
-\summation{$1}{$2}\ \ $3
+\summation{$1}{$2}\ $3\
 endsnippet
 
 snippet del "delta" i
@@ -987,6 +993,11 @@ $1
 \end{csscode}
 endsnippet
 
+snippet bash "bash code block" i
+\begin{bashcode}
+$1
+\end{bashcode}
+endsnippet
 
 snippet iff
 \Leftrightarrow
@@ -1203,4 +1214,24 @@ endsnippet
 
 snippet abs "absolute value" i
 \bigg\lvert $1 \bigg\rvert
+endsnippet
+
+snippet cred "color text red" i
+\textcolor{red}{$1}
+endsnippet
+
+snippet solution "solution" i
+\textcolor{red}{\textit{Solution.}}
+endsnippet
+
+snippet aliat "alignedat with 2 aligns" i
+\begin{equation}
+\begin{alignedat}{2}
+	$1
+\end{alignedat}
+\end{equation}
+endsnippet
+
+snippet mark "MARKBOTH" i
+\markboth{$1}{}
 endsnippet
