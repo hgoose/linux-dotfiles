@@ -1144,9 +1144,9 @@
 
 
 % Widths (Spacing width)
-\setlength{\cftsecnumwidth}{1.5em}       % Increase for sections
-\setlength{\cftsubsecnumwidth}{2em}  % Increase for subsections
-\setlength{\cftsubsubsecnumwidth}{2.6em} % Increase for subsubsections
+\setlength{\cftsecnumwidth}{2.5em}       % Increase for sections
+\setlength{\cftsubsecnumwidth}{3em}  % Increase for subsections
+\setlength{\cftsubsubsecnumwidth}{3.6em} % Increase for subsubsections
 
 % Indents
 \setlength{\cftsecindent}{0em}
@@ -1496,8 +1496,8 @@
 \newcommand{\unsect}[1]{
     \refstepcounter{section} % Increment section counter
     \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1} % Add to TOC with number
-    \markboth{}{} % Remove header left
-     \thispagestyle{empty} % Remove header right
+    % \markboth{}{} % Remove header left
+    %  \thispagestyle{empty} % Remove header right
    \markboth{\MakeUppercase{#1}}{}%
     \section*{#1} % Create unnumbered section
 }

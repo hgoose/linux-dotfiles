@@ -54,16 +54,21 @@ snippet ttemplate
 % \usepackage[default]{sourcecodepro}
 % \usepackage[T1]{fontenc}
 
+% Change the title
+\hypersetup{
+	pdftitle={$1}
+}
+
 \begin{document}
 	% \maketitle
 	    \begin{titlepage}
        \begin{center}
            \vspace*{1cm}
     
-           \textbf{$1}
+           \textbf{$2}
     
            \vspace{0.5cm}
-            $2
+            $3
                 
            \vspace{1.5cm}
     
@@ -84,11 +89,7 @@ snippet ttemplate
        \end{center}
     \end{titlepage}
 	\tableofcontents
-	\pagebreak \bigbreak \noindent
-	\begin{Large}
-
-		\noindent \textbf{$4}
-	\end{Large}
+	\pagebreak 
 	$5
 \end{document}
 endsnippet
@@ -235,9 +236,7 @@ snippet sect
 endsnippet
 
 snippet unsect
-\phantomsection
-\addcontentsline{toc}{section}{$1}
-\section*{$1}
+\unsect{$1}
 endsnippet
 
 snippet subsect
@@ -1007,12 +1006,9 @@ snippet ss
 \subsection{$1}
 endsnippet
 
-snippet unss
-\phantomsection
-\addcontentsline{toc}{subsection}{$1}
-\subsection*{$1}
+snippet sss
+\subsubsection{$1}
 endsnippet
-
 
 snippet sdiv
     \begin{align*}
