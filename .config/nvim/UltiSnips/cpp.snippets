@@ -102,10 +102,15 @@ snippet tmp
 #include <cstdarg> // For va_list, va_start, va_arg and va_end (variadic functions)
 #include <functional> // For std::function<rv(T,T,...)>
 #include <initializer_list> // Used for init list function parameters
+#include <utility> // For std::pair, tuple, and std::move
+#include <new> // For new placement
 
 #define a_sizeof(x) sizeof(x) / sizeof(x[0])
 #define show(a) cout << a << endl
 #define SHOW_AR(a) for (const auto& i : a) cout << i << " "; cout << endl;
+#define b(a) std::begin(a)
+#define e(a) std::end(a)
+
 
 using std::cout;
 using std::cin;
@@ -149,6 +154,8 @@ snippet includes "known includes" i
 #include <cstdarg> // For va_list, va_start, va_arg and va_end (variadic functions)
 #include <functional> // For std::function<rv(T,T,...)>
 #include <initializer_list> // Used for init list function parameters
+#include <utility> // For std::pair, tuple, and std::move
+#include <new> // For new placement
 endsnippet
 
 

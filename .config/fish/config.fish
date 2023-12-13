@@ -14,12 +14,6 @@ alias goto="cd ($HOME/.config/rofi/launchers/type-3/scripts/jump2)"
 alias wgetu="wget --user-agent=Yandex"
 alias ifw="inkscape-figures watch"
 alias ism="python3 ~/inkscape-shortcut-manager/main.py"
-alias :x="echo 'You're not in vim bozo | lolcat"
-alias :x!="echo 'You're not in vim bozo"
-alias :w="echo 'You're not in vim bozo"
-alias :wq="echo 'You're not in vim bozo"
-alias :q="echo 'You're not in vim bozo"
-alias :q!="echo 'You're not in vim bozo"
 # alias go="nohup google-chrome-stable >/dev/null 2>&1 & && pidof chrome | disown"
 # alias kp="kill picom"
 alias polybar="~/.config/polybar/launch.sh"
@@ -135,7 +129,7 @@ dpmsoff
 # set rate 300 50
 function setrate
 	if [ $(xset q | grep -e "repeat delay" | awk '{print $4 $7}') != '30050' ]
-		xset r rate 300 50
+		xset r rate 250 40
 	end
 end
 setrate

@@ -35,6 +35,8 @@ astro_plugins = {
       })
     end
   },
+  -- Onedark fork
+  ['hgoose/onedark-fk.vim'] = {},
   -- Edge-fk-black
   ['hgoose/edge-fk-black'] = {},
   --Edge 
