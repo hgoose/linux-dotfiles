@@ -68,8 +68,8 @@ let g:auto_save = 1  " enable AutoSave on Vim startup
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
-"set conceallevel=1
 "let g:tex_conceal='abdmg'
+"set conceallevel=1
 
 " set latex previewer viewer 
 let g:livepreview_previewer = 'zathura'

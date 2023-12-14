@@ -1,0 +1,206 @@
+snippet template
+#include <iostream> // For input/output tasks
+#include <iomanip> // For input/output manipulators
+#include <cstdlib> // For random, system, exit, EXIT_SUCCESS, EXIT_FAILURE, and malloc
+#include <cstdint> // For fixed width data types
+#include <unistd.h> // Posix API
+#include <typeinfo> // typeid(n).name()
+#include <cctype> // For character functions
+#include <algorithm> // Defined algorithms
+#include <iterator> // Iterator functions and types
+#include <string> // String class
+
+// Some macros
+#define a_sizeof(x) sizeof(x) / sizeof(x[0])
+#define show(a) cout << a << endl;
+#define SHOW_AR(a) for (const auto& i : a) cout << i << " "; cout << endl;
+#define NOPOS -1
+#define LINE_BREAK cout << endl; for (int i = 0; i < 75; i++) cout << "-"; cout << endl;
+
+// Using
+using std::cout;
+using std::cin;
+using std::cerr;
+using std::endl;
+using std::string;
+
+int main(int argc, const char* argv[]) {
+
+	$1
+    
+    return EXIT_SUCCESS;
+}
+endsnippet
+
+snippet full
+/***************************************************************
+CSCI 240         Program $1     Fall 2023
+
+Programmer: Nathan Warner
+ 
+Section: 001
+
+Date Due: $2
+
+Purpose: $3
+***************************************************************/
+#include <iostream> // For input/output tasks
+#include <iomanip> // For input/output manipulators
+#include <cstdlib> // For random, system, exit, EXIT_SUCCESS, EXIT_FAILURE, and malloc
+#include <cstdint> // For fixed width data types
+#include <unistd.h> // Posix API
+#include <typeinfo> // typeid(n).name()
+#include <cctype> // For character functions
+#include <algorithm> // Defined algorithms
+#include <iterator> // Iterator functions and types
+#include <string> // String class
+
+// Some macros
+#define a_sizeof(x) sizeof(x) / sizeof(x[0])
+#define show(a) cout << a << endl;
+#define SHOW_AR(a) for (const auto& i : a) cout << i << " "; cout << endl;
+#define NOPOS -1
+#define LINE_BREAK cout << endl; for (int i = 0; i < 75; i++) cout << "-"; cout << endl;
+
+// Using
+using std::cout;
+using std::cin;
+using std::cerr;
+using std::endl;
+using std::string;
+
+int main(int argc, const char *argv[]) {
+
+    return EXIT_SUCCESS;
+}
+endsnippet
+
+snippet tmp
+#include <iostream> // For Input/OUtput tasks
+#include <iomanip> // For output manipulations
+#include <fstream> // For file operations
+#include <typeinfo> // For typeid().name()
+#include <cstdlib> // For random, system, exit, EXIT_SUCCESS, EXIT_FAILURE, and malloc
+#include <cmath> // For mathematical functions
+#include <algorithm> // For defined algorithms
+#include <ctime> // For time functions
+#include <memory> // For smart pointers
+#include <cstring> // For c-string functions
+#include <cstdint> // For fixed width data types (like uint32_t)
+#include <sstream> // For string streams
+#include <unistd.h> // For unix operations (sleep and such)
+#include <iterator> // For iterator functions and such
+#include <numeric> // For partial sum
+#include <random> // For random stuff
+#include <chrono> // For time stuff
+#include <string> // For std::string 
+#include <array> // For std::array<T,n>
+#include <list> // For std::list<T>
+#include <vector> // For std::vector<T>
+#include <set> // For std::set<T, comp> 
+#include <map> // For std::map<T,T,comp>
+#include <cstdarg> // For va_list, va_start, va_arg and va_end (variadic functions)
+#include <functional> // For std::function<rv(T,T,...)>
+#include <initializer_list> // Used for init list function parameters
+#include <utility> // For std::pair, tuple, and std::move
+#include <new> // For new placement
+
+#define a_sizeof(x) sizeof(x) / sizeof(x[0])
+#define show(a) cout << a << endl
+#define SHOW_AR(a) for (const auto& i : a) cout << i << " "; cout << endl;
+#define b(a) std::begin(a)
+#define e(a) std::end(a)
+
+
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+
+
+
+int main(int argc, const char* argv[]) {
+
+	$1
+
+    return EXIT_SUCCESS;
+}
+endsnippet
+
+snippet includes "known includes" i
+#include <iostream> // For Input/OUtput tasks
+#include <iomanip> // For output manipulations
+#include <fstream> // For file operations
+#include <typeinfo> // For typeid().name()
+#include <cstdlib> // For random, system, exit, EXIT_SUCCESS, EXIT_FAILURE, and malloc
+#include <cmath> // For mathematical functions
+#include <algorithm> // For defined algorithms
+#include <ctime> // For time functions
+#include <memory> // For smart pointers
+#include <cstring> // For c-string functions
+#include <cstdint> // For fixed width data types (like uint32_t)
+#include <sstream> // For string streams
+#include <unistd.h> // For unix operations (sleep and such)
+#include <iterator> // For iterator functions and such
+#include <numeric> // For partial sum
+#include <random> // For random stuff
+#include <chrono> // For time stuff
+#include <string> // For std::string 
+#include <array> // For std::array<T,n>
+#include <list> // For std::list<T>
+#include <vector> // For std::vector<T>
+#include <set> // For std::set<T, comp> 
+#include <map> // For std::map<T,T,comp>
+#include <cstdarg> // For va_list, va_start, va_arg and va_end (variadic functions)
+#include <functional> // For std::function<rv(T,T,...)>
+#include <initializer_list> // Used for init list function parameters
+#include <utility> // For std::pair, tuple, and std::move
+#include <new> // For new placement
+endsnippet
+
+
+snippet remark
+/*<remark> 
+$1
+</remark>*/
+endsnippet
+
+snippet summary
+/*<summary> 
+$1
+</summary>*/
+endsnippet
+
+snippet nit
+/*<nit> 
+$1
+</nit>*/
+endsnippet
+
+snippet nt
+/*<note> 
+$1
+</note>*/
+endsnippet
+
+
+snippet fdesc
+// Function $1
+/***************************************************************
+Function: $2
+
+Use: $3
+
+Arguments: $4
+
+Returns: $5
+
+Notes: $6
+***************************************************************/
+endsnippet
+
+snippet seed
+unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+endsnippet
+
+

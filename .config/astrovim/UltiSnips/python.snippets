@@ -1,0 +1,50 @@
+snippet bang
+#!/usr/bin/python3
+endsnippet
+
+snippet main "main" i
+def main() -> int:
+	""" MAIN """
+	$1
+
+	return 0
+
+
+if __name__ == '__main__':
+	main()
+
+endsnippet
+
+snippet full
+#!/usr/bin/python3
+
+
+def main() -> int:
+	""" MAIN """
+	$1
+
+	return 0
+
+
+if __name__ == '__main__':
+	main()
+
+endsnippet
+
+# Use: print(f"{bcolors.OKCYAN} text {bcolors.ENDC}")
+# OR: print(bcolors.OKCYAN + anything)
+# https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797
+snippet colors "use: "
+class bcolors:
+    HEADER = '\033[95m'
+    RED = '\033[91m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+endsnippet
+
