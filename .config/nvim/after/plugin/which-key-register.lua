@@ -58,7 +58,9 @@ wk.register({
     -- ['>'] = "Indent Right",
     ['<leader><leader>'] = "Shoutout",
     x = "Mark Executable",
-    ['/'] = "Comment Lines"
+    ['/'] = "Comment Lines",
+    e = "Toggle Neo-tree",
+    y = "Toggle Tagbar",
 
 
 

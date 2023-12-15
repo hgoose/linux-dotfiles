@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+while getopts "v:" version; do
+    case ${OPTARG} in
+        1)
+            nohup google-chrome-stable /home/datura/niu/selfstudy/CS/Frontend/projects/fileopener/index.html >/dev/null 2>&1 &
+            ;;
+        2)
+            nohup google-chrome-stable /home/datura/niu/selfstudy/CS/Frontend/projects/fileopener2/index.html >/dev/null 2>&1 &
+            ;;
+    esac
+        
+done

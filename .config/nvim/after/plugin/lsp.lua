@@ -3,8 +3,6 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
-  'rust_analyzer',
 })
 
 -- Fix Undefined global 'vim'
@@ -58,3 +56,6 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- capabilities.offsetEncoding = { "utf-16" }
+-- require("lspconfig").clangd.setup({ capabilities = capabilities })

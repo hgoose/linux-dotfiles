@@ -43,14 +43,24 @@ return require('packer').startup(function(use)
     use("windwp/nvim-autopairs")
     use('dag/vim-fish')
     use('907th/vim-auto-save')
-    use("karb94/neoscroll.nvim")
     use('mrjones2014/smart-splits.nvim')
     use("folke/which-key.nvim")
     use('lervag/vimtex')
     use('SirVer/ultisnips')
+    use('preservim/tagbar')
+    use('ThePrimeagen/vim-be-good')
     use { 'goolord/alpha-nvim', requires = 'nvim-tree/nvim-web-devicons' }
     use { "akinsho/toggleterm.nvim", tag = '*' }
     use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
+    use({
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+            { 's1n7ax/nvim-window-picker', version = '2.*'}}})
 
     -- Colorschemes
     use('hgoose/onedark-fk.vim')
@@ -60,4 +70,9 @@ return require('packer').startup(function(use)
     use('https://github.com/Mofiqul/vscode.nvim.git')
     use('Mofiqul/dracula.nvim')
     use('catppuccin/nvim')
+    use{ 'Everblush/nvim', as = 'everblush' }
+    use {
+        'uloco/bluloco.nvim',
+        requires = { 'rktjmp/lush.nvim' }
+    }
 end)

@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["bluloco.nvim"] = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/bluloco.nvim",
+    url = "https://github.com/uloco/bluloco.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -124,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/dracula.nvim",
     url = "https://github.com/Mofiqul/dracula.nvim"
   },
+  everblush = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/everblush",
+    url = "https://github.com/Everblush/nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -149,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -159,10 +174,15 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["neoscroll.nvim"] = {
+  ["neo-tree.nvim"] = {
     loaded = true,
-    path = "/home/datura/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
-    url = "https://github.com/karb94/neoscroll.nvim"
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
+    url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   nvim = {
     loaded = true,
@@ -194,6 +214,11 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["nvim-window-picker"] = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/nvim-window-picker",
+    url = "https://github.com/s1n7ax/nvim-window-picker"
+  },
   ["oil.nvim"] = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/oil.nvim",
@@ -224,6 +249,11 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/smart-splits.nvim",
     url = "https://github.com/mrjones2014/smart-splits.nvim"
   },
+  tagbar = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/tagbar",
+    url = "https://github.com/preservim/tagbar"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -248,6 +278,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/vim-auto-save",
     url = "https://github.com/907th/vim-auto-save"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vim-fish"] = {
     loaded = true,
