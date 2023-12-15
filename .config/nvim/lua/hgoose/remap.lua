@@ -65,7 +65,8 @@ vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
 -- vim.keymap.set("i", "<", "<><Left>")
---
-vim.cmd("autocmd VimEnter * silent !/home/datura/.config/nvim/scripts/disable_blur.sh >/dev/null 2>&1")
-vim.cmd("autocmd VimLeave * silent !/home/datura/.config/nvim/scripts/enable_blur.sh >/dev/null 2>&1")
+
+--  Enable/Disable transparency script activations
+-- vim.cmd("autocmd VimEnter * silent !/home/datura/.config/nvim/scripts/disable_blur.sh >/dev/null 2>&1")
+-- vim.cmd("autocmd VimLeave * silent !/home/datura/.config/nvim/scripts/enable_blur.sh >/dev/null 2>&1")
 

@@ -211,8 +211,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 for_window [class="^.*"] border pixel 3
 
 # gapsconfig
-gaps inner 15
-gaps outer 15
+gaps outer 20
+gaps inner 10
 # gaps top 40
 # gaps bottom 40
 # gaps left 5
@@ -254,13 +254,22 @@ set_from_resource $bg i3wm.color6 #282a2e
 # client.urgent           #00D1FF #900000 #ffffff #900000   #900000
 # client.placeholder      #00D1FF #0c0c0c #ffffff #000000   #0c0c0c
 
-client.background       #9B00FF
+client.background       #c6a0f6aa
 # class                 border  backgr. text    indicator child_border
-client.focused          #9B00FF #3c464d #ffffff #9B00FF   #9B00FF
-client.focused_inactive #9B00FF #5f676a #ffffff #484e50   #9B00FF
-client.unfocused        #9B00FF #222222 #888888 #292d2e   #9B00FF
-client.urgent           #9B00FF #900000 #ffffff #900000   #900000
-client.placeholder      #9B00FF #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          #c6a0f6aa #3c464d #ffffff #c6a0f6aa   #c6a0f6aa
+client.focused_inactive #c6a0f6aa #5f676a #ffffff #484e50   #c6a0f6aa
+client.unfocused        #c6a0f6aa #222222 #888888 #292d2e   #c6a0f6aa
+client.urgent           #c6a0f6aa #900000 #ffffff #900000   #900000
+client.placeholder      #c6a0f6aa #0c0c0c #ffffff #000000   #0c0c0c
+
+
+# client.background       #9B00FF
+# # class                 border  backgr. text    indicator child_border
+# client.focused          #9B00FF #3c464d #ffffff #9B00FF   #9B00FF
+# client.focused_inactive #9B00FF #5f676a #ffffff #484e50   #9B00FF
+# client.unfocused        #9B00FF #222222 #888888 #292d2e   #9B00FF
+# client.urgent           #9B00FF #900000 #ffffff #900000   #900000
+# client.placeholder      #9B00FF #0c0c0c #ffffff #000000   #0c0c0c
 
 # client.background       #0AD900
 # # class                 border  backgr. text    indicator child_border

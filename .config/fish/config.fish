@@ -41,7 +41,7 @@ alias dev="cd ~/dev/"
 alias fishc="n ~/.config/fish/config.fish"
 alias kittyc="n ~/.config/kitty/kitty.conf"
 alias i3c="nvim ~/.config/i3/config"
-alias c="clear"
+alias c="clear; ~/shell-color-scripts/colorscripts/tux"
 alias cls="clear; neofetch"
 alias x="sudo chmod +x"
 alias dot="cd ~/.config"
@@ -64,16 +64,9 @@ function mk
 end
 
 # Rebind clear to also run neofetch
-# function fish_user_key_bindings
-#     bind \cl 'clear;neofetch; commandline -f repaint'
-# end
-
-# # Overload clear to also run neofetch
-# function clear
-#     command clear
-#     neofetch
-# end
-
+function fish_user_key_bindings
+    bind \cl 'clear;~/shell-color-scripts/colorscripts/tux; commandline -f repaint'
+end
 
 # Overload touch to also make file executable
 # function touch 
@@ -227,7 +220,7 @@ end
 
 # function to refresh fish shell
 function refresh
-	clear && fish	
+	clear && ~/shell-color-scripts/colorscripts/tux	 && fish
 end
 
 # Function to streamline searching packages
