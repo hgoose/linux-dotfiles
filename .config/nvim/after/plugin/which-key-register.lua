@@ -43,6 +43,17 @@ wk.register({
         s = { "Forth Mark" },
     },
 
+    c = {
+        name = "LSP",
+
+        c = { "Diagnostics" },
+        h = { "Hover" },
+        n = { "Go to next" },
+        p = { "Go to prev" },
+        a = { "Code action" },
+        d = { "Open float" },
+    },
+
    -- Singletons
     b = "Format Files",
     u = "Undo Tree",

@@ -1,0 +1,25 @@
+snippet template 
+# Makefile for compiling $1.cpp
+
+# Compiler to use
+CXX = g++
+
+# Compiler flags
+CXXFLAGS = -std=c++11 -Wall
+
+# Target executable name
+TARGET = program
+
+# Build target
+all: $(TARGET)
+
+$(TARGET): $1.o
+	$(CXX) $(CXXFLAGS) $1.o -o $(TARGET)
+
+$1.o: $1.cpp
+	$(CXX) $(CXXFLAGS) -c $1.cpp
+
+# Clean the build
+clean:
+	rm -f *.o $(TARGET)
+endsnippet
