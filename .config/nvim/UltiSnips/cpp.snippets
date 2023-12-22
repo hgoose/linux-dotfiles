@@ -12,7 +12,7 @@ snippet template
 
 // Some macros
 #define a_sizeof(x) sizeof(x) / sizeof(x[0])
-#define show(a) cout << a << endl;
+#define SHOW(a) cout << a << endl;
 #define SHOW_AR(a) for (const auto& i : a) cout << i << " "; cout << endl;
 #define NOPOS -1
 #define LINE_BREAK cout << endl; for (int i = 0; i < 75; i++) cout << "-"; cout << endl;
@@ -108,7 +108,7 @@ snippet tmp
 #include <exception> // Exception class
 
 #define a_sizeof(x) sizeof(x) / sizeof(x[0])
-#define show(a) cout << a << endl
+#define SHOW(a) cout << a << endl;
 #define SHOW_AR(a) for (const auto& i : a) cout << i << " "; cout << endl;
 #define b(a) std::begin(a)
 #define e(a) std::end(a)

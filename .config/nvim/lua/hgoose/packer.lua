@@ -49,9 +49,13 @@ return require('packer').startup(function(use)
     use('SirVer/ultisnips')
     use('preservim/tagbar')
     use('ThePrimeagen/vim-be-good')
-    use { 'goolord/alpha-nvim', requires = 'nvim-tree/nvim-web-devicons' }
-    use { "akinsho/toggleterm.nvim", tag = '*' }
-    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
+    use('ggandor/leap.nvim')
+    use('tpope/vim-repeat')
+    use('Wansmer/treesj')
+    use{ "kylechui/nvim-surround", tag = "*", }
+    use{ 'goolord/alpha-nvim', requires = 'nvim-tree/nvim-web-devicons' }
+    use{ "akinsho/toggleterm.nvim", tag = '*' }
+    use{ 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
     use({
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -61,6 +65,7 @@ return require('packer').startup(function(use)
             "MunifTanjim/nui.nvim",
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
             { 's1n7ax/nvim-window-picker', version = '2.*'}}})
+
 
     -- Colorschemes
     use('hgoose/onedark-fk.vim')

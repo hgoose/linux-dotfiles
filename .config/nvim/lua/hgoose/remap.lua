@@ -64,6 +64,9 @@ end)
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
+vim.keymap.set({"n", "v"}, "<leader>t", "{")
+vim.keymap.set({"n", "v"}, "<leader>h", "}")
+
 -- vim.keymap.set("i", "<", "<><Left>")
 
 --  Enable/Disable transparency script activations

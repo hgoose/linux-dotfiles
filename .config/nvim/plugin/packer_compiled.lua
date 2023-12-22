@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
+  ["leap.nvim"] = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/leap.nvim",
+    url = "https://github.com/ggandor/leap.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -203,6 +208,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-surround"] = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -264,6 +274,11 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  treesj = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/treesj",
+    url = "https://github.com/Wansmer/treesj"
+  },
   ultisnips = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/ultisnips",
@@ -293,6 +308,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-repeat"] = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
   },
   ["vim-synthwave84"] = {
     loaded = true,

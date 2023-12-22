@@ -1,7 +1,7 @@
 local wk = require("which-key")
 wk.register({
     -- First Key
-    t = {
+    n = {
         name = "Toggleterm",
         -- Second Key
         f = { "Floating Terminal" },
@@ -72,6 +72,11 @@ wk.register({
     ['/'] = "Comment Lines",
     e = "Toggle Neo-tree",
     y = "Toggle Tagbar",
+    h = "Jump Down Paragraph",
+    t = "Jump Up Paragraph",
+    s = "Leap Forward",
+    S = "Leap Backward",
+    r = "TSJToggle"
 
 
 
