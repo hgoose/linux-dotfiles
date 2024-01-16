@@ -52,6 +52,7 @@ return require('packer').startup(function(use)
     use('ggandor/leap.nvim')
     use('tpope/vim-repeat')
     use('Wansmer/treesj')
+    use('airblade/vim-rooter')
     use{ "kylechui/nvim-surround", tag = "*", }
     use{ 'goolord/alpha-nvim', requires = 'nvim-tree/nvim-web-devicons' }
     use{ "akinsho/toggleterm.nvim", tag = '*' }

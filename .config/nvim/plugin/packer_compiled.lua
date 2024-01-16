@@ -314,6 +314,11 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/vim-repeat",
     url = "https://github.com/tpope/vim-repeat"
   },
+  ["vim-rooter"] = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/vim-rooter",
+    url = "https://github.com/airblade/vim-rooter"
+  },
   ["vim-synthwave84"] = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/vim-synthwave84",
