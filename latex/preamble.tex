@@ -1516,6 +1516,23 @@
 \renewcommand{\sectionmark}[1]{%
   \markboth{#1}{}%
 }
+
+\newcounter{figurecounter}
+\setcounter{figurecounter}{1}
+
+\newcommand{\fig}[2] {
+
+    \begin{center}
+        \includegraphics[scale=#1]{#2}
+    \end{center}
+    \bigbreak \noindent 
+    \begin{center}
+        \textit{Figure \thefigurecounter}
+    \end{center}
+
+    \stepcounter{figurecounter} 
+}
+
 % Page geometry
 \geometry{
   left=1.5in,
