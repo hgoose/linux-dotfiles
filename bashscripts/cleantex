@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+find . -type f \
+    \( ! -name '*.tex' -and ! -name '*.pdf' \)  \
+    -exec rm -rf {} +
+
+
