@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/everblush",
     url = "https://github.com/Everblush/nvim"
   },
+  everblush_fk = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/everblush_fk",
+    url = "https://github.com/hgoose/everblush_fk"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/friendly-snippets",
