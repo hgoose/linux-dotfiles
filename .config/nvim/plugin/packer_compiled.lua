@@ -244,10 +244,10 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  playground = {
+  ["papercolor-theme"] = {
     loaded = true,
-    path = "/home/datura/.local/share/nvim/site/pack/packer/start/playground",
-    url = "https://github.com/nvim-treesitter/playground"
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/papercolor-theme",
+    url = "https://github.com/NLKNguyen/papercolor-theme"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -273,11 +273,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  treesj = {
-    loaded = true,
-    path = "/home/datura/.local/share/nvim/site/pack/packer/start/treesj",
-    url = "https://github.com/Wansmer/treesj"
   },
   ultisnips = {
     loaded = true,
@@ -313,11 +308,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/vim-repeat",
     url = "https://github.com/tpope/vim-repeat"
-  },
-  ["vim-rooter"] = {
-    loaded = true,
-    path = "/home/datura/.local/share/nvim/site/pack/packer/start/vim-rooter",
-    url = "https://github.com/airblade/vim-rooter"
   },
   ["vim-synthwave84"] = {
     loaded = true,

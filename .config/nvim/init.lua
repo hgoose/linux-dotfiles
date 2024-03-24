@@ -1,4 +1,3 @@
 require("hgoose")
 
-vim.cmd("colorscheme onedark_fk")
-
+vim.cmd("colorscheme everblush")

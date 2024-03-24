@@ -367,7 +367,7 @@ endsnippet
 # endsnippet
 
 snippet line
-\line(1,0){490}
+\line(1,0){395}
 endsnippet
 
 snippet pb
@@ -718,51 +718,51 @@ snippet theta0 "lim theta to 0" i
 endsnippet
 
 snippet sine "sin" i
-\sin{$1}
+\sin{\left($1\right)}
 endsnippet
 
 snippet cos "cos" i
-\cos{$1}
+\cos{\left($1\right)}
 endsnippet
 
 snippet tan "tan" i
-\tan{$1}
+\tan{\left($1\right)}
 endsnippet
 
 snippet csc "csc" i
-\csc{$1}
+\csc{\left($1\right)}
 endsnippet
 
 snippet sec "sec" i
-\sec{$1}
+\sec{\left($1\right)}
 endsnippet
 
 snippet cot "cot" i
-\cot{$1}
+\cot{\left($1\right)}
 endsnippet
 
 snippet isine- "sin" i
-\sin^{-1}{$1}
+\sin^{-1}{\left($1\right)}
 endsnippet
 
 snippet icos- "cos" i
-\cos^{-1}{$1}
+\cos^{-1}{\left($1\right)}
 endsnippet
 
 snippet itan- "tan" i
-\tan^{-1}{$1}
+\tan^{-1}{\left($1\right)}
 endsnippet
 
 snippet icsc- "csc" i
-\csc^{-1}{$1}
+\csc^{-1}{\left($1\right)}
 endsnippet
 
 snippet isec- "sec" i
-\sec^{-1}{$1}
+\sec^{-1}{\left($1\right)}
 endsnippet
 
 snippet icot- "cot" i
-\cot^{-1}{$1}
+\cot^{-1}{\left($1\right)}
 endsnippet
 
 snippet th "theta" i
@@ -1029,12 +1029,9 @@ endsnippet
 
 snippet table
 \begin{center}
-	\begin{tabular}{|l|c|}
-	\hline
-    	$1 \\\
-    	\hline
-     	 $2 & $3  \\\
-    	\hline
+	\begin{tabular}{c|c}
+		$1 & $2
+		\hline
 	\end{tabular}
 \end{center}
 endsnippet
@@ -1201,7 +1198,7 @@ snippet bs
 endsnippet
 
 snippet vc "vec" i
-\vec{$1}
+\vec{\mathbf{$1}}
 endsnippet
 
 snippet vect "vector" i
@@ -1230,4 +1227,48 @@ endsnippet
 
 snippet mark "MARKBOTH" i
 \markboth{$1}{}
+endsnippet
+
+snippet fig "FIGURE" i
+\fig{$1}{./figures/$2}
+endsnippet
+
+snippet no "norm" i
+\norm{$1}
+endsnippet
+
+snippet proj "vector projection" i
+\text{proj}_{$1}$2
+endsnippet
+
+snippet mb "math bold" i
+\mathbf{$1}
+endsnippet
+
+snippet comp "scalar projection" i
+\text{comp}_{$1}$2
+endsnippet
+
+snippet pon "angular brackets" i
+\left\langle $1 \right\rangle
+endsnippet
+
+snippet om "omega" i
+\omega
+endsnippet
+
+snippet hat "hat" i 
+\hat{\mathbf{$1}}
+endsnippet
+
+snippet tx "text" i 
+\text{$1}
+endsnippet
+
+snippet par "\delta" i
+\delta $1
+endsnippet
+
+snippet gr "gradient" i
+\nabla
 endsnippet

@@ -1,3 +1,13 @@
+snippet doc
+//***************************************************************************
+//
+//  $1 (file-name)
+//  CSCI 241 Assignment $2 (ass-no)
+//
+//  Created by Nate Warner z2004109
+//
+//***************************************************************************
+endsnippet
 snippet template
 #include <iostream> // For input/output tasks
 #include <iomanip> // For input/output manipulators
@@ -33,17 +43,15 @@ int main(int argc, const char* argv[]) {
 endsnippet
 
 snippet full
-/***************************************************************
-CSCI 240         Program $1     Fall 2023
 
-Programmer: Nathan Warner
- 
-Section: 001
-
-Date Due: $2
-
-Purpose: $3
-***************************************************************/
+//***************************************************************************
+//
+//  file-name
+//  CSCI 241 Assignment assignment-number
+//
+//  Created by name(s) and z-ID(s)
+//
+//***************************************************************************
 #include <iostream> // For input/output tasks
 #include <iomanip> // For input/output manipulators
 #include <cstdlib> // For random, system, exit, EXIT_SUCCESS, EXIT_FAILURE, and malloc
@@ -189,22 +197,41 @@ endsnippet
 
 
 snippet fdesc
-// Function $1
-/***************************************************************
-Function: $2
-
-Use: $3
-
-Arguments: $4
-
-Returns: $5
-
-Notes: $6
-***************************************************************/
+/**
+ * This first line is a brief description.
+ *
+ * The rest of the lines are a more detailed description of the
+ * function that outlines what it does and anything interesting about
+ * how it does it.
+ *
+ * @param x Description of the first parameter.
+ * @param y Description of the second parameter.
+ * @param z Description of the third parameter.
+ *
+ * @return This is where you describe the possible return values.
+ *
+ * @note This is how you can add an optional note about the function that
+ *    may be of interest to someone using it.
+ *
+ * @warning This is how you can add an optional warning to a user of the
+ *    function suitable for noting things like 'This function is not thread
+ *    safe' and so on.
+ *
+ * @bug This is how you can add an optional description of a known bug in the
+ *    function such as: This only works for positive values of z.
+ */
 endsnippet
 
 snippet seed
 unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
 endsnippet
 
+snippet hg
+#ifndef $1
+#define $1
+
+$2
+
+#endif
+endsnippet
 

@@ -50,6 +50,8 @@ alias kazam="nohup kazam & && pidof kazam | disown"
 alias pd="push-dotfiles"
 alias ss="cd ~/springsemester/"
 alias bluetooth="nvim /etc/bluetooth/main.conf"
+alias vup="sudo wg-quick up wg0"
+alias vdown="sudo wg-quick down wg0"
 
 function stat
     ./$argv && echo "status $status" 

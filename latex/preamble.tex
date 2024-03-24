@@ -5,10 +5,13 @@
 \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
 \usepackage[tmargin=2cm,rmargin=1in,lmargin=1in,margin=0.85in,bmargin=2cm,footskip=.2in]{geometry}
 \usepackage{amsmath,amsfonts,amsthm,amssymb,mathtools}
+\usepackage{mathrsfs}
 % \usepackage[varbb]{newpxmath}
 \usepackage{lipsum} % for generating dummy text
 % \usepackage{fontawesome} % for icons
 \usepackage{fontawesome5} % for icons
+\usepackage{booktabs}
+\usepackage{siunitx} % for proper formatting of numbers and units
 \usepackage{titlesec}
 \usepackage{xfrac}
 \usepackage{changepage}
@@ -33,6 +36,7 @@
 \usepackage{dcolumn}
 \usepackage{tikz}
 \usepackage{minted}
+\usepackage{tabularx}
 % \usepackage{listings}
 \usepackage[bottom]{footmisc}
 \newcolumntype{2}{D{.}{}{2.0}}
@@ -902,6 +906,26 @@
 % Initialize the counter to start at 1
 \setcounter{theoremcounter}{0}
 
+% Define a new counter for the concept environment
+\newcounter{conclusioncounter}
+
+% Define the concept environment
+\newenvironment{conc}
+{%
+  \stepcounter{conclusioncounter}% Increment the counter
+  \noindent\textbf{Conclusion \theconclusioncounter.} % Format the label
+}
+{%
+  \par% End the paragraph
+}
+
+\newcommand{\cc}[1] {
+    \begin{conc}
+        #1
+    \end{conc}
+}
+
+
 % % Define the thrmm environment
 % \newenvironment{thrmm}[1] % #1 is the argument
 % {%
@@ -1485,7 +1509,7 @@
 
 % Increases size of sections
 \titleformat{\section}
-  {\huge\bfseries} % Change \Huge to desired size
+  {\Large\bfseries} % Change \Huge to desired size
   {\thesection}{1em}{}
 
 \titleformat{\subsection}
@@ -1502,15 +1526,27 @@
     \section*{#1} % Create unnumbered section
 }
 
+% \newcommand{\beginch}[2] {
+% 	\markboth{}{}
+% 	 \vspace*{1.5in} % Add vertical space to push content down
+% 	 \thispagestyle{empty}
+%      \noindent{\huge\bfseries Chapter #1} % Large, bold text
+%     \vspace*{.25in}
+%     \unsect{#2} % Call unsect command
+%     \bigbreak \noindent 
+%     \vspace*{.1in}
+% }
+
 \newcommand{\beginch}[2] {
-	\markboth{}{}
-	 \vspace*{1.5in} % Add vertical space to push content down
-	 \thispagestyle{empty}
-     \noindent{\huge\bfseries Chapter #1} % Large, bold text
-    \vspace*{.25in}
-    \unsect{#2} % Call unsect command
+    \vspace{2in}  \\
+    \begin{Huge}
+        \textbf{Chapter #1\\
+            #2
+        }
+
+    \end{Huge}
     \bigbreak \noindent 
-    \vspace*{.1in}
+    \line(1,0){395}
 }
 % Redefine \sectionmark
 \renewcommand{\sectionmark}[1]{%
@@ -1525,12 +1561,54 @@
     \begin{center}
         \includegraphics[scale=#1]{#2}
     \end{center}
+}
+
+\newcommand{\figcap}[3] {
+
+    \begin{center}
+        \includegraphics[scale=#1]{#2}
+    \end{center}
     \bigbreak \noindent 
     \begin{center}
-        \textit{Figure \thefigurecounter}
+        \textbf{Figure \thefigurecounter: } \textit{#3}
     \end{center}
 
     \stepcounter{figurecounter} 
+}
+
+
+\newcommand{\figcapman}[4] {
+
+    \begin{center}
+        \includegraphics[scale=#1]{#2}
+    \end{center}
+    \bigbreak \noindent 
+    \begin{center}
+        \textbf{Figure #4: } \textit{#3}
+    \end{center}
+
+    \stepcounter{figurecounter} 
+}
+
+\newcounter{figtitle}
+\setcounter{figtitle}{1}
+\newcommand{\fc}[1] {
+    \begin{center}
+        \textbf{Figure \thefigtitle :} \textit{#1}
+    \end{center}
+
+    \stepcounter{figtitle}
+
+}
+
+\newcounter{tabletitle}
+\setcounter{tabletitle}{1}
+\newcommand{\tc}[1] {
+    \begin{center}
+        \textbf{Table \thetabletitle :} \textit{#1}
+    \end{center}
+
+    \stepcounter{tabletitle}
 }
 
 % Page geometry
@@ -1540,4 +1618,3 @@
   top=1in,
   bottom=1in
 }
-

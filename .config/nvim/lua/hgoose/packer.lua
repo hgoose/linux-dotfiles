@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use('nvim-treesitter/playground')
+    -- use('nvim-treesitter/playground')
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
@@ -51,8 +51,8 @@ return require('packer').startup(function(use)
     use('ThePrimeagen/vim-be-good')
     use('ggandor/leap.nvim')
     use('tpope/vim-repeat')
-    use('Wansmer/treesj')
-    use('airblade/vim-rooter')
+    -- use('Wansmer/treesj')
+    -- use('airblade/vim-rooter')
     use{ "kylechui/nvim-surround", tag = "*", }
     use{ 'goolord/alpha-nvim', requires = 'nvim-tree/nvim-web-devicons' }
     use{ "akinsho/toggleterm.nvim", tag = '*' }
@@ -69,8 +69,10 @@ return require('packer').startup(function(use)
 
 
     -- Colorschemes
+    use('NLKNguyen/papercolor-theme')
     use('hgoose/onedark-fk.vim')
     use('ellisonleao/gruvbox.nvim')
+    use('hgoose/everblush_fk')
     use('hgoose/gruv.nvim')
     use('artanikin/vim-synthwave84')
     use('https://github.com/Mofiqul/vscode.nvim.git')
