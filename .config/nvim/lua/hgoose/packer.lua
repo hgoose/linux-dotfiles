@@ -39,6 +39,7 @@ return require('packer').startup(function(use)
         }
     }
     use('numToStr/Comment.nvim')
+    use('skywind3000/vim-quickui')
     use("stevearc/oil.nvim")
     use("windwp/nvim-autopairs")
     use('dag/vim-fish')

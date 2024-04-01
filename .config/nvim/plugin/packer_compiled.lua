@@ -309,6 +309,11 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-quickui"] = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/vim-quickui",
+    url = "https://github.com/skywind3000/vim-quickui"
+  },
   ["vim-repeat"] = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/vim-repeat",
