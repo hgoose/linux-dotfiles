@@ -31,6 +31,8 @@ map("n", "<leader>pu", "<cmd>PackerUpdate<cr>")
 -- Visual Mode Mappings
 map("v", "T", ":m '<-2<CR>gv=gv")
 map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "<leader>a", "<cmd>norm I\\item <cr>")
+
 
 -- Other
 vim.cmd [[

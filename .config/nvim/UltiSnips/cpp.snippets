@@ -115,7 +115,8 @@ snippet tmp
 #include <stdexcept> // For exception classes
 #include <exception> // Exception class
 #include <cstdio> // C-Style IO operations
-#include <regex>
+#include <regex.h> // Regcomp, regexec
+#include <errno.h> // Errno variable
 
 #define a_sizeof(x) sizeof(x) / sizeof(x[0])
 #define SHOW(a) cout << a << endl;
@@ -171,7 +172,8 @@ snippet includes "known includes" i
 #include <stdexcept> // For exception classes
 #include <exception> // Exception class
 #include <cstdio> // C-Style IO operations
-#include <regex>
+#include <regex.h> // Regcomp, regexec
+#include <errno.h> // Errno variable
 endsnippet
 
 
