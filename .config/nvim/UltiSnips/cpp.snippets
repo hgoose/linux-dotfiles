@@ -96,7 +96,6 @@ snippet tmp
 #include <cstring> // For c-string functions
 #include <cstdint> // For fixed width data types (like uint32_t)
 #include <sstream> // For string streams
-#include <unistd.h> // For unix operations (sleep and such)
 #include <iterator> // For iterator functions and such
 #include <numeric> // For partial sum
 #include <random> // For random stuff
@@ -117,6 +116,12 @@ snippet tmp
 #include <cstdio> // C-Style IO operations
 #include <regex.h> // Regcomp, regexec
 #include <errno.h> // Errno variable
+
+-- Start UNIX Sys
+#include <unistd.h> // For unix sys calls file stuff and sleep
+#include <fcntl.h> // O_WRONLY, etc...
+#include <sys/stat.h> // File stats
+-- End UNIX Sys
 
 #define a_sizeof(x) sizeof(x) / sizeof(x[0])
 #define SHOW(a) cout << a << endl;
@@ -153,7 +158,6 @@ snippet includes "known includes" i
 #include <cstring> // For c-string functions
 #include <cstdint> // For fixed width data types (like uint32_t)
 #include <sstream> // For string streams
-#include <unistd.h> // For unix operations (sleep and such)
 #include <iterator> // For iterator functions and such
 #include <numeric> // For partial sum
 #include <random> // For random stuff
@@ -174,6 +178,15 @@ snippet includes "known includes" i
 #include <cstdio> // C-Style IO operations
 #include <regex.h> // Regcomp, regexec
 #include <errno.h> // Errno variable
+#include <unistd.h> // File stuff
+
+-- Start UNIX Sys
+#include <unistd.h> // For unix sys calls file stuff and sleep
+#include <fcntl.h> // O_WRONLY, etc...
+#include <sys/stat.h> // File stats
+-- End UNIX Sys
+
+
 endsnippet
 
 
@@ -241,3 +254,6 @@ $2
 #endif
 endsnippet
 
+snippet exit
+exit(EXIT_FAILURE);
+endsnippet

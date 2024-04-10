@@ -1,3 +1,3 @@
 require("hgoose")
 
-vim.cmd("colorscheme everblush_fk")
+vim.cmd("colorscheme dracula")
