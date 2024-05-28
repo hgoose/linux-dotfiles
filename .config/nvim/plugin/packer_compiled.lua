@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/dracula.nvim",
     url = "https://github.com/Mofiqul/dracula.nvim"
   },
+  dracula_gruvback = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/dracula_gruvback",
+    url = "https://github.com/hgoose/dracula_gruvback"
+  },
   everblush = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/everblush",

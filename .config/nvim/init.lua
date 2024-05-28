@@ -1,3 +1,3 @@
 require("hgoose")
 
-vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme dracula_gruvback")

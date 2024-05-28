@@ -78,6 +78,7 @@ return require('packer').startup(function(use)
     use('artanikin/vim-synthwave84')
     use('https://github.com/Mofiqul/vscode.nvim.git')
     use('Mofiqul/dracula.nvim')
+    use('hgoose/dracula_gruvback')
     use('catppuccin/nvim')
     use{ 'Everblush/nvim', as = 'everblush' }
     use {
@@ -85,3 +86,4 @@ return require('packer').startup(function(use)
         requires = { 'rktjmp/lush.nvim' }
     }
 end)
+

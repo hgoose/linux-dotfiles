@@ -1,16 +1,21 @@
+clear;neofetch
+
 # neofetcr
 # swww init
 # wlr-randr --output HDMI-A-1 --mode 1920x1080@119.878998
 set -x PATH $HOME/.cargo/bin $PATH
 # Remove fish greeting
 set -U fish_greeting
+set fish_vi_key_bindings true
 
 # xrandr --newmode "1440x1080_100.00"  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync
 # xrandr --addmode HDMI-1-0 1440x1080_100.00
 # xrandr --addmode eDP-1 1440x1080_100.00
 
 # USER DEFINED ALIASES
+alias es="exercism submit"
 alias goto="cd ($HOME/.config/rofi/launchers/type-3/scripts/jump2)"
+alias 241="cd $HOME/niu/CS/CS-241/"
 alias wgetu="wget --user-agent=Yandex"
 alias ifw="inkscape-figures watch"
 alias ism="python3 ~/inkscape-shortcut-manager/main.py"
@@ -41,8 +46,7 @@ alias dev="cd ~/dev/"
 alias fishc="n ~/.config/fish/config.fish"
 alias kittyc="n ~/.config/kitty/kitty.conf"
 alias i3c="nvim ~/.config/i3/config"
-alias c="clear"
-# alias c="clear; ~/shell-color-scripts/colorscripts/tux"
+alias c="cle;neofetch"
 alias cls="clear; neofetch"
 alias x="sudo chmod +x"
 alias dot="cd ~/.config"
@@ -67,9 +71,9 @@ function mk
 end
 
 # Rebind clear to also run neofetch
-# function fish_user_key_bindings
-#     bind \cl 'clear;~/shell-color-scripts/colorscripts/tux; commandline -f repaint'
-# end
+function fish_user_key_bindings
+    bind \cl 'clear;neofetch; commandline -f repaint'
+end
 
 # Overload touch to also make file executable
 # function touch 

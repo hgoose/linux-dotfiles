@@ -898,6 +898,7 @@
 }
 {%
   \par% End the paragraph
+  \noindent \square
 }
 
 % Define a new counter for the concept environment
@@ -924,6 +925,20 @@
         #1
     \end{conc}
 }
+
+\newcounter{defcounter}
+
+% Define the concept environment
+\newenvironment{dn}
+{%
+  \stepcounter{defcounter}% Increment the counter
+  \noindent\textbf{Definition \thedefcounter. } % Format the label
+}
+{%
+  \par% End the paragraph
+  \noindent \square
+}
+
 
 
 % % Define the thrmm environment

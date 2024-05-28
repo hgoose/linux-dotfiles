@@ -88,7 +88,6 @@ snippet tmp
 #include <iomanip> // For output manipulations
 #include <fstream> // For file operations
 #include <typeinfo> // For typeid().name()
-#include <cstdlib> // For random, system, exit, EXIT_SUCCESS, EXIT_FAILURE, and malloc
 #include <cmath> // For mathematical functions
 #include <algorithm> // For defined algorithms
 #include <ctime> // For time functions
@@ -113,15 +112,26 @@ snippet tmp
 #include <new> // For new placement, bad_alloc, and nothrow
 #include <stdexcept> // For exception classes
 #include <exception> // Exception class
-#include <cstdio> // C-Style IO operations
-#include <regex.h> // Regcomp, regexec
-#include <errno.h> // Errno variable
 
--- Start UNIX Sys
+// -- Start UNIX Sys
+#include <cstdlib> // For random, system, exit, EXIT_SUCCESS, EXIT_FAILURE, and malloc
 #include <unistd.h> // For unix sys calls file stuff and sleep
-#include <fcntl.h> // O_WRONLY, etc...
+#include <cstdio> // C standard
+#include <fcntl.h> // O_WRONLY, open, etc...
 #include <sys/stat.h> // File stats
--- End UNIX Sys
+#include <sys/types.h> // Types
+#include <dirent.h>
+#include <regex.h>
+#include <errno.h>
+#include <sys/wait.h> // wait system call
+// -- End UNIX Sys
+
+// -- Networking stuff
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+// -- End Networkin stuff
 
 #define a_sizeof(x) sizeof(x) / sizeof(x[0])
 #define SHOW(a) cout << a << endl;
@@ -175,18 +185,25 @@ snippet includes "known includes" i
 #include <new> // For new placement, bad_alloc, and nothrow
 #include <stdexcept> // For exception classes
 #include <exception> // Exception class
-#include <cstdio> // C-Style IO operations
-#include <regex.h> // Regcomp, regexec
-#include <errno.h> // Errno variable
-#include <unistd.h> // File stuff
 
--- Start UNIX Sys
+//-- Start UNIX Sys
 #include <unistd.h> // For unix sys calls file stuff and sleep
-#include <fcntl.h> // O_WRONLY, etc...
+#include <cstdio> // C standard
+#include <fcntl.h> // O_WRONLY, open, etc...
 #include <sys/stat.h> // File stats
--- End UNIX Sys
+#include <sys/types.h> // Types
+#include <dirent.h>
+#include <regex.h>
+#include <errno.h>
+#include <sys/wait.h> // wait system call
+//-- End UNIX Sys
 
-
+// -- Networking stuff
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h> // htons, inet_addr, etc...
+#include <netdb.h>
+// -- End Networkin stuff
 endsnippet
 
 
