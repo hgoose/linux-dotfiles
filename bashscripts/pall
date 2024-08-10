@@ -11,7 +11,7 @@ main(){
         sudo git -C $HOME/$i add . && sudo git -C $HOME/$i commit -m "Commit" && git -C $HOME/$i push && echo "Successfully pushed changes to directory $i" || echo "Failed to push changes to directory $i or everything is up to date"
     done
 
-    sudo git -C ~/Documents/Obsidian\ Vault/ add . && sudo git -C ~/Documents/Obsidian\ Vault/ commit -m "commit" && git -C ~/Documents/Obsidian\ Vault/ push && echo "Successfully pushed changes to directory obsidian" || echo "Failed to push changes to directory obsidian or everything is up to date"
+    sudo git -C ~/Documents/Obsidian Vault/ add . && sudo git -C ~/Documents/Obsidian Vault/ commit -m "commit" && git -C ~/Documents/Obsidian Vault/ push && echo "Successfully pushed changes to directory obsidian" || echo "Failed to push changes to directory obsidian or everything is up to date"
 }
 main
 #
