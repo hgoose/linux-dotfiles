@@ -48,9 +48,15 @@ exec --no-startup-id nm-applet
 #--- Set Modifier to super ---
 set $mod Mod4
 
+set $browser chrome
+
 #--- Chrome Shortcuts ---
 bindsym $mod+shift+h exec --no-startup-id brave file:///home/datura/niu
 bindsym $mod+shift+t exec --no-startup-id brave file:///home/datura/dev
+
+# Screenshot bind
+
+bindsym Control+Delete exec spectacle
 
 #---- WORKSPACE MANAGER ----#
 set $exec_i3_groups exec --no-startup-id i3-workspace-groups

@@ -531,6 +531,12 @@ snippet enumab
 \end{enumerate}
 endsnippet
 
+snippet enro
+\begin{enumerate}[label=(\roman*)]
+	$1
+\end{enumerate}
+endsnippet
+
 snippet Large
 \begin{Large}
 	\textbf{$1}
@@ -917,7 +923,7 @@ snippet prop "proper suubset" i
 endsnippet
 
 snippet sum "sigma notation" i
-\summation{$1}{$2}\ $3\
+\sum_{$1}^{$2}
 endsnippet
 
 snippet del "delta" i
@@ -1279,4 +1285,19 @@ endsnippet
 
 snippet gr "gradient" i
 \nabla
+endsnippet
+
+snippet al "alpha" i
+\alpha
+endsnippet
+
+snippet rem "remark" i
+\begin{remark}
+	$1
+\smiley{}
+\end{remark}
+endsnippet
+
+snippet blue "new definition/theorem entry" i
+\item \textbf{\textcolor{cyan}{$1}}
 endsnippet

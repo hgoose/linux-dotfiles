@@ -1,5 +1,4 @@
-clear;neofetch
-
+clear
 # neofetcr
 # swww init
 # wlr-randr --output HDMI-A-1 --mode 1920x1080@119.878998
@@ -46,9 +45,9 @@ alias dev="cd ~/dev/"
 alias fishc="n ~/.config/fish/config.fish"
 alias kittyc="n ~/.config/kitty/kitty.conf"
 alias i3c="nvim ~/.config/i3/config"
-alias c="cle;neofetch"
+alias c="clear"
 alias cls="clear; neofetch"
-alias x="sudo chmod +x"
+alias x="sudo chmod u+x"
 alias dot="cd ~/.config"
 alias nviminit="nvim ~/.config/nvim/init.lua"
 alias kazam="nohup kazam & && pidof kazam | disown"
@@ -71,10 +70,10 @@ function mk
 end
 
 # Rebind clear to also run neofetch
-function fish_user_key_bindings
-    bind \cl 'clear;neofetch; commandline -f repaint'
-end
-
+# function fish_user_key_bindings
+#     bind \cl 'clear;neofetch; commandline -f repaint'
+# end
+#
 # Overload touch to also make file executable
 # function touch 
 # 	command touch $argv
