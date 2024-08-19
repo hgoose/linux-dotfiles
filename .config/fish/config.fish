@@ -45,7 +45,7 @@ alias dev="cd ~/dev/"
 alias fishc="n ~/.config/fish/config.fish"
 alias kittyc="n ~/.config/kitty/kitty.conf"
 alias i3c="nvim ~/.config/i3/config"
-alias c="clear"
+alias c="clear;ff"
 alias cls="clear; neofetch"
 alias x="sudo chmod u+x"
 alias dot="cd ~/.config"
@@ -56,6 +56,12 @@ alias ss="cd ~/springsemester/"
 alias bluetooth="nvim /etc/bluetooth/main.conf"
 alias vup="sudo wg-quick up wg0"
 alias vdown="sudo wg-quick down wg0"
+
+# fastfetch --logo arch
+function ff
+    fastfetch --logo arch
+end
+ff
 
 function stat
     ./$argv && echo "status $status" 
@@ -70,9 +76,9 @@ function mk
 end
 
 # Rebind clear to also run neofetch
-# function fish_user_key_bindings
-#     bind \cl 'clear;neofetch; commandline -f repaint'
-# end
+function fish_user_key_bindings
+    bind \cl 'clear;fastfetch --logo arch; commandline -f repaint'
+end
 #
 # Overload touch to also make file executable
 # function touch 
