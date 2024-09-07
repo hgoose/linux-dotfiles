@@ -179,7 +179,8 @@ end
 # Set Mirror Displays
 function mirrordisplay
     if [ $( xrandr --listactivemonitors | grep Monitors | awk '{print $2}') = '1' ]
-        xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0
+        xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0 --gamma 0.9:0.9:0.9
+        redshift -O 5500
     end
 end
 mirrordisplay
