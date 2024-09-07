@@ -1,4 +1,4 @@
-snippet doc
+snippet head
 //***************************************************************************
 //
 //  $1 (file-name)
@@ -232,7 +232,7 @@ $1
 endsnippet
 
 
-snippet fdesc
+snippet fhead
 /**
  * This first line is a brief description.
  *
@@ -255,6 +255,21 @@ snippet fdesc
  *
  * @bug This is how you can add an optional description of a known bug in the
  *    function such as: This only works for positive values of z.
+ */
+endsnippet
+
+snippet fhead2
+/**
+ * Function to generate [1,range_limit] random numbers, numbers are used to populate vector
+ *
+ * @param v Z family vector
+ * @param seed seed  to seed rand
+ * @param range_limit upper bound of rand range
+ * @param vec_size the size of the vector
+ *
+ * @return void
+ *
+ * @note clears the vector before populating
  */
 endsnippet
 
