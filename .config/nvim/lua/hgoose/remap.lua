@@ -14,6 +14,7 @@ map({ "n", "v" }, "n", "<left>")                                      -- Left
 map({ "n", "v" }, "s", "<right>")                                     -- Right
 map("n", "T", ":m .-2<CR>==")                                         -- Move line up
 map("n", "J", ":m .+1<CR>==")                                         -- Move line down
+map("n", "M", ":join<cr>")
 
 map("n", ";", "n")                                                    -- Search next on find
 map("n", "<leader>6", "<cmd>!bash opb<cr>")                           -- Open pdf in browser
