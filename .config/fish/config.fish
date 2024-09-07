@@ -7,6 +7,8 @@ set -x PATH $HOME/.cargo/bin $PATH
 set -U fish_greeting
 set fish_vi_key_bindings true
 
+redshift -O 5500
+
 # xrandr --newmode "1440x1080_100.00"  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync
 # xrandr --addmode HDMI-1-0 1440x1080_100.00
 # xrandr --addmode eDP-1 1440x1080_100.00
@@ -180,7 +182,6 @@ end
 function mirrordisplay
     if [ $( xrandr --listactivemonitors | grep Monitors | awk '{print $2}') = '1' ]
         xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 144 --output eDP-1 --mode 1920x1080 --rate 144 --same-as HDMI-1-0
-        redshift 5500
     end
 end
 mirrordisplay
