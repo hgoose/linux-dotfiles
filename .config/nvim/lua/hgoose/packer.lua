@@ -38,6 +38,7 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' },
         }
     }
+    use('nyoom-engineering/oxocarbon.nvim')
     use('numToStr/Comment.nvim')
     use('skywind3000/vim-quickui')
     use("stevearc/oil.nvim")
