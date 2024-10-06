@@ -1,4 +1,5 @@
 require("hgoose")
 
+vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme dracula_gruvback")
-vim.cmd("colorscheme oxocarbon")
+-- vim.cmd("colorscheme oxocarbon")

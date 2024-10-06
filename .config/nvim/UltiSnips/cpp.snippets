@@ -2,7 +2,7 @@ snippet head
 //***************************************************************************
 //
 //  $1 (file-name)
-//  CSCI 241 Assignment $2 (ass-no)
+//  CSCI 340 Assignment $2 (ass-no)
 //
 //  Created by Nate Warner z2004109
 //
@@ -260,16 +260,13 @@ endsnippet
 
 snippet fhead2
 /**
- * Function to generate [1,range_limit] random numbers, numbers are used to populate vector
+ * This first line is a brief description.
+*
+ * @param x Description of the first parameter.
+ * @param y Description of the second parameter.
+ * @param z Description of the third parameter.
  *
- * @param v Z family vector
- * @param seed seed  to seed rand
- * @param range_limit upper bound of rand range
- * @param vec_size the size of the vector
- *
- * @return void
- *
- * @note clears the vector before populating
+ * @return This is where you describe the possible return values.
  */
 endsnippet
 
@@ -288,4 +285,23 @@ endsnippet
 
 snippet exit
 exit(EXIT_FAILURE);
+endsnippet
+
+snippet vec "vector tmp" i
+#include <iostream>
+#include <vector>
+
+using std::cout;
+using std::endl;
+using std::vector;
+
+struct types {
+    template <typename T>
+        using matrix = vector<vector<T>>;
+};
+
+int main (int argc, char** argv) {
+
+    return 0;
+}
 endsnippet
