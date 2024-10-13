@@ -1,0 +1,35 @@
+#!/usr/bin/bash
+
+function usage() {
+    echo "Usage: ./genmake <binary name> <file>" && exit 0
+}
+
+function makemake() {
+    touch makefile 
+    cat << EOF > makefile
+all:
+$(printf '\t')g++ -o $1 $2
+clean:
+$(printf '\t')rm -rf $1
+EOF
+}
+
+function f() {
+    [[ ${#} != 2 ]] && usage
+
+    if [[ -e "makefile" || -e "Makefile" ]]; then
+        read -p "makefile exists, overwrite? (y/n) " tf
+        case ${tf} in 
+            "y" | 'Y' | "yes" | "Yes")
+                makemake "$@" ;;
+            'n' | 'N' | "no" | "No")
+                echo "Aborting"
+                exit 0 ;;
+            *)
+                ;;
+        esac
+    fi
+    makemake "$@"
+}
+f "$@"
+
