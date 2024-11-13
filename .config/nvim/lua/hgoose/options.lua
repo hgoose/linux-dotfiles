@@ -42,6 +42,7 @@ let g:vimtex_compiler_latexmk = {
                 \}
 let g:vimtex_syntax_packages = {'minted': {'load': 2}}
 ]]
+
 -- vim.cmd("set conceallevel=1")
 -- vim.g.tex_conceal = 'abdmg'
 

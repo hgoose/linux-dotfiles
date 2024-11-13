@@ -38,9 +38,22 @@ require('Comment').setup(
             extra = true,
         },
         ---Function to call before (un)comment
-        pre_hook = nil,
+        -- pre_hook = nil,
         ---Function to call after (un)comment
         post_hook = nil,
+        pre_hook = function(ctx)
+        -- Only change the comment style in PHP files
+        if vim.bo.filetype == 'php' then
+            -- Use `//` for single-line comments
+            if ctx.ctype == require('Comment.utils').ctype.linewise then
+                return '// %s'
+            -- Use `/* ... */` for block comments
+            elseif ctx.ctype == require('Comment.utils').ctype.blockwise then
+                return '/* %s */'
+            end
+        end
+    end,
+
     })
 
 vim.keymap.set("n", "<leader>/", function() require("Comment.api").toggle.linewise.current() end)                 -- Comment lines

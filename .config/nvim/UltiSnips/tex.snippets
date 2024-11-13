@@ -996,6 +996,12 @@ $1
 \end{sqlcode}
 endsnippet
 
+snippet php "php code block" i
+\begin{phpcode}
+$1
+\end{phpcode}
+endsnippet
+
 snippet html "html code block" i
 \begin{htmlcode}
 $1
@@ -1045,7 +1051,7 @@ endsnippet
 
 snippet table
 \begin{center}
-	\begin{tabular}{c|c}
+	\begin{tabular}{p{4cm}|p{4cm}}
 		$1 & $2
 		\hline
 	\end{tabular}
@@ -1351,4 +1357,8 @@ endsnippet
 
 snippet lm "lambda" i
 \lambda
+endsnippet
+
+snippet plcf
+$\exists \ n \in \mathbb{Z}^+\  \mid \ \ \forall \ z \in L,\ \abs{z} \geq n \ z = uvwxy$ for $u,v,w,x,y \in \Sigma^{*}$, with $\abs{vx} > 0,\ \abs{vwy} \leq n$ and $z^{\prime} = uv^{i}wx^{i}y \in L \ \forall \ i \geq 0$.
 endsnippet
