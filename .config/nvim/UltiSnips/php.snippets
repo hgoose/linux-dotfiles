@@ -173,3 +173,17 @@ snippet .main
 </main>
 endsnippet
 
+snippet pdoinit
+    try {
+        
+        $username = "$1";
+        $password = "$2";
+        $dsn = "mysql:host=$3;dbname=$4";
+        $pdo = new PDO($dsn, $username, $password);
+
+    } catch (PDOexception $e) {
+        echo "Connection failed";
+        $e->getMessage();
+    }
+endsnippet
+
