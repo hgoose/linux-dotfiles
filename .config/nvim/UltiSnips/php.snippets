@@ -178,7 +178,9 @@ snippet pdoinit
         
         $username = "$1";
         $password = "$2";
-        $dsn = "mysql:host=$3;dbname=$4";
+        $host = "$3";
+        $db = "$4";
+        $dsn = "mysql:host=$host;dbname=$db";
         $pdo = new PDO($dsn, $username, $password);
 
     } catch (PDOexception $e) {
@@ -187,3 +189,10 @@ snippet pdoinit
     }
 endsnippet
 
+snippet err
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+endsnippet
