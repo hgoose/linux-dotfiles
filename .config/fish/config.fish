@@ -3,6 +3,7 @@ clear
 # swww init
 # wlr-randr --output HDMI-A-1 --mode 1920x1080@119.878998
 set -x PATH $HOME/.cargo/bin $PATH
+set -x PATH $HOME/.juliaup/bin $PATH
 # Remove fish greeting
 set -U fish_greeting
 set fish_vi_key_bindings true

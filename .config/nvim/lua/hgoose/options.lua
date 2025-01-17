@@ -53,3 +53,4 @@ vim.g.livepreview_previewer = 'zathura'
 vim.g.UltiSnipsExpandTrigger = '<a-tab>'
 vim.g.UltiSnipsJumpForwardTrigger = '<a-tab>'
 vim.g.UltiSnipsJumpBackwardTrigger = '<c-tab>'
+
