@@ -13,6 +13,7 @@ set fish_vi_key_bindings true
 # xrandr --addmode eDP-1 1440x1080_100.00
 
 # USER DEFINED ALIASES
+alias j="julia"
 alias rx="redshift -x"
 alias ro="redshift -O"
 alias es="exercism submit"

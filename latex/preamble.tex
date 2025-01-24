@@ -1693,6 +1693,14 @@
     \end{tcolorbox}
 }
 
+
+\newcommand{\diagstrike}[1]{%
+  \tikz[baseline=(X.base)]{
+    \node[inner sep=0pt, anchor=base] (X) {#1};
+    \draw[thick] (X.south west) -- (X.north east);
+  }%
+}
+
 % Page geometry
 \geometry{
   left=1.5in,
