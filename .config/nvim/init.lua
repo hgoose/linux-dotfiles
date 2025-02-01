@@ -11,6 +11,6 @@ vim.opt.spelllang = 'en'
 vim.cmd[[
     hi SpellBad ctermfg=red guifg=red
     hi SpellCap ctermfg=blue guifg=blue
+    hi NormalFloat guibg=#282828
 ]]
-
 

@@ -1,82 +1,94 @@
-local lsp = require("lsp-zero")
+local lsp_zero = require('lsp-zero')
 
-lsp.preset("recommended")
-
-lsp.ensure_installed({
-  -- 'tsserver',
-  -- 'rust_analyzer',
+lsp_zero.set_preferences({
+    sign_icons = { }
 })
 
--- Fix Undefined global 'vim'
-lsp.nvim_workspace()
-
-
-local cmp = require('cmp')
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
-local cmp_mappings = lsp.defaults.cmp_mappings({
-  ['<S-tab>'] = cmp.mapping.select_prev_item(cmp_select),
-  ['<tab>'] = cmp.mapping.select_next_item(cmp_select),
-  ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-  ["<C-Space>"] = cmp.mapping.complete(),
-})
-
-cmp_mappings['<Tab>'] = nil
-cmp_mappings['<S-Tab>'] = nil
-
-lsp.setup_nvim_cmp({
-  mapping = cmp_mappings
-})
-
-lsp.set_preferences({
-    suggest_lsp_servers = false,
-    sign_icons = {
-        error = 'E',
-        warn = 'W',
-        hint = 'H',
-        info = 'I'
-    }
-})
-
-
-lsp.on_attach(function(client, bufnr)
-    local opts = { buffer = bufnr, remap = false }
-    vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-    vim.keymap.set('n', '<space>cc', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
-    vim.keymap.set("n", "<leader>ch", function() vim.lsp.buf.hover() end, opts)
-    vim.keymap.set("n", "<leader>cn", function() vim.diagnostic.goto_next() end, opts)
-    vim.keymap.set("n", "<leader>cp", function() vim.diagnostic.goto_prev() end, opts)
-    vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
-    vim.keymap.set("n", "<leader>cd", function() vim.diagnostic.open_float() end, opts)
-    vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
-    vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
-    vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-    vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+lsp_zero.on_attach(function(client, bufnr)
+    lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-lsp.setup()
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-vim.diagnostic.config({
-    virtual_text = true
+require('mason').setup({})
+require('mason-lspconfig').setup({
+    ensure_installed = {},
+    automatic_installation = true,
+
+    -- If we need to add a custom configuration for a server, you'll need to add a property to handlers.
+    -- This new property must have the same name as the language server you want to configure,
+    -- and you need to assign a function to it.
+    handlers = {
+        -- This first function is the default handler
+        -- It applies to every langauge server without a custom handler.
+        function(server_name)
+            local opts = { capabilities = capabilities }
+
+            -- Some extra stuff for the lua LS.
+            if server_name == "lua_ls" then
+                opts.settings = {
+                    Lua = {
+                        diagnostics = {
+                            -- Tell the language server that `vim` is a global variable
+                            globals = {'vim'}
+                        },
+                        workspace = {
+                            -- Assuming your Neovim configuration files are in `~/.config/nvim`
+                            library = vim.api.nvim_get_runtime_file("", true),
+                        },
+                        -- Do not send telemetry data containing a randomized but unique identifier
+                        telemetry = {
+                            enable = false,
+                        },
+                    }
+                }
+            end
+
+            require('lspconfig').clangd.setup {
+                init_options = {
+                    fallbackFlags = {'--std=c++23'}
+                }
+            }
+
+            require('lspconfig')[server_name].setup(opts)
+        end,
+
+-- require ('lspconfig')['intelephense'].setup({
+--  root_dir = function(fname)
+--         return require('lspconfig.util').find_git_ancestor(fname)
+--             or require('lspconfig.util').path.dirname(fname)
+--     end,
+--     settings = {
+--         intelephense = {
+--             stubs = {"bcmath", "bz2", "Core", "curl", "date", "dom", "fileinfo", "filter", "gd", "gettext", "hash", "iconv", "imap", "intl", "json", "libxml", "mbstring", "mcrypt", "mysql", "mysqli", "password", "pcntl", "pcre", "PDO", "pdo_mysql", "Phar", "readline", "regex", "session", "SimpleXML", "sockets", "sodium", "standard", "superglobals", "tokenizer", "xml", "xdebug", "xmlreader", "xmlwriter", "yaml", "zip", "zlib", "wordpress-stubs", "woocommerce-stubs", "acf-pro-stubs", "wordpress-globals", "wp-cli-stubs", "genesis-stubs", "polylang-stubs"},
+--             environment = {
+--                 includePaths = {'/home/mte90/.composer/vendor/php-stubs/', '/home/mte90/.composer/vendor/wpsyntex/'}
+--             },
+--             files = {
+--                 maxSize = 5000000;
+--             };
+--         };
+    -- },
+-- }),
+}
 })
 
--- lsp.on_attach(function(client, bufnr)
---   local opts = {buffer = bufnr, remap = false}
---
---   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
---   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
---   vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
---   vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
---   vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
---   vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
---   vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
---   vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
---   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
---   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
--- end)
---
--- lsp.setup()
---
--- vim.diagnostic.config({
---     virtual_text = true
--- })
---
+-- Super tab configuration
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
+cmp.setup({
+    mapping = cmp.mapping.preset.insert({
+        ['<Tab>'] = cmp_action.luasnip_supertab(),
+        ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+    }),
+    snippet = {
+        expand = function(args)
+            require('luasnip').lsp_expand(args.body)
+        end,
+    },
+})
+
+

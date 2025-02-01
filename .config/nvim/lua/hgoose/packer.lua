@@ -9,36 +9,60 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
         -- or                            , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = { { 'nvim-lua/plenary.nvim' }},
+        require("telescope").setup{
+            pickers = {
+                colorscheme = {
+                    enable_preview = true
+                }
+            }
+        }
     }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     -- use('nvim-treesitter/playground')
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
+
+    -- use {
+    --     'VonHeikemen/lsp-zero.nvim',
+    --     branch = 'v1.x',
+    --     requires = {
+    --         -- LSP Support
+    --         { 'neovim/nvim-lspconfig' },
+            -- { 'williamboman/mason.nvim' },
+    --         { 'williamboman/mason-lspconfig.nvim' },
+    --
+    --         -- Autocompletion
+    --         { 'hrsh7th/nvim-cmp' },
+    --         { 'hrsh7th/cmp-buffer' },
+    --         { 'hrsh7th/cmp-path' },
+    --         { 'saadparwaiz1/cmp_luasnip' },
+    --         { 'hrsh7th/cmp-nvim-lsp' },
+    --         { 'hrsh7th/cmp-nvim-lua' },
+    --
+    --         -- Snippets
+    --         { 'L3MON4D3/LuaSnip' },
+    --         { 'rafamadriz/friendly-snippets' },
+    --     }
+    -- }
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
-        requires = {
-            -- LSP Support
-            { 'neovim/nvim-lspconfig' },
-            { 'williamboman/mason.nvim' },
-            { 'williamboman/mason-lspconfig.nvim' },
+        branch = 'v3.x', requires = {
+            {'williamboman/mason-lspconfig.nvim'},
 
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },
-            { 'hrsh7th/cmp-buffer' },
-            { 'hrsh7th/cmp-path' },
-            { 'saadparwaiz1/cmp_luasnip' },
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'hrsh7th/cmp-nvim-lua' },
-
-            -- Snippets
-            { 'L3MON4D3/LuaSnip' },
-            { 'rafamadriz/friendly-snippets' },
+            {'neovim/nvim-lspconfig'},
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'L3MON4D3/LuaSnip'},
+            {'onsails/lspkind.nvim'},
         }
-    }
-    use('nyoom-engineering/oxocarbon.nvim')
+      }
+      -- Mason
+      use {
+          "williamboman/mason.nvim"
+      }
+      use('nyoom-engineering/oxocarbon.nvim')
     use('numToStr/Comment.nvim')
     use('skywind3000/vim-quickui')
     use("stevearc/oil.nvim")
@@ -71,6 +95,12 @@ return require('packer').startup(function(use)
 
 
     -- Colorschemes
+    use {
+        'VonHeikemen/fine-cmdline.nvim',
+        requires = {
+            {'MunifTanjim/nui.nvim'}
+        }
+    }
     use('NLKNguyen/papercolor-theme')
     use('hgoose/onedark-fk.vim')
     use('ellisonleao/gruvbox.nvim')

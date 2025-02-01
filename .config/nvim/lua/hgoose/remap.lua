@@ -1,4 +1,4 @@
--- Easier Remaps
+-- Easier Reaps
 local function map(mode, newkey, action)
     vim.keymap.set(mode, newkey, action)
 end
@@ -71,6 +71,8 @@ vim.keymap.set({"n", "v"}, "<leader>t", "{")
 vim.keymap.set({"n", "v"}, "<leader>h", "}")
 
 vim.keymap.set("n", "<C-s>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) 
+
+vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
 
 -- vim.keymap.set("i", "<", "<><Left>")
 
