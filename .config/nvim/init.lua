@@ -14,3 +14,4 @@ vim.cmd[[
     hi NormalFloat guibg=#282828
 ]]
 
+
