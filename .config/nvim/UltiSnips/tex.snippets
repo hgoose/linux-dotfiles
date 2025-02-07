@@ -362,9 +362,9 @@ endsnippet
 # \longleftarrow
 # endsnippet
 
-snippet line
-\line(1,0){395}
-endsnippet
+# snippet line
+# \line(1,0){395}
+# endsnippet
 
 snippet pb
 \pagebreak 
@@ -987,6 +987,13 @@ $1
 \end{cppcode}
 endsnippet
 
+snippet js "js code block" i
+\begin{jscode}
+$1
+\end{jscode}
+endsnippet
+
+
 snippet jl "jl code block" i
 \begin{jlcode}
 $1
@@ -1389,4 +1396,12 @@ endsnippet
 
 snippet vn "varnothing" i
 \varnothing
+endsnippet
+
+snippet line "overleftrightarrow" i
+\overleftrightarrow{$1}
+endsnippet
+
+snippet arc "arc" i
+\overset{\frown}{$1}
 endsnippet
