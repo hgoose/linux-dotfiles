@@ -114,7 +114,9 @@ snippet tmp
 #include <exception> // Exception class
 #include <concepts> // concepts
 #include <ranges> // Ranges and views
-#include <span>
+#include <span> // std::span
+#include <optional> // std::optional<T>
+#include <expected> // std::optional<T,E>
 
 // -- Start UNIX Sys
 #include <cstdlib> // For random, system, exit, EXIT_SUCCESS, EXIT_FAILURE, and malloc
@@ -190,7 +192,10 @@ snippet includes "known includes" i
 #include <exception> // Exception class
 #include <concepts> // concepts
 #include <ranges> // Ranges and views
-#include <span>
+#include <span> // std::span
+#include <optional> // std::optional<T>
+#include <expected> // std::expected<T,E>
+
 
 //-- Start UNIX Sys
 #include <unistd.h> // For unix sys calls file stuff and sleep
@@ -314,12 +319,25 @@ endsnippet
 
 snippet half 
 #include <iostream>
+#include <utility>
 #include <vector>
 #include <string>
+#include <unordered_map>
+#include <queue>
 using std::cout;
+using std::endl;
 using std::string;
 using std::vector;
-using std::endl;
+using std::unordered_map;
+using std::queue;
+using std::priority_queue;
+typedef long long dword;
+
+template<typename T, typename U>
+using pmap = unordered_map<T,U>;
+
+template<typename T, typename U, typename W=std::less<T>>
+using pq = priority_queue<T,U,W>;
 
 int main(int argc, char** argv) {
 

@@ -1,0 +1,34 @@
+snippet jcl "jcl" i
+//KC03AEEA JOB ,'N. WARNER',MSGCLASS=H                                  
+//JSTEP01 EXEC PGM=ASSIST                                               
+//STEPLIB DD DSN=KC00NIU.ASSIST.LOADLIB,DISP=SHR                        
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSIN DD *                                                            
+endsnippet
+
+snippet template
+$1
+         USING $1,15 
+         BCR   B'1111',14
+*
+         LTORG
+*
+*
+         END   $1 
+endsnippet
+
+snippet head
+***************************************************************
+* *                                                           *
+* CSCI 360-1 ASSIGNMENT $1
+* spring 2025                                                 
+* *                                                           *
+* PROGRAMMER NAME: Nate Warner
+* DATE DUE: $2
+* *                                                           *
+* MAIN PROGRAM NAME: $3                                       
+* *
+* FUNCTION: $4
+* *                                                           *
+***************************************************************
+endsnippet
