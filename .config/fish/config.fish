@@ -13,6 +13,7 @@ set fish_vi_key_bindings true
 # xrandr --addmode eDP-1 1440x1080_100.00
 
 # USER DEFINED ALIASES
+alias gif="magick -delay 70 -loop 0 frame*.png animation.gif"
 alias j="julia"
 alias rx="redshift -x"
 alias ro="redshift -O"
@@ -52,7 +53,7 @@ alias i3c="nvim ~/.config/i3/config"
 alias c="clear;ff"
 alias cls="clear; neofetch"
 alias x="sudo chmod u+x"
-alias dot="cd ~/.config"
+# alias dot="cd ~/.config"
 alias nviminit="nvim ~/.config/nvim/init.lua"
 alias kazam="nohup kazam & && pidof kazam | disown"
 alias pd="push-dotfiles"
