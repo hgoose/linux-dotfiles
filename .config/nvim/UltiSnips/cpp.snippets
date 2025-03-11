@@ -117,6 +117,7 @@ snippet tmp
 #include <span> // std::span
 #include <optional> // std::optional<T>
 #include <expected> // std::optional<T,E>
+#include <compare> // Spaceship
 
 // -- Start UNIX Sys
 #include <cstdlib> // For random, system, exit, EXIT_SUCCESS, EXIT_FAILURE, and malloc
@@ -195,7 +196,7 @@ snippet includes "known includes" i
 #include <span> // std::span
 #include <optional> // std::optional<T>
 #include <expected> // std::expected<T,E>
-
+#include <compare> // Spaceship
 
 //-- Start UNIX Sys
 #include <unistd.h> // For unix sys calls file stuff and sleep
@@ -330,11 +331,13 @@ snippet half
 #include <array>
 #include <map>
 #include <limits>
+#include <numeric> // std::accumulate
 #include <climits> // INT_MAX, INT_MIN, ...
 #include <tuple>
 #include <unordered_set>
 #include <algorithm>
 #include <stack>
+using std::pair;
 using std::stack;
 using std::unordered_set;
 using std::tuple;
@@ -361,8 +364,17 @@ template<typename T, typename U, typename W=std::less<T>>
 using pq = priority_queue<T,U,W>;
 
 template<typename T>
-
 using lims = std::numeric_limits<T>;
+
+int main(int argc, char** argv) {
+
+    return 0;
+}
+endsnippet
+
+snippet leet
+#include <bits/stdc++.h>
+using namespace std;
 
 int main(int argc, char** argv) {
 
