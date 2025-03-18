@@ -354,9 +354,6 @@ using std::bitset;
 
 typedef long long dword;
 
-template<typename T, typename U>
-using pmap = unordered_map<T,U>;
-
 template<typename T>
 using pset = unordered_set<T>;
 
@@ -365,6 +362,9 @@ using pq = priority_queue<T,U,W>;
 
 template<typename T>
 using lims = std::numeric_limits<T>;
+
+template<typename T, typename U>
+using pmap = unordered_map<T,U>;
 
 int main(int argc, char** argv) {
 
