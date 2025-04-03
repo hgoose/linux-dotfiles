@@ -13,6 +13,8 @@ set fish_vi_key_bindings true
 # xrandr --addmode eDP-1 1440x1080_100.00
 
 # USER DEFINED ALIASES
+alias ws="nmcli dev wifi rescan"
+alias nm="nmtui"
 alias gif="magick -delay 70 -loop 0 frame*.png animation.gif"
 alias j="julia"
 alias rx="redshift -x"

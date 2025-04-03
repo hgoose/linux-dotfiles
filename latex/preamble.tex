@@ -11,6 +11,7 @@
 \usepackage{lipsum} % for generating dummy text
 % \usepackage{fontawesome} % for icons
 \usepackage{fontawesome5} % for icons
+\usepackage{slashed}
 \usepackage{booktabs}
 \usepackage{siunitx} % for proper formatting of numbers and units
 \usepackage{titlesec}
@@ -1738,6 +1739,13 @@
     \node[inner sep=0pt, anchor=base] (X) {#1};
     \draw[thick] (X.south west) -- (X.north east);
   }%
+}
+
+\newcommand{\hcancel}[1]{%
+  \setbox0=\hbox{$#1$}%
+  \dimen0=\wd0%
+  \rlap{\hbox to \dimen0{\hfil\raisebox{0.05\ht0}{\rule{\dimen0}{0.6pt}}\hfil}}%
+  #1%
 }
 
 
