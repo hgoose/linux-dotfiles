@@ -118,6 +118,7 @@ snippet tmp
 #include <optional> // std::optional<T>
 #include <expected> // std::optional<T,E>
 #include <compare> // Spaceship
+#include <cctype>
 
 // -- Start UNIX Sys
 #include <cstdlib> // For random, system, exit, EXIT_SUCCESS, EXIT_FAILURE, and malloc
@@ -197,6 +198,7 @@ snippet includes "known includes" i
 #include <optional> // std::optional<T>
 #include <expected> // std::expected<T,E>
 #include <compare> // Spaceship
+#include <cctype>
 
 //-- Start UNIX Sys
 #include <unistd.h> // For unix sys calls file stuff and sleep
@@ -338,6 +340,7 @@ snippet half
 #include <algorithm>
 #include <stack>
 #include <ranges>
+#include <cctype>
 using std::accumulate;
 using std::pair;
 using std::stack;
@@ -362,6 +365,9 @@ using pset = unordered_set<T>;
 template<typename T, typename U, typename W=std::less<T>>
 using pq = priority_queue<T,U,W>;
 
+typedef priority_queue<int, vector<int>, std::greater<int>> I_MIN_HEAP;
+typedef priority_queue<int, vector<int>> I_MAX_HEAP;
+
 template<typename T>
 using lims = std::numeric_limits<T>;
 
@@ -375,6 +381,7 @@ struct ListNode;
 typedef ListNode ln;
 typedef TreeNode tn;
 #define PB push_back
+
 
 int main(int argc, char** argv) {
 
