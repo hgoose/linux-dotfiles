@@ -25,7 +25,7 @@ alias 241="cd $HOME/niu/CS/CS-241/"
 alias wgetu="wget --user-agent=Yandex"
 alias ifw="inkscape-figures watch"
 alias ism="python3 ~/inkscape-shortcut-manager/main.py"
-alias go="nohup google-chrome-stable >/dev/null 2>&1 & && pidof chrome | disown"
+# alias go="nohup google-chrome-stable >/dev/null 2>&1 & && pidof chrome | disown"
 # alias kp="kill picom"
 alias polybar="~/.config/polybar/launch.sh"
 alias pyflakes="nvim ~/.local/share/nvim/mason/packages/python-lsp-server/venv/lib/python3.10/site-packages/pyflakes/messages.py"
@@ -39,7 +39,7 @@ alias uu="ls -l"
 alias u="ls -a"
 alias gpush="git add .; git commit -m "all"; git push"
 alias neo="clear; neofetch"
-alias discord="nohup discord >/dev/null 2>&1 & && pidof Discord | disown"
+# alias discord="nohup discord >/dev/null 2>&1 & && pidof Discord | disown"
 alias nt="nohup nautilus . >/dev/null 2>&1 &"
 alias clock="tty-clock -t -c -C 5"
 alias calc="libreoffice --calc"
@@ -57,7 +57,7 @@ alias cls="clear; neofetch"
 alias x="sudo chmod u+x"
 # alias dot="cd ~/.config"
 alias nviminit="nvim ~/.config/nvim/init.lua"
-alias kazam="nohup kazam & && pidof kazam | disown"
+# alias kazam="nohup kazam & && pidof kazam | disown"
 alias pd="push-dotfiles"
 alias ss="cd ~/springsemester/"
 alias bluetooth="nvim /etc/bluetooth/main.conf"
@@ -163,13 +163,13 @@ ssoff
 # endbar
 
 # Set lang vorak
-# function dvorak
-#  	set mylang (setxkbmap -query | grep layout | awk '{ print $2 }')
-# 	if [ $mylang != 'dvorak' ]
-# 		setxkbmap -layout us -variant dvorak
-# 	end
-# end
-# dvorak
+function dvorak
+ 	set mylang (setxkbmap -query | grep layout | awk '{ print $2 }')
+	if [ $mylang != 'dvorak' ]
+		setxkbmap -layout us -variant dvorak
+	end
+end
+dvorak
 
 function qwerty
  	set mylang (setxkbmap -query | grep layout | awk '{ print $2 }')

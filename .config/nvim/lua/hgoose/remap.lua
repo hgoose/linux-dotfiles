@@ -72,7 +72,7 @@ vim.keymap.set({"n", "v"}, "<leader>h", "}")
 
 vim.keymap.set("n", "<C-s>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) 
 
-vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+-- vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
 
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, { noremap = true, silent = true })
 -- vim.keymap.set("i", "<", "<><Left>")
