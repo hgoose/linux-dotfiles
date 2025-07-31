@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+export PATH_TO_FX=/usr/share/java/java-openjfx
+
+javac \
+  --module-path "$PATH_TO_FX" \
+  --add-modules javafx.controls,javafx.fxml \
+  *.java
+
+java \
+  --enable-native-access=javafx.graphics \
+  --module-path /usr/share/java/java-openjfx \
+  --add-modules javafx.controls,javafx.fxml \
+  -Djava.library.path=/usr/lib/java-openjfx \
+  -Dprism.order=sw \
+  -Dprism.verbose=true \
+  -cp . \
+  $1
