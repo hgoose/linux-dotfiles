@@ -4,6 +4,10 @@ clear
 # wlr-randr --output HDMI-A-1 --mode 1920x1080@119.878998
 set -x PATH $HOME/.cargo/bin $PATH
 set -x PATH $HOME/.juliaup/bin $PATH
+set -x PATH $HOME/Android/Sdk/platform-tools $PATH
+set -x PATH $HOME/Android/Sdk/tools $PATH
+set -x PATH $HOME/Android/Sdk/tools/bin $PATH
+set -x PATH $HOME/Android/Sdk/emulator $PATH
 # Remove fish greeting
 set -U fish_greeting
 set fish_vi_key_bindings true

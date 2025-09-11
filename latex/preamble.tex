@@ -35,6 +35,7 @@
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
 \usepackage{multirow}
+\usepackage{blkarray}
 \usepackage{dcolumn}
 \usepackage{tikz}
 \usepackage{minted}
@@ -1343,6 +1344,19 @@
   listing only,
   minted style=xcode,
   minted language=cpp,
+  minted options={linenos=true, breaklines=true, escapeinside=||, firstnumber=0},
+  colback=c_grey,
+  colframe=c_grey2,
+  listing engine=minted,
+  % other settings...
+}
+
+\newtcblisting{xmlcode}{
+  arc=10pt,
+  outer arc=10pt,
+  listing only,
+  minted style=xcode,
+  minted language=xml,
   minted options={linenos=true, breaklines=true, escapeinside=||, firstnumber=0},
   colback=c_grey,
   colframe=c_grey2,
