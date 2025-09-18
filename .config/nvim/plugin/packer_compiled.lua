@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/dracula_gruvback",
     url = "https://github.com/hgoose/dracula_gruvback"
   },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
   everblush = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/everblush",
@@ -268,6 +273,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/tagbar",
     url = "https://github.com/preservim/tagbar"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["toggleterm.nvim"] = {
     loaded = true,
