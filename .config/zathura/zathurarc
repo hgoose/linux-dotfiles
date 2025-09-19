@@ -1,4 +1,4 @@
 set recolor   
-set recolor-lightcolor \#282828
+set recolor-lightcolor \#1c1c1c
 set recolor-keephue
-set default-bg \#282828
+set default-bg \#1c1c1c
