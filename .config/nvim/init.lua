@@ -2,7 +2,8 @@ require("hgoose")
 
 vim.cmd([[hi SignColumn guibg=Normal]])
 vim.cmd([[set autoindent]])
-vim.cmd("colorscheme retrobox")
+vim.cmd("colorscheme ron")
+-- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme dracula_gruvback")
 -- vim.cmd("colorscheme oxocarbon")
 
