@@ -63,6 +63,7 @@ return require('packer').startup(function(use)
       }
       use('nyoom-engineering/oxocarbon.nvim')
     use('EdenEast/nightfox.nvim')
+    use('loctvl842/monokai-pro.nvim')
     use('iruzo/matrix-nvim')
     use('numToStr/Comment.nvim')
     use('skywind3000/vim-quickui')

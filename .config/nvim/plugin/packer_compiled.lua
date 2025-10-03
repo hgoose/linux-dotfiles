@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/matrix-nvim",
     url = "https://github.com/iruzo/matrix-nvim"
   },
+  ["monokai-pro.nvim"] = {
+    loaded = true,
+    path = "/home/datura/.local/share/nvim/site/pack/packer/start/monokai-pro.nvim",
+    url = "https://github.com/loctvl842/monokai-pro.nvim"
+  },
   ["neo-tree.nvim"] = {
     loaded = true,
     path = "/home/datura/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",

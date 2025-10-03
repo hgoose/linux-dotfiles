@@ -4,7 +4,8 @@ vim.cmd([[hi SignColumn guibg=Normal]])
 vim.cmd([[set autoindent]])
 -- vim.cmd("colorscheme ron")
 -- vim.cmd("colorscheme retrobox")
-vim.cmd("colorscheme unokai")
+-- vim.cmd("colorscheme unokai")
+vim.cmd("colorscheme monokai-pro-classic")
 vim.cmd("hi normal guibg=#1c1c1c")
 -- vim.cmd("colorscheme dracula_gruvback")
 -- vim.cmd("colorscheme oxocarbon")
@@ -17,14 +18,14 @@ vim.cmd[[
     hi NormalFloat guibg=#282828
 ]]
 
-vim.api.nvim_create_user_command("Colorschemes", function()
-  local schemes = vim.fn.getcompletion("", "color")
-  vim.ui.select(schemes, { prompt = "Select colorscheme:" }, function(choice)
-    if choice then
-      vim.cmd("colorscheme " .. choice)
-    end
-  end)
-end, {})
-
-
-
+-- vim.api.nvim_create_user_command("Colorschemes", function()
+--   local schemes = vim.fn.getcompletion("", "color")
+--   vim.ui.select(schemes, { prompt = "Select colorscheme:" }, function(choice)
+--     if choice then
+--       vim.cmd("colorscheme " .. choice)
+--     end
+--   end)
+-- end, {})
+--
+--
+--
