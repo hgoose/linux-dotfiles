@@ -62,6 +62,7 @@ return require('packer').startup(function(use)
           "williamboman/mason.nvim"
       }
       use('nyoom-engineering/oxocarbon.nvim')
+    use('EdenEast/nightfox.nvim')
     use('iruzo/matrix-nvim')
     use('numToStr/Comment.nvim')
     use('skywind3000/vim-quickui')
