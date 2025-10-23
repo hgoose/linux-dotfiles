@@ -6,7 +6,7 @@ app.window.position.width=940
 app.rollback-to-sc=true
 autologin.blob="9+0jndY2rFSPVkcs3LJUZ/iIUPfjTcjEES76Y2+frFJrw9e5y9tindlByfl15BfVU0+x32FiPY4bsq0xZD2vqsqLxTjzSCJg07PubcG527SmnU3prFrK833YMzhhqSx2040KGs5NklGV2Y6uConHh0tgeSLglLyyAiNxuC+zs2tuFefgljke29eqMpdvSHctXHDVwJrtgMM5CAZnfjU6gRLimyekbsx1LMBAXf6fPeYTzoFp/DlGDU9TJwQzr41JfnHTnj1oQdXFYko0YmrnaeklQ61ttrvuBBfC9ZLUFtY="
 es.send-on-startup=true
-core.clock_delta=-1
+core.clock_delta=0
 app.window.position.saved=true
 app.window.position.height=1054
 app.autostart-mode=""
