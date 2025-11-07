@@ -5,6 +5,6 @@ function halt { echo "Usage: ./pdftex file"; exit 1; }
 function main {
     [[ $# != 1 ]] && halt
 
-    inkscape -D --export-type=pdf --export-latex $1.svg
+    inkscape --export-type=pdf --export-latex --export-area-page $1.svg
 } 
 main "${@}"
