@@ -979,6 +979,12 @@ $1
 \end{cppcode}
 endsnippet
 
+snippet tex "tex code block" i
+\begin{texcode}
+$1
+\end{texcode}
+endsnippet
+
 snippet xml "xml code block" i
 \begin{xmlcode}
 $1
@@ -1065,13 +1071,13 @@ endsnippet
 
 snippet table
 \begin{center}
-	\begin{tabular}{p{4cm}|p{4cm}}
-		$1 & $2
-		\hline
-	\end{tabular}
+    \begin{tabularx}{\textwidth}{@{}lXl@{}}
+        \toprule
+        \midrule
+        \bottomrule
+    \end{tabularx}
 \end{center}
 endsnippet
-
 snippet addition
 \[
 \begin{array}{@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}c@{}}
@@ -1496,4 +1502,8 @@ endsnippet
 
 snippet ep "varepsilon" i
 \varepsilon
+endsnippet
+
+snippet ga "gamma" i
+\gamma
 endsnippet

@@ -42,6 +42,7 @@
 \usepackage{tikz}
 \usepackage{minted}
 \usepackage{tabularx}
+\usepackage{tabulary}
 % \usepackage{listings}
 \usepackage[bottom]{footmisc}
 \newcolumntype{2}{D{.}{}{2.0}}
@@ -102,6 +103,7 @@
 
 \newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
 \SetCommentSty{mycommfont}
+
 \newcommand{\incfig}[1]{%
     % \def\svgwidth{\columnwidth}
     % \def\svgwidth{\textwidth}
@@ -1353,6 +1355,20 @@
   listing engine=minted,
   % other settings...
 }
+
+\newtcblisting{texcode}{
+  arc=10pt,
+  outer arc=10pt,
+  listing only,
+  minted style=xcode,
+  minted language=tex,
+  minted options={linenos=true, breaklines=true, escapeinside=||, firstnumber=0},
+  colback=c_grey,
+  colframe=c_grey2,
+  listing engine=minted,
+  % other settings...
+}
+
 
 \newtcblisting{xmlcode}{
   arc=10pt,
