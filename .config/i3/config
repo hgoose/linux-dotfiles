@@ -11,7 +11,7 @@ exec --no-startup-id xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 
 exec --no-startup-id dunst
 
 # # Start Picom
-# exec --no-startup-id picom -CGb
+exec --no-startup-id picom -CGb
 
 # Start nitrogen (wallpaper)
 exec --no-startup-id nitrogen --restore
