@@ -1,7 +1,6 @@
-audio.hifi_upgraded=true
-audio.play_bitrate_non_metered_migrated=true
-connect.dial_devices="[{\"address\":\"100.110.60.14\",\"app_state\":\"MISSING\",\"created_timestamp\":1758122050,\"device_id\":\"b20e0010-3d57-3013-99ab-f42b2dabb591\",\"dial_location_url\":\"http://100.110.60.14:60000/dd.xml\",\"display_name\":\"Amber's 2nd FireTVStick\",\"last_seen\":1758122056,\"manufacturer\":\"Amazon\",\"model_name\":\"AFTSS\",\"product_cap\":\"\",\"public_ip\":\"192.183.72.106\",\"wol\":{\"all_interfaces\":false,\"delay_ms\":250,\"mac\":\"f8fce1a15680\",\"port\":9,\"retries\":160}}]"
 connect.mdns_devices="[]"
+connect.dial_devices="[{\"address\":\"100.110.60.14\",\"app_state\":\"MISSING\",\"created_timestamp\":1758122050,\"device_id\":\"b20e0010-3d57-3013-99ab-f42b2dabb591\",\"dial_location_url\":\"http://100.110.60.14:60000/dd.xml\",\"display_name\":\"Amber's 2nd FireTVStick\",\"last_seen\":1758122056,\"manufacturer\":\"Amazon\",\"model_name\":\"AFTSS\",\"product_cap\":\"\",\"public_ip\":\"192.183.72.106\",\"wol\":{\"all_interfaces\":false,\"delay_ms\":250,\"mac\":\"f8fce1a15680\",\"port\":9,\"retries\":160}}]"
+audio.play_bitrate_non_metered_migrated=true
 audio.play_bitrate_non_metered_enumeration=5
 audio.play_bitrate_enumeration=2
 app.browser.zoom-level=-50
