@@ -6,7 +6,13 @@ vim.cmd([[set autoindent]])
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme unokai")
 vim.cmd("colorscheme monokai-pro-classic")
-vim.cmd("hi normal guibg=#1c1c1c")
+vim.cmd[[
+    hi normal guibg=#171717
+    hi LineNr guifg=#bdbdbd guibg=#171717
+    hi SignColumn guibg=#171717
+]]
+-- vim.cmd("hi normal guibg=#1e1f22")
+
 -- vim.cmd("colorscheme dracula_gruvback")
 -- vim.cmd("colorscheme oxocarbon")
 
@@ -16,6 +22,8 @@ vim.cmd[[
     hi SpellBad ctermfg=red guifg=red
     hi SpellCap ctermfg=blue guifg=blue
     hi NormalFloat guibg=#282828
+    hi BufferLineFill guibg=#bdbdbd
+    hi EndOfBuffer guibg=#bdbdbd
 ]]
 
 -- vim.api.nvim_create_user_command("Colorschemes", function()
@@ -26,6 +34,4 @@ vim.cmd[[
 --     end
 --   end)
 -- end, {})
---
---
 --
