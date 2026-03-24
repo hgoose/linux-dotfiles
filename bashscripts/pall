@@ -6,6 +6,7 @@
 #
 main(){
     DIRS=("linux-dotfiles" "Linux-Resources" "dev" "earn" "learn" "niu" "springsemester" "Pictures" "leetcode" "csesproblemset")
+    sudo pacman -Q > $HOME/linux-dotfiles/pac
 
     for i in "${DIRS[@]}"; do
         sudo git -C $HOME/$i add . && sudo git -C $HOME/$i commit -m "Commit" && git -C $HOME/$i push && echo "Successfully pushed changes to directory $i" || echo "Failed to push changes to directory $i or everything is up to date"
@@ -14,6 +15,8 @@ main(){
     git -C $HOME/Documents/Obsidian\ Vault/ add . && sudo git -C $HOME/Documents/Obsidian\ Vault/ commit -m "commit" && git -C $HOME/Documents/Obsidian\ Vault/ push
 
     # sudo git -C ~/Documents/Obsidian Vault/ add . && sudo git -C ~/Documents/Obsidian Vault/ commit -m "commit" && git -C ~/Documents/Obsidian Vault/ push && echo "Successfully pushed changes to directory obsidian" || echo "Failed to push changes to directory obsidian or everything is up to date"
+
+
 }
 main
 #
