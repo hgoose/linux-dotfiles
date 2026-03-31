@@ -70,7 +70,7 @@ default-cursors 3-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.33-1
 diffutils 3.12-2
-discord 1:0.0.130-1
+discord 1:0.0.131-1
 double-conversion 3.3.1-1
 dtc 1.7.2-4
 duktape 2.7.0-7
@@ -582,6 +582,7 @@ mtdev 1.1.7-1
 multipath-tools 0.11.1-1
 ncurses 6.5-4
 ndctl 79-1
+neofetch 7.1.0-2
 neon 0.35.0-1
 neovim 0.11.3-1
 netpbm 10.86.48-1
