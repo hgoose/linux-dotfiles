@@ -580,6 +580,7 @@ mpg123 1.33.1-1
 msgpack-c 6.1.0-2
 mtdev 1.1.7-1
 multipath-tools 0.11.1-1
+nasm 3.01-1
 ncurses 6.5-4
 ndctl 79-1
 neofetch 7.1.0-2
