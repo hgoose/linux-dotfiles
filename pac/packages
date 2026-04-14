@@ -70,7 +70,7 @@ default-cursors 3-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.33-1
 diffutils 3.12-2
-discord 1:0.0.131-1
+discord 1:0.0.132-1
 double-conversion 3.3.1-1
 dtc 1.7.2-4
 duktape 2.7.0-7
