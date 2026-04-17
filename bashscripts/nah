@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+die_maybe() { [[ ${#} < 1 ]] && echo "Usage <file ext> ..." && exit 1; }
+
+main() { die_maybe "${@}"
+    LINE="find . -type f -name *.${1}";
+    for arg in $(seq 2 $((${#}))); do
+        LINE+=" -o -name *.${!arg}" 
+    done; $LINE | xargs nvim
+}; main "$@"
