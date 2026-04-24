@@ -590,7 +590,10 @@ netpbm 10.86.48-1
 nettle 3.10.2-1
 networkmanager 1.52.1-1
 nitrogen 1.6.1-6
+node-gyp 12.3.0-1
 nodejs 24.4.1-2
+nodejs-nopt 9.0.0-1
+npm 11.13.0-1
 npth 1.8-1
 nspr 4.37-1
 nss 3.114-1
@@ -828,6 +831,7 @@ sdl2_image 2.8.8-1
 sdl3 3.2.20-1
 seabios 1.17.0-1
 sed 4.9-3
+semver 7.7.4-1
 shaderc 2025.3-1
 shadow 4.18.0-1
 shared-mime-info 2.4-2
