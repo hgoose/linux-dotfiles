@@ -1,8 +1,5 @@
 #!/usr/bin/bash
-
-die_maybe() { [[ ${#} < 1 ]] && echo "Usage <file ext> ..." && exit 1; }
-
-main() { die_maybe "${@}"
+main() { [[ ${#} < 1 ]] && echo "Usage <file ext> ..." && exit 1; }
     LINE="find . -type f -name *.${1}";
     for arg in $(seq 2 $((${#}))); do
         LINE+=" -o -name *.${!arg}" 
