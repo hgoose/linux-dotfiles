@@ -70,7 +70,7 @@ default-cursors 3-1
 desktop-file-utils 0.28-1
 device-mapper 2.03.33-1
 diffutils 3.12-2
-discord 1:0.0.134-1
+discord 1:0.0.135-1
 double-conversion 3.3.1-1
 dtc 1.7.2-4
 duktape 2.7.0-7
@@ -86,6 +86,7 @@ egl-gbm 1.1.2.1-1
 egl-wayland 4:1.1.19-1
 egl-x11 1.0.2-1
 eglexternalplatform 1.2.1-1
+electron39 39.8.9-1
 enchant 2.8.12-1
 exo 4.20.0-2
 expat 2.7.4-1
@@ -603,6 +604,7 @@ nvidia 575.64.05-3
 nvidia-settings 575.64.05-1
 nvidia-utils 575.64.05-2
 obs-studio 31.1.2-1
+obsidian 1.12.7-2
 ocl-icd 2.3.3-1
 onetbb 2022.2.0-1
 openal 1.24.3-1
