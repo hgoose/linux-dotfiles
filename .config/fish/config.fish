@@ -12,11 +12,14 @@ set -x PATH $HOME/Android/Sdk/emulator $PATH
 set -U fish_greeting
 set fish_vi_key_bindings true
 
+set -g fish_autosuggestion_enabled 1
+
 # xrandr --newmode "1440x1080_100.00"  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync
 # xrandr --addmode HDMI-1-0 1440x1080_100.00
 # xrandr --addmode eDP-1 1440x1080_100.00
 
 # USER DEFINED ALIASES
+alias bmake="bear -- make"
 alias pixel="$HOME/Android/Sdk/emulator/emulator -avd Pixel -verbose"
 alias ws="nmcli dev wifi rescan"
 alias nm="nmtui"

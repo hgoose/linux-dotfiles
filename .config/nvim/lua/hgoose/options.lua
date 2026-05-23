@@ -1,10 +1,12 @@
 vim.opt.nu = true
+-- vimtex
 vim.opt.relativenumber = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
+vim.opt.smartcase = true
 vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -23,8 +25,6 @@ vim.opt.ignorecase = true
 vim.g.auto_save = 1
 vim.o.timeout = true
 vim.o.timeoutlen = 300
-
--- Vimtex Setup
 vim.g.vimtex_view_method = 'zathura'
 vim.g.tex_fast = "bMpr"
 vim.g.vimtex_quickfix_mode = 0
@@ -54,3 +54,10 @@ vim.g.UltiSnipsExpandTrigger = '<a-tab>'
 vim.g.UltiSnipsJumpForwardTrigger = '<a-tab>'
 vim.g.UltiSnipsJumpBackwardTrigger = '<c-tab>'
 
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    underline = false,
+    globals = {'vim'},
+    update_in_insert = false,
+})
