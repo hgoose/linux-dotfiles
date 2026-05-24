@@ -14,10 +14,20 @@
 # Remove it to not load settings done via the GUI.
 config.load_autoconfig(False)
 
+config.set("colors.webpage.darkmode.enabled", True)
+config.set("qt.force_software_rendering", "chromium")
+
 # Aliases for commands. The keys of the given dictionary are the
 # aliases, while the values are the commands they map to.
 ## Type: Dict
-# c.aliases = {'w': 'session-save', 'q': 'close', 'qa': 'quit', 'wq': 'quit --save', 'wqa': 'quit --save'}
+c.aliases = {'w': 'session-save',
+             'q': 'close',
+             'qa': 'quit',
+             'wq': 'quit --save',
+             'wqa': 'quit --save',
+             'b': "tab-select",
+             'm': "tab-move"
+}
 
 # Time interval (in milliseconds) between auto-saves of
 # config/cookies/etc.
@@ -31,7 +41,7 @@ config.load_autoconfig(False)
 # session which was last loaded. This behavior can be customized via the
 # `session.default_name` setting.
 ## Type: Bool
-# c.auto_save.session = False
+c.auto_save.session = True
 
 # Backend to use to display websites. qutebrowser supports two different
 # web rendering engines / backends, QtWebEngine and QtWebKit (not
@@ -904,6 +914,10 @@ config.load_autoconfig(False)
 ## Type: Dict
 # c.content.javascript.log = {'unknown': 'debug', 'info': 'debug', 'warning': 'debug', 'error': 'debug'}
 
+c.content.javascript.log_message.excludes = {
+    'userscript:_qute_js': ['*TrustedHTML*']
+}
+
 # Use the standard JavaScript modal dialog for `alert()` and
 # `confirm()`.
 ## Type: Bool
@@ -1008,7 +1022,7 @@ config.load_autoconfig(False)
 # `:prompt-open-download --pdfjs` command (bound to `<Ctrl-p>` by
 # default) can be used in the download prompt.
 ## Type: Bool
-# c.content.pdfjs = False
+c.content.pdfjs = True
 
 # Allow websites to request persistent storage quota via
 # `navigator.webkitPersistentStorage.requestQuota`.
@@ -2119,6 +2133,26 @@ c.url.start_pages = ['https://google.com']
 ## Type: Bool
 # c.zoom.text_only = False
 
+config.unbind('n')
+
+config.bind('h', "scroll down")
+config.bind('t', "scroll up")
+config.bind('n', "scroll left")
+config.bind('s', "scroll right")
+
+config.bind('h', "move-to-next-line", mode="caret")
+config.bind('t', "move-to-prev-line", mode="caret")
+config.bind('n', "move-to-prev-char", mode="caret")
+config.bind('s', "move-to-next-char", mode="caret")
+
+config.bind(';', "search-next")
+
+config.bind('J', "tab-prev")
+config.bind('K', "tab-next")
+
+
+
+
 # Bindings for normal mode
 # config.bind("'", 'mode-enter jump_mark')
 # config.bind('+', 'zoom-in')
@@ -2431,4 +2465,4 @@ c.url.start_pages = ['https://google.com']
 # config.bind('n', 'prompt-accept no', mode='yesno')
 # config.bind('y', 'prompt-accept yes', mode='yesno')
 
-config.source('qutebrowser-themes/themes/onedark.py')
+# config.source('qutebrowser-themes/themes/onedark.py')
