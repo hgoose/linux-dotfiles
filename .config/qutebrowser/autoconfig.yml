@@ -6,19 +6,7 @@
 
 config_version: 2
 settings:
-  bindings.commands:
-    global:
-      caret:
-        h: move-to-next-line
-        n: move-to-prev-char
-        s: move-to-next-char
-        t: move-to-prev-line
-      normal:
-        ;: search-next
-        J: tab-prev
-        K: tab-next
-        h: scroll down
-        n: scroll left
-        s: scroll right
-        space: '"open -t"'
-        t: scroll up
+  colors.webpage.bg:
+    global: '#fff8dc'
+  scrolling.smooth:
+    global: true

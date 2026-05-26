@@ -14,9 +14,16 @@
 # Remove it to not load settings done via the GUI.
 config.load_autoconfig(False)
 
-config.set("colors.webpage.darkmode.enabled", True)
+c.content.user_stylesheets = ['~/.config/qutebrowser/styles/dark.css']
+
+c.colors.webpage.darkmode.enabled = False
+c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
+c.colors.webpage.darkmode.policy.images = 'never'
+
+c.search.incremental = False
+
 config.set("qt.force_software_rendering", "chromium")
-config.set("search.incremental", False)
+# config.set("search.incremental", False)
 
 # Aliases for commands. The keys of the given dictionary are the
 # aliases, while the values are the commands they map to.
@@ -405,15 +412,15 @@ c.auto_save.session = True
 
 # Background color of the tab bar.
 ## Type: QssColor
-# c.colors.tabs.bar.bg = '#555555'
+c.colors.tabs.bar.bg = '#1e1e1e'
 
 # Background color of unselected even tabs.
 ## Type: QtColor
-# c.colors.tabs.even.bg = 'darkgrey'
+c.colors.tabs.even.bg = '#1e1e1e'
 
 # Foreground color of unselected even tabs.
 ## Type: QtColor
-# c.colors.tabs.even.fg = 'white'
+c.colors.tabs.even.fg = '#ffffff'
 
 # Color for the tab indicator on errors.
 ## Type: QtColor
@@ -438,11 +445,11 @@ c.auto_save.session = True
 
 # Background color of unselected odd tabs.
 ## Type: QtColor
-# c.colors.tabs.odd.bg = 'grey'
+c.colors.tabs.odd.bg = '#1e1e1e'
 
 # Foreground color of unselected odd tabs.
 ## Type: QtColor
-# c.colors.tabs.odd.fg = 'white'
+c.colors.tabs.odd.fg = '#ffffff'
 
 # Background color of pinned unselected even tabs.
 ## Type: QtColor
@@ -478,24 +485,24 @@ c.auto_save.session = True
 
 # Background color of selected even tabs.
 ## Type: QtColor
-# c.colors.tabs.selected.even.bg = 'black'
+c.colors.tabs.selected.even.bg = '#EFABFF'
 
 # Foreground color of selected even tabs.
 ## Type: QtColor
-# c.colors.tabs.selected.even.fg = 'white'
+c.colors.tabs.selected.even.fg = 'white'
 
 # Background color of selected odd tabs.
 ## Type: QtColor
-# c.colors.tabs.selected.odd.bg = 'black'
+c.colors.tabs.selected.odd.bg = '#EFABFF'
 
 # Foreground color of selected odd tabs.
 ## Type: QtColor
-# c.colors.tabs.selected.odd.fg = 'white'
+c.colors.tabs.selected.odd.fg = 'white'
 
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 ## Type: QtColor
-# c.colors.webpage.bg = 'white'
+# c.colors.webpage.bg = '#1e1e1e'
 
 # Which algorithm to use for modifying how colors are rendered with
 # darkmode. The `lightness-cielab` value was added with QtWebEngine 5.14
@@ -505,7 +512,7 @@ c.auto_save.session = True
 # - lightness-cielab: Modify colors by converting them to CIELAB color space and inverting the L value. Not available with Qt < 5.14.
 # - lightness-hsl: Modify colors by converting them to the HSL color space and inverting the lightness (i.e. the "L" in HSL).
 # - brightness-rgb: Modify colors by subtracting each of r, g, and b from their maximum value.
-# c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
+c.colors.webpage.darkmode.algorithm = 'lightness-hsl'
 
 # Contrast for dark mode. This only has an effect when
 # `colors.webpage.darkmode.algorithm` is set to `lightness-hsl` or
@@ -582,7 +589,7 @@ c.auto_save.session = True
 # - auto: Use the system-wide color scheme setting.
 # - light: Force a light theme.
 # - dark: Force a dark theme.
-# c.colors.webpage.preferred_color_scheme = 'auto'
+# c.colors.webpage.preferred_color_scheme = 'dark'
 
 # Number of commands to save in the command history. 0: no history / -1:
 # unlimited
@@ -1948,7 +1955,7 @@ c.content.pdfjs = True
 
 # Padding (in pixels) around text for tabs.
 ## Type: Padding
-# c.tabs.padding = {'top': 0, 'bottom': 0, 'left': 5, 'right': 5}
+c.tabs.padding = {'top': 10, 'bottom': 15, 'left': 10, 'right': 1}
 
 # Force pinned tabs to stay at fixed URL.
 ## Type: Bool
