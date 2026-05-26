@@ -16,6 +16,7 @@ config.load_autoconfig(False)
 
 config.set("colors.webpage.darkmode.enabled", True)
 config.set("qt.force_software_rendering", "chromium")
+config.set("search.incremental", False)
 
 # Aliases for commands. The keys of the given dictionary are the
 # aliases, while the values are the commands they map to.
@@ -26,7 +27,8 @@ c.aliases = {'w': 'session-save',
              'wq': 'quit --save',
              'wqa': 'quit --save',
              'b': "tab-select",
-             'm': "tab-move"
+             'm': "tab-move",
+             's': "session-save main"
 }
 
 # Time interval (in milliseconds) between auto-saves of
@@ -2150,7 +2152,8 @@ config.bind(';', "search-next")
 config.bind('J', "tab-prev")
 config.bind('K', "tab-next")
 
-
+config.bind('<Ctrl-o>', 'tab-focus stack-prev')
+config.bind('<Ctrl-i>', 'tab-focus stack-next')
 
 
 # Bindings for normal mode
