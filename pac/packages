@@ -61,6 +61,7 @@ cmatrix 2.0-4
 colm 0.14.7-5
 confuse 3.3-5
 coreutils 9.11-1
+cozette-otb 1.30.0-1
 cpio 2.15-3
 cppdap 1.58.0-3
 cryptsetup 2.8.6-1
@@ -653,6 +654,7 @@ openssl 3.6.2-2
 opus 1.6.1-1
 orc 0.4.42-1
 os-prober 1.84-1
+otf-departure-mono 1.500-1
 p11-kit 0.26.2-1
 pacman 7.1.0.r9.g54d9411-2
 pacman-mirrorlist 20260406-1
