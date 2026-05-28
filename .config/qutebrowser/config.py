@@ -35,7 +35,8 @@ c.aliases = {'w': 'session-save',
              'wqa': 'quit --save',
              'b': "tab-select",
              'm': "tab-move",
-             's': "session-save main"
+             's': "session-save main",
+             'd': "download-clear"
 }
 
 # Time interval (in milliseconds) between auto-saves of
