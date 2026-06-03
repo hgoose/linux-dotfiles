@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+# Running this command in a directory that isn't solely comprised of 
+# pngs named 1..n is unexpected behavior
+
+ls | sed -E "s/(.*).png/\1/" | sort -gr | head -n 1
