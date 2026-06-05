@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+FILE="$HOME/.config/qutebrowser/main.yml"
+OUT="$HOME/.local/share/qutebrowser/sessions/"
+if [ -e $FILE ]; then
+    cp $FILE $OUT
+else
+    echo "ERROR: cannot find session main"
+fi

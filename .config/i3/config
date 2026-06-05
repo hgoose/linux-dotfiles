@@ -240,7 +240,7 @@ set_from_resource $bg i3wm.color6 #282a2e
 # client.unfocused        #000000 #222222 #888888 #292d2e   #000000
 # client.urgent           #000000 #900000 #000000 #900000   #900000
 # client.placeholder      #000000 #0c0c0c #000000 #000000   #0c0c0c
-#
+
 # client.background       #00D1FF
 
 # class                 border  backgr. text    indicator child_border
