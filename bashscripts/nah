@@ -1,7 +1,13 @@
 #!/usr/bin/bash
-main() { [[ ${#} < 1 ]] && echo "Usage <file ext> ..." && exit 1; }
-    LINE="find . -type f -name *.${1}";
-    for arg in $(seq 2 $((${#}))); do
-        LINE+=" -o -name *.${!arg}" 
-    done; $LINE | xargs nvim
+main() { (( ${#} < 1 )) && echo "Usage <file ext> ..." && exit 1;
+        
+    EXP=()
+    for EXT in "$@"; do
+        EXP+=( -name "*.${EXT}" -o )
+    done
+
+    unset 'EXP[-1]'
+
+    find . -type f \( "${EXP[@]}" \) -print0 | xargs -0 -r nvim
+
 }; main "$@"
