@@ -6,19 +6,19 @@ vim.cmd([[set autoindent]])
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme unokai")
 
--- vim.cmd("colorscheme monokai-pro-classic")
--- vim.cmd[[
---     hi normal guibg=#171717
---     hi LineNr guifg=#bdbdbd guibg=#171717
---     hi SignColumn guibg=#171717
--- ]]
-
-vim.cmd("colorscheme delek")
+vim.cmd("colorscheme monokai-pro-classic")
 vim.cmd[[
-    hi normal guibg=#fff8dc guifg=#000000
+    hi normal guibg=#171717
     hi LineNr guifg=#bdbdbd guibg=#171717
-    hi SignColumn guibg=#171717 guifg=#ffffff
+    hi SignColumn guibg=#171717
 ]]
+
+-- vim.cmd("colorscheme delek")
+-- vim.cmd[[
+--     hi normal guibg=#fff8dc guifg=#000000
+--     hi LineNr guifg=#bdbdbd guibg=#171717
+--     hi SignColumn guibg=#171717 guifg=#ffffff
+-- ]]
 
 -- vim.cmd("hi normal guibg=#1e1f22")
 -- vim.cmd("colorscheme dracula_gruvback")

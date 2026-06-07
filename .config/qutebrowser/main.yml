@@ -1,0 +1,457 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAIAAAACAAAB3cAAAQvAAAADQAAAA0AAAdyAAAEKgAAAAACAAAAB4AAAAANAAAA
+    DQAAB3IAAAQq
+  tabs:
+  - history:
+    - last_visited: '2026-06-02T11:29:18'
+      pinned: false
+      title: Squash vs Regular Merge
+      url: https://chatgpt.com/c/6a1f04d4-bfec-83ea-827d-cd2fb91005b2
+    - last_visited: '2026-06-02T13:46:34'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-02T13:46:42'
+      pinned: false
+      title: Sed Examples
+      url: https://chatgpt.com/c/6a1f250e-cd64-83ea-bef2-cc58a11c0eac
+    - last_visited: '2026-06-02T18:02:43'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-02T18:02:53'
+      pinned: false
+      title: Xlib Mask Types
+      url: https://chatgpt.com/c/6a1f6115-7a2c-83ea-90b9-404cb0f19a69
+    - last_visited: '2026-06-03T10:30:06'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-03T10:30:25'
+      pinned: false
+      title: Git show-branch Symbols
+      url: https://chatgpt.com/c/6a204885-3030-83ea-920b-e3538cb5155e
+    - last_visited: '2026-06-03T10:33:37'
+      pinned: false
+      title: Linux PDF Viewer Keyboard Support
+      url: https://chatgpt.com/c/6a134de1-ab88-83ea-9e32-5f86f64f444e
+    - last_visited: '2026-06-03T10:37:53'
+      pinned: false
+      title: Git show-branch Symbols
+      url: https://chatgpt.com/c/6a204885-3030-83ea-920b-e3538cb5155e
+    - last_visited: '2026-06-03T10:38:02'
+      pinned: false
+      title: Squash vs Regular Merge
+      url: https://chatgpt.com/c/6a1f04d4-bfec-83ea-827d-cd2fb91005b2
+    - last_visited: '2026-06-03T10:39:07'
+      pinned: false
+      title: Upstreams and Rebasing in Git
+      url: https://chatgpt.com/c/6a1641f6-1c08-83ea-a868-3c8df8cda7d9
+    - last_visited: '2026-06-03T10:48:55'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-03T10:48:59'
+      pinned: false
+      title: Git rebase explanation
+      url: https://chatgpt.com/c/6a204ce8-f528-83ea-a828-74d6f91b47c4
+    - last_visited: '2026-06-03T11:38:47'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-03T11:38:55'
+      pinned: false
+      title: Aggregation in OOP
+      url: https://chatgpt.com/c/6a20589a-02d8-83ea-907f-af89f252dcec
+    - last_visited: '2026-06-03T11:46:40'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-03T11:47:00'
+      pinned: false
+      title: Builder OOP Pattern Explanation
+      url: https://chatgpt.com/c/6a205a72-d050-83ea-91fc-e6c7b082e68e
+    - last_visited: '2026-06-03T12:04:07'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-03T12:04:23'
+      pinned: false
+      title: C++ Abstract Class Methods
+      url: https://chatgpt.com/c/6a205e88-cc10-83ea-a2f6-c6389a0838a2
+    - last_visited: '2026-06-03T14:16:32'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-03T14:16:41'
+      pinned: false
+      title: XChangeProperty cast explanation
+      url: https://chatgpt.com/c/6a207d92-28cc-83ea-a747-066b94f383b1
+    - last_visited: '2026-06-03T14:55:40'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-03T14:55:49'
+      pinned: false
+      title: C++ Type Size Standard
+      url: https://chatgpt.com/c/6a2086bd-d5a8-83ea-8dea-4dd3e7e829ba
+    - last_visited: '2026-06-03T18:56:38'
+      pinned: false
+      title: C++ Type Size Standard
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-03T18:56:38'
+      pinned: false
+      title: C++ Type Size Standard
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-03T18:56:38'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-03T18:57:24'
+      pinned: false
+      title: Creating XColor in Xlib
+      url: https://chatgpt.com/c/6a20bf53-2a30-83ea-a631-d4ecd6c5e328
+    - last_visited: '2026-06-03T18:58:41'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-03T18:58:56'
+      pinned: false
+      title: Convert to LaTeX
+      url: https://chatgpt.com/c/6a20bfb3-5504-83ea-ab2b-28da498868f3
+    - last_visited: '2026-06-03T19:27:18'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-03T19:28:21'
+      pinned: false
+      title: Egg Drop Problem
+      url: https://chatgpt.com/c/6a20c668-d45c-83ea-bb04-315b8f2535ba
+    - last_visited: '2026-06-03T21:22:23'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-03T21:41:24'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-04T10:13:50'
+      pinned: false
+      title: Git rebase conflict resolution
+      url: https://chatgpt.com/c/6a219625-c12c-83ea-bea4-99ed19100618
+    - last_visited: '2026-06-04T16:07:20'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-04T16:07:31'
+      pinned: false
+      title: Xlib Color Management
+      url: https://chatgpt.com/c/6a21e90a-fbf0-83ea-8d56-f8c7f2c762c2
+    - last_visited: '2026-06-04T17:09:45'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-04T17:11:09'
+      pinned: false
+      title: Convert to LaTeX
+      url: https://chatgpt.com/c/6a21f7ad-6474-83ea-9284-68eec3b6fb2f
+    - last_visited: '2026-06-05T10:23:26'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-05T10:53:21'
+      pinned: false
+      title: Git Index and Blobs
+      url: https://chatgpt.com/c/6a22e9f0-f494-83ea-9ff2-1621fd1617a6
+    - last_visited: '2026-06-05T10:54:04'
+      pinned: false
+      title: Git stash options explained
+      url: https://chatgpt.com/c/6a163f47-565c-83ea-b73e-1a8afaec05cd
+    - last_visited: '2026-06-05T11:09:54'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-05T11:10:02'
+      pinned: false
+      title: Git reset hard explained
+      url: https://chatgpt.com/c/6a22f4d4-1d20-83ea-ad5d-f0cabb09ed67
+    - last_visited: '2026-06-05T11:14:50'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-05T11:15:02'
+      pinned: false
+      title: Git Commit Reachability
+      url: https://chatgpt.com/c/6a22f5fc-3830-83ea-ad16-d4e0ec2f43c0
+    - last_visited: '2026-06-05T11:16:05'
+      pinned: false
+      title: Git reset hard explained
+      url: https://chatgpt.com/c/6a22f4d4-1d20-83ea-ad5d-f0cabb09ed67
+    - last_visited: '2026-06-05T12:41:59'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2026-06-05T12:42:08'
+      pinned: false
+      title: Prototype Creational Pattern
+      url: https://chatgpt.com/c/6a230a68-d5a0-83ea-9b4c-269545106771
+    - last_visited: '2026-06-05T13:56:29'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - active: true
+      last_visited: '2026-06-05T13:56:36'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Three-way merge in Git
+      url: https://chatgpt.com/c/6a231bdf-da7c-83ea-b426-09fd2f37f124
+      zoom: 1.0
+  - history:
+    - last_visited: '2026-05-30T12:53:59'
+      pinned: false
+      title: Google Calendar - June 2026
+      url: https://calendar.google.com/calendar/u/0/r/month
+    - active: true
+      last_visited: '2026-06-01T08:19:04'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Google Calendar - June 2026
+      url: https://calendar.google.com/calendar/u/0/r/month
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2026-05-30T12:53:57'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Staffing, Recruitment & Job Search | Robert Half
+      url: https://www.roberthalf.com/us/en
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2026-06-04T12:59:02'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: 'System Design Interview – An insider''s guide, Second Edition: Step
+        by Step Guide, Tips and 15 System Design Interview Questions with Detailed
+        Solutions - tmp4ba6gp4b_System Design Interview... Alex Xu (z-lib.org).pdf'
+      url: qute://pdfjs/web/viewer.html?filename=tmp4ba6gp4b_System%20Design%20Interview...%20Alex%20Xu%20(z-lib.org).pdf&file=&source=file:///home/datura/Downloads/System%20Design%20Interview%20An%20Insider%E2%80%99s%20Guide%20by%20Alex%20Xu%20(z-lib.org).pdf
+      zoom: 1.0
+  - history:
+    - last_visited: '2026-06-03T10:53:08'
+      pinned: false
+      title: Math 5 - tmp8j2upb67_main.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmp8j2upb67_main.pdf&file=&source=file:///home/datura/niu/MATH/allmath5/main.pdf
+    - last_visited: '2026-06-03T10:53:08'
+      pinned: false
+      title: Math 5 - tmp8j2upb67_main.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmp8j2upb67_main.pdf&file=&source=file:///home/datura/niu/MATH/allmath5/main.pdf
+    - active: true
+      last_visited: '2026-06-03T10:53:35'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Math 5 - tmp8j2upb67_main.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmp8j2upb67_main.pdf&file=&source=file:///home/datura/niu/MATH/allmath5/main.pdf
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2026-06-04T12:59:01'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Math 3 - tmphvxgcpqr_main.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmphvxgcpqr_main.pdf&file=&source=file:///home/datura/niu/MATH/allmath3/main.pdf
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2026-06-02T19:13:31'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Math 1 - tmpbssupa8q_main.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpbssupa8q_main.pdf&file=&source=file:///home/datura/niu/MATH/allmath1/main.pdf
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2026-06-02T19:13:34'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Math 2 - tmp7kh1ml1f_main.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmp7kh1ml1f_main.pdf&file=&source=file:///home/datura/niu/MATH/allmath2/main.pdf
+      zoom: 1.0
+  - history:
+    - last_visited: '2026-06-01T11:51:01'
+      pinned: false
+      title: 'Design Patterns : Elements of Reusable Object-Oriented Software - tmpx0vycdaq_book.pdf'
+      url: qute://pdfjs/web/viewer.html?filename=tmpx0vycdaq_book.pdf&file=&source=file:///home/datura/niu/CS/design/book/book.pdf
+    - last_visited: '2026-06-01T11:51:01'
+      pinned: false
+      title: 'Design Patterns : Elements of Reusable Object-Oriented Software - tmpx0vycdaq_book.pdf'
+      url: qute://pdfjs/web/viewer.html?filename=tmpx0vycdaq_book.pdf&file=&source=file:///home/datura/niu/CS/design/book/book.pdf
+    - last_visited: '2026-06-01T12:17:31'
+      pinned: false
+      title: 'Design Patterns : Elements of Reusable Object-Oriented Software - tmpx0vycdaq_book.pdf'
+      url: qute://pdfjs/web/viewer.html?filename=tmpx0vycdaq_book.pdf&file=&source=file:///home/datura/niu/CS/design/book/book.pdf
+    - last_visited: '2026-06-01T12:17:31'
+      pinned: false
+      title: 'Design Patterns : Elements of Reusable Object-Oriented Software - tmpx0vycdaq_book.pdf'
+      url: qute://pdfjs/web/viewer.html?filename=tmpx0vycdaq_book.pdf&file=&source=file:///home/datura/niu/CS/design/book/book.pdf
+    - last_visited: '2026-06-01T12:17:33'
+      pinned: false
+      title: 'Design Patterns : Elements of Reusable Object-Oriented Software - tmpx0vycdaq_book.pdf'
+      url: qute://pdfjs/web/viewer.html?filename=tmpx0vycdaq_book.pdf&file=&source=file:///home/datura/niu/CS/design/book/book.pdf
+    - last_visited: '2026-06-05T13:28:12'
+      pinned: false
+      title: 'Design Patterns : Elements of Reusable Object-Oriented Software - tmpx0vycdaq_book.pdf'
+      url: qute://pdfjs/web/viewer.html?filename=tmpx0vycdaq_book.pdf&file=&source=file:///home/datura/niu/CS/design/book/book.pdf
+    - active: true
+      last_visited: '2026-06-05T13:28:12'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: 'Design Patterns : Elements of Reusable Object-Oriented Software - tmpx0vycdaq_book.pdf'
+      url: qute://pdfjs/web/viewer.html?filename=tmpx0vycdaq_book.pdf&file=&source=file:///home/datura/niu/CS/design/book/book.pdf
+      zoom: 1.0
+  - history:
+    - last_visited: '2026-06-03T18:58:08'
+      pinned: false
+      title: tmpg3i7mo0n_xlib.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpg3i7mo0n_xlib.pdf&file=&source=file:///home/datura/niu/CS/xlib/book/xlib.pdf
+    - last_visited: '2026-06-03T18:58:08'
+      pinned: false
+      title: tmpg3i7mo0n_xlib.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpg3i7mo0n_xlib.pdf&file=&source=file:///home/datura/niu/CS/xlib/book/xlib.pdf
+    - last_visited: '2026-06-03T19:18:36'
+      pinned: false
+      title: tmpg3i7mo0n_xlib.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpg3i7mo0n_xlib.pdf&file=&source=file:///home/datura/niu/CS/xlib/book/xlib.pdf
+    - last_visited: '2026-06-03T19:18:36'
+      pinned: false
+      title: tmpg3i7mo0n_xlib.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpg3i7mo0n_xlib.pdf&file=&source=file:///home/datura/niu/CS/xlib/book/xlib.pdf
+    - active: true
+      last_visited: '2026-06-05T13:28:34'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: tmpg3i7mo0n_xlib.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpg3i7mo0n_xlib.pdf&file=&source=file:///home/datura/niu/CS/xlib/book/xlib.pdf
+      zoom: 1.0
+  - history:
+    - last_visited: '2026-06-05T13:45:33'
+      pinned: false
+      title: tmpr43yscto_book.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpr43yscto_book.pdf&file=&source=file:///home/datura/niu/CS/ctci/book/book.pdf
+    - last_visited: '2026-06-05T13:45:33'
+      pinned: false
+      title: tmpr43yscto_book.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpr43yscto_book.pdf&file=&source=file:///home/datura/niu/CS/ctci/book/book.pdf
+    - last_visited: '2026-06-05T13:46:03'
+      pinned: false
+      title: tmpr43yscto_book.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpr43yscto_book.pdf&file=&source=file:///home/datura/niu/CS/ctci/book/book.pdf
+    - last_visited: '2026-06-05T13:46:03'
+      pinned: false
+      title: tmpr43yscto_book.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpr43yscto_book.pdf&file=&source=file:///home/datura/niu/CS/ctci/book/book.pdf
+    - last_visited: '2026-06-05T13:46:06'
+      pinned: false
+      title: tmpr43yscto_book.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpr43yscto_book.pdf&file=&source=file:///home/datura/niu/CS/ctci/book/book.pdf
+    - last_visited: '2026-06-05T13:51:26'
+      pinned: false
+      title: tmpr43yscto_book.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpr43yscto_book.pdf&file=&source=file:///home/datura/niu/CS/ctci/book/book.pdf
+    - last_visited: '2026-06-05T13:51:26'
+      pinned: false
+      title: tmpr43yscto_book.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpr43yscto_book.pdf&file=&source=file:///home/datura/niu/CS/ctci/book/book.pdf
+    - last_visited: '2026-06-05T14:00:07'
+      pinned: false
+      title: tmpr43yscto_book.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpr43yscto_book.pdf&file=&source=file:///home/datura/niu/CS/ctci/book/book.pdf
+    - last_visited: '2026-06-05T14:00:07'
+      pinned: false
+      title: tmpr43yscto_book.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpr43yscto_book.pdf&file=&source=file:///home/datura/niu/CS/ctci/book/book.pdf
+    - active: true
+      last_visited: '2026-06-05T17:46:55'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: tmpr43yscto_book.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpr43yscto_book.pdf&file=&source=file:///home/datura/niu/CS/ctci/book/book.pdf
+      zoom: 1.0
+  - active: true
+    history:
+    - active: true
+      last_visited: '2026-06-05T17:47:05'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: CS Complete - tmpvee0t8gw_main.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpvee0t8gw_main.pdf&file=&source=file:///home/datura/niu/CS/csall1/main.pdf
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2026-05-30T12:54:12'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: 429924_Print.indd - tmpdl6jufn1_abstractalgebra.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpdl6jufn1_abstractalgebra.pdf&file=&source=file:///home/datura/niu/MATH/allmath5/books/abstractalgebra.pdf
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2026-06-01T11:48:57'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: The Art of Unit Testing - tmpffvuqd9n_TheArtofUnitTesting.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpffvuqd9n_TheArtofUnitTesting.pdf&file=&source=https://accorsi.net/docs/TheArtofUnitTesting.pdf
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2026-06-05T15:01:19'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: tmpllr96_z3_book.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpllr96_z3_book.pdf&file=&source=file:///home/datura/niu/CS/cleancode/book/book.pdf
+      zoom: 1.0
+  - history:
+    - last_visited: '2026-06-05T14:53:38'
+      pinned: false
+      title: The C Programming Language - 2nd Edition - tmpn_5p75jp_book.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpn_5p75jp_book.pdf&file=&source=file:///home/datura/niu/CS/lang/c/ritchie/book/book.pdf
+    - active: true
+      last_visited: '2026-06-05T14:53:38'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: The C Programming Language - 2nd Edition - tmpn_5p75jp_book.pdf
+      url: qute://pdfjs/web/viewer.html?filename=tmpn_5p75jp_book.pdf&file=&source=file:///home/datura/niu/CS/lang/c/ritchie/book/book.pdf
+      zoom: 1.0

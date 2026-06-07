@@ -417,3 +417,24 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 endsnippet
+
+snippet si
+if (skip_if_invalid_or_lexerr(lex_err)) {
+    free_tree($1);
+    return nullptr;
+}
+endsnippet
+
+snippet vn
+if (unexpected_token($1, $2)) {
+    free_tree($3);
+    return nullptr;
+}
+endsnippet
+
+snippet wn
+if (wrong_next_token($1, $2)) {
+    free_tree($3);
+    return nullptr;
+}
+endsnippet
